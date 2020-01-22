@@ -106,7 +106,7 @@
             this.quitterBraceletToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -431,37 +431,37 @@
             this.importationDeLaFédérationToolStripMenuItem,
             this.archivageDuneCampagneToolStripMenuItem});
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             // 
             // exportationVersLaFédérationToolStripMenuItem
             // 
             this.exportationVersLaFédérationToolStripMenuItem.Name = "exportationVersLaFédérationToolStripMenuItem";
-            this.exportationVersLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.exportationVersLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.exportationVersLaFédérationToolStripMenuItem.Text = "Exportation vers la fédération";
             // 
             // importationDeLaDDAFToolStripMenuItem
             // 
             this.importationDeLaDDAFToolStripMenuItem.Name = "importationDeLaDDAFToolStripMenuItem";
-            this.importationDeLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.importationDeLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.importationDeLaDDAFToolStripMenuItem.Text = "Importation de la DDAF";
             // 
             // exportationVersLaDDAFToolStripMenuItem
             // 
             this.exportationVersLaDDAFToolStripMenuItem.Name = "exportationVersLaDDAFToolStripMenuItem";
-            this.exportationVersLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.exportationVersLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.exportationVersLaDDAFToolStripMenuItem.Text = "Exportation vers la DDAF";
             // 
             // importationDeLaFédérationToolStripMenuItem
             // 
             this.importationDeLaFédérationToolStripMenuItem.Name = "importationDeLaFédérationToolStripMenuItem";
-            this.importationDeLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.importationDeLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.importationDeLaFédérationToolStripMenuItem.Text = "Importation de la Fédération";
             // 
             // archivageDuneCampagneToolStripMenuItem
             // 
             this.archivageDuneCampagneToolStripMenuItem.Name = "archivageDuneCampagneToolStripMenuItem";
-            this.archivageDuneCampagneToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.archivageDuneCampagneToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.archivageDuneCampagneToolStripMenuItem.Text = "Archivage d\'une campagne";
             // 
             // sécuritéToolStripMenuItem
@@ -490,13 +490,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -537,7 +537,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 814);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";

@@ -327,11 +327,26 @@
     <EmbeddedResource Include="Action_Form1_suite.resx">
       <DependentUpon>Action_Form1_suite.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Action_Form2.resx">
+      <DependentUpon>Action_Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Action_Form3.resx">
       <DependentUpon>Action_Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Action_Form3_Suite.resx">
       <DependentUpon>Action_Form3_Suite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action_Form4.resx">
+      <DependentUpon>Action_Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action_Form5.resx">
+      <DependentUpon>Action_Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aide_Form1.resx">
+      <DependentUpon>Aide_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aide_Form2.resx">
+      <DependentUpon>Aide_Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edition_Form1.resx">
       <DependentUpon>Edition_Form1.cs</DependentUpon>
@@ -339,14 +354,92 @@
     <EmbeddedResource Include="Edition_Form2.resx">
       <DependentUpon>Edition_Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form3.resx">
+      <DependentUpon>Edition_Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form3_F1.resx">
+      <DependentUpon>Edition_Form3_F1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form3_F2.resx">
+      <DependentUpon>Edition_Form3_F2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form3_F3.resx">
+      <DependentUpon>Edition_Form3_F3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form3_F4.resx">
+      <DependentUpon>Edition_Form3_F4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form3_F5.resx">
+      <DependentUpon>Edition_Form3_F5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form3_F6.resx">
+      <DependentUpon>Edition_Form3_F6.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edition_Form4.resx">
       <DependentUpon>Edition_Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form4_F1.resx">
+      <DependentUpon>Edition_Form4_F1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form5.resx">
+      <DependentUpon>Edition_Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form5_F1.resx">
+      <DependentUpon>Edition_Form5_F1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form5_F2.resx">
+      <DependentUpon>Edition_Form5_F2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form5_F3.resx">
+      <DependentUpon>Edition_Form5_F3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport_Form1.resx">
+      <DependentUpon>ImportExport_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport_Form2.resx">
+      <DependentUpon>ImportExport_Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport_Form3.resx">
+      <DependentUpon>ImportExport_Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport_Form4.resx">
+      <DependentUpon>ImportExport_Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport_Form5.resx">
+      <DependentUpon>ImportExport_Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form1.resx">
+      <DependentUpon>Listes_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form10.resx">
+      <DependentUpon>Listes_Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form11.resx">
+      <DependentUpon>Listes_Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form2.resx">
+      <DependentUpon>Listes_Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listes_Form3.resx">
       <DependentUpon>Listes_Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form4.resx">
+      <DependentUpon>Listes_Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form5.resx">
+      <DependentUpon>Listes_Form5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Listes_Form6.resx">
       <DependentUpon>Listes_Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form7.resx">
+      <DependentUpon>Listes_Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form8.resx">
+      <DependentUpon>Listes_Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form9.resx">
+      <DependentUpon>Listes_Form9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -367,6 +460,9 @@
     <EmbeddedResource Include="Saisie_Form2.resx">
       <DependentUpon>Saisie_Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Securite_Form1.resx">
+      <DependentUpon>Securite_Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -385,6 +481,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fantasy-4386055_1280.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
