@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4B1FE19-752A-4B19-87C8-3046A5A36785}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bracelet</RootNamespace>
+    <AssemblyName>Bracelet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action_Form1.Designer.cs">
+      <DependentUpon>Action_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action_Form1_suite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action_Form1_suite.Designer.cs">
+      <DependentUpon>Action_Form1_suite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action_Form2.Designer.cs">
+      <DependentUpon>Action_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action_Form3.Designer.cs">
+      <DependentUpon>Action_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action_Form3_Suite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action_Form3_Suite.Designer.cs">
+      <DependentUpon>Action_Form3_Suite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action_Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action_Form4.Designer.cs">
+      <DependentUpon>Action_Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action_Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action_Form5.Designer.cs">
+      <DependentUpon>Action_Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aide_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aide_Form1.Designer.cs">
+      <DependentUpon>Aide_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aide_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aide_Form2.Designer.cs">
+      <DependentUpon>Aide_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form1.Designer.cs">
+      <DependentUpon>Edition_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form2.Designer.cs">
+      <DependentUpon>Edition_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form3.Designer.cs">
+      <DependentUpon>Edition_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form3_F1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form3_F1.Designer.cs">
+      <DependentUpon>Edition_Form3_F1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form3_F2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form3_F2.Designer.cs">
+      <DependentUpon>Edition_Form3_F2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form3_F3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form3_F3.Designer.cs">
+      <DependentUpon>Edition_Form3_F3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form3_F4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form3_F4.Designer.cs">
+      <DependentUpon>Edition_Form3_F4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form3_F5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form3_F5.Designer.cs">
+      <DependentUpon>Edition_Form3_F5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form3_F6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form3_F6.Designer.cs">
+      <DependentUpon>Edition_Form3_F6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form4.Designer.cs">
+      <DependentUpon>Edition_Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form4_F1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form4_F1.Designer.cs">
+      <DependentUpon>Edition_Form4_F1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form5.Designer.cs">
+      <DependentUpon>Edition_Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form5_F1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form5_F1.Designer.cs">
+      <DependentUpon>Edition_Form5_F1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form5_F2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form5_F2.Designer.cs">
+      <DependentUpon>Edition_Form5_F2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edition_Form5_F3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edition_Form5_F3.Designer.cs">
+      <DependentUpon>Edition_Form5_F3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport_Form1.Designer.cs">
+      <DependentUpon>ImportExport_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport_Form2.Designer.cs">
+      <DependentUpon>ImportExport_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport_Form3.Designer.cs">
+      <DependentUpon>ImportExport_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport_Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport_Form4.Designer.cs">
+      <DependentUpon>ImportExport_Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport_Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport_Form5.Designer.cs">
+      <DependentUpon>ImportExport_Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form1.Designer.cs">
+      <DependentUpon>Listes_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form10.Designer.cs">
+      <DependentUpon>Listes_Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form11.Designer.cs">
+      <DependentUpon>Listes_Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form2.Designer.cs">
+      <DependentUpon>Listes_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form3.Designer.cs">
+      <DependentUpon>Listes_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form4.Designer.cs">
+      <DependentUpon>Listes_Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form5.Designer.cs">
+      <DependentUpon>Listes_Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form6.Designer.cs">
+      <DependentUpon>Listes_Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form7.Designer.cs">
+      <DependentUpon>Listes_Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form8.Designer.cs">
+      <DependentUpon>Listes_Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listes_Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listes_Form9.Designer.cs">
+      <DependentUpon>Listes_Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Saisie_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saisie_Form1.Designer.cs">
+      <DependentUpon>Saisie_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Saisie_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saisie_Form2.Designer.cs">
+      <DependentUpon>Saisie_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Securite_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Securite_Form1.Designer.cs">
+      <DependentUpon>Securite_Form1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action_Form1.resx">
+      <DependentUpon>Action_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action_Form1_suite.resx">
+      <DependentUpon>Action_Form1_suite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action_Form3.resx">
+      <DependentUpon>Action_Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action_Form3_Suite.resx">
+      <DependentUpon>Action_Form3_Suite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form1.resx">
+      <DependentUpon>Edition_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form2.resx">
+      <DependentUpon>Edition_Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edition_Form4.resx">
+      <DependentUpon>Edition_Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form3.resx">
+      <DependentUpon>Listes_Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listes_Form6.resx">
+      <DependentUpon>Listes_Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Saisie_Form1.resx">
+      <DependentUpon>Saisie_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Saisie_Form2.resx">
+      <DependentUpon>Saisie_Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
