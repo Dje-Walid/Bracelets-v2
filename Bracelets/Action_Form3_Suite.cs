@@ -55,5 +55,22 @@ namespace Bracelet
         {
 
         }
+
+        private void Action_Form3_Suite_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEffacer_Click(object sender, EventArgs e)
+        {
+            txbx_secteur_inclure.Text = "";
+            txbx_secteurs_exlure.Text = "";
+
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,5 +29,15 @@ namespace Bracelet
             Edition_Form1 edition_Form1A = new Edition_Form1();
             edition_Form1A.Show();
         }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEffacer_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
