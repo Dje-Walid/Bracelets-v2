@@ -47,18 +47,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(140, 25);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(340, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(413, 29);
+            this.label1.Size = new System.Drawing.Size(580, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Basculement Proposés / Accordés";
             // 
             // btnEffacer
             // 
-            this.btnEffacer.Location = new System.Drawing.Point(593, 25);
+            this.btnEffacer.Location = new System.Drawing.Point(681, 621);
             this.btnEffacer.Name = "btnEffacer";
-            this.btnEffacer.Size = new System.Drawing.Size(102, 29);
+            this.btnEffacer.Size = new System.Drawing.Size(150, 29);
             this.btnEffacer.TabIndex = 1;
             this.btnEffacer.Text = "Effacer";
             this.btnEffacer.UseVisualStyleBackColor = true;
@@ -73,94 +73,95 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(145, 89);
+            this.groupBox1.Location = new System.Drawing.Point(173, 168);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(550, 166);
+            this.groupBox1.Size = new System.Drawing.Size(856, 431);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quel massifs éditer ? (si non spécifieé = tout)";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(209, 92);
+            this.textBox2.Location = new System.Drawing.Point(285, 236);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 20);
+            this.textBox2.Size = new System.Drawing.Size(179, 29);
             this.textBox2.TabIndex = 9;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(209, 35);
+            this.textBox1.Location = new System.Drawing.Point(285, 83);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
+            this.textBox1.Size = new System.Drawing.Size(179, 29);
             this.textBox1.TabIndex = 8;
             // 
             // cbxMassifaExclure
             // 
             this.cbxMassifaExclure.FormattingEnabled = true;
-            this.cbxMassifaExclure.Location = new System.Drawing.Point(209, 128);
+            this.cbxMassifaExclure.Location = new System.Drawing.Point(285, 310);
             this.cbxMassifaExclure.Name = "cbxMassifaExclure";
-            this.cbxMassifaExclure.Size = new System.Drawing.Size(179, 21);
+            this.cbxMassifaExclure.Size = new System.Drawing.Size(179, 32);
             this.cbxMassifaExclure.TabIndex = 7;
             // 
             // cbxMassifaInclur
             // 
             this.cbxMassifaInclur.FormattingEnabled = true;
-            this.cbxMassifaInclur.Location = new System.Drawing.Point(209, 62);
+            this.cbxMassifaInclur.Location = new System.Drawing.Point(285, 158);
             this.cbxMassifaInclur.Name = "cbxMassifaInclur";
-            this.cbxMassifaInclur.Size = new System.Drawing.Size(179, 21);
+            this.cbxMassifaInclur.Size = new System.Drawing.Size(179, 32);
             this.cbxMassifaInclur.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 131);
+            this.label5.Location = new System.Drawing.Point(26, 313);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 13);
+            this.label5.Size = new System.Drawing.Size(245, 24);
             this.label5.TabIndex = 3;
             this.label5.Text = "Liste des massifs à Exclure :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 95);
+            this.label4.Location = new System.Drawing.Point(24, 241);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 13);
+            this.label4.Size = new System.Drawing.Size(255, 24);
             this.label4.TabIndex = 2;
             this.label4.Text = "Liste des secteurs à Exclure :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 65);
+            this.label3.Location = new System.Drawing.Point(24, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 13);
+            this.label3.Size = new System.Drawing.Size(237, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "Liste des massifs à Inclure :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 35);
+            this.label2.Location = new System.Drawing.Point(24, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 13);
+            this.label2.Size = new System.Drawing.Size(247, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Liste des secteurs à Inclure :";
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(265, 284);
+            this.btnOK.Location = new System.Drawing.Point(296, 621);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(102, 29);
+            this.btnOK.Size = new System.Drawing.Size(156, 29);
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "Ok";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(473, 284);
+            this.btnAnnuler.Location = new System.Drawing.Point(498, 621);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(102, 29);
+            this.btnAnnuler.Size = new System.Drawing.Size(139, 29);
             this.btnAnnuler.TabIndex = 4;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;

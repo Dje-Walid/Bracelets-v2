@@ -21,5 +21,11 @@ namespace Bracelet
         {
 
         }
+
+        private void btAction_Form1_Click(object sender, EventArgs e)
+        {
+            Action_Form1_suite action_Form1_Suite = new Action_Form1_suite();
+            action_Form1_Suite.Show();
+        }
     }
 }

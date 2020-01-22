@@ -26,5 +26,25 @@ namespace Bracelet
         {
 
         }
+
+        private void btnEffacer_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxMassifaInclur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxMassifaExclure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
