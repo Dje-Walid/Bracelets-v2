@@ -35,6 +35,10 @@
             this.txbxListeSectInclur = new System.Windows.Forms.TextBox();
             this.cbxZoneaExclure = new System.Windows.Forms.ComboBox();
             this.cbxZoneaInclur = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbxMassifaExclure = new System.Windows.Forms.ComboBox();
+            this.cbxMassifaInclur = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +51,11 @@
             this.chbxParSecteur = new System.Windows.Forms.CheckBox();
             this.chbxParMassif = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +88,10 @@
             this.groupBox1.Controls.Add(this.txbxListeSectInclur);
             this.groupBox1.Controls.Add(this.cbxZoneaExclure);
             this.groupBox1.Controls.Add(this.cbxZoneaInclur);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cbxMassifaExclure);
+            this.groupBox1.Controls.Add(this.cbxMassifaInclur);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -121,6 +134,35 @@
             this.cbxZoneaInclur.Name = "cbxZoneaInclur";
             this.cbxZoneaInclur.Size = new System.Drawing.Size(179, 32);
             this.cbxZoneaInclur.TabIndex = 5;
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(285, 180);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(179, 29);
+            this.textBox2.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(285, 57);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(179, 29);
+            this.textBox1.TabIndex = 8;
+            // 
+            // cbxMassifaExclure
+            // 
+            this.cbxMassifaExclure.FormattingEnabled = true;
+            this.cbxMassifaExclure.Location = new System.Drawing.Point(285, 239);
+            this.cbxMassifaExclure.Name = "cbxMassifaExclure";
+            this.cbxMassifaExclure.Size = new System.Drawing.Size(179, 32);
+            this.cbxMassifaExclure.TabIndex = 7;
+            // 
+            // cbxMassifaInclur
+            // 
+            this.cbxMassifaInclur.FormattingEnabled = true;
+            this.cbxMassifaInclur.Location = new System.Drawing.Point(285, 117);
+            this.cbxMassifaInclur.Name = "cbxMassifaInclur";
+            this.cbxMassifaInclur.Size = new System.Drawing.Size(179, 32);
+            this.cbxMassifaInclur.TabIndex = 5;
             // 
             // label5
             // 
@@ -185,12 +227,55 @@
             this.groupBox2.Controls.Add(this.chbxPourtoutSecteur);
             this.groupBox2.Controls.Add(this.chbxParSecteur);
             this.groupBox2.Controls.Add(this.chbxParMassif);
+            this.groupBox2.Controls.Add(this.checkBox4);
+            this.groupBox2.Controls.Add(this.checkBox3);
+            this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Location = new System.Drawing.Point(208, 457);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(834, 159);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Niveau De Detail ?";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(0, 0);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(123, 28);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(43, 37);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(114, 28);
+            this.checkBox2.TabIndex = 0;
+            this.checkBox2.Text = "Par Massif";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(43, 71);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(127, 28);
+            this.checkBox3.TabIndex = 1;
+            this.checkBox3.Text = "Par Secteur";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(43, 105);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(191, 28);
+            this.checkBox4.TabIndex = 2;
+            this.checkBox4.Text = "Pour tout le secteur";
+            this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -257,6 +342,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Edition_Form5_F1";
             this.Text = "Edition_Form5_F1";
             this.groupBox1.ResumeLayout(false);
@@ -277,6 +363,10 @@
         private System.Windows.Forms.TextBox txbxListeSectInclur;
         private System.Windows.Forms.ComboBox cbxZoneaExclure;
         private System.Windows.Forms.ComboBox cbxZoneaInclur;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbxMassifaExclure;
+        private System.Windows.Forms.ComboBox cbxMassifaInclur;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -288,6 +378,9 @@
         private System.Windows.Forms.CheckBox chbxPourtoutSecteur;
         private System.Windows.Forms.CheckBox chbxParSecteur;
         private System.Windows.Forms.CheckBox chbxParMassif;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
     }
 }
