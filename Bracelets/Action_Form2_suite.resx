@@ -117,11 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Cette fonction permet de recopier les effecifs FDCY saisis pour la campagne courante 
-(et le plan de chasse courant) dans les zones de saisie des effectifs ONF et DDAF. 
-Cela évite une saisie manuelle fastidieuse.
-Attention ! si vous lancez ce basculement pour un massif ayant déjà été basculé,
- les données des zones accordés de ce massif seront écrasées.</value>
-  </data>
 </root>
