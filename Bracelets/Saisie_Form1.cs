@@ -41,5 +41,10 @@ namespace Bracelet
         {
 
         }
+
+        private void Saisie_Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
