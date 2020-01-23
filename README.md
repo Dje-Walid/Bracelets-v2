@@ -17,3 +17,16 @@ Mehdi / Les différents répertoires des Menus et sous Menus seront nommés comm
        Menu_SousMenu_F2 
        etc etc ... 
        ex: Saisie_Form1_F1
+       
+Mehdi/ Les titres seront en gras sous titré taille 26
+       Le texte simple taille 14
+
+Mehdi/ Les Outils seront renommé selon les disposition suivantes :  button  -> bt...
+                                                                    text    -> txt...
+                                                                    label   -> lb...
+                                                                    groupeBox ->grb...
+                                                                    comboBox  -> cbx
+                                                                    textBox  -> txbx 
+                                                                    listBox  -> lstbx
+                                                                    check ->chbx   
+                                                                   
