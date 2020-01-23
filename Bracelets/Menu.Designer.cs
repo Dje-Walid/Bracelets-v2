@@ -231,12 +231,14 @@
             this.editionsToolStripMenuItem.Name = "editionsToolStripMenuItem";
             this.editionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.editionsToolStripMenuItem.Text = "Editions";
+            this.editionsToolStripMenuItem.Click += new System.EventHandler(this.editionsToolStripMenuItem_Click);
             // 
             // documentsSouscommissionToolStripMenuItem
             // 
             this.documentsSouscommissionToolStripMenuItem.Name = "documentsSouscommissionToolStripMenuItem";
             this.documentsSouscommissionToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.documentsSouscommissionToolStripMenuItem.Text = "Documents sous-commission";
+            this.documentsSouscommissionToolStripMenuItem.Click += new System.EventHandler(this.documentsSouscommissionToolStripMenuItem_Click);
             // 
             // documentsCommissionToolStripMenuItem
             // 
@@ -257,42 +259,49 @@
             this.editionsDDAFToolStripMenuItem.Name = "editionsDDAFToolStripMenuItem";
             this.editionsDDAFToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.editionsDDAFToolStripMenuItem.Text = "Editions DDAF";
+            this.editionsDDAFToolStripMenuItem.Click += new System.EventHandler(this.editionsDDAFToolStripMenuItem_Click);
             // 
             // arrêtésIndividuelsTirÀLapprocheToolStripMenuItem
             // 
             this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem.Name = "arrêtésIndividuelsTirÀLapprocheToolStripMenuItem";
             this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem.Text = "Arrêtés individuels tir à l\'approche";
+            this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem.Click += new System.EventHandler(this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem_Click);
             // 
             // arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem
             // 
             this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem.Name = "arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem";
             this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem.Text = "Arrêtés récapitulatif de tir à l\'approche";
+            this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem.Click += new System.EventHandler(this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem_Click);
             // 
             // arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem
             // 
             this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem.Name = "arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem";
             this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem.Text = "Arrêtés individuels d\'attribution de Bracelets";
+            this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem.Click += new System.EventHandler(this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem_Click);
             // 
             // arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem
             // 
             this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem.Name = "arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem";
             this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem.Text = "Arrêtés individuels d\'attribution de Bracelets V2";
+            this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem.Click += new System.EventHandler(this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem_Click);
             // 
             // arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem
             // 
             this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem.Name = "arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem";
             this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem.Text = "Arrêtés récapitulatif d\'attribution de bracelets";
+            this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem.Click += new System.EventHandler(this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem_Click);
             // 
             // réponseAuxDemandesDePlanDeChasseToolStripMenuItem
             // 
             this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem.Name = "réponseAuxDemandesDePlanDeChasseToolStripMenuItem";
             this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem.Text = "Réponse aux demandes de plan de chasse";
+            this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem.Click += new System.EventHandler(this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem_Click);
             // 
             // editionsFédérationToolStripMenuItem
             // 
@@ -301,12 +310,14 @@
             this.editionsFédérationToolStripMenuItem.Name = "editionsFédérationToolStripMenuItem";
             this.editionsFédérationToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.editionsFédérationToolStripMenuItem.Text = "Editions Fédération";
+            this.editionsFédérationToolStripMenuItem.Click += new System.EventHandler(this.editionsFédérationToolStripMenuItem_Click);
             // 
             // listingDétiquettesToolStripMenuItem
             // 
             this.listingDétiquettesToolStripMenuItem.Name = "listingDétiquettesToolStripMenuItem";
-            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listingDétiquettesToolStripMenuItem.Text = "Listing d\'étiquettes";
+            this.listingDétiquettesToolStripMenuItem.Click += new System.EventHandler(this.listingDétiquettesToolStripMenuItem_Click);
             // 
             // statistiquesToolStripMenuItem
             // 
@@ -317,24 +328,28 @@
             this.statistiquesToolStripMenuItem.Name = "statistiquesToolStripMenuItem";
             this.statistiquesToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.statistiquesToolStripMenuItem.Text = "Statistiques";
+            this.statistiquesToolStripMenuItem.Click += new System.EventHandler(this.statistiquesToolStripMenuItem_Click);
             // 
             // statistiquesParZoneToolStripMenuItem
             // 
             this.statistiquesParZoneToolStripMenuItem.Name = "statistiquesParZoneToolStripMenuItem";
             this.statistiquesParZoneToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.statistiquesParZoneToolStripMenuItem.Text = "Statistiques par zone";
+            this.statistiquesParZoneToolStripMenuItem.Click += new System.EventHandler(this.statistiquesParZoneToolStripMenuItem_Click);
             // 
             // statistiquesParCommunesToolStripMenuItem
             // 
             this.statistiquesParCommunesToolStripMenuItem.Name = "statistiquesParCommunesToolStripMenuItem";
             this.statistiquesParCommunesToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.statistiquesParCommunesToolStripMenuItem.Text = "Statistiques par communes";
+            this.statistiquesParCommunesToolStripMenuItem.Click += new System.EventHandler(this.statistiquesParCommunesToolStripMenuItem_Click);
             // 
             // statistiquesRéalisésListésParCommunesToolStripMenuItem
             // 
             this.statistiquesRéalisésListésParCommunesToolStripMenuItem.Name = "statistiquesRéalisésListésParCommunesToolStripMenuItem";
             this.statistiquesRéalisésListésParCommunesToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.statistiquesRéalisésListésParCommunesToolStripMenuItem.Text = "Statistiques réalisés listés par communes";
+            this.statistiquesRéalisésListésParCommunesToolStripMenuItem.Click += new System.EventHandler(this.statistiquesRéalisésListésParCommunesToolStripMenuItem_Click);
             // 
             // listesToolStripMenuItem
             // 
@@ -359,12 +374,14 @@
             this.recapitulatifDesAttributionsParZoneToolStripMenuItem.Name = "recapitulatifDesAttributionsParZoneToolStripMenuItem";
             this.recapitulatifDesAttributionsParZoneToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.recapitulatifDesAttributionsParZoneToolStripMenuItem.Text = "Recapitulatif des attributions par zone";
+            this.recapitulatifDesAttributionsParZoneToolStripMenuItem.Click += new System.EventHandler(this.recapitulatifDesAttributionsParZoneToolStripMenuItem_Click);
             // 
             // lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem
             // 
             this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem.Name = "lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem";
             this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem.Text = "Lettre de relance Réalisés non renseignés";
+            this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem.Click += new System.EventHandler(this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem_Click);
             // 
             // listeDesAttributionsAccordéesSousRéserveToolStripMenuItem
             // 
@@ -378,12 +395,14 @@
             this.codesZonesToolStripMenuItem.Name = "codesZonesToolStripMenuItem";
             this.codesZonesToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesZonesToolStripMenuItem.Text = "Codes zones";
+            this.codesZonesToolStripMenuItem.Click += new System.EventHandler(this.codesZonesToolStripMenuItem_Click);
             // 
             // codesTypesDePlanDeChasseToolStripMenuItem
             // 
             this.codesTypesDePlanDeChasseToolStripMenuItem.Name = "codesTypesDePlanDeChasseToolStripMenuItem";
             this.codesTypesDePlanDeChasseToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesTypesDePlanDeChasseToolStripMenuItem.Text = "Codes types de plan de chasse";
+            this.codesTypesDePlanDeChasseToolStripMenuItem.Click += new System.EventHandler(this.codesTypesDePlanDeChasseToolStripMenuItem_Click);
             // 
             // codesEspècesToolStripMenuItem
             // 
@@ -397,30 +416,35 @@
             this.codesSériesDeBraceletsToolStripMenuItem.Name = "codesSériesDeBraceletsToolStripMenuItem";
             this.codesSériesDeBraceletsToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesSériesDeBraceletsToolStripMenuItem.Text = "Codes séries de bracelets";
+            this.codesSériesDeBraceletsToolStripMenuItem.Click += new System.EventHandler(this.codesSériesDeBraceletsToolStripMenuItem_Click);
             // 
             // codesGibiersToolStripMenuItem
             // 
             this.codesGibiersToolStripMenuItem.Name = "codesGibiersToolStripMenuItem";
             this.codesGibiersToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesGibiersToolStripMenuItem.Text = "Codes gibiers";
+            this.codesGibiersToolStripMenuItem.Click += new System.EventHandler(this.codesGibiersToolStripMenuItem_Click);
             // 
             // codesRefusToolStripMenuItem
             // 
             this.codesRefusToolStripMenuItem.Name = "codesRefusToolStripMenuItem";
             this.codesRefusToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesRefusToolStripMenuItem.Text = "Codes refus";
+            this.codesRefusToolStripMenuItem.Click += new System.EventHandler(this.codesRefusToolStripMenuItem_Click);
             // 
             // codesCampagnesToolStripMenuItem
             // 
             this.codesCampagnesToolStripMenuItem.Name = "codesCampagnesToolStripMenuItem";
             this.codesCampagnesToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesCampagnesToolStripMenuItem.Text = "Codes campagnes";
+            this.codesCampagnesToolStripMenuItem.Click += new System.EventHandler(this.codesCampagnesToolStripMenuItem_Click);
             // 
             // codesCommunesToolStripMenuItem
             // 
             this.codesCommunesToolStripMenuItem.Name = "codesCommunesToolStripMenuItem";
             this.codesCommunesToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesCommunesToolStripMenuItem.Text = "Codes communes";
+            this.codesCommunesToolStripMenuItem.Click += new System.EventHandler(this.codesCommunesToolStripMenuItem_Click);
             // 
             // importExportToolStripMenuItem
             // 
@@ -431,38 +455,43 @@
             this.importationDeLaFédérationToolStripMenuItem,
             this.archivageDuneCampagneToolStripMenuItem});
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             // 
             // exportationVersLaFédérationToolStripMenuItem
             // 
             this.exportationVersLaFédérationToolStripMenuItem.Name = "exportationVersLaFédérationToolStripMenuItem";
-            this.exportationVersLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.exportationVersLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.exportationVersLaFédérationToolStripMenuItem.Text = "Exportation vers la fédération";
+            this.exportationVersLaFédérationToolStripMenuItem.Click += new System.EventHandler(this.exportationVersLaFédérationToolStripMenuItem_Click);
             // 
             // importationDeLaDDAFToolStripMenuItem
             // 
             this.importationDeLaDDAFToolStripMenuItem.Name = "importationDeLaDDAFToolStripMenuItem";
-            this.importationDeLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.importationDeLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.importationDeLaDDAFToolStripMenuItem.Text = "Importation de la DDAF";
+            this.importationDeLaDDAFToolStripMenuItem.Click += new System.EventHandler(this.importationDeLaDDAFToolStripMenuItem_Click);
             // 
             // exportationVersLaDDAFToolStripMenuItem
             // 
             this.exportationVersLaDDAFToolStripMenuItem.Name = "exportationVersLaDDAFToolStripMenuItem";
-            this.exportationVersLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.exportationVersLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.exportationVersLaDDAFToolStripMenuItem.Text = "Exportation vers la DDAF";
+            this.exportationVersLaDDAFToolStripMenuItem.Click += new System.EventHandler(this.exportationVersLaDDAFToolStripMenuItem_Click);
             // 
             // importationDeLaFédérationToolStripMenuItem
             // 
             this.importationDeLaFédérationToolStripMenuItem.Name = "importationDeLaFédérationToolStripMenuItem";
-            this.importationDeLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.importationDeLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.importationDeLaFédérationToolStripMenuItem.Text = "Importation de la Fédération";
+            this.importationDeLaFédérationToolStripMenuItem.Click += new System.EventHandler(this.importationDeLaFédérationToolStripMenuItem_Click);
             // 
             // archivageDuneCampagneToolStripMenuItem
             // 
             this.archivageDuneCampagneToolStripMenuItem.Name = "archivageDuneCampagneToolStripMenuItem";
-            this.archivageDuneCampagneToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.archivageDuneCampagneToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.archivageDuneCampagneToolStripMenuItem.Text = "Archivage d\'une campagne";
+            this.archivageDuneCampagneToolStripMenuItem.Click += new System.EventHandler(this.archivageDuneCampagneToolStripMenuItem_Click);
             // 
             // sécuritéToolStripMenuItem
             // 
@@ -477,6 +506,7 @@
             this.changerDeMotDePasseToolStripMenuItem.Name = "changerDeMotDePasseToolStripMenuItem";
             this.changerDeMotDePasseToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.changerDeMotDePasseToolStripMenuItem.Text = "Changer de mot de passe";
+            this.changerDeMotDePasseToolStripMenuItem.Click += new System.EventHandler(this.changerDeMotDePasseToolStripMenuItem_Click);
             // 
             // outilsToolStripMenuItem
             // 
@@ -490,13 +520,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -519,12 +549,14 @@
             this.manuelUtilisateurWordToolStripMenuItem.Name = "manuelUtilisateurWordToolStripMenuItem";
             this.manuelUtilisateurWordToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.manuelUtilisateurWordToolStripMenuItem.Text = "Manuel utilisateur (Word)";
+            this.manuelUtilisateurWordToolStripMenuItem.Click += new System.EventHandler(this.manuelUtilisateurWordToolStripMenuItem_Click);
             // 
             // aProposDeBraceletToolStripMenuItem
             // 
             this.aProposDeBraceletToolStripMenuItem.Name = "aProposDeBraceletToolStripMenuItem";
             this.aProposDeBraceletToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.aProposDeBraceletToolStripMenuItem.Text = "A propos de Bracelet…";
+            this.aProposDeBraceletToolStripMenuItem.Click += new System.EventHandler(this.aProposDeBraceletToolStripMenuItem_Click);
             // 
             // quitterBraceletToolStripMenuItem1
             // 
@@ -537,7 +569,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 814);
+            this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";

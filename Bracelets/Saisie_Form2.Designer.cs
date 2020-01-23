@@ -32,9 +32,10 @@
             // 
             // Saisie_Form2
             // 
+            this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 814);
+            this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Name = "Saisie_Form2";
             this.Text = "Saisie_Form2";
             this.ResumeLayout(false);

@@ -122,12 +122,13 @@
             this.btnAnnule.TabIndex = 7;
             this.btnAnnule.Text = "Annuler";
             this.btnAnnule.UseVisualStyleBackColor = true;
+            this.btnAnnule.Click += new System.EventHandler(this.btnAnnule_Click);
             // 
             // Action_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 814);
+            this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.btnAnnule);
             this.Controls.Add(this.btnLanceBascul);
             this.Controls.Add(this.cbxEspecAbascul);

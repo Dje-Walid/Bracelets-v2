@@ -39,5 +39,20 @@ namespace Bracelet
         {
             
         }
+
+        private void bt_Annuler_Click(object sender, EventArgs e)
+        {
+            DialogResult resulta;
+            resulta = MessageBox.Show("Êtes-vous sûr de vouloir annuler ", "AVERTISSEMENT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (resulta == System.Windows.Forms.DialogResult.OK)
+            {
+                this.Close();
+
+            }
+            else
+            {
+
+            }
+        }
     }
 }

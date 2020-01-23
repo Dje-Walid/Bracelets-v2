@@ -84,5 +84,196 @@ namespace Bracelet
         {
 
         }
+
+        private void documentsSouscommissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form1 Edition_Form1a = new Edition_Form1();
+            Edition_Form1a.Show();
+        }
+
+        private void editionsDDAFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form3 Edition_Form3a = new Edition_Form3();
+            Edition_Form3a.Show();
+        }
+
+        private void arrêtésIndividuelsTirÀLapprocheToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form3_F1 Edition_Form3_F1a = new Edition_Form3_F1();
+            Edition_Form3_F1a.Show();
+        }
+
+        private void arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form3_F2 Edition_Form3_F2a = new Edition_Form3_F2();
+            Edition_Form3_F2a.Show();
+        }
+
+        private void arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form3_F3 Edition_Form3_F3a = new Edition_Form3_F3();
+            Edition_Form3_F3a.Show();
+        }
+
+        private void arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form3_F4 Edition_Form3_F4a = new Edition_Form3_F4();
+            Edition_Form3_F4a.Show();
+        }
+
+        private void arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form3_F5 Edition_Form3_F5a = new Edition_Form3_F5();
+            Edition_Form3_F5a.Show();
+        }
+
+        private void réponseAuxDemandesDePlanDeChasseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form3_F6 Edition_Form3_F6a = new Edition_Form3_F6();
+            Edition_Form3_F6a.Show();
+        }
+
+        private void editionsFédérationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form4 Edition_Form4a = new Edition_Form4();
+            Edition_Form4a.Show();
+        }
+
+        private void listingDétiquettesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form4_F1 Edition_Form4_F1a = new Edition_Form4_F1();
+            Edition_Form4_F1a.Show();
+        }
+
+        private void statistiquesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form5 Edition_Form5a = new Edition_Form5();
+            Edition_Form5a.Show();
+        }
+
+        private void statistiquesParZoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form5_F1 Edition_Form5_F1a = new Edition_Form5_F1();
+            Edition_Form5_F1a.Show();
+        }
+
+        private void statistiquesParCommunesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form5_F2 Edition_Form5_F2a = new Edition_Form5_F2();
+            Edition_Form5_F2a.Show();
+        }
+
+        private void statistiquesRéalisésListésParCommunesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edition_Form5_F3 Edition_Form5_F3a = new Edition_Form5_F3();
+            Edition_Form5_F3a.Show();
+        }
+
+        private void recapitulatifDesAttributionsParZoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listes_Form1 listes_Form1a = new Listes_Form1();
+            listes_Form1a.Show();
+        }
+
+        private void lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listes_Form2 listes_Form2a = new Listes_Form2();
+            listes_Form2a.Show();
+        }
+
+        private void codesZonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listes_Form4 listes_Form4a = new Listes_Form4();
+            listes_Form4a.Show();
+        }
+
+        private void codesTypesDePlanDeChasseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listes_Form5 listes_Form5a = new Listes_Form5();
+            listes_Form5a.Show();
+        }
+
+        private void codesSériesDeBraceletsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listes_Form7 listes_Form7a = new Listes_Form7();
+            listes_Form7a.Show();
+        }
+
+        private void codesGibiersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listes_Form8 listes_Form8a = new Listes_Form8();
+            listes_Form8a.Show();
+        }
+
+        private void codesRefusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listes_Form9 listes_Form9a = new Listes_Form9();
+            listes_Form9a.Show();
+        }
+
+        private void codesCampagnesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listes_Form10 listes_Form10a = new Listes_Form10();
+            listes_Form10a.Show();
+        }
+
+        private void codesCommunesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listes_Form11 listes_Form11a = new Listes_Form11();
+            listes_Form11a.Show();
+        }
+
+        private void editionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exportationVersLaFédérationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
+            importExport_Form1a.Show();
+        }
+
+        private void importationDeLaDDAFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImportExport_Form2 importExport_Form2a = new ImportExport_Form2();
+            importExport_Form2a.Show();
+        }
+
+        private void exportationVersLaDDAFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImportExport_Form3 importExport_Form3a = new ImportExport_Form3();
+            importExport_Form3a.Show();
+        }
+
+        private void importationDeLaFédérationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImportExport_Form4 importExport_Form4a = new ImportExport_Form4();
+            importExport_Form4a.Show();
+        }
+
+        private void archivageDuneCampagneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImportExport_Form5 importExport_Form5a = new ImportExport_Form5();
+            importExport_Form5a.Show();
+        }
+
+        private void changerDeMotDePasseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Securite_Form1 Securite_Form1a = new Securite_Form1();
+            Securite_Form1a.Show();
+        }
+
+        private void manuelUtilisateurWordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Aide_Form1 Aide_Form1a = new Aide_Form1();
+            Aide_Form1a.Show();
+        }
+
+        private void aProposDeBraceletToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Aide_Form2 Aide_Form2a = new Aide_Form2();
+            Aide_Form2a.Show();
+        }
     }
 }
