@@ -27,5 +27,10 @@ namespace Bracelet
             Action_Form2_suite action_Form2_Suite = new Action_Form2_suite();
             action_Form2_Suite.Show();
         }
+
+        private void Action_Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

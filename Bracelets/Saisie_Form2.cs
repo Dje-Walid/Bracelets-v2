@@ -21,5 +21,20 @@ namespace Bracelet
         {
 
         }
+
+        private void Saisie_Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbNumPlan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

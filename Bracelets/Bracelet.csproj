@@ -517,6 +517,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="deer-1529440_1280.ico" />
+    <None Include="Resources\search 24px.png" />
+    <None Include="Resources\trash 24px.png" />
+    <None Include="Resources\right-arrow 24 px.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

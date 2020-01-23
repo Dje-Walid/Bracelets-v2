@@ -309,6 +309,8 @@ namespace Bracelet
         private void saisirConsulterLesPlanDeChasseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Saisie_Form2 Saisie_Form2 = new Saisie_Form2();
+            Saisie_Form2.Show();
         }
 
         private void basculerFDCYEnONFEDDAFToolStripMenuItem_Click(object sender, EventArgs e)
