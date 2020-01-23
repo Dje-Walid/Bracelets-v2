@@ -28,19 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxCommune = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(421, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(438, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Statistiques par communes";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbxCommune);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 139);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1240, 243);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Selection de la Commune";
+            // 
+            // cbxCommune
+            // 
+            this.cbxCommune.FormattingEnabled = true;
+            this.cbxCommune.Location = new System.Drawing.Point(352, 84);
+            this.cbxCommune.Name = "cbxCommune";
+            this.cbxCommune.Size = new System.Drawing.Size(160, 32);
+            this.cbxCommune.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(176, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Communes  :";
             // 
             // Edition_Form5_F2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 814);
+            this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label1);
             this.Name = "Edition_Form5_F2";
             this.Text = "Edition_Form5_F2";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cbxCommune;
+        private System.Windows.Forms.Label label2;
     }
 }

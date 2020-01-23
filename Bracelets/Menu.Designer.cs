@@ -324,7 +324,7 @@
             // listingDétiquettesToolStripMenuItem
             // 
             this.listingDétiquettesToolStripMenuItem.Name = "listingDétiquettesToolStripMenuItem";
-            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listingDétiquettesToolStripMenuItem.Text = "Listing d\'étiquettes";
             this.listingDétiquettesToolStripMenuItem.Click += new System.EventHandler(this.listingDétiquettesToolStripMenuItem_Click);
             // 
@@ -536,7 +536,7 @@
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem

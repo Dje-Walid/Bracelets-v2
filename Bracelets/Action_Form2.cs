@@ -16,5 +16,16 @@ namespace Bracelet
         {
             InitializeComponent();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Action_Form2_suite action_Form2_Suite = new Action_Form2_suite();
+            action_Form2_Suite.Show();
+        }
     }
 }

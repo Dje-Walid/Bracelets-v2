@@ -175,3 +175,4 @@ C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Securite_Form
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.csproj.GenerateResource.cache
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.exe
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.pdb
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form2_suite.resources

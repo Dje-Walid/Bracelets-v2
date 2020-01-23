@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Bracelet
 {
-    public partial class Listes_Form4 : Form
+    public partial class Action_Form2_suite : Form
     {
-        public Listes_Form4()
+        public Action_Form2_suite()
         {
             InitializeComponent();
-        }
-
-        private void textBox11_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
