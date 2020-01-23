@@ -123,6 +123,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(516, 589);
             this.button1.Name = "button1";
@@ -135,6 +136,7 @@
             // 
             this.button3.BackgroundImage = global::Bracelet.Properties.Resources.search;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(307, 591);
             this.button3.Name = "button3";
@@ -146,6 +148,7 @@
             // 
             this.button2.BackgroundImage = global::Bracelet.Properties.Resources.logout__1_;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(767, 589);
             this.button2.Name = "button2";
@@ -487,7 +490,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 814);
+            this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.TypePlan20);
             this.Controls.Add(this.TypePlan10);
             this.Controls.Add(this.CodeEspece10);

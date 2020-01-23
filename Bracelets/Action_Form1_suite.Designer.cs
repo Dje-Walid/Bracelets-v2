@@ -56,9 +56,11 @@
             // 
             // btnEffacer
             // 
+            this.btnEffacer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEffacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEffacer.Location = new System.Drawing.Point(681, 621);
             this.btnEffacer.Name = "btnEffacer";
-            this.btnEffacer.Size = new System.Drawing.Size(150, 29);
+            this.btnEffacer.Size = new System.Drawing.Size(152, 37);
             this.btnEffacer.TabIndex = 1;
             this.btnEffacer.Text = "Effacer";
             this.btnEffacer.UseVisualStyleBackColor = true;
@@ -150,18 +152,22 @@
             // 
             // btnOK
             // 
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Location = new System.Drawing.Point(296, 621);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(156, 29);
+            this.btnOK.Size = new System.Drawing.Size(156, 37);
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "Ok";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnuler.Location = new System.Drawing.Point(498, 621);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(139, 29);
+            this.btnAnnuler.Size = new System.Drawing.Size(139, 37);
             this.btnAnnuler.TabIndex = 4;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;

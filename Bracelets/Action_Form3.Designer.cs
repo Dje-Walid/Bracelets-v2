@@ -41,6 +41,7 @@
             // 
             // bt_Annule
             // 
+            this.bt_Annule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_Annule.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Annule.Location = new System.Drawing.Point(516, 558);
             this.bt_Annule.Name = "bt_Annule";
@@ -52,6 +53,7 @@
             // 
             // bt_lancer
             // 
+            this.bt_lancer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_lancer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_lancer.Location = new System.Drawing.Point(234, 558);
             this.bt_lancer.Name = "bt_lancer";
@@ -73,6 +75,7 @@
             // 
             // bt_Action_Form3
             // 
+            this.bt_Action_Form3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_Action_Form3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Action_Form3.Location = new System.Drawing.Point(268, 482);
             this.bt_Action_Form3.Name = "bt_Action_Form3";

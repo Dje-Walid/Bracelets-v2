@@ -125,6 +125,7 @@
             // 
             // btModif
             // 
+            this.btModif.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btModif.Location = new System.Drawing.Point(423, 651);
             this.btModif.Name = "btModif";
@@ -135,6 +136,7 @@
             // 
             // btSortir
             // 
+            this.btSortir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSortir.Image = global::Bracelet.Properties.Resources.logout__1_;
             this.btSortir.Location = new System.Drawing.Point(628, 651);
             this.btSortir.Name = "btSortir";
@@ -146,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 814);
+            this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.btSortir);
             this.Controls.Add(this.btModif);
             this.Controls.Add(this.lbNotes);

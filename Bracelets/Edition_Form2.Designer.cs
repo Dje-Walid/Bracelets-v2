@@ -46,10 +46,11 @@
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnuler.Location = new System.Drawing.Point(700, 536);
+            this.btnAnnuler.Location = new System.Drawing.Point(692, 536);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(178, 29);
+            this.btnAnnuler.Size = new System.Drawing.Size(186, 38);
             this.btnAnnuler.TabIndex = 9;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
@@ -57,20 +58,22 @@
             // 
             // btnOK
             // 
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Location = new System.Drawing.Point(215, 536);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(178, 29);
+            this.btnOK.Size = new System.Drawing.Size(186, 38);
             this.btnOK.TabIndex = 8;
             this.btnOK.Text = "Ok";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // btnEffacer
             // 
+            this.btnEffacer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEffacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEffacer.Location = new System.Drawing.Point(458, 536);
             this.btnEffacer.Name = "btnEffacer";
-            this.btnEffacer.Size = new System.Drawing.Size(178, 29);
+            this.btnEffacer.Size = new System.Drawing.Size(178, 38);
             this.btnEffacer.TabIndex = 6;
             this.btnEffacer.Text = "Effacer";
             this.btnEffacer.UseVisualStyleBackColor = true;

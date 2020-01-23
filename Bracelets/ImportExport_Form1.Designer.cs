@@ -30,15 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Importer = new System.Windows.Forms.Button();
             this.cbxSelecFich = new System.Windows.Forms.ComboBox();
-            this.cbxSelecFich2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Exporter = new System.Windows.Forms.Button();
             this.cbxSelecType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Importer = new System.Windows.Forms.Button();
-            this.Exporter = new System.Windows.Forms.Button();
+            this.cbxSelecFich2 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Import";
             // 
+            // Importer
+            // 
+            this.Importer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Importer.Location = new System.Drawing.Point(172, 320);
+            this.Importer.Name = "Importer";
+            this.Importer.Size = new System.Drawing.Size(165, 40);
+            this.Importer.TabIndex = 2;
+            this.Importer.Text = "Importer";
+            this.Importer.UseVisualStyleBackColor = true;
+            // 
+            // cbxSelecFich
+            // 
+            this.cbxSelecFich.FormattingEnabled = true;
+            this.cbxSelecFich.Location = new System.Drawing.Point(263, 153);
+            this.cbxSelecFich.Name = "cbxSelecFich";
+            this.cbxSelecFich.Size = new System.Drawing.Size(195, 32);
+            this.cbxSelecFich.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(178, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Selection du Fichier";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Exporter);
@@ -81,39 +108,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Export";
             // 
-            // label2
+            // Exporter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Selection du Fichier";
-            // 
-            // cbxSelecFich
-            // 
-            this.cbxSelecFich.FormattingEnabled = true;
-            this.cbxSelecFich.Location = new System.Drawing.Point(263, 153);
-            this.cbxSelecFich.Name = "cbxSelecFich";
-            this.cbxSelecFich.Size = new System.Drawing.Size(195, 32);
-            this.cbxSelecFich.TabIndex = 1;
-            // 
-            // cbxSelecFich2
-            // 
-            this.cbxSelecFich2.FormattingEnabled = true;
-            this.cbxSelecFich2.Location = new System.Drawing.Point(335, 148);
-            this.cbxSelecFich2.Name = "cbxSelecFich2";
-            this.cbxSelecFich2.Size = new System.Drawing.Size(195, 32);
-            this.cbxSelecFich2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 151);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Selection du Fichier";
+            this.Exporter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Exporter.Location = new System.Drawing.Point(242, 320);
+            this.Exporter.Name = "Exporter";
+            this.Exporter.Size = new System.Drawing.Size(165, 40);
+            this.Exporter.TabIndex = 6;
+            this.Exporter.Text = "Exporter";
+            this.Exporter.UseVisualStyleBackColor = true;
             // 
             // cbxSelecType
             // 
@@ -132,29 +135,28 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Selection du Type";
             // 
-            // Importer
+            // cbxSelecFich2
             // 
-            this.Importer.Location = new System.Drawing.Point(172, 320);
-            this.Importer.Name = "Importer";
-            this.Importer.Size = new System.Drawing.Size(165, 40);
-            this.Importer.TabIndex = 2;
-            this.Importer.Text = "Importer";
-            this.Importer.UseVisualStyleBackColor = true;
+            this.cbxSelecFich2.FormattingEnabled = true;
+            this.cbxSelecFich2.Location = new System.Drawing.Point(335, 148);
+            this.cbxSelecFich2.Name = "cbxSelecFich2";
+            this.cbxSelecFich2.Size = new System.Drawing.Size(195, 32);
+            this.cbxSelecFich2.TabIndex = 3;
             // 
-            // Exporter
+            // label3
             // 
-            this.Exporter.Location = new System.Drawing.Point(242, 320);
-            this.Exporter.Name = "Exporter";
-            this.Exporter.Size = new System.Drawing.Size(165, 40);
-            this.Exporter.TabIndex = 6;
-            this.Exporter.Text = "Exporter";
-            this.Exporter.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(96, 151);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(178, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Selection du Fichier";
             // 
             // ImportExport_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 814);
+            this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
