@@ -63,6 +63,36 @@ namespace Bracelet.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arow_droite_24px {
+            get {
+                object obj = ResourceManager.GetObject("arow droite 24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_droite__24px {
+            get {
+                object obj = ResourceManager.GetObject("arrow droite+ 24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_gauche_24px {
+            get {
+                object obj = ResourceManager.GetObject("arrow gauche 24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fantasy_4386055_1280 {
             get {
                 object obj = ResourceManager.GetObject("fantasy-4386055_1280", resourceCulture);
