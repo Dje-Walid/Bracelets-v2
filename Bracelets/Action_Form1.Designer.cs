@@ -140,8 +140,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lb);
             this.Controls.Add(this.lbBasculPropAccord);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Action_Form1";
-            this.Text = "Action_Form1";
+            this.Text = "Basculer proposés / accordés";
             this.ResumeLayout(false);
             this.PerformLayout();
 

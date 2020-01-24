@@ -159,8 +159,9 @@
             this.Controls.Add(this.lbCampCour);
             this.Controls.Add(this.lbPlanChassCour);
             this.Controls.Add(this.cbxCampCour);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Saisie_Form1";
-            this.Text = "Saisie_Form1";
+            this.Text = "Environnement Courant";
             this.Load += new System.EventHandler(this.Saisie_Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

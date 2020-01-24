@@ -326,11 +326,15 @@ namespace Bracelet
         private void changerLeBénéficiaireDunBraceletToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Action_Form4_F1 action_Form4_F1 = new Action_Form4_F1();
+            action_Form4_F1.Show();
         }
 
         private void supprimerUnBraceletToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Action_Form4_F2 action_Form4_F2 = new Action_Form4_F2();
+            action_Form4_F2.Show();
         }
 
         private void paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem_Click(object sender, EventArgs e)
