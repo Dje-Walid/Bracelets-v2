@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportExport_Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Importer = new System.Windows.Forms.Button();
@@ -39,6 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbxSelecFich2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +58,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.Importer);
             this.groupBox1.Controls.Add(this.cbxSelecFich);
             this.groupBox1.Controls.Add(this.label2);
@@ -79,7 +84,7 @@
             // cbxSelecFich
             // 
             this.cbxSelecFich.FormattingEnabled = true;
-            this.cbxSelecFich.Location = new System.Drawing.Point(263, 153);
+            this.cbxSelecFich.Location = new System.Drawing.Point(269, 200);
             this.cbxSelecFich.Name = "cbxSelecFich";
             this.cbxSelecFich.Size = new System.Drawing.Size(195, 32);
             this.cbxSelecFich.TabIndex = 1;
@@ -87,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 156);
+            this.label2.Location = new System.Drawing.Point(41, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 24);
             this.label2.TabIndex = 0;
@@ -152,6 +157,23 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Selection du Fichier";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(269, 153);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(195, 32);
+            this.comboBox1.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(41, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(163, 24);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Selection du Type";
+            // 
             // ImportExport_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,8 +182,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ImportExport_Form1";
-            this.Text = "ImportExport_Form1";
+            this.Text = "Import / Export";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -184,5 +207,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxSelecFich2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

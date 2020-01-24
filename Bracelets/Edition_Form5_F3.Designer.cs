@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edition_Form5_F3));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -61,15 +62,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Campagne Concernés par les statistique";
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(427, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "( par defaut edition de l\'année précedant la campagne courante )";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(114, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(213, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Campagne Concernée :";
             // 
             // comboBox1
             // 
@@ -79,14 +79,15 @@
             this.comboBox1.Size = new System.Drawing.Size(194, 32);
             this.comboBox1.TabIndex = 1;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(114, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Campagne Concernée :";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(91, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(427, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "( par defaut edition de l\'année précedant la campagne courante )";
             // 
             // button1
             // 
@@ -117,8 +118,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edition_Form5_F3";
-            this.Text = "Edition_Form5_F3";
+            this.Text = "Statistique de Gibiers réalisés par commune";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edition_Form2));
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnEffacer = new System.Windows.Forms.Button();
@@ -187,8 +188,9 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnEffacer);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edition_Form2";
-            this.Text = "Edition_Form2";
+            this.Text = "Document Commission";
             this.Load += new System.EventHandler(this.Edition_Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

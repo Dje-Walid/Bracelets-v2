@@ -138,9 +138,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "Action_Form2";
-            this.Text = "Action_Form2";
+            this.Text = "Basculer FDCY en ONF e DDAF";
             this.Load += new System.EventHandler(this.Action_Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
