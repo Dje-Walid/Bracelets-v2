@@ -179,15 +179,15 @@
             // changerLeBénéficiaireDunBraceletToolStripMenuItem
             // 
             this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Name = "changerLeBénéficiaireDunBraceletToolStripMenuItem";
-            this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
-            this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Text = "Changer le bénéficiaire d\'un bracelet";
+            this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
+            this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Text = "Paramètrage des bracelets pour la campagne";
             this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Click += new System.EventHandler(this.changerLeBénéficiaireDunBraceletToolStripMenuItem_Click);
             // 
             // supprimerUnBraceletToolStripMenuItem
             // 
             this.supprimerUnBraceletToolStripMenuItem.Name = "supprimerUnBraceletToolStripMenuItem";
-            this.supprimerUnBraceletToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
-            this.supprimerUnBraceletToolStripMenuItem.Text = "Supprimer un bracelet";
+            this.supprimerUnBraceletToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
+            this.supprimerUnBraceletToolStripMenuItem.Text = "Param. Minima à tuer par espèce et par zones";
             this.supprimerUnBraceletToolStripMenuItem.Click += new System.EventHandler(this.supprimerUnBraceletToolStripMenuItem_Click);
             // 
             // paramétrageDesActionsToolStripMenuItem
@@ -529,7 +529,7 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             this.exportationExcelToolStripMenuItem.Click += new System.EventHandler(this.exportationExcelToolStripMenuItem_Click_1);
             // 

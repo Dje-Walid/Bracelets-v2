@@ -115,6 +115,18 @@
     <Compile Include="Action_Form4.Designer.cs">
       <DependentUpon>Action_Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Action_Form4_F1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action_Form4_F1.Designer.cs">
+      <DependentUpon>Action_Form4_F1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action_Form4_F2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action_Form4_F2.Designer.cs">
+      <DependentUpon>Action_Form4_F2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Action_Form5.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +380,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Action_Form4.resx">
       <DependentUpon>Action_Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action_Form4_F1.resx">
+      <DependentUpon>Action_Form4_F1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action_Form4_F2.resx">
+      <DependentUpon>Action_Form4_F2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Action_Form5.resx">
       <DependentUpon>Action_Form5.cs</DependentUpon>
