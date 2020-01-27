@@ -76,26 +76,72 @@
             this.lbPortable = new System.Windows.Forms.Label();
             this.lbCivilite = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btSuivant = new System.Windows.Forms.Button();
+            this.btEffacer = new System.Windows.Forms.Button();
             this.lbCampagane = new System.Windows.Forms.Label();
             this.dtpCampagane = new System.Windows.Forms.DateTimePicker();
             this.btNewCampagne = new System.Windows.Forms.Button();
             this.btCamapagneLast = new System.Windows.Forms.Button();
             this.btCampagneSuiv = new System.Windows.Forms.Button();
             this.btCampagnePre = new System.Windows.Forms.Button();
-            this.btSuivant = new System.Windows.Forms.Button();
-            this.btEffacer = new System.Windows.Forms.Button();
             this.btQuitter = new System.Windows.Forms.Button();
             this.btApercu = new System.Windows.Forms.Button();
             this.grbSurfChasse = new System.Windows.Forms.GroupBox();
-            this.lbBoisPrive = new System.Windows.Forms.Label();
-            this.lbBoisSoumis = new System.Windows.Forms.Label();
+            this.lbhaTotal = new System.Windows.Forms.Label();
+            this.lbhaPlaine = new System.Windows.Forms.Label();
+            this.lbhaTTBois = new System.Windows.Forms.Label();
+            this.lbhaBoisSoumis = new System.Windows.Forms.Label();
+            this.lbhaBoisPrive = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbTotalSurfChasse = new System.Windows.Forms.Label();
+            this.txbxPlaine = new System.Windows.Forms.TextBox();
+            this.lbPlaine = new System.Windows.Forms.Label();
+            this.txbxTTBois = new System.Windows.Forms.TextBox();
+            this.lbTTBois = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txbxBoisSoumis = new System.Windows.Forms.TextBox();
+            this.txbxBoisPrive = new System.Windows.Forms.TextBox();
+            this.lbBoisSoumis = new System.Windows.Forms.Label();
+            this.lbBoisPrive = new System.Windows.Forms.Label();
+            this.grbApparGroupement = new System.Windows.Forms.GroupBox();
+            this.txbxSecCerf = new System.Windows.Forms.TextBox();
+            this.txbxSecSanglier = new System.Windows.Forms.TextBox();
+            this.txbxSecChevreuil = new System.Windows.Forms.TextBox();
+            this.lbSecCerf = new System.Windows.Forms.Label();
+            this.lbSecSanglier = new System.Windows.Forms.Label();
+            this.lbSecChevreuil = new System.Windows.Forms.Label();
+            this.cbxNomGroupement = new System.Windows.Forms.ComboBox();
+            this.lbObservations = new System.Windows.Forms.Label();
+            this.txbxObservations = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpLastAttribution = new System.Windows.Forms.DateTimePicker();
+            this.dtpLastModif = new System.Windows.Forms.DateTimePicker();
+            this.dtpCrea = new System.Windows.Forms.DateTimePicker();
+            this.txbxNumLastAttribution = new System.Windows.Forms.TextBox();
+            this.btSuppCampagne = new System.Windows.Forms.Button();
+            this.dgvGibiers = new System.Windows.Forms.DataGridView();
+            this.dgvEspeces = new System.Windows.Forms.DataGridView();
+            this.dvgBraceltParGibier = new System.Windows.Forms.DataGridView();
+            this.cbxRefus = new System.Windows.Forms.ComboBox();
+            this.lbRefus = new System.Windows.Forms.Label();
+            this.lbEspeces = new System.Windows.Forms.Label();
+            this.btEstime = new System.Windows.Forms.Button();
+            this.chbxPointNoir = new System.Windows.Forms.CheckBox();
+            this.lbBracGibier = new System.Windows.Forms.Label();
+            this.lbGibiers = new System.Windows.Forms.Label();
             this.grbInfoBenef.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grbSurfChasse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.grbApparGroupement.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEspeces)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).BeginInit();
             this.SuspendLayout();
             // 
             // btRecherche
@@ -327,6 +373,7 @@
             // dtpDateModif
             // 
             this.dtpDateModif.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dtpDateModif.Enabled = false;
             this.dtpDateModif.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateModif.Location = new System.Drawing.Point(1113, 38);
             this.dtpDateModif.MaxDate = new System.DateTime(2020, 1, 23, 0, 0, 0, 0);
@@ -603,9 +650,33 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1444, 49);
+            this.groupBox1.Size = new System.Drawing.Size(1761, 49);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
+            // 
+            // btSuivant
+            // 
+            this.btSuivant.BackgroundImage = global::Bracelet.Properties.Resources.right_arrow_24_px;
+            this.btSuivant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btSuivant.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSuivant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSuivant.Location = new System.Drawing.Point(132, 11);
+            this.btSuivant.Name = "btSuivant";
+            this.btSuivant.Size = new System.Drawing.Size(34, 32);
+            this.btSuivant.TabIndex = 1;
+            this.btSuivant.UseVisualStyleBackColor = true;
+            // 
+            // btEffacer
+            // 
+            this.btEffacer.BackgroundImage = global::Bracelet.Properties.Resources.trash_24px;
+            this.btEffacer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btEffacer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEffacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEffacer.Location = new System.Drawing.Point(172, 11);
+            this.btEffacer.Name = "btEffacer";
+            this.btEffacer.Size = new System.Drawing.Size(34, 32);
+            this.btEffacer.TabIndex = 2;
+            this.btEffacer.UseVisualStyleBackColor = true;
             // 
             // lbCampagane
             // 
@@ -680,30 +751,6 @@
             this.btCampagnePre.TabIndex = 51;
             this.btCampagnePre.UseVisualStyleBackColor = true;
             // 
-            // btSuivant
-            // 
-            this.btSuivant.BackgroundImage = global::Bracelet.Properties.Resources.right_arrow_24_px;
-            this.btSuivant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btSuivant.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSuivant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSuivant.Location = new System.Drawing.Point(132, 11);
-            this.btSuivant.Name = "btSuivant";
-            this.btSuivant.Size = new System.Drawing.Size(34, 32);
-            this.btSuivant.TabIndex = 1;
-            this.btSuivant.UseVisualStyleBackColor = true;
-            // 
-            // btEffacer
-            // 
-            this.btEffacer.BackgroundImage = global::Bracelet.Properties.Resources.trash_24px;
-            this.btEffacer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btEffacer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btEffacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEffacer.Location = new System.Drawing.Point(172, 11);
-            this.btEffacer.Name = "btEffacer";
-            this.btEffacer.Size = new System.Drawing.Size(34, 32);
-            this.btEffacer.TabIndex = 2;
-            this.btEffacer.UseVisualStyleBackColor = true;
-            // 
             // btQuitter
             // 
             this.btQuitter.BackgroundImage = global::Bracelet.Properties.Resources.logout__1_;
@@ -730,30 +777,181 @@
             // 
             // grbSurfChasse
             // 
-            this.grbSurfChasse.Controls.Add(this.pictureBox1);
-            this.grbSurfChasse.Controls.Add(this.textBox4);
+            this.grbSurfChasse.Controls.Add(this.lbhaTotal);
+            this.grbSurfChasse.Controls.Add(this.lbhaPlaine);
+            this.grbSurfChasse.Controls.Add(this.lbhaTTBois);
+            this.grbSurfChasse.Controls.Add(this.lbhaBoisSoumis);
+            this.grbSurfChasse.Controls.Add(this.lbhaBoisPrive);
             this.grbSurfChasse.Controls.Add(this.textBox2);
+            this.grbSurfChasse.Controls.Add(this.pictureBox2);
+            this.grbSurfChasse.Controls.Add(this.lbTotalSurfChasse);
+            this.grbSurfChasse.Controls.Add(this.txbxPlaine);
+            this.grbSurfChasse.Controls.Add(this.lbPlaine);
+            this.grbSurfChasse.Controls.Add(this.txbxTTBois);
+            this.grbSurfChasse.Controls.Add(this.lbTTBois);
+            this.grbSurfChasse.Controls.Add(this.pictureBox1);
+            this.grbSurfChasse.Controls.Add(this.txbxBoisSoumis);
+            this.grbSurfChasse.Controls.Add(this.txbxBoisPrive);
             this.grbSurfChasse.Controls.Add(this.lbBoisSoumis);
             this.grbSurfChasse.Controls.Add(this.lbBoisPrive);
             this.grbSurfChasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSurfChasse.ForeColor = System.Drawing.Color.DarkCyan;
             this.grbSurfChasse.Location = new System.Drawing.Point(12, 781);
             this.grbSurfChasse.Name = "grbSurfChasse";
-            this.grbSurfChasse.Size = new System.Drawing.Size(303, 312);
+            this.grbSurfChasse.Size = new System.Drawing.Size(253, 246);
             this.grbSurfChasse.TabIndex = 55;
             this.grbSurfChasse.TabStop = false;
             this.grbSurfChasse.Text = "Surface de chasse :";
             // 
-            // lbBoisPrive
+            // lbhaTotal
             // 
-            this.lbBoisPrive.AutoSize = true;
-            this.lbBoisPrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBoisPrive.ForeColor = System.Drawing.Color.Firebrick;
-            this.lbBoisPrive.Location = new System.Drawing.Point(25, 40);
-            this.lbBoisPrive.Name = "lbBoisPrive";
-            this.lbBoisPrive.Size = new System.Drawing.Size(102, 24);
-            this.lbBoisPrive.TabIndex = 25;
-            this.lbBoisPrive.Text = "Bois privé :";
+            this.lbhaTotal.AutoSize = true;
+            this.lbhaTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhaTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbhaTotal.Location = new System.Drawing.Point(215, 205);
+            this.lbhaTotal.Name = "lbhaTotal";
+            this.lbhaTotal.Size = new System.Drawing.Size(31, 24);
+            this.lbhaTotal.TabIndex = 57;
+            this.lbhaTotal.Text = "ha";
+            // 
+            // lbhaPlaine
+            // 
+            this.lbhaPlaine.AutoSize = true;
+            this.lbhaPlaine.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhaPlaine.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbhaPlaine.Location = new System.Drawing.Point(215, 166);
+            this.lbhaPlaine.Name = "lbhaPlaine";
+            this.lbhaPlaine.Size = new System.Drawing.Size(31, 24);
+            this.lbhaPlaine.TabIndex = 60;
+            this.lbhaPlaine.Text = "ha";
+            // 
+            // lbhaTTBois
+            // 
+            this.lbhaTTBois.AutoSize = true;
+            this.lbhaTTBois.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhaTTBois.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbhaTTBois.Location = new System.Drawing.Point(217, 112);
+            this.lbhaTTBois.Name = "lbhaTTBois";
+            this.lbhaTTBois.Size = new System.Drawing.Size(31, 24);
+            this.lbhaTTBois.TabIndex = 57;
+            this.lbhaTTBois.Text = "ha";
+            // 
+            // lbhaBoisSoumis
+            // 
+            this.lbhaBoisSoumis.AutoSize = true;
+            this.lbhaBoisSoumis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhaBoisSoumis.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbhaBoisSoumis.Location = new System.Drawing.Point(217, 73);
+            this.lbhaBoisSoumis.Name = "lbhaBoisSoumis";
+            this.lbhaBoisSoumis.Size = new System.Drawing.Size(31, 24);
+            this.lbhaBoisSoumis.TabIndex = 57;
+            this.lbhaBoisSoumis.Text = "ha";
+            // 
+            // lbhaBoisPrive
+            // 
+            this.lbhaBoisPrive.AutoSize = true;
+            this.lbhaBoisPrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhaBoisPrive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbhaBoisPrive.Location = new System.Drawing.Point(217, 43);
+            this.lbhaBoisPrive.Name = "lbhaBoisPrive";
+            this.lbhaBoisPrive.Size = new System.Drawing.Size(31, 24);
+            this.lbhaBoisPrive.TabIndex = 56;
+            this.lbhaBoisPrive.Text = "ha";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(140, 202);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(71, 29);
+            this.textBox2.TabIndex = 59;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 198);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(283, 1);
+            this.pictureBox2.TabIndex = 57;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lbTotalSurfChasse
+            // 
+            this.lbTotalSurfChasse.AutoSize = true;
+            this.lbTotalSurfChasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalSurfChasse.ForeColor = System.Drawing.Color.Gray;
+            this.lbTotalSurfChasse.Location = new System.Drawing.Point(6, 205);
+            this.lbTotalSurfChasse.Name = "lbTotalSurfChasse";
+            this.lbTotalSurfChasse.Size = new System.Drawing.Size(61, 24);
+            this.lbTotalSurfChasse.TabIndex = 58;
+            this.lbTotalSurfChasse.Text = "Total :";
+            // 
+            // txbxPlaine
+            // 
+            this.txbxPlaine.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxPlaine.Location = new System.Drawing.Point(140, 163);
+            this.txbxPlaine.Name = "txbxPlaine";
+            this.txbxPlaine.Size = new System.Drawing.Size(71, 29);
+            this.txbxPlaine.TabIndex = 56;
+            // 
+            // lbPlaine
+            // 
+            this.lbPlaine.AutoSize = true;
+            this.lbPlaine.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPlaine.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lbPlaine.Location = new System.Drawing.Point(6, 166);
+            this.lbPlaine.Name = "lbPlaine";
+            this.lbPlaine.Size = new System.Drawing.Size(72, 24);
+            this.lbPlaine.TabIndex = 57;
+            this.lbPlaine.Text = "Plaine :";
+            // 
+            // txbxTTBois
+            // 
+            this.txbxTTBois.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txbxTTBois.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxTTBois.Location = new System.Drawing.Point(140, 109);
+            this.txbxTTBois.Name = "txbxTTBois";
+            this.txbxTTBois.ReadOnly = true;
+            this.txbxTTBois.Size = new System.Drawing.Size(71, 29);
+            this.txbxTTBois.TabIndex = 57;
+            // 
+            // lbTTBois
+            // 
+            this.lbTTBois.AutoSize = true;
+            this.lbTTBois.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTTBois.ForeColor = System.Drawing.Color.Gray;
+            this.lbTTBois.Location = new System.Drawing.Point(7, 112);
+            this.lbTTBois.Name = "lbTTBois";
+            this.lbTTBois.Size = new System.Drawing.Size(101, 24);
+            this.lbTTBois.TabIndex = 56;
+            this.lbTTBois.Text = "Total bois :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 105);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(283, 1);
+            this.pictureBox1.TabIndex = 56;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txbxBoisSoumis
+            // 
+            this.txbxBoisSoumis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxBoisSoumis.Location = new System.Drawing.Point(140, 70);
+            this.txbxBoisSoumis.Name = "txbxBoisSoumis";
+            this.txbxBoisSoumis.Size = new System.Drawing.Size(71, 29);
+            this.txbxBoisSoumis.TabIndex = 45;
+            // 
+            // txbxBoisPrive
+            // 
+            this.txbxBoisPrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxBoisPrive.Location = new System.Drawing.Point(140, 40);
+            this.txbxBoisPrive.Name = "txbxBoisPrive";
+            this.txbxBoisPrive.Size = new System.Drawing.Size(71, 29);
+            this.txbxBoisPrive.TabIndex = 44;
             // 
             // lbBoisSoumis
             // 
@@ -766,30 +964,328 @@
             this.lbBoisSoumis.TabIndex = 26;
             this.lbBoisSoumis.Text = "Bois soumis :";
             // 
-            // textBox2
+            // lbBoisPrive
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(140, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(71, 29);
-            this.textBox2.TabIndex = 44;
+            this.lbBoisPrive.AutoSize = true;
+            this.lbBoisPrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBoisPrive.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbBoisPrive.Location = new System.Drawing.Point(6, 43);
+            this.lbBoisPrive.Name = "lbBoisPrive";
+            this.lbBoisPrive.Size = new System.Drawing.Size(102, 24);
+            this.lbBoisPrive.TabIndex = 25;
+            this.lbBoisPrive.Text = "Bois privé :";
             // 
-            // textBox4
+            // grbApparGroupement
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(140, 70);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(71, 29);
-            this.textBox4.TabIndex = 45;
+            this.grbApparGroupement.Controls.Add(this.txbxSecCerf);
+            this.grbApparGroupement.Controls.Add(this.txbxSecSanglier);
+            this.grbApparGroupement.Controls.Add(this.txbxSecChevreuil);
+            this.grbApparGroupement.Controls.Add(this.lbSecCerf);
+            this.grbApparGroupement.Controls.Add(this.lbSecSanglier);
+            this.grbApparGroupement.Controls.Add(this.lbSecChevreuil);
+            this.grbApparGroupement.Controls.Add(this.cbxNomGroupement);
+            this.grbApparGroupement.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbApparGroupement.ForeColor = System.Drawing.Color.DarkCyan;
+            this.grbApparGroupement.Location = new System.Drawing.Point(330, 781);
+            this.grbApparGroupement.Name = "grbApparGroupement";
+            this.grbApparGroupement.Size = new System.Drawing.Size(584, 246);
+            this.grbApparGroupement.TabIndex = 56;
+            this.grbApparGroupement.TabStop = false;
+            this.grbApparGroupement.Text = "Appartenance à des groupements :";
             // 
-            // pictureBox1
+            // txbxSecCerf
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 105);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 1);
-            this.pictureBox1.TabIndex = 56;
-            this.pictureBox1.TabStop = false;
+            this.txbxSecCerf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxSecCerf.Location = new System.Drawing.Point(200, 195);
+            this.txbxSecCerf.Name = "txbxSecCerf";
+            this.txbxSecCerf.Size = new System.Drawing.Size(44, 29);
+            this.txbxSecCerf.TabIndex = 58;
+            // 
+            // txbxSecSanglier
+            // 
+            this.txbxSecSanglier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxSecSanglier.Location = new System.Drawing.Point(200, 148);
+            this.txbxSecSanglier.Name = "txbxSecSanglier";
+            this.txbxSecSanglier.Size = new System.Drawing.Size(44, 29);
+            this.txbxSecSanglier.TabIndex = 58;
+            // 
+            // txbxSecChevreuil
+            // 
+            this.txbxSecChevreuil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxSecChevreuil.Location = new System.Drawing.Point(200, 102);
+            this.txbxSecChevreuil.Name = "txbxSecChevreuil";
+            this.txbxSecChevreuil.Size = new System.Drawing.Size(44, 29);
+            this.txbxSecChevreuil.TabIndex = 57;
+            // 
+            // lbSecCerf
+            // 
+            this.lbSecCerf.AutoSize = true;
+            this.lbSecCerf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSecCerf.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbSecCerf.Location = new System.Drawing.Point(16, 198);
+            this.lbSecCerf.Name = "lbSecCerf";
+            this.lbSecCerf.Size = new System.Drawing.Size(124, 24);
+            this.lbSecCerf.TabIndex = 58;
+            this.lbSecCerf.Text = "Secteur Cerf :";
+            // 
+            // lbSecSanglier
+            // 
+            this.lbSecSanglier.AutoSize = true;
+            this.lbSecSanglier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSecSanglier.ForeColor = System.Drawing.Color.Blue;
+            this.lbSecSanglier.Location = new System.Drawing.Point(16, 151);
+            this.lbSecSanglier.Name = "lbSecSanglier";
+            this.lbSecSanglier.Size = new System.Drawing.Size(159, 24);
+            this.lbSecSanglier.TabIndex = 57;
+            this.lbSecSanglier.Text = "Secteur Sanglier :";
+            // 
+            // lbSecChevreuil
+            // 
+            this.lbSecChevreuil.AutoSize = true;
+            this.lbSecChevreuil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSecChevreuil.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbSecChevreuil.Location = new System.Drawing.Point(16, 105);
+            this.lbSecChevreuil.Name = "lbSecChevreuil";
+            this.lbSecChevreuil.Size = new System.Drawing.Size(170, 24);
+            this.lbSecChevreuil.TabIndex = 57;
+            this.lbSecChevreuil.Text = "Secteur Chevreuil :";
+            // 
+            // cbxNomGroupement
+            // 
+            this.cbxNomGroupement.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxNomGroupement.FormattingEnabled = true;
+            this.cbxNomGroupement.Location = new System.Drawing.Point(125, 40);
+            this.cbxNomGroupement.Name = "cbxNomGroupement";
+            this.cbxNomGroupement.Size = new System.Drawing.Size(453, 32);
+            this.cbxNomGroupement.TabIndex = 43;
+            // 
+            // lbObservations
+            // 
+            this.lbObservations.AutoSize = true;
+            this.lbObservations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbObservations.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbObservations.Location = new System.Drawing.Point(8, 1030);
+            this.lbObservations.Name = "lbObservations";
+            this.lbObservations.Size = new System.Drawing.Size(315, 24);
+            this.lbObservations.TabIndex = 61;
+            this.lbObservations.Text = "Observations (éditées dans l\'arrêté) :";
+            // 
+            // txbxObservations
+            // 
+            this.txbxObservations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxObservations.Location = new System.Drawing.Point(12, 1057);
+            this.txbxObservations.Multiline = true;
+            this.txbxObservations.Name = "txbxObservations";
+            this.txbxObservations.Size = new System.Drawing.Size(902, 69);
+            this.txbxObservations.TabIndex = 62;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(451, 1244);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 24);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Date dernière modification :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(451, 1156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 24);
+            this.label2.TabIndex = 64;
+            this.label2.Text = "Date de création :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(12, 1244);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(250, 24);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "Numéro dernière attribution :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(12, 1156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(219, 24);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Date dernière attribution :";
+            // 
+            // dtpLastAttribution
+            // 
+            this.dtpLastAttribution.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpLastAttribution.CausesValidation = false;
+            this.dtpLastAttribution.Cursor = System.Windows.Forms.Cursors.No;
+            this.dtpLastAttribution.Enabled = false;
+            this.dtpLastAttribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpLastAttribution.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpLastAttribution.Location = new System.Drawing.Point(277, 1152);
+            this.dtpLastAttribution.Name = "dtpLastAttribution";
+            this.dtpLastAttribution.Size = new System.Drawing.Size(168, 29);
+            this.dtpLastAttribution.TabIndex = 67;
+            this.dtpLastAttribution.ValueChanged += new System.EventHandler(this.dtpLastAttribution_ValueChanged);
+            // 
+            // dtpLastModif
+            // 
+            this.dtpLastModif.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpLastModif.CausesValidation = false;
+            this.dtpLastModif.Cursor = System.Windows.Forms.Cursors.No;
+            this.dtpLastModif.Enabled = false;
+            this.dtpLastModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpLastModif.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpLastModif.Location = new System.Drawing.Point(740, 1239);
+            this.dtpLastModif.Name = "dtpLastModif";
+            this.dtpLastModif.Size = new System.Drawing.Size(168, 29);
+            this.dtpLastModif.TabIndex = 68;
+            // 
+            // dtpCrea
+            // 
+            this.dtpCrea.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCrea.CausesValidation = false;
+            this.dtpCrea.Cursor = System.Windows.Forms.Cursors.No;
+            this.dtpCrea.Enabled = false;
+            this.dtpCrea.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCrea.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpCrea.Location = new System.Drawing.Point(740, 1152);
+            this.dtpCrea.Name = "dtpCrea";
+            this.dtpCrea.Size = new System.Drawing.Size(168, 29);
+            this.dtpCrea.TabIndex = 69;
+            // 
+            // txbxNumLastAttribution
+            // 
+            this.txbxNumLastAttribution.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txbxNumLastAttribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxNumLastAttribution.Location = new System.Drawing.Point(277, 1241);
+            this.txbxNumLastAttribution.Name = "txbxNumLastAttribution";
+            this.txbxNumLastAttribution.ReadOnly = true;
+            this.txbxNumLastAttribution.Size = new System.Drawing.Size(168, 29);
+            this.txbxNumLastAttribution.TabIndex = 70;
+            // 
+            // btSuppCampagne
+            // 
+            this.btSuppCampagne.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSuppCampagne.Enabled = false;
+            this.btSuppCampagne.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSuppCampagne.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btSuppCampagne.Location = new System.Drawing.Point(1023, 710);
+            this.btSuppCampagne.Name = "btSuppCampagne";
+            this.btSuppCampagne.Size = new System.Drawing.Size(223, 32);
+            this.btSuppCampagne.TabIndex = 71;
+            this.btSuppCampagne.Text = "Supprimer campagne";
+            this.btSuppCampagne.UseVisualStyleBackColor = true;
+            // 
+            // dgvGibiers
+            // 
+            this.dgvGibiers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGibiers.Location = new System.Drawing.Point(920, 1057);
+            this.dgvGibiers.Name = "dgvGibiers";
+            this.dgvGibiers.Size = new System.Drawing.Size(828, 211);
+            this.dgvGibiers.TabIndex = 72;
+            // 
+            // dgvEspeces
+            // 
+            this.dgvEspeces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEspeces.Location = new System.Drawing.Point(920, 840);
+            this.dgvEspeces.Name = "dgvEspeces";
+            this.dgvEspeces.Size = new System.Drawing.Size(303, 187);
+            this.dgvEspeces.TabIndex = 73;
+            // 
+            // dvgBraceltParGibier
+            // 
+            this.dvgBraceltParGibier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgBraceltParGibier.Location = new System.Drawing.Point(1308, 840);
+            this.dvgBraceltParGibier.Name = "dvgBraceltParGibier";
+            this.dvgBraceltParGibier.Size = new System.Drawing.Size(453, 187);
+            this.dvgBraceltParGibier.TabIndex = 74;
+            // 
+            // cbxRefus
+            // 
+            this.cbxRefus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxRefus.FormattingEnabled = true;
+            this.cbxRefus.Location = new System.Drawing.Point(1023, 758);
+            this.cbxRefus.Name = "cbxRefus";
+            this.cbxRefus.Size = new System.Drawing.Size(315, 32);
+            this.cbxRefus.TabIndex = 75;
+            // 
+            // lbRefus
+            // 
+            this.lbRefus.AutoSize = true;
+            this.lbRefus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRefus.ForeColor = System.Drawing.Color.Blue;
+            this.lbRefus.Location = new System.Drawing.Point(949, 761);
+            this.lbRefus.Name = "lbRefus";
+            this.lbRefus.Size = new System.Drawing.Size(68, 24);
+            this.lbRefus.TabIndex = 76;
+            this.lbRefus.Text = "Refus :";
+            // 
+            // lbEspeces
+            // 
+            this.lbEspeces.AutoSize = true;
+            this.lbEspeces.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEspeces.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbEspeces.Location = new System.Drawing.Point(920, 810);
+            this.lbEspeces.Name = "lbEspeces";
+            this.lbEspeces.Size = new System.Drawing.Size(103, 24);
+            this.lbEspeces.TabIndex = 77;
+            this.lbEspeces.Text = "Espèces :";
+            // 
+            // btEstime
+            // 
+            this.btEstime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEstime.Enabled = false;
+            this.btEstime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEstime.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btEstime.Location = new System.Drawing.Point(1141, 806);
+            this.btEstime.Name = "btEstime";
+            this.btEstime.Size = new System.Drawing.Size(82, 32);
+            this.btEstime.TabIndex = 78;
+            this.btEstime.Text = "Estimé";
+            this.btEstime.UseVisualStyleBackColor = true;
+            // 
+            // chbxPointNoir
+            // 
+            this.chbxPointNoir.AutoSize = true;
+            this.chbxPointNoir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbxPointNoir.Location = new System.Drawing.Point(1344, 760);
+            this.chbxPointNoir.Name = "chbxPointNoir";
+            this.chbxPointNoir.Size = new System.Drawing.Size(111, 28);
+            this.chbxPointNoir.TabIndex = 79;
+            this.chbxPointNoir.Text = "Point Noir";
+            this.chbxPointNoir.UseVisualStyleBackColor = true;
+            // 
+            // lbBracGibier
+            // 
+            this.lbBracGibier.AutoSize = true;
+            this.lbBracGibier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBracGibier.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbBracGibier.Location = new System.Drawing.Point(1304, 810);
+            this.lbBracGibier.Name = "lbBracGibier";
+            this.lbBracGibier.Size = new System.Drawing.Size(193, 24);
+            this.lbBracGibier.TabIndex = 80;
+            this.lbBracGibier.Text = "Bracelet par gibier :";
+            // 
+            // lbGibiers
+            // 
+            this.lbGibiers.AutoSize = true;
+            this.lbGibiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGibiers.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbGibiers.Location = new System.Drawing.Point(920, 1030);
+            this.lbGibiers.Name = "lbGibiers";
+            this.lbGibiers.Size = new System.Drawing.Size(88, 24);
+            this.lbGibiers.TabIndex = 81;
+            this.lbGibiers.Text = "Gibiers :";
             // 
             // Saisie_Form2
             // 
@@ -799,7 +1295,29 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1444, 1606);
+            this.ClientSize = new System.Drawing.Size(1449, 1041);
+            this.Controls.Add(this.lbGibiers);
+            this.Controls.Add(this.lbBracGibier);
+            this.Controls.Add(this.chbxPointNoir);
+            this.Controls.Add(this.btEstime);
+            this.Controls.Add(this.lbEspeces);
+            this.Controls.Add(this.lbRefus);
+            this.Controls.Add(this.cbxRefus);
+            this.Controls.Add(this.dvgBraceltParGibier);
+            this.Controls.Add(this.dgvEspeces);
+            this.Controls.Add(this.dgvGibiers);
+            this.Controls.Add(this.btSuppCampagne);
+            this.Controls.Add(this.txbxNumLastAttribution);
+            this.Controls.Add(this.dtpCrea);
+            this.Controls.Add(this.dtpLastModif);
+            this.Controls.Add(this.dtpLastAttribution);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbxObservations);
+            this.Controls.Add(this.lbObservations);
+            this.Controls.Add(this.grbApparGroupement);
             this.Controls.Add(this.grbSurfChasse);
             this.Controls.Add(this.btNewCampagne);
             this.Controls.Add(this.btCamapagneLast);
@@ -832,7 +1350,13 @@
             this.groupBox1.PerformLayout();
             this.grbSurfChasse.ResumeLayout(false);
             this.grbSurfChasse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.grbApparGroupement.ResumeLayout(false);
+            this.grbApparGroupement.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEspeces)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -898,10 +1422,51 @@
         private System.Windows.Forms.Button btCamapagneLast;
         private System.Windows.Forms.Button btNewCampagne;
         private System.Windows.Forms.GroupBox grbSurfChasse;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbxBoisSoumis;
+        private System.Windows.Forms.TextBox txbxBoisPrive;
         private System.Windows.Forms.Label lbBoisSoumis;
         private System.Windows.Forms.Label lbBoisPrive;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txbxTTBois;
+        private System.Windows.Forms.Label lbTTBois;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lbTotalSurfChasse;
+        private System.Windows.Forms.TextBox txbxPlaine;
+        private System.Windows.Forms.Label lbPlaine;
+        private System.Windows.Forms.Label lbhaTotal;
+        private System.Windows.Forms.Label lbhaPlaine;
+        private System.Windows.Forms.Label lbhaTTBois;
+        private System.Windows.Forms.Label lbhaBoisSoumis;
+        private System.Windows.Forms.Label lbhaBoisPrive;
+        private System.Windows.Forms.GroupBox grbApparGroupement;
+        private System.Windows.Forms.TextBox txbxSecCerf;
+        private System.Windows.Forms.TextBox txbxSecSanglier;
+        private System.Windows.Forms.TextBox txbxSecChevreuil;
+        private System.Windows.Forms.Label lbSecCerf;
+        private System.Windows.Forms.Label lbSecSanglier;
+        private System.Windows.Forms.Label lbSecChevreuil;
+        private System.Windows.Forms.ComboBox cbxNomGroupement;
+        private System.Windows.Forms.Label lbObservations;
+        private System.Windows.Forms.TextBox txbxObservations;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dtpLastAttribution;
+        private System.Windows.Forms.DateTimePicker dtpLastModif;
+        private System.Windows.Forms.DateTimePicker dtpCrea;
+        private System.Windows.Forms.TextBox txbxNumLastAttribution;
+        private System.Windows.Forms.Button btSuppCampagne;
+        private System.Windows.Forms.DataGridView dgvGibiers;
+        private System.Windows.Forms.DataGridView dgvEspeces;
+        private System.Windows.Forms.DataGridView dvgBraceltParGibier;
+        private System.Windows.Forms.ComboBox cbxRefus;
+        private System.Windows.Forms.Label lbRefus;
+        private System.Windows.Forms.Label lbEspeces;
+        private System.Windows.Forms.Button btEstime;
+        private System.Windows.Forms.CheckBox chbxPointNoir;
+        private System.Windows.Forms.Label lbBracGibier;
+        private System.Windows.Forms.Label lbGibiers;
     }
 }

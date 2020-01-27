@@ -36,5 +36,10 @@ namespace Bracelet
         {
 
         }
+
+        private void dtpLastAttribution_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
