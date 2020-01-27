@@ -76,22 +76,22 @@
             this.lbPortable = new System.Windows.Forms.Label();
             this.lbCivilite = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btSuivant = new System.Windows.Forms.Button();
+            this.btEffacer = new System.Windows.Forms.Button();
             this.lbCampagane = new System.Windows.Forms.Label();
             this.dtpCampagane = new System.Windows.Forms.DateTimePicker();
             this.btNewCampagne = new System.Windows.Forms.Button();
             this.btCamapagneLast = new System.Windows.Forms.Button();
             this.btCampagneSuiv = new System.Windows.Forms.Button();
             this.btCampagnePre = new System.Windows.Forms.Button();
-            this.btSuivant = new System.Windows.Forms.Button();
-            this.btEffacer = new System.Windows.Forms.Button();
             this.btQuitter = new System.Windows.Forms.Button();
             this.btApercu = new System.Windows.Forms.Button();
             this.grbSurfChasse = new System.Windows.Forms.GroupBox();
-            this.lbBoisPrive = new System.Windows.Forms.Label();
-            this.lbBoisSoumis = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lbBoisSoumis = new System.Windows.Forms.Label();
+            this.lbBoisPrive = new System.Windows.Forms.Label();
             this.grbInfoBenef.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grbSurfChasse.SuspendLayout();
@@ -607,6 +607,30 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
+            // btSuivant
+            // 
+            this.btSuivant.BackgroundImage = global::Bracelet.Properties.Resources.right_arrow_24_px;
+            this.btSuivant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btSuivant.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSuivant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSuivant.Location = new System.Drawing.Point(132, 11);
+            this.btSuivant.Name = "btSuivant";
+            this.btSuivant.Size = new System.Drawing.Size(34, 32);
+            this.btSuivant.TabIndex = 1;
+            this.btSuivant.UseVisualStyleBackColor = true;
+            // 
+            // btEffacer
+            // 
+            this.btEffacer.BackgroundImage = global::Bracelet.Properties.Resources.trash_24px;
+            this.btEffacer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btEffacer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEffacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEffacer.Location = new System.Drawing.Point(172, 11);
+            this.btEffacer.Name = "btEffacer";
+            this.btEffacer.Size = new System.Drawing.Size(34, 32);
+            this.btEffacer.TabIndex = 2;
+            this.btEffacer.UseVisualStyleBackColor = true;
+            // 
             // lbCampagane
             // 
             this.lbCampagane.AutoSize = true;
@@ -680,30 +704,6 @@
             this.btCampagnePre.TabIndex = 51;
             this.btCampagnePre.UseVisualStyleBackColor = true;
             // 
-            // btSuivant
-            // 
-            this.btSuivant.BackgroundImage = global::Bracelet.Properties.Resources.right_arrow_24_px;
-            this.btSuivant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btSuivant.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSuivant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSuivant.Location = new System.Drawing.Point(132, 11);
-            this.btSuivant.Name = "btSuivant";
-            this.btSuivant.Size = new System.Drawing.Size(34, 32);
-            this.btSuivant.TabIndex = 1;
-            this.btSuivant.UseVisualStyleBackColor = true;
-            // 
-            // btEffacer
-            // 
-            this.btEffacer.BackgroundImage = global::Bracelet.Properties.Resources.trash_24px;
-            this.btEffacer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btEffacer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btEffacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEffacer.Location = new System.Drawing.Point(172, 11);
-            this.btEffacer.Name = "btEffacer";
-            this.btEffacer.Size = new System.Drawing.Size(34, 32);
-            this.btEffacer.TabIndex = 2;
-            this.btEffacer.UseVisualStyleBackColor = true;
-            // 
             // btQuitter
             // 
             this.btQuitter.BackgroundImage = global::Bracelet.Properties.Resources.logout__1_;
@@ -744,16 +744,30 @@
             this.grbSurfChasse.TabStop = false;
             this.grbSurfChasse.Text = "Surface de chasse :";
             // 
-            // lbBoisPrive
+            // pictureBox1
             // 
-            this.lbBoisPrive.AutoSize = true;
-            this.lbBoisPrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBoisPrive.ForeColor = System.Drawing.Color.Firebrick;
-            this.lbBoisPrive.Location = new System.Drawing.Point(25, 40);
-            this.lbBoisPrive.Name = "lbBoisPrive";
-            this.lbBoisPrive.Size = new System.Drawing.Size(102, 24);
-            this.lbBoisPrive.TabIndex = 25;
-            this.lbBoisPrive.Text = "Bois privé :";
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 105);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(283, 1);
+            this.pictureBox1.TabIndex = 56;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(140, 70);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(71, 29);
+            this.textBox4.TabIndex = 45;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(140, 40);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(71, 29);
+            this.textBox2.TabIndex = 44;
             // 
             // lbBoisSoumis
             // 
@@ -766,30 +780,16 @@
             this.lbBoisSoumis.TabIndex = 26;
             this.lbBoisSoumis.Text = "Bois soumis :";
             // 
-            // textBox2
+            // lbBoisPrive
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(140, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(71, 29);
-            this.textBox2.TabIndex = 44;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(140, 70);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(71, 29);
-            this.textBox4.TabIndex = 45;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 105);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 1);
-            this.pictureBox1.TabIndex = 56;
-            this.pictureBox1.TabStop = false;
+            this.lbBoisPrive.AutoSize = true;
+            this.lbBoisPrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBoisPrive.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbBoisPrive.Location = new System.Drawing.Point(25, 40);
+            this.lbBoisPrive.Name = "lbBoisPrive";
+            this.lbBoisPrive.Size = new System.Drawing.Size(102, 24);
+            this.lbBoisPrive.TabIndex = 25;
+            this.lbBoisPrive.Text = "Bois privé :";
             // 
             // Saisie_Form2
             // 
@@ -799,7 +799,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1444, 1606);
+            this.ClientSize = new System.Drawing.Size(1461, 881);
             this.Controls.Add(this.grbSurfChasse);
             this.Controls.Add(this.btNewCampagne);
             this.Controls.Add(this.btCamapagneLast);

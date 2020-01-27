@@ -16,5 +16,17 @@ namespace Bracelet
         {
             InitializeComponent();
         }
+
+        private void Listes_Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            webBrowser1.AllowWebBrowserDrop = false;
+            webBrowser1.Url = new Uri("https://www.microsoft.com/fr-fr/");
+
+        }
     }
 }
