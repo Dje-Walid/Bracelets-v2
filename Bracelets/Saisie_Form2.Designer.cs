@@ -133,6 +133,30 @@
             this.chbxPointNoir = new System.Windows.Forms.CheckBox();
             this.lbBracGibier = new System.Windows.Forms.Label();
             this.lbGibiers = new System.Windows.Forms.Label();
+            this.btDem = new System.Windows.Forms.Button();
+            this.btFDCY = new System.Windows.Forms.Button();
+            this.btReal = new System.Windows.Forms.Button();
+            this.btNb = new System.Windows.Forms.Button();
+            this.btDDT = new System.Windows.Forms.Button();
+            this.btONF = new System.Windows.Forms.Button();
+            this.btACC = new System.Windows.Forms.Button();
+            this.btAccReserve = new System.Windows.Forms.Button();
+            this.btFdcySmall = new System.Windows.Forms.Button();
+            this.btAccSmall = new System.Windows.Forms.Button();
+            this.btDdtSmall = new System.Windows.Forms.Button();
+            this.btOnfSmall = new System.Windows.Forms.Button();
+            this.btRecours = new System.Windows.Forms.Button();
+            this.grbInfoPlanChasse = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbLstCommunes = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txbxNotesInternes = new System.Windows.Forms.TextBox();
+            this.lbDateCrea = new System.Windows.Forms.Label();
+            this.dtpDateCreaPlan = new System.Windows.Forms.DateTimePicker();
+            this.lbDateModifPlan = new System.Windows.Forms.Label();
+            this.dtpDateModifPlan = new System.Windows.Forms.DateTimePicker();
+            this.lbDateSuppPlan = new System.Windows.Forms.Label();
+            this.txbxDateSuppPlan = new System.Windows.Forms.TextBox();
             this.grbInfoBenef.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grbSurfChasse.SuspendLayout();
@@ -142,6 +166,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspeces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).BeginInit();
+            this.grbInfoPlanChasse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btRecherche
@@ -650,7 +676,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1761, 49);
+            this.groupBox1.Size = new System.Drawing.Size(2130, 49);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
@@ -1189,9 +1215,9 @@
             // dgvGibiers
             // 
             this.dgvGibiers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGibiers.Location = new System.Drawing.Point(920, 1057);
+            this.dgvGibiers.Location = new System.Drawing.Point(924, 1105);
             this.dgvGibiers.Name = "dgvGibiers";
-            this.dgvGibiers.Size = new System.Drawing.Size(828, 211);
+            this.dgvGibiers.Size = new System.Drawing.Size(1084, 211);
             this.dgvGibiers.TabIndex = 72;
             // 
             // dgvEspeces
@@ -1199,13 +1225,13 @@
             this.dgvEspeces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEspeces.Location = new System.Drawing.Point(920, 840);
             this.dgvEspeces.Name = "dgvEspeces";
-            this.dgvEspeces.Size = new System.Drawing.Size(303, 187);
+            this.dgvEspeces.Size = new System.Drawing.Size(370, 187);
             this.dgvEspeces.TabIndex = 73;
             // 
             // dvgBraceltParGibier
             // 
             this.dvgBraceltParGibier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgBraceltParGibier.Location = new System.Drawing.Point(1308, 840);
+            this.dvgBraceltParGibier.Location = new System.Drawing.Point(1472, 840);
             this.dvgBraceltParGibier.Name = "dvgBraceltParGibier";
             this.dvgBraceltParGibier.Size = new System.Drawing.Size(453, 187);
             this.dvgBraceltParGibier.TabIndex = 74;
@@ -1270,7 +1296,7 @@
             this.lbBracGibier.AutoSize = true;
             this.lbBracGibier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBracGibier.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbBracGibier.Location = new System.Drawing.Point(1304, 810);
+            this.lbBracGibier.Location = new System.Drawing.Point(1468, 810);
             this.lbBracGibier.Name = "lbBracGibier";
             this.lbBracGibier.Size = new System.Drawing.Size(193, 24);
             this.lbBracGibier.TabIndex = 80;
@@ -1281,11 +1307,309 @@
             this.lbGibiers.AutoSize = true;
             this.lbGibiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGibiers.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbGibiers.Location = new System.Drawing.Point(920, 1030);
+            this.lbGibiers.Location = new System.Drawing.Point(920, 1060);
             this.lbGibiers.Name = "lbGibiers";
             this.lbGibiers.Size = new System.Drawing.Size(88, 24);
             this.lbGibiers.TabIndex = 81;
             this.lbGibiers.Text = "Gibiers :";
+            // 
+            // btDem
+            // 
+            this.btDem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDem.Enabled = false;
+            this.btDem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btDem.Location = new System.Drawing.Point(1126, 1046);
+            this.btDem.Name = "btDem";
+            this.btDem.Size = new System.Drawing.Size(65, 53);
+            this.btDem.TabIndex = 82;
+            this.btDem.Text = "Dem.";
+            this.btDem.UseVisualStyleBackColor = true;
+            // 
+            // btFDCY
+            // 
+            this.btFDCY.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btFDCY.Enabled = false;
+            this.btFDCY.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btFDCY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btFDCY.Location = new System.Drawing.Point(1192, 1046);
+            this.btFDCY.Name = "btFDCY";
+            this.btFDCY.Size = new System.Drawing.Size(65, 53);
+            this.btFDCY.TabIndex = 83;
+            this.btFDCY.Text = "FDCY";
+            this.btFDCY.UseVisualStyleBackColor = true;
+            // 
+            // btReal
+            // 
+            this.btReal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btReal.Enabled = false;
+            this.btReal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btReal.Location = new System.Drawing.Point(1522, 1046);
+            this.btReal.Name = "btReal";
+            this.btReal.Size = new System.Drawing.Size(65, 53);
+            this.btReal.TabIndex = 85;
+            this.btReal.Text = "Réal";
+            this.btReal.UseVisualStyleBackColor = true;
+            // 
+            // btNb
+            // 
+            this.btNb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btNb.Enabled = false;
+            this.btNb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNb.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btNb.Location = new System.Drawing.Point(1640, 1073);
+            this.btNb.Name = "btNb";
+            this.btNb.Size = new System.Drawing.Size(73, 26);
+            this.btNb.TabIndex = 84;
+            this.btNb.Text = "Nb";
+            this.btNb.UseVisualStyleBackColor = true;
+            // 
+            // btDDT
+            // 
+            this.btDDT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDDT.Enabled = false;
+            this.btDDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btDDT.Location = new System.Drawing.Point(1324, 1046);
+            this.btDDT.Name = "btDDT";
+            this.btDDT.Size = new System.Drawing.Size(65, 53);
+            this.btDDT.TabIndex = 87;
+            this.btDDT.Text = "DDT";
+            this.btDDT.UseVisualStyleBackColor = true;
+            // 
+            // btONF
+            // 
+            this.btONF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btONF.Enabled = false;
+            this.btONF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btONF.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btONF.Location = new System.Drawing.Point(1258, 1046);
+            this.btONF.Name = "btONF";
+            this.btONF.Size = new System.Drawing.Size(65, 53);
+            this.btONF.TabIndex = 86;
+            this.btONF.Text = "ONF";
+            this.btONF.UseVisualStyleBackColor = true;
+            // 
+            // btACC
+            // 
+            this.btACC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btACC.Enabled = false;
+            this.btACC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btACC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btACC.Location = new System.Drawing.Point(1456, 1046);
+            this.btACC.Name = "btACC";
+            this.btACC.Size = new System.Drawing.Size(65, 53);
+            this.btACC.TabIndex = 89;
+            this.btACC.Text = "Acc.";
+            this.btACC.UseVisualStyleBackColor = true;
+            this.btACC.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // btAccReserve
+            // 
+            this.btAccReserve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAccReserve.Enabled = false;
+            this.btAccReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAccReserve.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btAccReserve.Location = new System.Drawing.Point(1390, 1046);
+            this.btAccReserve.Name = "btAccReserve";
+            this.btAccReserve.Size = new System.Drawing.Size(65, 53);
+            this.btAccReserve.TabIndex = 88;
+            this.btAccReserve.Text = "Acc s réserve";
+            this.btAccReserve.UseVisualStyleBackColor = true;
+            // 
+            // btFdcySmall
+            // 
+            this.btFdcySmall.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btFdcySmall.Enabled = false;
+            this.btFdcySmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btFdcySmall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btFdcySmall.Location = new System.Drawing.Point(1714, 1073);
+            this.btFdcySmall.Name = "btFdcySmall";
+            this.btFdcySmall.Size = new System.Drawing.Size(73, 26);
+            this.btFdcySmall.TabIndex = 93;
+            this.btFdcySmall.Text = "FDCY";
+            this.btFdcySmall.UseVisualStyleBackColor = true;
+            // 
+            // btAccSmall
+            // 
+            this.btAccSmall.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAccSmall.Enabled = false;
+            this.btAccSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAccSmall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btAccSmall.Location = new System.Drawing.Point(1935, 1073);
+            this.btAccSmall.Name = "btAccSmall";
+            this.btAccSmall.Size = new System.Drawing.Size(73, 26);
+            this.btAccSmall.TabIndex = 94;
+            this.btAccSmall.Text = "Acc.";
+            this.btAccSmall.UseVisualStyleBackColor = true;
+            // 
+            // btDdtSmall
+            // 
+            this.btDdtSmall.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDdtSmall.Enabled = false;
+            this.btDdtSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDdtSmall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btDdtSmall.Location = new System.Drawing.Point(1861, 1073);
+            this.btDdtSmall.Name = "btDdtSmall";
+            this.btDdtSmall.Size = new System.Drawing.Size(73, 26);
+            this.btDdtSmall.TabIndex = 97;
+            this.btDdtSmall.Text = "DDT";
+            this.btDdtSmall.UseVisualStyleBackColor = true;
+            // 
+            // btOnfSmall
+            // 
+            this.btOnfSmall.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btOnfSmall.Enabled = false;
+            this.btOnfSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btOnfSmall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btOnfSmall.Location = new System.Drawing.Point(1787, 1073);
+            this.btOnfSmall.Name = "btOnfSmall";
+            this.btOnfSmall.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btOnfSmall.Size = new System.Drawing.Size(73, 26);
+            this.btOnfSmall.TabIndex = 96;
+            this.btOnfSmall.Text = "ONF";
+            this.btOnfSmall.UseVisualStyleBackColor = true;
+            // 
+            // btRecours
+            // 
+            this.btRecours.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btRecours.Enabled = false;
+            this.btRecours.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRecours.ForeColor = System.Drawing.Color.Firebrick;
+            this.btRecours.Location = new System.Drawing.Point(1640, 1046);
+            this.btRecours.Name = "btRecours";
+            this.btRecours.Size = new System.Drawing.Size(368, 26);
+            this.btRecours.TabIndex = 98;
+            this.btRecours.Text = "Recours";
+            this.btRecours.UseVisualStyleBackColor = true;
+            // 
+            // grbInfoPlanChasse
+            // 
+            this.grbInfoPlanChasse.Controls.Add(this.txbxDateSuppPlan);
+            this.grbInfoPlanChasse.Controls.Add(this.lbDateSuppPlan);
+            this.grbInfoPlanChasse.Controls.Add(this.dtpDateModifPlan);
+            this.grbInfoPlanChasse.Controls.Add(this.lbDateModifPlan);
+            this.grbInfoPlanChasse.Controls.Add(this.dtpDateCreaPlan);
+            this.grbInfoPlanChasse.Controls.Add(this.lbDateCrea);
+            this.grbInfoPlanChasse.Controls.Add(this.txbxNotesInternes);
+            this.grbInfoPlanChasse.Controls.Add(this.label5);
+            this.grbInfoPlanChasse.Controls.Add(this.lbLstCommunes);
+            this.grbInfoPlanChasse.Controls.Add(this.dataGridView1);
+            this.grbInfoPlanChasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbInfoPlanChasse.ForeColor = System.Drawing.Color.Blue;
+            this.grbInfoPlanChasse.Location = new System.Drawing.Point(1472, 186);
+            this.grbInfoPlanChasse.Name = "grbInfoPlanChasse";
+            this.grbInfoPlanChasse.Size = new System.Drawing.Size(440, 493);
+            this.grbInfoPlanChasse.TabIndex = 99;
+            this.grbInfoPlanChasse.TabStop = false;
+            this.grbInfoPlanChasse.Text = "Informations plan de chasse :";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 69);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(428, 195);
+            this.dataGridView1.TabIndex = 74;
+            // 
+            // lbLstCommunes
+            // 
+            this.lbLstCommunes.AutoSize = true;
+            this.lbLstCommunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLstCommunes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbLstCommunes.Location = new System.Drawing.Point(6, 42);
+            this.lbLstCommunes.Name = "lbLstCommunes";
+            this.lbLstCommunes.Size = new System.Drawing.Size(194, 24);
+            this.lbLstCommunes.TabIndex = 100;
+            this.lbLstCommunes.Text = "Liste des communes :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(6, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(350, 24);
+            this.label5.TabIndex = 101;
+            this.label5.Text = "Notes internes (édition sous-comission) :";
+            // 
+            // txbxNotesInternes
+            // 
+            this.txbxNotesInternes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxNotesInternes.Location = new System.Drawing.Point(6, 318);
+            this.txbxNotesInternes.Multiline = true;
+            this.txbxNotesInternes.Name = "txbxNotesInternes";
+            this.txbxNotesInternes.Size = new System.Drawing.Size(428, 57);
+            this.txbxNotesInternes.TabIndex = 102;
+            // 
+            // lbDateCrea
+            // 
+            this.lbDateCrea.AutoSize = true;
+            this.lbDateCrea.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateCrea.ForeColor = System.Drawing.Color.Blue;
+            this.lbDateCrea.Location = new System.Drawing.Point(6, 383);
+            this.lbDateCrea.Name = "lbDateCrea";
+            this.lbDateCrea.Size = new System.Drawing.Size(174, 24);
+            this.lbDateCrea.TabIndex = 103;
+            this.lbDateCrea.Text = "Date Création plan :";
+            // 
+            // dtpDateCreaPlan
+            // 
+            this.dtpDateCreaPlan.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateCreaPlan.CausesValidation = false;
+            this.dtpDateCreaPlan.Cursor = System.Windows.Forms.Cursors.No;
+            this.dtpDateCreaPlan.Enabled = false;
+            this.dtpDateCreaPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateCreaPlan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateCreaPlan.Location = new System.Drawing.Point(216, 379);
+            this.dtpDateCreaPlan.Name = "dtpDateCreaPlan";
+            this.dtpDateCreaPlan.Size = new System.Drawing.Size(168, 29);
+            this.dtpDateCreaPlan.TabIndex = 104;
+            // 
+            // lbDateModifPlan
+            // 
+            this.lbDateModifPlan.AutoSize = true;
+            this.lbDateModifPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateModifPlan.ForeColor = System.Drawing.Color.Blue;
+            this.lbDateModifPlan.Location = new System.Drawing.Point(6, 418);
+            this.lbDateModifPlan.Name = "lbDateModifPlan";
+            this.lbDateModifPlan.Size = new System.Drawing.Size(204, 24);
+            this.lbDateModifPlan.TabIndex = 104;
+            this.lbDateModifPlan.Text = "Date modification plan :";
+            // 
+            // dtpDateModifPlan
+            // 
+            this.dtpDateModifPlan.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateModifPlan.CausesValidation = false;
+            this.dtpDateModifPlan.Cursor = System.Windows.Forms.Cursors.No;
+            this.dtpDateModifPlan.Enabled = false;
+            this.dtpDateModifPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateModifPlan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateModifPlan.Location = new System.Drawing.Point(216, 414);
+            this.dtpDateModifPlan.Name = "dtpDateModifPlan";
+            this.dtpDateModifPlan.Size = new System.Drawing.Size(168, 29);
+            this.dtpDateModifPlan.TabIndex = 105;
+            // 
+            // lbDateSuppPlan
+            // 
+            this.lbDateSuppPlan.AutoSize = true;
+            this.lbDateSuppPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateSuppPlan.ForeColor = System.Drawing.Color.Blue;
+            this.lbDateSuppPlan.Location = new System.Drawing.Point(6, 453);
+            this.lbDateSuppPlan.Name = "lbDateSuppPlan";
+            this.lbDateSuppPlan.Size = new System.Drawing.Size(207, 24);
+            this.lbDateSuppPlan.TabIndex = 105;
+            this.lbDateSuppPlan.Text = "Date suppression plan :";
+            // 
+            // txbxDateSuppPlan
+            // 
+            this.txbxDateSuppPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxDateSuppPlan.Location = new System.Drawing.Point(215, 450);
+            this.txbxDateSuppPlan.Name = "txbxDateSuppPlan";
+            this.txbxDateSuppPlan.Size = new System.Drawing.Size(169, 29);
+            this.txbxDateSuppPlan.TabIndex = 106;
             // 
             // Saisie_Form2
             // 
@@ -1295,7 +1619,21 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1449, 1041);
+            this.ClientSize = new System.Drawing.Size(2147, 1061);
+            this.Controls.Add(this.grbInfoPlanChasse);
+            this.Controls.Add(this.btRecours);
+            this.Controls.Add(this.btDdtSmall);
+            this.Controls.Add(this.btOnfSmall);
+            this.Controls.Add(this.btAccSmall);
+            this.Controls.Add(this.btFdcySmall);
+            this.Controls.Add(this.btACC);
+            this.Controls.Add(this.btAccReserve);
+            this.Controls.Add(this.btDDT);
+            this.Controls.Add(this.btONF);
+            this.Controls.Add(this.btReal);
+            this.Controls.Add(this.btNb);
+            this.Controls.Add(this.btFDCY);
+            this.Controls.Add(this.btDem);
             this.Controls.Add(this.lbGibiers);
             this.Controls.Add(this.lbBracGibier);
             this.Controls.Add(this.chbxPointNoir);
@@ -1357,6 +1695,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspeces)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).EndInit();
+            this.grbInfoPlanChasse.ResumeLayout(false);
+            this.grbInfoPlanChasse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1468,5 +1809,29 @@
         private System.Windows.Forms.CheckBox chbxPointNoir;
         private System.Windows.Forms.Label lbBracGibier;
         private System.Windows.Forms.Label lbGibiers;
+        private System.Windows.Forms.Button btDem;
+        private System.Windows.Forms.Button btFDCY;
+        private System.Windows.Forms.Button btReal;
+        private System.Windows.Forms.Button btNb;
+        private System.Windows.Forms.Button btDDT;
+        private System.Windows.Forms.Button btONF;
+        private System.Windows.Forms.Button btACC;
+        private System.Windows.Forms.Button btAccReserve;
+        private System.Windows.Forms.Button btFdcySmall;
+        private System.Windows.Forms.Button btAccSmall;
+        private System.Windows.Forms.Button btDdtSmall;
+        private System.Windows.Forms.Button btOnfSmall;
+        private System.Windows.Forms.Button btRecours;
+        private System.Windows.Forms.GroupBox grbInfoPlanChasse;
+        private System.Windows.Forms.DateTimePicker dtpDateCreaPlan;
+        private System.Windows.Forms.Label lbDateCrea;
+        private System.Windows.Forms.TextBox txbxNotesInternes;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbLstCommunes;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txbxDateSuppPlan;
+        private System.Windows.Forms.Label lbDateSuppPlan;
+        private System.Windows.Forms.DateTimePicker dtpDateModifPlan;
+        private System.Windows.Forms.Label lbDateModifPlan;
     }
 }
