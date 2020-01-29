@@ -340,11 +340,15 @@ namespace Bracelet
         private void paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Action_Form5_F3 action_Form5_F3 = new Action_Form5_F3();
+            action_Form5_F3.Show();
         }
 
         private void paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Action_Form5_F4 action_Form5_F4 = new Action_Form5_F4();
+            action_Form5_F4.Show();
         }
 
         private void historiqueDesDatesDesActionsToolStripMenuItem_Click(object sender, EventArgs e)
