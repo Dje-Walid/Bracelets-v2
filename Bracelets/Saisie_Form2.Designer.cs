@@ -147,16 +147,16 @@
             this.btOnfSmall = new System.Windows.Forms.Button();
             this.btRecours = new System.Windows.Forms.Button();
             this.grbInfoPlanChasse = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lbLstCommunes = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txbxNotesInternes = new System.Windows.Forms.TextBox();
-            this.lbDateCrea = new System.Windows.Forms.Label();
-            this.dtpDateCreaPlan = new System.Windows.Forms.DateTimePicker();
-            this.lbDateModifPlan = new System.Windows.Forms.Label();
-            this.dtpDateModifPlan = new System.Windows.Forms.DateTimePicker();
-            this.lbDateSuppPlan = new System.Windows.Forms.Label();
             this.txbxDateSuppPlan = new System.Windows.Forms.TextBox();
+            this.lbDateSuppPlan = new System.Windows.Forms.Label();
+            this.dtpDateModifPlan = new System.Windows.Forms.DateTimePicker();
+            this.lbDateModifPlan = new System.Windows.Forms.Label();
+            this.dtpDateCreaPlan = new System.Windows.Forms.DateTimePicker();
+            this.lbDateCrea = new System.Windows.Forms.Label();
+            this.txbxNotesInternes = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbLstCommunes = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grbInfoBenef.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grbSurfChasse.SuspendLayout();
@@ -1505,79 +1505,24 @@
             this.grbInfoPlanChasse.TabStop = false;
             this.grbInfoPlanChasse.Text = "Informations plan de chasse :";
             // 
-            // dataGridView1
+            // txbxDateSuppPlan
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(428, 195);
-            this.dataGridView1.TabIndex = 74;
+            this.txbxDateSuppPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxDateSuppPlan.Location = new System.Drawing.Point(215, 450);
+            this.txbxDateSuppPlan.Name = "txbxDateSuppPlan";
+            this.txbxDateSuppPlan.Size = new System.Drawing.Size(169, 29);
+            this.txbxDateSuppPlan.TabIndex = 106;
             // 
-            // lbLstCommunes
+            // lbDateSuppPlan
             // 
-            this.lbLstCommunes.AutoSize = true;
-            this.lbLstCommunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLstCommunes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbLstCommunes.Location = new System.Drawing.Point(6, 42);
-            this.lbLstCommunes.Name = "lbLstCommunes";
-            this.lbLstCommunes.Size = new System.Drawing.Size(194, 24);
-            this.lbLstCommunes.TabIndex = 100;
-            this.lbLstCommunes.Text = "Liste des communes :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(6, 288);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(350, 24);
-            this.label5.TabIndex = 101;
-            this.label5.Text = "Notes internes (édition sous-comission) :";
-            // 
-            // txbxNotesInternes
-            // 
-            this.txbxNotesInternes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxNotesInternes.Location = new System.Drawing.Point(6, 318);
-            this.txbxNotesInternes.Multiline = true;
-            this.txbxNotesInternes.Name = "txbxNotesInternes";
-            this.txbxNotesInternes.Size = new System.Drawing.Size(428, 57);
-            this.txbxNotesInternes.TabIndex = 102;
-            // 
-            // lbDateCrea
-            // 
-            this.lbDateCrea.AutoSize = true;
-            this.lbDateCrea.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDateCrea.ForeColor = System.Drawing.Color.Blue;
-            this.lbDateCrea.Location = new System.Drawing.Point(6, 383);
-            this.lbDateCrea.Name = "lbDateCrea";
-            this.lbDateCrea.Size = new System.Drawing.Size(174, 24);
-            this.lbDateCrea.TabIndex = 103;
-            this.lbDateCrea.Text = "Date Création plan :";
-            // 
-            // dtpDateCreaPlan
-            // 
-            this.dtpDateCreaPlan.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateCreaPlan.CausesValidation = false;
-            this.dtpDateCreaPlan.Cursor = System.Windows.Forms.Cursors.No;
-            this.dtpDateCreaPlan.Enabled = false;
-            this.dtpDateCreaPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateCreaPlan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateCreaPlan.Location = new System.Drawing.Point(216, 379);
-            this.dtpDateCreaPlan.Name = "dtpDateCreaPlan";
-            this.dtpDateCreaPlan.Size = new System.Drawing.Size(168, 29);
-            this.dtpDateCreaPlan.TabIndex = 104;
-            // 
-            // lbDateModifPlan
-            // 
-            this.lbDateModifPlan.AutoSize = true;
-            this.lbDateModifPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDateModifPlan.ForeColor = System.Drawing.Color.Blue;
-            this.lbDateModifPlan.Location = new System.Drawing.Point(6, 418);
-            this.lbDateModifPlan.Name = "lbDateModifPlan";
-            this.lbDateModifPlan.Size = new System.Drawing.Size(204, 24);
-            this.lbDateModifPlan.TabIndex = 104;
-            this.lbDateModifPlan.Text = "Date modification plan :";
+            this.lbDateSuppPlan.AutoSize = true;
+            this.lbDateSuppPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateSuppPlan.ForeColor = System.Drawing.Color.Blue;
+            this.lbDateSuppPlan.Location = new System.Drawing.Point(6, 453);
+            this.lbDateSuppPlan.Name = "lbDateSuppPlan";
+            this.lbDateSuppPlan.Size = new System.Drawing.Size(207, 24);
+            this.lbDateSuppPlan.TabIndex = 105;
+            this.lbDateSuppPlan.Text = "Date suppression plan :";
             // 
             // dtpDateModifPlan
             // 
@@ -1592,24 +1537,79 @@
             this.dtpDateModifPlan.Size = new System.Drawing.Size(168, 29);
             this.dtpDateModifPlan.TabIndex = 105;
             // 
-            // lbDateSuppPlan
+            // lbDateModifPlan
             // 
-            this.lbDateSuppPlan.AutoSize = true;
-            this.lbDateSuppPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDateSuppPlan.ForeColor = System.Drawing.Color.Blue;
-            this.lbDateSuppPlan.Location = new System.Drawing.Point(6, 453);
-            this.lbDateSuppPlan.Name = "lbDateSuppPlan";
-            this.lbDateSuppPlan.Size = new System.Drawing.Size(207, 24);
-            this.lbDateSuppPlan.TabIndex = 105;
-            this.lbDateSuppPlan.Text = "Date suppression plan :";
+            this.lbDateModifPlan.AutoSize = true;
+            this.lbDateModifPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateModifPlan.ForeColor = System.Drawing.Color.Blue;
+            this.lbDateModifPlan.Location = new System.Drawing.Point(6, 418);
+            this.lbDateModifPlan.Name = "lbDateModifPlan";
+            this.lbDateModifPlan.Size = new System.Drawing.Size(204, 24);
+            this.lbDateModifPlan.TabIndex = 104;
+            this.lbDateModifPlan.Text = "Date modification plan :";
             // 
-            // txbxDateSuppPlan
+            // dtpDateCreaPlan
             // 
-            this.txbxDateSuppPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxDateSuppPlan.Location = new System.Drawing.Point(215, 450);
-            this.txbxDateSuppPlan.Name = "txbxDateSuppPlan";
-            this.txbxDateSuppPlan.Size = new System.Drawing.Size(169, 29);
-            this.txbxDateSuppPlan.TabIndex = 106;
+            this.dtpDateCreaPlan.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateCreaPlan.CausesValidation = false;
+            this.dtpDateCreaPlan.Cursor = System.Windows.Forms.Cursors.No;
+            this.dtpDateCreaPlan.Enabled = false;
+            this.dtpDateCreaPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateCreaPlan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateCreaPlan.Location = new System.Drawing.Point(216, 379);
+            this.dtpDateCreaPlan.Name = "dtpDateCreaPlan";
+            this.dtpDateCreaPlan.Size = new System.Drawing.Size(168, 29);
+            this.dtpDateCreaPlan.TabIndex = 104;
+            // 
+            // lbDateCrea
+            // 
+            this.lbDateCrea.AutoSize = true;
+            this.lbDateCrea.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateCrea.ForeColor = System.Drawing.Color.Blue;
+            this.lbDateCrea.Location = new System.Drawing.Point(6, 383);
+            this.lbDateCrea.Name = "lbDateCrea";
+            this.lbDateCrea.Size = new System.Drawing.Size(174, 24);
+            this.lbDateCrea.TabIndex = 103;
+            this.lbDateCrea.Text = "Date Création plan :";
+            // 
+            // txbxNotesInternes
+            // 
+            this.txbxNotesInternes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxNotesInternes.Location = new System.Drawing.Point(6, 318);
+            this.txbxNotesInternes.Multiline = true;
+            this.txbxNotesInternes.Name = "txbxNotesInternes";
+            this.txbxNotesInternes.Size = new System.Drawing.Size(428, 57);
+            this.txbxNotesInternes.TabIndex = 102;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(6, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(350, 24);
+            this.label5.TabIndex = 101;
+            this.label5.Text = "Notes internes (édition sous-comission) :";
+            // 
+            // lbLstCommunes
+            // 
+            this.lbLstCommunes.AutoSize = true;
+            this.lbLstCommunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLstCommunes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbLstCommunes.Location = new System.Drawing.Point(6, 42);
+            this.lbLstCommunes.Name = "lbLstCommunes";
+            this.lbLstCommunes.Size = new System.Drawing.Size(194, 24);
+            this.lbLstCommunes.TabIndex = 100;
+            this.lbLstCommunes.Text = "Liste des communes :";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 69);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(428, 195);
+            this.dataGridView1.TabIndex = 74;
             // 
             // Saisie_Form2
             // 
