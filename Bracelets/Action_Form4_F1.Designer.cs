@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnModif = new System.Windows.Forms.Button();
             this.dgvParamBracCamp = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParamBracCamp)).BeginInit();
             this.SuspendLayout();
@@ -92,16 +92,16 @@
             this.button2.TabIndex = 55;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnModif
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(875, 732);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 35);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Modification";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnModif.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModif.Location = new System.Drawing.Point(875, 732);
+            this.btnModif.Name = "btnModif";
+            this.btnModif.Size = new System.Drawing.Size(156, 35);
+            this.btnModif.TabIndex = 54;
+            this.btnModif.Text = "Modification";
+            this.btnModif.UseVisualStyleBackColor = true;
             // 
             // dgvParamBracCamp
             // 
@@ -119,7 +119,7 @@
             this.Controls.Add(this.dgvParamBracCamp);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnModif);
             this.Controls.Add(this.cbxCampAffich);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -139,7 +139,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnModif;
         private System.Windows.Forms.DataGridView dgvParamBracCamp;
     }
 }
