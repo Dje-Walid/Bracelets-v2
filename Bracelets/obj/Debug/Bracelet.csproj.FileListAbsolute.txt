@@ -268,3 +268,9 @@ C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bra
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form2_suite.resources
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form4_F1.resources
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form4_F2.resources
+C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.csproj.ResolveComReference.cache
+C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form4_F1.resources
+C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form4_F2.resources
+C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F1.resources
+C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F3.resources
+C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F4.resources

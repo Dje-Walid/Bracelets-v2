@@ -16,5 +16,10 @@ namespace Bracelet
         {
             InitializeComponent();
         }
+
+        private void Action_Form5_F1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

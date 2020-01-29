@@ -297,6 +297,17 @@ namespace Bracelet
             this.Hide();
             Aide_Form1 Aide_Form1a = new Aide_Form1();
             Aide_Form1a.Show();
+
+            //Lancement de l'extension Word
+            Microsoft.Office.Interop.Word.Application msWord = new Microsoft.Office.Interop.Word.Application();
+            msWord.Visible = false;
+            object missing = System.Reflection.Missing.Value;
+
+            //Lancement du fichier word
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo.FileName = "Manuel Utilisateur.doc";
+            proc.Start();
+            proc.Close();
         }
 
         private void aProposDeBraceletToolStripMenuItem_Click(object sender, EventArgs e)
