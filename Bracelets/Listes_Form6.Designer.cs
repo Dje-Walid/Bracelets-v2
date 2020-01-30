@@ -95,7 +95,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.dgvListEspe);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

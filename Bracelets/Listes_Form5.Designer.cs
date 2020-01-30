@@ -310,7 +310,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listes_Form5";
-            this.Text = "Listes_Form5";
+            this.Text = "Codes types de plan de chasse";
             this.Load += new System.EventHandler(this.Listes_Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

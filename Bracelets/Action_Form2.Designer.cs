@@ -128,7 +128,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.btnAnnule);
             this.Controls.Add(this.btnLanceBascul);
             this.Controls.Add(this.cbxEspecAbascul);

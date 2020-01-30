@@ -131,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.date1);
             this.Controls.Add(this.bt_Annule);
@@ -140,8 +141,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lb);
             this.Controls.Add(this.lbBasculPropAccord);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Action_Form3";
-            this.Text = "Action_Form3";
+            this.Text = "Attribution automatique de Bracelets";
             this.ResumeLayout(false);
             this.PerformLayout();
 

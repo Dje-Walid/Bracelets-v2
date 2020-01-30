@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form3_Suite));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txbx_secteurs_exlure = new System.Windows.Forms.TextBox();
@@ -178,12 +179,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bt_Annuler);
             this.Controls.Add(this.bt_OK);
             this.Controls.Add(this.bt_Effacer);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Action_Form3_Suite";
             this.Text = "Action_Form3_Suite";
             this.Load += new System.EventHandler(this.Action_Form3_Suite_Load);
