@@ -73,6 +73,7 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quelles zones éditer ? (si non spécifié = tout)";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txbx_secteurs_exlure
             // 

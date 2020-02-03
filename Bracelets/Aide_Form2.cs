@@ -16,5 +16,15 @@ namespace Bracelet
         {
             InitializeComponent();
         }
+
+        private void Aide_Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -117,6 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lb_description.Text" xml:space="preserve">
+    <value>Cette application gère les plans de chasse Grand Gibier, Sangliers, Petit Gibier avec éditions des documents de travail 
+pour les sous-commisions et commission départementale, 
+attribution des numéros de bracelets, édition d'arrêtés et de statistiques.
+Elle permet de faire une partie de la saisie/consultation à la Fédération des chasseurs.</value>
+  </data>
+  <data name="lb_description_licence.Text" xml:space="preserve">
+    <value>L'application Bracelet est développée par l'informaticien en 1999/2000 pour le maître d'ouvrage.
+Elle utilise le gestionnaire de données Microsoft® Office 97 et principalement Microsoft® Access 97.
+Le logiciel peut être diffusé par le maître d'ouvrage ou le gestionnaire sous leur propre responsabilité.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

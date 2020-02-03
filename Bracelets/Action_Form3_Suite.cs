@@ -16,7 +16,7 @@ namespace Bracelet
         {
             InitializeComponent();
         }
-
+        Outils a = new Outils();
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -70,17 +70,12 @@ namespace Bracelet
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
-            DialogResult resulta;
-            resulta = MessageBox.Show("Êtes-vous sûr de vouloir annuler ", "AVERTISSEMENT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (resulta == System.Windows.Forms.DialogResult.OK)
-            {
-                this.Close();
+            a.annuler(this);
+        }
 
-            }
-            else
-            {
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
-            }
         }
     }
 }
