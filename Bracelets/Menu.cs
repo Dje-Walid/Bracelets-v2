@@ -36,8 +36,8 @@ namespace Bracelet
 
         private void quitterBraceletToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            DialogResult resulta; 
-            resulta =MessageBox.Show("Êtes-vous sûr de vouloir quittez", "AVERTISSEMENT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult resulta;
+            resulta = MessageBox.Show("Êtes-vous sûr de vouloir quittez", "AVERTISSEMENT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (resulta == System.Windows.Forms.DialogResult.OK)
             {
                 Application.Exit();
@@ -47,8 +47,8 @@ namespace Bracelet
 
             }
 
-            
-            
+
+
         }
 
         private void basculerProposésAccordésToolStripMenuItem_Click(object sender, EventArgs e)
@@ -327,6 +327,8 @@ namespace Bracelet
         private void basculerFDCYEnONFEDDAFToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Action_Form2 action_Form2 = new Action_Form2();
+            action_Form2.Show();
         }
 
         private void modificationsDattributionManuellesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -351,28 +353,37 @@ namespace Bracelet
         private void paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Action_Form5_F1 action_Form5_F1 = new Action_Form5_F1();
+            action_Form5_F1.Show();
+        }
+
+        private void paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Action_Form5_F2 action_Form5_F2 = new Action_Form5_F2();
+            action_Form5_F2.Show();
+        }
+
+        private void historiqueDesDatesDesActionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
             Action_Form5_F3 action_Form5_F3 = new Action_Form5_F3();
             action_Form5_F3.Show();
         }
 
-        private void paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void historiqueDesModifsDeNumérosDePlansDeChasseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Action_Form5_F4 action_Form5_F4 = new Action_Form5_F4();
             action_Form5_F4.Show();
         }
 
-        private void historiqueDesDatesDesActionsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void historiqueDesModifsDeNumérosDePlansDeChasseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void exportationExcelToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

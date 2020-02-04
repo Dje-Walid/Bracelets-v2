@@ -278,3 +278,10 @@ C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.csproj.Resolv
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F1.resources
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F3.resources
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F4.resources
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.csproj.ResolveComReference.cache
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form4_F1.resources
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form4_F2.resources
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F1.resources
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F3.resources
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F4.resources
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F2.resources
