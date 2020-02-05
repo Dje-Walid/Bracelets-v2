@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form3));
-            this.bt_Annule = new System.Windows.Forms.Button();
-            this.bt_lancer = new System.Windows.Forms.Button();
+            this.bt_Annuler = new System.Windows.Forms.Button();
+            this.bt_lancer_Attrib = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.bt_Action_Form3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.Label();
             this.lbBasculPropAccord = new System.Windows.Forms.Label();
-            this.date1 = new System.Windows.Forms.DateTimePicker();
+            this.DateAttr = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,28 +95,28 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bt_Annule
+            // bt_Annuler
             // 
-            this.bt_Annule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_Annule.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Annule.Location = new System.Drawing.Point(691, 638);
-            this.bt_Annule.Name = "bt_Annule";
-            this.bt_Annule.Size = new System.Drawing.Size(142, 40);
-            this.bt_Annule.TabIndex = 15;
-            this.bt_Annule.Text = "Annuler";
-            this.bt_Annule.UseVisualStyleBackColor = true;
-            this.bt_Annule.Click += new System.EventHandler(this.btnAnnule_Click);
+            this.bt_Annuler.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_Annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Annuler.Location = new System.Drawing.Point(691, 638);
+            this.bt_Annuler.Name = "bt_Annuler";
+            this.bt_Annuler.Size = new System.Drawing.Size(142, 40);
+            this.bt_Annuler.TabIndex = 15;
+            this.bt_Annuler.Text = "Annuler";
+            this.bt_Annuler.UseVisualStyleBackColor = true;
+            this.bt_Annuler.Click += new System.EventHandler(this.btnAnnule_Click);
             // 
-            // bt_lancer
+            // bt_lancer_Attrib
             // 
-            this.bt_lancer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_lancer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_lancer.Location = new System.Drawing.Point(438, 638);
-            this.bt_lancer.Name = "bt_lancer";
-            this.bt_lancer.Size = new System.Drawing.Size(204, 40);
-            this.bt_lancer.TabIndex = 14;
-            this.bt_lancer.Text = "Lancer l\'attribution automatique\r\n";
-            this.bt_lancer.UseVisualStyleBackColor = true;
+            this.bt_lancer_Attrib.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_lancer_Attrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_lancer_Attrib.Location = new System.Drawing.Point(438, 638);
+            this.bt_lancer_Attrib.Name = "bt_lancer_Attrib";
+            this.bt_lancer_Attrib.Size = new System.Drawing.Size(204, 40);
+            this.bt_lancer_Attrib.TabIndex = 14;
+            this.bt_lancer_Attrib.Text = "Lancer l\'attribution automatique\r\n";
+            this.bt_lancer_Attrib.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -175,14 +175,14 @@
             this.lbBasculPropAccord.Text = "Attribution automatique\r\nde Bracelets\r\n";
             this.lbBasculPropAccord.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // date1
+            // DateAttr
             // 
-            this.date1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date1.Location = new System.Drawing.Point(648, 487);
-            this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(132, 29);
-            this.date1.TabIndex = 16;
+            this.DateAttr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateAttr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateAttr.Location = new System.Drawing.Point(648, 487);
+            this.DateAttr.Name = "DateAttr";
+            this.DateAttr.Size = new System.Drawing.Size(132, 29);
+            this.DateAttr.TabIndex = 16;
             // 
             // menuStrip1
             // 
@@ -630,9 +630,9 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.date1);
-            this.Controls.Add(this.bt_Annule);
-            this.Controls.Add(this.bt_lancer);
+            this.Controls.Add(this.DateAttr);
+            this.Controls.Add(this.bt_Annuler);
+            this.Controls.Add(this.bt_lancer_Attrib);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bt_Action_Form3);
             this.Controls.Add(this.label3);
@@ -651,14 +651,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button bt_Annule;
-        private System.Windows.Forms.Button bt_lancer;
+        private System.Windows.Forms.Button bt_Annuler;
+        private System.Windows.Forms.Button bt_lancer_Attrib;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button bt_Action_Form3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lb;
         private System.Windows.Forms.Label lbBasculPropAccord;
-        private System.Windows.Forms.DateTimePicker date1;
+        private System.Windows.Forms.DateTimePicker DateAttr;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem environnementCourantToolStripMenuItem;

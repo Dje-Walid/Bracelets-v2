@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form3_Suite));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txbx_secteurs_exlure = new System.Windows.Forms.TextBox();
-            this.txbx_secteur_inclure = new System.Windows.Forms.TextBox();
-            this.txbx_secteur_exclure = new System.Windows.Forms.ComboBox();
-            this.txbx_Massif_Inclure = new System.Windows.Forms.ComboBox();
+            this.txbxSecEx = new System.Windows.Forms.TextBox();
+            this.txbxSecIn = new System.Windows.Forms.TextBox();
+            this.cbxMasEx = new System.Windows.Forms.ComboBox();
+            this.cbxMasIn = new System.Windows.Forms.ComboBox();
             this.lb3 = new System.Windows.Forms.Label();
             this.lb2 = new System.Windows.Forms.Label();
             this.lb1 = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.Label();
             this.bt_Annuler = new System.Windows.Forms.Button();
-            this.bt_OK = new System.Windows.Forms.Button();
+            this.btValider = new System.Windows.Forms.Button();
             this.bt_Effacer = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.IndianRed;
             this.label1.Location = new System.Drawing.Point(184, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(549, 39);
@@ -57,10 +58,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txbx_secteurs_exlure);
-            this.groupBox1.Controls.Add(this.txbx_secteur_inclure);
-            this.groupBox1.Controls.Add(this.txbx_secteur_exclure);
-            this.groupBox1.Controls.Add(this.txbx_Massif_Inclure);
+            this.groupBox1.Controls.Add(this.txbxSecEx);
+            this.groupBox1.Controls.Add(this.txbxSecIn);
+            this.groupBox1.Controls.Add(this.cbxMasEx);
+            this.groupBox1.Controls.Add(this.cbxMasIn);
             this.groupBox1.Controls.Add(this.lb3);
             this.groupBox1.Controls.Add(this.lb2);
             this.groupBox1.Controls.Add(this.lb1);
@@ -75,35 +76,35 @@
             this.groupBox1.Text = "Quelles zones éditer ? (si non spécifié = tout)";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // txbx_secteurs_exlure
+            // txbxSecEx
             // 
-            this.txbx_secteurs_exlure.Location = new System.Drawing.Point(331, 170);
-            this.txbx_secteurs_exlure.Name = "txbx_secteurs_exlure";
-            this.txbx_secteurs_exlure.Size = new System.Drawing.Size(179, 29);
-            this.txbx_secteurs_exlure.TabIndex = 9;
+            this.txbxSecEx.Location = new System.Drawing.Point(331, 170);
+            this.txbxSecEx.Name = "txbxSecEx";
+            this.txbxSecEx.Size = new System.Drawing.Size(179, 29);
+            this.txbxSecEx.TabIndex = 9;
             // 
-            // txbx_secteur_inclure
+            // txbxSecIn
             // 
-            this.txbx_secteur_inclure.Location = new System.Drawing.Point(331, 68);
-            this.txbx_secteur_inclure.Name = "txbx_secteur_inclure";
-            this.txbx_secteur_inclure.Size = new System.Drawing.Size(179, 29);
-            this.txbx_secteur_inclure.TabIndex = 8;
+            this.txbxSecIn.Location = new System.Drawing.Point(331, 68);
+            this.txbxSecIn.Name = "txbxSecIn";
+            this.txbxSecIn.Size = new System.Drawing.Size(179, 29);
+            this.txbxSecIn.TabIndex = 8;
             // 
-            // txbx_secteur_exclure
+            // cbxMasEx
             // 
-            this.txbx_secteur_exclure.FormattingEnabled = true;
-            this.txbx_secteur_exclure.Location = new System.Drawing.Point(331, 226);
-            this.txbx_secteur_exclure.Name = "txbx_secteur_exclure";
-            this.txbx_secteur_exclure.Size = new System.Drawing.Size(179, 32);
-            this.txbx_secteur_exclure.TabIndex = 7;
+            this.cbxMasEx.FormattingEnabled = true;
+            this.cbxMasEx.Location = new System.Drawing.Point(331, 226);
+            this.cbxMasEx.Name = "cbxMasEx";
+            this.cbxMasEx.Size = new System.Drawing.Size(179, 32);
+            this.cbxMasEx.TabIndex = 7;
             // 
-            // txbx_Massif_Inclure
+            // cbxMasIn
             // 
-            this.txbx_Massif_Inclure.FormattingEnabled = true;
-            this.txbx_Massif_Inclure.Location = new System.Drawing.Point(331, 115);
-            this.txbx_Massif_Inclure.Name = "txbx_Massif_Inclure";
-            this.txbx_Massif_Inclure.Size = new System.Drawing.Size(179, 32);
-            this.txbx_Massif_Inclure.TabIndex = 5;
+            this.cbxMasIn.FormattingEnabled = true;
+            this.cbxMasIn.Location = new System.Drawing.Point(331, 115);
+            this.cbxMasIn.Name = "cbxMasIn";
+            this.cbxMasIn.Size = new System.Drawing.Size(179, 32);
+            this.cbxMasIn.TabIndex = 5;
             // 
             // lb3
             // 
@@ -153,16 +154,16 @@
             this.bt_Annuler.UseVisualStyleBackColor = true;
             this.bt_Annuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
-            // bt_OK
+            // btValider
             // 
-            this.bt_OK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_OK.Location = new System.Drawing.Point(219, 557);
-            this.bt_OK.Name = "bt_OK";
-            this.bt_OK.Size = new System.Drawing.Size(184, 41);
-            this.bt_OK.TabIndex = 18;
-            this.bt_OK.Text = "Ok";
-            this.bt_OK.UseVisualStyleBackColor = true;
+            this.btValider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btValider.Location = new System.Drawing.Point(219, 557);
+            this.btValider.Name = "btValider";
+            this.btValider.Size = new System.Drawing.Size(184, 41);
+            this.btValider.TabIndex = 18;
+            this.btValider.Text = "Valider";
+            this.btValider.UseVisualStyleBackColor = true;
             // 
             // bt_Effacer
             // 
@@ -184,7 +185,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bt_Annuler);
-            this.Controls.Add(this.bt_OK);
+            this.Controls.Add(this.btValider);
             this.Controls.Add(this.bt_Effacer);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -202,16 +203,16 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txbx_secteurs_exlure;
-        private System.Windows.Forms.TextBox txbx_secteur_inclure;
-        private System.Windows.Forms.ComboBox txbx_secteur_exclure;
-        private System.Windows.Forms.ComboBox txbx_Massif_Inclure;
+        private System.Windows.Forms.TextBox txbxSecEx;
+        private System.Windows.Forms.TextBox txbxSecIn;
+        private System.Windows.Forms.ComboBox cbxMasEx;
+        private System.Windows.Forms.ComboBox cbxMasIn;
         private System.Windows.Forms.Label lb3;
         private System.Windows.Forms.Label lb2;
         private System.Windows.Forms.Label lb1;
         private System.Windows.Forms.Label lb;
         private System.Windows.Forms.Button bt_Annuler;
-        private System.Windows.Forms.Button bt_OK;
+        private System.Windows.Forms.Button btValider;
         private System.Windows.Forms.Button bt_Effacer;
     }
 }

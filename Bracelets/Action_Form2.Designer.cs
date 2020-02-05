@@ -34,9 +34,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btAction_Form2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbxEspecAbascul = new System.Windows.Forms.ComboBox();
-            this.btnLanceBascul = new System.Windows.Forms.Button();
-            this.btnAnnule = new System.Windows.Forms.Button();
+            this.cbxEspBascul = new System.Windows.Forms.ComboBox();
+            this.btLancerBascul = new System.Windows.Forms.Button();
+            this.btAnnule = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -152,35 +152,35 @@
             this.label4.Text = "Espèce à Basculer :";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // cbxEspecAbascul
+            // cbxEspBascul
             // 
-            this.cbxEspecAbascul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxEspecAbascul.FormattingEnabled = true;
-            this.cbxEspecAbascul.Location = new System.Drawing.Point(547, 565);
-            this.cbxEspecAbascul.Name = "cbxEspecAbascul";
-            this.cbxEspecAbascul.Size = new System.Drawing.Size(246, 32);
-            this.cbxEspecAbascul.TabIndex = 5;
+            this.cbxEspBascul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxEspBascul.FormattingEnabled = true;
+            this.cbxEspBascul.Location = new System.Drawing.Point(547, 565);
+            this.cbxEspBascul.Name = "cbxEspBascul";
+            this.cbxEspBascul.Size = new System.Drawing.Size(246, 32);
+            this.cbxEspBascul.TabIndex = 5;
             // 
-            // btnLanceBascul
+            // btLancerBascul
             // 
-            this.btnLanceBascul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLanceBascul.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnLanceBascul.Location = new System.Drawing.Point(317, 700);
-            this.btnLanceBascul.Name = "btnLanceBascul";
-            this.btnLanceBascul.Size = new System.Drawing.Size(263, 37);
-            this.btnLanceBascul.TabIndex = 6;
-            this.btnLanceBascul.Text = "Lancer le basculement";
-            this.btnLanceBascul.UseVisualStyleBackColor = true;
+            this.btLancerBascul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLancerBascul.ForeColor = System.Drawing.Color.Firebrick;
+            this.btLancerBascul.Location = new System.Drawing.Point(317, 700);
+            this.btLancerBascul.Name = "btLancerBascul";
+            this.btLancerBascul.Size = new System.Drawing.Size(263, 37);
+            this.btLancerBascul.TabIndex = 6;
+            this.btLancerBascul.Text = "Lancer le basculement";
+            this.btLancerBascul.UseVisualStyleBackColor = true;
             // 
-            // btnAnnule
+            // btAnnule
             // 
-            this.btnAnnule.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnule.Location = new System.Drawing.Point(677, 700);
-            this.btnAnnule.Name = "btnAnnule";
-            this.btnAnnule.Size = new System.Drawing.Size(168, 37);
-            this.btnAnnule.TabIndex = 7;
-            this.btnAnnule.Text = "Annuler";
-            this.btnAnnule.UseVisualStyleBackColor = true;
+            this.btAnnule.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAnnule.Location = new System.Drawing.Point(677, 700);
+            this.btAnnule.Name = "btAnnule";
+            this.btAnnule.Size = new System.Drawing.Size(168, 37);
+            this.btAnnule.TabIndex = 7;
+            this.btAnnule.Text = "Annuler";
+            this.btAnnule.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -628,9 +628,9 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.btnAnnule);
-            this.Controls.Add(this.btnLanceBascul);
-            this.Controls.Add(this.cbxEspecAbascul);
+            this.Controls.Add(this.btAnnule);
+            this.Controls.Add(this.btLancerBascul);
+            this.Controls.Add(this.cbxEspBascul);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btAction_Form2);
             this.Controls.Add(this.label3);
@@ -657,9 +657,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btAction_Form2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbxEspecAbascul;
-        private System.Windows.Forms.Button btnLanceBascul;
-        private System.Windows.Forms.Button btnAnnule;
+        private System.Windows.Forms.ComboBox cbxEspBascul;
+        private System.Windows.Forms.Button btLancerBascul;
+        private System.Windows.Forms.Button btAnnule;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem environnementCourantToolStripMenuItem;

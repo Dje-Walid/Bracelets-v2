@@ -35,7 +35,7 @@
             this.btAction_Form1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxEspecAbascul = new System.Windows.Forms.ComboBox();
-            this.btnLanceBascul = new System.Windows.Forms.Button();
+            this.btLanceBascul = new System.Windows.Forms.Button();
             this.btnAnnule = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -162,16 +162,16 @@
             this.cbxEspecAbascul.Size = new System.Drawing.Size(186, 32);
             this.cbxEspecAbascul.TabIndex = 5;
             // 
-            // btnLanceBascul
+            // btLanceBascul
             // 
-            this.btnLanceBascul.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLanceBascul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLanceBascul.Location = new System.Drawing.Point(357, 596);
-            this.btnLanceBascul.Name = "btnLanceBascul";
-            this.btnLanceBascul.Size = new System.Drawing.Size(248, 37);
-            this.btnLanceBascul.TabIndex = 6;
-            this.btnLanceBascul.Text = "Lancer le basculement";
-            this.btnLanceBascul.UseVisualStyleBackColor = true;
+            this.btLanceBascul.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btLanceBascul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLanceBascul.Location = new System.Drawing.Point(357, 596);
+            this.btLanceBascul.Name = "btLanceBascul";
+            this.btLanceBascul.Size = new System.Drawing.Size(248, 37);
+            this.btLanceBascul.TabIndex = 6;
+            this.btLanceBascul.Text = "Lancer le basculement";
+            this.btLanceBascul.UseVisualStyleBackColor = true;
             // 
             // btnAnnule
             // 
@@ -633,7 +633,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnAnnule);
-            this.Controls.Add(this.btnLanceBascul);
+            this.Controls.Add(this.btLanceBascul);
             this.Controls.Add(this.cbxEspecAbascul);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btAction_Form1);
@@ -660,7 +660,7 @@
         private System.Windows.Forms.Button btAction_Form1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxEspecAbascul;
-        private System.Windows.Forms.Button btnLanceBascul;
+        private System.Windows.Forms.Button btLanceBascul;
         private System.Windows.Forms.Button btnAnnule;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;

@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btEffacer = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbxSecEx = new System.Windows.Forms.TextBox();
             this.txbxSecIn = new System.Windows.Forms.TextBox();
-            this.cbxMassifaExclure = new System.Windows.Forms.ComboBox();
-            this.cbxMassifaInclur = new System.Windows.Forms.ComboBox();
+            this.cbxMasEx = new System.Windows.Forms.ComboBox();
+            this.cbxMasIn = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbSecEx = new System.Windows.Forms.Label();
+            this.lbMasIn = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btValider = new System.Windows.Forms.Button();
             this.btAnnuler = new System.Windows.Forms.Button();
@@ -69,13 +69,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txbxSecEx);
             this.groupBox1.Controls.Add(this.txbxSecIn);
-            this.groupBox1.Controls.Add(this.cbxMassifaExclure);
-            this.groupBox1.Controls.Add(this.cbxMassifaInclur);
+            this.groupBox1.Controls.Add(this.cbxMasEx);
+            this.groupBox1.Controls.Add(this.cbxMasIn);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbSecEx);
+            this.groupBox1.Controls.Add(this.lbMasIn);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -87,12 +87,12 @@
             this.groupBox1.Text = "Quel massifs éditer ? (si non spécifieé = tout)";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox2
+            // txbxSecEx
             // 
-            this.textBox2.Location = new System.Drawing.Point(285, 236);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 29);
-            this.textBox2.TabIndex = 9;
+            this.txbxSecEx.Location = new System.Drawing.Point(285, 236);
+            this.txbxSecEx.Name = "txbxSecEx";
+            this.txbxSecEx.Size = new System.Drawing.Size(179, 29);
+            this.txbxSecEx.TabIndex = 9;
             // 
             // txbxSecIn
             // 
@@ -101,21 +101,21 @@
             this.txbxSecIn.Size = new System.Drawing.Size(179, 29);
             this.txbxSecIn.TabIndex = 8;
             // 
-            // cbxMassifaExclure
+            // cbxMasEx
             // 
-            this.cbxMassifaExclure.FormattingEnabled = true;
-            this.cbxMassifaExclure.Location = new System.Drawing.Point(285, 310);
-            this.cbxMassifaExclure.Name = "cbxMassifaExclure";
-            this.cbxMassifaExclure.Size = new System.Drawing.Size(179, 32);
-            this.cbxMassifaExclure.TabIndex = 7;
+            this.cbxMasEx.FormattingEnabled = true;
+            this.cbxMasEx.Location = new System.Drawing.Point(285, 310);
+            this.cbxMasEx.Name = "cbxMasEx";
+            this.cbxMasEx.Size = new System.Drawing.Size(179, 32);
+            this.cbxMasEx.TabIndex = 7;
             // 
-            // cbxMassifaInclur
+            // cbxMasIn
             // 
-            this.cbxMassifaInclur.FormattingEnabled = true;
-            this.cbxMassifaInclur.Location = new System.Drawing.Point(285, 158);
-            this.cbxMassifaInclur.Name = "cbxMassifaInclur";
-            this.cbxMassifaInclur.Size = new System.Drawing.Size(179, 32);
-            this.cbxMassifaInclur.TabIndex = 5;
+            this.cbxMasIn.FormattingEnabled = true;
+            this.cbxMasIn.Location = new System.Drawing.Point(285, 158);
+            this.cbxMasIn.Name = "cbxMasIn";
+            this.cbxMasIn.Size = new System.Drawing.Size(179, 32);
+            this.cbxMasIn.TabIndex = 5;
             // 
             // label5
             // 
@@ -127,25 +127,25 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Liste des massifs à Exclure :";
             // 
-            // label4
+            // lbSecEx
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 241);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(255, 24);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Liste des secteurs à Exclure :";
+            this.lbSecEx.AutoSize = true;
+            this.lbSecEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSecEx.Location = new System.Drawing.Point(24, 241);
+            this.lbSecEx.Name = "lbSecEx";
+            this.lbSecEx.Size = new System.Drawing.Size(255, 24);
+            this.lbSecEx.TabIndex = 2;
+            this.lbSecEx.Text = "Liste des secteurs à Exclure :";
             // 
-            // label3
+            // lbMasIn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 158);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(237, 24);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Liste des massifs à Inclure :";
+            this.lbMasIn.AutoSize = true;
+            this.lbMasIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMasIn.Location = new System.Drawing.Point(24, 158);
+            this.lbMasIn.Name = "lbMasIn";
+            this.lbMasIn.Size = new System.Drawing.Size(237, 24);
+            this.lbMasIn.TabIndex = 1;
+            this.lbMasIn.Text = "Liste des massifs à Inclure :";
             // 
             // label2
             // 
@@ -209,13 +209,13 @@
         private System.Windows.Forms.Button btEffacer;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbSecEx;
+        private System.Windows.Forms.Label lbMasIn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbxSecEx;
         private System.Windows.Forms.TextBox txbxSecIn;
-        private System.Windows.Forms.ComboBox cbxMassifaExclure;
-        private System.Windows.Forms.ComboBox cbxMassifaInclur;
+        private System.Windows.Forms.ComboBox cbxMasEx;
+        private System.Windows.Forms.ComboBox cbxMasIn;
         private System.Windows.Forms.Button btValider;
         private System.Windows.Forms.Button btAnnuler;
     }

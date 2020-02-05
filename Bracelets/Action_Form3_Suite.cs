@@ -63,8 +63,8 @@ namespace Bracelet
 
         private void btnEffacer_Click(object sender, EventArgs e)
         {
-            txbx_secteur_inclure.Text = "";
-            txbx_secteurs_exlure.Text = "";
+            txbxSecIn.Text = "";
+            txbxSecEx.Text = "";
 
         }
 
