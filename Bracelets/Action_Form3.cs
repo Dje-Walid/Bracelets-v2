@@ -111,8 +111,7 @@ namespace Bracelet
 
         private void editionsDDAFToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Edition_Form3 Edition_Form3a = new Edition_Form3();
-            Edition_Form3a.Show();
+            
         }
 
         private void arrêtésIndividuelsTirÀLapprocheToolStripMenuItem_Click(object sender, EventArgs e)
@@ -159,8 +158,7 @@ namespace Bracelet
 
         private void editionsFédérationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Edition_Form4 Edition_Form4a = new Edition_Form4();
-            Edition_Form4a.Show();
+            
         }
 
         private void listingDétiquettesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -171,8 +169,7 @@ namespace Bracelet
 
         private void statistiquesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Edition_Form5 Edition_Form5a = new Edition_Form5();
-            Edition_Form5a.Show();
+            
         }
 
         private void statistiquesParZoneToolStripMenuItem_Click(object sender, EventArgs e)
@@ -268,33 +265,7 @@ namespace Bracelet
             importExport_Form1a.Show();
         }
 
-        private void importationDeLaDDAFToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ImportExport_Form2 importExport_Form2a = new ImportExport_Form2();
-            importExport_Form2a.Show();
-        }
-
-        private void exportationVersLaDDAFToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ImportExport_Form3 importExport_Form3a = new ImportExport_Form3();
-            importExport_Form3a.Show();
-        }
-
-        private void importationDeLaFédérationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ImportExport_Form4 importExport_Form4a = new ImportExport_Form4();
-            importExport_Form4a.Show();
-        }
-
-        private void archivageDuneCampagneToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ImportExport_Form5 importExport_Form5a = new ImportExport_Form5();
-            importExport_Form5a.Show();
-        }
+      
 
         private void changerDeMotDePasseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -397,6 +368,18 @@ namespace Bracelet
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void modificationsDattributionManuellesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void importExportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
+            importExport_Form1a.Show();
         }
     }
 }

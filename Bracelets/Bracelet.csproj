@@ -109,12 +109,6 @@
     <Compile Include="Action_Form3_Suite.Designer.cs">
       <DependentUpon>Action_Form3_Suite.cs</DependentUpon>
     </Compile>
-    <Compile Include="Action_Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Action_Form4.Designer.cs">
-      <DependentUpon>Action_Form4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Action_Form4_F1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +120,6 @@
     </Compile>
     <Compile Include="Action_Form4_F2.Designer.cs">
       <DependentUpon>Action_Form4_F2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Action_Form5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Action_Form5.Designer.cs">
-      <DependentUpon>Action_Form5.cs</DependentUpon>
     </Compile>
     <Compile Include="Action_Form5_F1.cs">
       <SubType>Form</SubType>
@@ -181,12 +169,6 @@
     <Compile Include="Edition_Form2.Designer.cs">
       <DependentUpon>Edition_Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edition_Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edition_Form3.Designer.cs">
-      <DependentUpon>Edition_Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="Edition_Form3_F1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,23 +205,11 @@
     <Compile Include="Edition_Form3_F6.Designer.cs">
       <DependentUpon>Edition_Form3_F6.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edition_Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edition_Form4.Designer.cs">
-      <DependentUpon>Edition_Form4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Edition_Form4_F1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Edition_Form4_F1.Designer.cs">
       <DependentUpon>Edition_Form4_F1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edition_Form5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edition_Form5.Designer.cs">
-      <DependentUpon>Edition_Form5.cs</DependentUpon>
     </Compile>
     <Compile Include="Edition_Form5_F1.cs">
       <SubType>Form</SubType>
@@ -264,30 +234,6 @@
     </Compile>
     <Compile Include="ImportExport_Form1.Designer.cs">
       <DependentUpon>ImportExport_Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ImportExport_Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImportExport_Form2.Designer.cs">
-      <DependentUpon>ImportExport_Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ImportExport_Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImportExport_Form3.Designer.cs">
-      <DependentUpon>ImportExport_Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ImportExport_Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImportExport_Form4.Designer.cs">
-      <DependentUpon>ImportExport_Form4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ImportExport_Form5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImportExport_Form5.Designer.cs">
-      <DependentUpon>ImportExport_Form5.cs</DependentUpon>
     </Compile>
     <Compile Include="Listes_Form1.cs">
       <SubType>Form</SubType>
@@ -403,17 +349,11 @@
     <EmbeddedResource Include="Action_Form3_Suite.resx">
       <DependentUpon>Action_Form3_Suite.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Action_Form4.resx">
-      <DependentUpon>Action_Form4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Action_Form4_F1.resx">
       <DependentUpon>Action_Form4_F1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Action_Form4_F2.resx">
       <DependentUpon>Action_Form4_F2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Action_Form5.resx">
-      <DependentUpon>Action_Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Action_Form5_F1.resx">
       <DependentUpon>Action_Form5_F1.cs</DependentUpon>
@@ -439,9 +379,6 @@
     <EmbeddedResource Include="Edition_Form2.resx">
       <DependentUpon>Edition_Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edition_Form3.resx">
-      <DependentUpon>Edition_Form3.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Edition_Form3_F1.resx">
       <DependentUpon>Edition_Form3_F1.cs</DependentUpon>
     </EmbeddedResource>
@@ -460,14 +397,8 @@
     <EmbeddedResource Include="Edition_Form3_F6.resx">
       <DependentUpon>Edition_Form3_F6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edition_Form4.resx">
-      <DependentUpon>Edition_Form4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Edition_Form4_F1.resx">
       <DependentUpon>Edition_Form4_F1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edition_Form5.resx">
-      <DependentUpon>Edition_Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edition_Form5_F1.resx">
       <DependentUpon>Edition_Form5_F1.cs</DependentUpon>
@@ -480,18 +411,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImportExport_Form1.resx">
       <DependentUpon>ImportExport_Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ImportExport_Form2.resx">
-      <DependentUpon>ImportExport_Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ImportExport_Form3.resx">
-      <DependentUpon>ImportExport_Form3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ImportExport_Form4.resx">
-      <DependentUpon>ImportExport_Form4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ImportExport_Form5.resx">
-      <DependentUpon>ImportExport_Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listes_Form1.resx">
       <DependentUpon>Listes_Form1.cs</DependentUpon>

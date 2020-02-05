@@ -74,11 +74,6 @@
             this.codesCampagnesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.codesCommunesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportationVersLaFédérationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importationDeLaDDAFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportationVersLaDDAFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importationDeLaFédérationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.archivageDuneCampagneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sécuritéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changerDeMotDePasseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -201,6 +196,7 @@
             this.paramétrageDesActionsToolStripMenuItem.Name = "paramétrageDesActionsToolStripMenuItem";
             this.paramétrageDesActionsToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.paramétrageDesActionsToolStripMenuItem.Text = "Paramétrage des actions";
+            this.paramétrageDesActionsToolStripMenuItem.Click += new System.EventHandler(this.paramétrageDesActionsToolStripMenuItem_Click);
             // 
             // paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem
             // 
@@ -325,7 +321,7 @@
             // listingDétiquettesToolStripMenuItem
             // 
             this.listingDétiquettesToolStripMenuItem.Name = "listingDétiquettesToolStripMenuItem";
-            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.listingDétiquettesToolStripMenuItem.Text = "Listing d\'étiquettes";
             this.listingDétiquettesToolStripMenuItem.Click += new System.EventHandler(this.listingDétiquettesToolStripMenuItem_Click);
             // 
@@ -458,50 +454,10 @@
             // 
             // importExportToolStripMenuItem
             // 
-            this.importExportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportationVersLaFédérationToolStripMenuItem,
-            this.importationDeLaDDAFToolStripMenuItem,
-            this.exportationVersLaDDAFToolStripMenuItem,
-            this.importationDeLaFédérationToolStripMenuItem,
-            this.archivageDuneCampagneToolStripMenuItem});
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
             this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
-            // 
-            // exportationVersLaFédérationToolStripMenuItem
-            // 
-            this.exportationVersLaFédérationToolStripMenuItem.Name = "exportationVersLaFédérationToolStripMenuItem";
-            this.exportationVersLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.exportationVersLaFédérationToolStripMenuItem.Text = "Exportation vers la fédération";
-            this.exportationVersLaFédérationToolStripMenuItem.Click += new System.EventHandler(this.exportationVersLaFédérationToolStripMenuItem_Click);
-            // 
-            // importationDeLaDDAFToolStripMenuItem
-            // 
-            this.importationDeLaDDAFToolStripMenuItem.Name = "importationDeLaDDAFToolStripMenuItem";
-            this.importationDeLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.importationDeLaDDAFToolStripMenuItem.Text = "Importation de la DDAF";
-            this.importationDeLaDDAFToolStripMenuItem.Click += new System.EventHandler(this.importationDeLaDDAFToolStripMenuItem_Click);
-            // 
-            // exportationVersLaDDAFToolStripMenuItem
-            // 
-            this.exportationVersLaDDAFToolStripMenuItem.Name = "exportationVersLaDDAFToolStripMenuItem";
-            this.exportationVersLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.exportationVersLaDDAFToolStripMenuItem.Text = "Exportation vers la DDAF";
-            this.exportationVersLaDDAFToolStripMenuItem.Click += new System.EventHandler(this.exportationVersLaDDAFToolStripMenuItem_Click);
-            // 
-            // importationDeLaFédérationToolStripMenuItem
-            // 
-            this.importationDeLaFédérationToolStripMenuItem.Name = "importationDeLaFédérationToolStripMenuItem";
-            this.importationDeLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.importationDeLaFédérationToolStripMenuItem.Text = "Importation de la Fédération";
-            this.importationDeLaFédérationToolStripMenuItem.Click += new System.EventHandler(this.importationDeLaFédérationToolStripMenuItem_Click);
-            // 
-            // archivageDuneCampagneToolStripMenuItem
-            // 
-            this.archivageDuneCampagneToolStripMenuItem.Name = "archivageDuneCampagneToolStripMenuItem";
-            this.archivageDuneCampagneToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.archivageDuneCampagneToolStripMenuItem.Text = "Archivage d\'une campagne";
-            this.archivageDuneCampagneToolStripMenuItem.Click += new System.EventHandler(this.archivageDuneCampagneToolStripMenuItem_Click);
+            this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
             // sécuritéToolStripMenuItem
             // 
@@ -530,14 +486,14 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             this.exportationExcelToolStripMenuItem.Click += new System.EventHandler(this.exportationExcelToolStripMenuItem_Click_1);
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -587,6 +543,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -643,7 +600,6 @@
         private System.Windows.Forms.ToolStripMenuItem codesCommunesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outilsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importExportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportationVersLaFédérationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sécuritéToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changerDeMotDePasseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
@@ -653,9 +609,5 @@
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exportationExcelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprimerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importationDeLaDDAFToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportationVersLaDDAFToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importationDeLaFédérationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem archivageDuneCampagneToolStripMenuItem;
     }
 }

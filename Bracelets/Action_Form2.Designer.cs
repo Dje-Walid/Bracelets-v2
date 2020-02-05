@@ -82,11 +82,6 @@
             this.codesCampagnesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.codesCommunesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportationVersLaFédérationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importationDeLaDDAFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportationVersLaDDAFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importationDeLaFédérationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.archivageDuneCampagneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sécuritéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changerDeMotDePasseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -108,13 +103,14 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(375, 78);
             this.label1.TabIndex = 0;
-            this.label1.Text = "        Basculement\r\nFDCY -> ONF et DDAF";
+            this.label1.Text = "Basculement\r\nFDCY -> ONF et DDAF";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.ForeColor = System.Drawing.Color.Firebrick;
             this.label2.Location = new System.Drawing.Point(276, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(728, 120);
@@ -131,6 +127,7 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Si vous ne voulez opérer le basculement que sur certains massifs alors cliquez su" +
     "r le bouton ci-dessous.";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btAction_Form2
             // 
@@ -147,12 +144,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.ForeColor = System.Drawing.Color.Firebrick;
             this.label4.Location = new System.Drawing.Point(327, 568);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 24);
+            this.label4.Size = new System.Drawing.Size(178, 24);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Espèce à Basculer";
+            this.label4.Text = "Espèce à Basculer :";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // cbxEspecAbascul
@@ -167,7 +164,7 @@
             // btnLanceBascul
             // 
             this.btnLanceBascul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLanceBascul.ForeColor = System.Drawing.Color.Red;
+            this.btnLanceBascul.ForeColor = System.Drawing.Color.Firebrick;
             this.btnLanceBascul.Location = new System.Drawing.Point(317, 700);
             this.btnLanceBascul.Name = "btnLanceBascul";
             this.btnLanceBascul.Size = new System.Drawing.Size(263, 37);
@@ -178,7 +175,7 @@
             // btnAnnule
             // 
             this.btnAnnule.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnule.Location = new System.Drawing.Point(720, 700);
+            this.btnAnnule.Location = new System.Drawing.Point(677, 700);
             this.btnAnnule.Name = "btnAnnule";
             this.btnAnnule.Size = new System.Drawing.Size(168, 37);
             this.btnAnnule.TabIndex = 7;
@@ -268,6 +265,7 @@
             this.modificationsDattributionManuellesToolStripMenuItem.Name = "modificationsDattributionManuellesToolStripMenuItem";
             this.modificationsDattributionManuellesToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.modificationsDattributionManuellesToolStripMenuItem.Text = "Modifications d\'attribution manuelles";
+            this.modificationsDattributionManuellesToolStripMenuItem.Click += new System.EventHandler(this.modificationsDattributionManuellesToolStripMenuItem_Click_1);
             // 
             // changerLeBénéficiaireDunBraceletToolStripMenuItem
             // 
@@ -414,7 +412,7 @@
             // listingDétiquettesToolStripMenuItem
             // 
             this.listingDétiquettesToolStripMenuItem.Name = "listingDétiquettesToolStripMenuItem";
-            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.listingDétiquettesToolStripMenuItem.Text = "Listing d\'étiquettes";
             this.listingDétiquettesToolStripMenuItem.Click += new System.EventHandler(this.listingDétiquettesToolStripMenuItem_Click);
             // 
@@ -546,46 +544,10 @@
             // 
             // importExportToolStripMenuItem
             // 
-            this.importExportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportationVersLaFédérationToolStripMenuItem,
-            this.importationDeLaDDAFToolStripMenuItem,
-            this.exportationVersLaDDAFToolStripMenuItem,
-            this.importationDeLaFédérationToolStripMenuItem,
-            this.archivageDuneCampagneToolStripMenuItem});
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
-            // 
-            // exportationVersLaFédérationToolStripMenuItem
-            // 
-            this.exportationVersLaFédérationToolStripMenuItem.Name = "exportationVersLaFédérationToolStripMenuItem";
-            this.exportationVersLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.exportationVersLaFédérationToolStripMenuItem.Text = "Exportation vers la fédération";
-            this.exportationVersLaFédérationToolStripMenuItem.Click += new System.EventHandler(this.exportationVersLaFédérationToolStripMenuItem_Click);
-            // 
-            // importationDeLaDDAFToolStripMenuItem
-            // 
-            this.importationDeLaDDAFToolStripMenuItem.Name = "importationDeLaDDAFToolStripMenuItem";
-            this.importationDeLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.importationDeLaDDAFToolStripMenuItem.Text = "Importation de la DDAF";
-            // 
-            // exportationVersLaDDAFToolStripMenuItem
-            // 
-            this.exportationVersLaDDAFToolStripMenuItem.Name = "exportationVersLaDDAFToolStripMenuItem";
-            this.exportationVersLaDDAFToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.exportationVersLaDDAFToolStripMenuItem.Text = "Exportation vers la DDAF";
-            // 
-            // importationDeLaFédérationToolStripMenuItem
-            // 
-            this.importationDeLaFédérationToolStripMenuItem.Name = "importationDeLaFédérationToolStripMenuItem";
-            this.importationDeLaFédérationToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.importationDeLaFédérationToolStripMenuItem.Text = "Importation de la Fédération";
-            // 
-            // archivageDuneCampagneToolStripMenuItem
-            // 
-            this.archivageDuneCampagneToolStripMenuItem.Name = "archivageDuneCampagneToolStripMenuItem";
-            this.archivageDuneCampagneToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.archivageDuneCampagneToolStripMenuItem.Text = "Archivage d\'une campagne";
+            this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
             // sécuritéToolStripMenuItem
             // 
@@ -614,13 +576,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -679,6 +641,7 @@
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "Action_Form2";
             this.Text = "Basculer FDCY en ONF e DDAF";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Action_Form2_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -742,11 +705,6 @@
         private System.Windows.Forms.ToolStripMenuItem codesCampagnesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem codesCommunesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importExportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportationVersLaFédérationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importationDeLaDDAFToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportationVersLaDDAFToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importationDeLaFédérationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem archivageDuneCampagneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sécuritéToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changerDeMotDePasseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outilsToolStripMenuItem;
