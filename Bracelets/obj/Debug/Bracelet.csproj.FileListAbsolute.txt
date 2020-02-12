@@ -285,3 +285,5 @@ C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action
 C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F3.resources
 C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F4.resources
 C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F2.resources
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\bin\Debug\190414Bracelet.accdb
+C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\bin\Debug\BracDonnees.accdb

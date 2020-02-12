@@ -44,6 +44,8 @@ namespace Bracelet
 
         private void Saisie_Form1_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'bracDonneesDataSet.tlCampagnes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlCampagnesTableAdapter.Fill(this.bracDonneesDataSet.tlCampagnes);
 
         }
 
@@ -404,6 +406,11 @@ namespace Bracelet
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void cbxCampCour_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -169,6 +169,11 @@
     <Compile Include="Aide_Form2.Designer.cs">
       <DependentUpon>Aide_Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="BracDonneesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BracDonneesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Edition_Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -548,6 +553,17 @@
     <EmbeddedResource Include="Securite_Form1.resx">
       <DependentUpon>Securite_Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BracDonneesDataSet.xsc">
+      <DependentUpon>BracDonneesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BracDonneesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BracDonneesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BracDonneesDataSet.xss">
+      <DependentUpon>BracDonneesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -571,6 +587,12 @@
     <None Include="Resources\fantasy-4386055_1280.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="190414Bracelet.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BracDonnees.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="deer-1529440_1280.ico" />
     <None Include="Resources\arrow gauche 24px.png" />
     <None Include="Resources\arow droite 24px.png" />

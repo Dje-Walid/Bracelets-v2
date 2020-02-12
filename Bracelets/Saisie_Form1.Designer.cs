@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saisie_Form1));
             this.cbxCampCour = new System.Windows.Forms.ComboBox();
             this.lbPlanChassCour = new System.Windows.Forms.Label();
@@ -99,16 +100,23 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bracDonneesDataSet = new Bracelet.BracDonneesDataSet();
+            this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tlCampagnesTableAdapter = new Bracelet.BracDonneesDataSetTableAdapters.tlCampagnesTableAdapter();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bracDonneesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCampCour
             // 
+            this.cbxCampCour.DataSource = this.tlCampagnesBindingSource;
             this.cbxCampCour.FormattingEnabled = true;
             this.cbxCampCour.Location = new System.Drawing.Point(423, 259);
             this.cbxCampCour.Name = "cbxCampCour";
             this.cbxCampCour.Size = new System.Drawing.Size(179, 21);
             this.cbxCampCour.TabIndex = 0;
+            this.cbxCampCour.SelectedIndexChanged += new System.EventHandler(this.cbxCampCour_SelectedIndexChanged);
             // 
             // lbPlanChassCour
             // 
@@ -434,7 +442,7 @@
             // listingDétiquettesToolStripMenuItem
             // 
             this.listingDétiquettesToolStripMenuItem.Name = "listingDétiquettesToolStripMenuItem";
-            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.listingDétiquettesToolStripMenuItem.Text = "Listing d\'étiquettes";
             this.listingDétiquettesToolStripMenuItem.Click += new System.EventHandler(this.listingDétiquettesToolStripMenuItem_Click);
             // 
@@ -679,6 +687,20 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // bracDonneesDataSet
+            // 
+            this.bracDonneesDataSet.DataSetName = "BracDonneesDataSet";
+            this.bracDonneesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tlCampagnesBindingSource
+            // 
+            this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
+            this.tlCampagnesBindingSource.DataSource = this.bracDonneesDataSet;
+            // 
+            // tlCampagnesTableAdapter
+            // 
+            this.tlCampagnesTableAdapter.ClearBeforeFill = true;
+            // 
             // Saisie_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -702,6 +724,8 @@
             this.Load += new System.EventHandler(this.Saisie_Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bracDonneesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -779,5 +803,8 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private BracDonneesDataSet bracDonneesDataSet;
+        private System.Windows.Forms.BindingSource tlCampagnesBindingSource;
+        private BracDonneesDataSetTableAdapters.tlCampagnesTableAdapter tlCampagnesTableAdapter;
     }
 }

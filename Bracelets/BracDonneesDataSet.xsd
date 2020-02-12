@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BracDonneesDataSet" targetNamespace="http://tempuri.org/BracDonneesDataSet.xsd" xmlns:mstns="http://tempuri.org/BracDonneesDataSet.xsd" xmlns="http://tempuri.org/BracDonneesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BracDonneesConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BracDonneesConnectionString (Settings)" PropertyReference="ApplicationSettings.Bracelet.Properties.Settings.GlobalReference.Default.BracDonneesConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tlCampagnesTableAdapter" GeneratorDataComponentClassName="tlCampagnesTableAdapter" Name="tlCampagnes" UserDataComponentName="tlCampagnesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BracDonneesConnectionString (Settings)" DbObjectName="tlCampagnes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT LibCampagne FROM tlCampagnes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LibCampagne" DataSetColumn="LibCampagne" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BracDonneesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BracDonneesDataSet" msprop:Generator_UserDSName="BracDonneesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tlCampagnes" msprop:Generator_TableClassName="tlCampagnesDataTable" msprop:Generator_TableVarName="tabletlCampagnes" msprop:Generator_TablePropName="tlCampagnes" msprop:Generator_RowDeletingName="tlCampagnesRowDeleting" msprop:Generator_RowChangingName="tlCampagnesRowChanging" msprop:Generator_RowEvHandlerName="tlCampagnesRowChangeEventHandler" msprop:Generator_RowDeletedName="tlCampagnesRowDeleted" msprop:Generator_UserTableName="tlCampagnes" msprop:Generator_RowChangedName="tlCampagnesRowChanged" msprop:Generator_RowEvArgName="tlCampagnesRowChangeEvent" msprop:Generator_RowClassName="tlCampagnesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LibCampagne" msprop:Generator_ColumnVarNameInTable="columnLibCampagne" msprop:Generator_ColumnPropNameInRow="LibCampagne" msprop:Generator_ColumnPropNameInTable="LibCampagneColumn" msprop:Generator_UserColumnName="LibCampagne" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
