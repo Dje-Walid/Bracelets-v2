@@ -157,6 +157,11 @@
     <Compile Include="Aide_Form2.Designer.cs">
       <DependentUpon>Aide_Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="BraceletBDDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Edition_Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -467,6 +472,17 @@
     <EmbeddedResource Include="Securite_Form1.resx">
       <DependentUpon>Securite_Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BraceletBDDDataSet.xsc">
+      <DependentUpon>BraceletBDDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet.xss">
+      <DependentUpon>BraceletBDDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -490,6 +506,9 @@
     <None Include="Resources\fantasy-4386055_1280.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BraceletBDD.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="deer-1529440_1280.ico" />
     <None Include="Resources\arrow gauche 24px.png" />
     <None Include="Resources\arow droite 24px.png" />
