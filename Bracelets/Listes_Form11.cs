@@ -355,5 +355,38 @@ namespace Bracelet
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
         }
+
+        private void Listes_Form11_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlCommunes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlCommunesTableAdapter.Fill(this.braceletBDD.tlCommunes);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvCommunes.ReadOnly = false;
+            btnModif.Visible = false;
+            btnModifier.Visible = true;
+
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            btnModif.Visible = true;
+            btnModifier.Visible = false ;
+            dgvCommunes.ReadOnly = true;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

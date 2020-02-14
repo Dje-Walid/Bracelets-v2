@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listes_Form11));
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnModif = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,8 +89,18 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvCommunes = new System.Windows.Forms.DataGridView();
+            this.braceletBDD = new Bracelet.BraceletBDD();
+            this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tlCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlCommunesTableAdapter();
+            this.cODEINSEEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libCommuneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codePostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnModifier = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -104,6 +114,7 @@
             this.button3.Size = new System.Drawing.Size(38, 35);
             this.button3.TabIndex = 164;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -117,28 +128,22 @@
             this.button2.TabIndex = 163;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnModif
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(703, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 35);
-            this.button1.TabIndex = 162;
-            this.button1.Text = "Modification";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(74, 191);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(915, 395);
-            this.dataGridView1.TabIndex = 161;
+            this.btnModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModif.Location = new System.Drawing.Point(703, 130);
+            this.btnModif.Name = "btnModif";
+            this.btnModif.Size = new System.Drawing.Size(162, 35);
+            this.btnModif.TabIndex = 162;
+            this.btnModif.Text = "Modification";
+            this.btnModif.UseVisualStyleBackColor = true;
+            this.btnModif.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Firebrick;
             this.label1.Location = new System.Drawing.Point(67, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(621, 39);
@@ -584,25 +589,104 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // dgvCommunes
+            // 
+            this.dgvCommunes.AllowUserToResizeColumns = false;
+            this.dgvCommunes.AllowUserToResizeRows = false;
+            this.dgvCommunes.AutoGenerateColumns = false;
+            this.dgvCommunes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvCommunes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvCommunes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCommunes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cODEINSEEDataGridViewTextBoxColumn,
+            this.libCommuneDataGridViewTextBoxColumn,
+            this.codePostalDataGridViewTextBoxColumn});
+            this.dgvCommunes.DataSource = this.tlCommunesBindingSource;
+            this.dgvCommunes.Location = new System.Drawing.Point(150, 190);
+            this.dgvCommunes.MultiSelect = false;
+            this.dgvCommunes.Name = "dgvCommunes";
+            this.dgvCommunes.ReadOnly = true;
+            this.dgvCommunes.Size = new System.Drawing.Size(370, 302);
+            this.dgvCommunes.TabIndex = 166;
+            this.dgvCommunes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // braceletBDD
+            // 
+            this.braceletBDD.DataSetName = "BraceletBDD";
+            this.braceletBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tlCommunesBindingSource
+            // 
+            this.tlCommunesBindingSource.DataMember = "tlCommunes";
+            this.tlCommunesBindingSource.DataSource = this.braceletBDD;
+            // 
+            // tlCommunesTableAdapter
+            // 
+            this.tlCommunesTableAdapter.ClearBeforeFill = true;
+            // 
+            // cODEINSEEDataGridViewTextBoxColumn
+            // 
+            this.cODEINSEEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.cODEINSEEDataGridViewTextBoxColumn.DataPropertyName = "CODE_INSEE";
+            this.cODEINSEEDataGridViewTextBoxColumn.HeaderText = "CODE INSEE";
+            this.cODEINSEEDataGridViewTextBoxColumn.Name = "cODEINSEEDataGridViewTextBoxColumn";
+            this.cODEINSEEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cODEINSEEDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // libCommuneDataGridViewTextBoxColumn
+            // 
+            this.libCommuneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.libCommuneDataGridViewTextBoxColumn.DataPropertyName = "LibCommune";
+            this.libCommuneDataGridViewTextBoxColumn.HeaderText = "Nom de la commune";
+            this.libCommuneDataGridViewTextBoxColumn.Name = "libCommuneDataGridViewTextBoxColumn";
+            this.libCommuneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.libCommuneDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // codePostalDataGridViewTextBoxColumn
+            // 
+            this.codePostalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.codePostalDataGridViewTextBoxColumn.DataPropertyName = "CodePostal";
+            this.codePostalDataGridViewTextBoxColumn.HeaderText = "Code Postal";
+            this.codePostalDataGridViewTextBoxColumn.Name = "codePostalDataGridViewTextBoxColumn";
+            this.codePostalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codePostalDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // btnModifier
+            // 
+            this.btnModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifier.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnModifier.Location = new System.Drawing.Point(703, 132);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(162, 33);
+            this.btnModifier.TabIndex = 167;
+            this.btnModifier.Text = "Modifier";
+            this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnModifier.Visible = false;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+            // 
             // Listes_Form11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.Controls.Add(this.btnModifier);
+            this.Controls.Add(this.dgvCommunes);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnModif);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listes_Form11";
             this.Text = "Codes communes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Listes_Form11_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -612,8 +696,7 @@
 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnModif;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
@@ -670,5 +753,13 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private System.Windows.Forms.DataGridView dgvCommunes;
+        private BraceletBDD braceletBDD;
+        private System.Windows.Forms.BindingSource tlCommunesBindingSource;
+        private BraceletBDDTableAdapters.tlCommunesTableAdapter tlCommunesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODEINSEEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libCommuneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codePostalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnModifier;
     }
 }

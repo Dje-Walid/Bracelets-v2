@@ -269,3 +269,4 @@ C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action
 C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F2.resources
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F2.resources
 C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\bin\Debug\BraceletBDD.accdb
+C:\Users\adama\Documents\Bracelets-v2\Bracelets\bin\Debug\BraceletBDD.accdb

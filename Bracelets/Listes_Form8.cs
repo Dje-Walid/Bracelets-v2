@@ -355,5 +355,31 @@ namespace Bracelet
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
         }
+
+        private void Listes_Form8_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlGibiers'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlGibiersTableAdapter.Fill(this.braceletBDD.tlGibiers);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            btnModif.Visible = true;
+            btnModifier.Visible = false;
+
+            dgvGibiers.ReadOnly = true;
+        }
+
+        private void btnModif_Click(object sender, EventArgs e)
+        {
+            btnModif.Visible = false;
+            btnModifier.Visible = true;
+            dgvGibiers.ReadOnly = false;
+        }
     }
 }

@@ -157,6 +157,11 @@
     <Compile Include="Aide_Form2.Designer.cs">
       <DependentUpon>Aide_Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="BraceletBDD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BraceletBDDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -472,6 +477,17 @@
     <EmbeddedResource Include="Securite_Form1.resx">
       <DependentUpon>Securite_Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BraceletBDD.xsc">
+      <DependentUpon>BraceletBDD.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDD.xss">
+      <DependentUpon>BraceletBDD.xsd</DependentUpon>
+    </None>
     <None Include="BraceletBDDDataSet.xsc">
       <DependentUpon>BraceletBDDDataSet.xsd</DependentUpon>
     </None>
