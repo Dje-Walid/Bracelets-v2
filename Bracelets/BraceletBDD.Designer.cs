@@ -10,6 +10,9 @@
 
 #pragma warning disable 1591
 
+using System;
+using System.Windows.Forms;
+
 namespace Bracelet {
     
     
@@ -7993,6 +7996,11 @@ namespace Bracelet {
                 else {
                     return ((tbPlansRow[])(base.GetChildRows(this.Table.ChildRelations["tbBenefstbPlans"])));
                 }
+            }
+
+            public static implicit operator ComboBox(tbBenefsRow v)
+            {
+                throw new NotImplementedException();
             }
         }
         

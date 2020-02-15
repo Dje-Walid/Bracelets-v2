@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saisie_Form2));
             this.btApercu = new System.Windows.Forms.Button();
             this.btQuitter = new System.Windows.Forms.Button();
@@ -111,6 +112,18 @@
             this.btEffacer = new System.Windows.Forms.Button();
             this.btSuivant = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxNumPlan = new System.Windows.Forms.ComboBox();
+            this.tbPlansBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDD = new Bracelet.BraceletBDD();
+            this.btRecherche = new System.Windows.Forms.Button();
+            this.cbxSte = new System.Windows.Forms.ComboBox();
+            this.cbxNomBenef = new System.Windows.Forms.ComboBox();
+            this.tbBenefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lbNumPlan = new System.Windows.Forms.Label();
+            this.lbNom = new System.Windows.Forms.Label();
+            this.lbSte = new System.Windows.Forms.Label();
+            this.btNouveauPlan = new System.Windows.Forms.Button();
             this.lbCivilite = new System.Windows.Forms.Label();
             this.lbPortable = new System.Windows.Forms.Label();
             this.lbMail = new System.Windows.Forms.Label();
@@ -148,15 +161,7 @@
             this.lbCommuPrin = new System.Windows.Forms.Label();
             this.txbxPlanChasse = new System.Windows.Forms.TextBox();
             this.lbPlanChasse = new System.Windows.Forms.Label();
-            this.btNouveauPlan = new System.Windows.Forms.Button();
-            this.lbSte = new System.Windows.Forms.Label();
-            this.lbNom = new System.Windows.Forms.Label();
-            this.lbNumPlan = new System.Windows.Forms.Label();
             this.cbxCommuPrin = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.cbxNumPlan = new System.Windows.Forms.ComboBox();
-            this.cbxSte = new System.Windows.Forms.ComboBox();
-            this.btRecherche = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -212,6 +217,14 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbPlansTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbPlansTableAdapter();
+            this.tbBenefsTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbBenefsTableAdapter();
+            this.tbBenefstbPlansBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbCommunesTableAdapter();
+            this.braceletBDDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tlCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlCommunesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grbInfoPlanChasse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).BeginInit();
@@ -222,8 +235,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.grbSurfChasse.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPlansBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbBenefsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource)).BeginInit();
             this.grbInfoBenef.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btApercu
@@ -1165,7 +1186,7 @@
             this.groupBox1.Controls.Add(this.btSuivant);
             this.groupBox1.Controls.Add(this.btEffacer);
             this.groupBox1.Controls.Add(this.cbxSte);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.cbxNomBenef);
             this.groupBox1.Controls.Add(this.lbNumPlan);
             this.groupBox1.Controls.Add(this.lbNom);
             this.groupBox1.Controls.Add(this.lbSte);
@@ -1177,6 +1198,124 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cbxNumPlan
+            // 
+            this.cbxNumPlan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxNumPlan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxNumPlan.DataSource = this.tbPlansBindingSource;
+            this.cbxNumPlan.DisplayMember = "NumPlan";
+            this.cbxNumPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxNumPlan.FormattingEnabled = true;
+            this.cbxNumPlan.Location = new System.Drawing.Point(321, 11);
+            this.cbxNumPlan.Name = "cbxNumPlan";
+            this.cbxNumPlan.Size = new System.Drawing.Size(148, 32);
+            this.cbxNumPlan.TabIndex = 8;
+            // 
+            // tbPlansBindingSource
+            // 
+            this.tbPlansBindingSource.DataMember = "tbPlans";
+            this.tbPlansBindingSource.DataSource = this.braceletBDD;
+            // 
+            // braceletBDD
+            // 
+            this.braceletBDD.DataSetName = "BraceletBDD";
+            this.braceletBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btRecherche
+            // 
+            this.btRecherche.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRecherche.Location = new System.Drawing.Point(12, 11);
+            this.btRecherche.Name = "btRecherche";
+            this.btRecherche.Size = new System.Drawing.Size(114, 32);
+            this.btRecherche.TabIndex = 0;
+            this.btRecherche.Text = "Recherche";
+            this.btRecherche.UseVisualStyleBackColor = true;
+            // 
+            // cbxSte
+            // 
+            this.cbxSte.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxSte.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxSte.DataSource = this.tbBenefsBindingSource;
+            this.cbxSte.DisplayMember = "NomSociete";
+            this.cbxSte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSte.FormattingEnabled = true;
+            this.cbxSte.Location = new System.Drawing.Point(785, 11);
+            this.cbxSte.Name = "cbxSte";
+            this.cbxSte.Size = new System.Drawing.Size(303, 32);
+            this.cbxSte.TabIndex = 7;
+            this.cbxSte.SelectedIndexChanged += new System.EventHandler(this.cbxSte_SelectedIndexChanged);
+            // 
+            // cbxNomBenef
+            // 
+            this.cbxNomBenef.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxNomBenef.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxNomBenef.DataSource = this.tbBenefsBindingSource;
+            this.cbxNomBenef.DisplayMember = "NomBenef";
+            this.cbxNomBenef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxNomBenef.FormattingEnabled = true;
+            this.cbxNomBenef.Location = new System.Drawing.Point(542, 11);
+            this.cbxNomBenef.Name = "cbxNomBenef";
+            this.cbxNomBenef.Size = new System.Drawing.Size(148, 32);
+            this.cbxNomBenef.TabIndex = 9;
+            // 
+            // tbBenefsBindingSource
+            // 
+            this.tbBenefsBindingSource.DataMember = "tbBenefs";
+            this.tbBenefsBindingSource.DataSource = this.braceletBDDBindingSource;
+            // 
+            // braceletBDDBindingSource
+            // 
+            this.braceletBDDBindingSource.DataSource = this.braceletBDD;
+            this.braceletBDDBindingSource.Position = 0;
+            // 
+            // lbNumPlan
+            // 
+            this.lbNumPlan.AutoSize = true;
+            this.lbNumPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumPlan.ForeColor = System.Drawing.Color.Gold;
+            this.lbNumPlan.Location = new System.Drawing.Point(212, 14);
+            this.lbNumPlan.Name = "lbNumPlan";
+            this.lbNumPlan.Size = new System.Drawing.Size(103, 24);
+            this.lbNumPlan.TabIndex = 11;
+            this.lbNumPlan.Text = "Num Plan :";
+            this.lbNumPlan.Click += new System.EventHandler(this.lbNumPlan_Click);
+            // 
+            // lbNom
+            // 
+            this.lbNom.AutoSize = true;
+            this.lbNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNom.ForeColor = System.Drawing.Color.Gold;
+            this.lbNom.Location = new System.Drawing.Point(475, 14);
+            this.lbNom.Name = "lbNom";
+            this.lbNom.Size = new System.Drawing.Size(61, 24);
+            this.lbNom.TabIndex = 12;
+            this.lbNom.Text = "Nom :";
+            // 
+            // lbSte
+            // 
+            this.lbSte.AutoSize = true;
+            this.lbSte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSte.ForeColor = System.Drawing.Color.Gold;
+            this.lbSte.Location = new System.Drawing.Point(696, 15);
+            this.lbSte.Name = "lbSte";
+            this.lbSte.Size = new System.Drawing.Size(83, 24);
+            this.lbSte.TabIndex = 13;
+            this.lbSte.Text = "Société :";
+            this.lbSte.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btNouveauPlan
+            // 
+            this.btNouveauPlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btNouveauPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNouveauPlan.ForeColor = System.Drawing.Color.Blue;
+            this.btNouveauPlan.Location = new System.Drawing.Point(1094, 11);
+            this.btNouveauPlan.Name = "btNouveauPlan";
+            this.btNouveauPlan.Size = new System.Drawing.Size(158, 32);
+            this.btNouveauPlan.TabIndex = 14;
+            this.btNouveauPlan.Text = "Nouveau Plan";
+            this.btNouveauPlan.UseVisualStyleBackColor = true;
             // 
             // lbCivilite
             // 
@@ -1301,6 +1440,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Notes", true));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(497, 69);
             this.textBox1.Multiline = true;
@@ -1310,6 +1450,7 @@
             // 
             // txbxCP
             // 
+            this.txbxCP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "CodePostal", true));
             this.txbxCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxCP.Location = new System.Drawing.Point(140, 235);
             this.txbxCP.Name = "txbxCP";
@@ -1318,6 +1459,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "ComplRue", true));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(140, 205);
             this.textBox3.Name = "textBox3";
@@ -1326,6 +1468,7 @@
             // 
             // txbxRue
             // 
+            this.txbxRue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Rue", true));
             this.txbxRue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxRue.Location = new System.Drawing.Point(140, 175);
             this.txbxRue.Name = "txbxRue";
@@ -1334,6 +1477,7 @@
             // 
             // txbxSociete
             // 
+            this.txbxSociete.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "NomSociete", true));
             this.txbxSociete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxSociete.Location = new System.Drawing.Point(140, 130);
             this.txbxSociete.Name = "txbxSociete";
@@ -1342,6 +1486,7 @@
             // 
             // txbxPrenom
             // 
+            this.txbxPrenom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "PrenomBenef", true));
             this.txbxPrenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxPrenom.Location = new System.Drawing.Point(140, 100);
             this.txbxPrenom.Name = "txbxPrenom";
@@ -1350,6 +1495,7 @@
             // 
             // txbxNomInfoBenef
             // 
+            this.txbxNomInfoBenef.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "NomBenef", true));
             this.txbxNomInfoBenef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxNomInfoBenef.Location = new System.Drawing.Point(140, 69);
             this.txbxNomInfoBenef.Name = "txbxNomInfoBenef";
@@ -1358,6 +1504,8 @@
             // 
             // cbxCivilite
             // 
+            this.cbxCivilite.DataSource = this.tbBenefsBindingSource;
+            this.cbxCivilite.DisplayMember = "Sigle";
             this.cbxCivilite.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCivilite.FormattingEnabled = true;
             this.cbxCivilite.Location = new System.Drawing.Point(140, 35);
@@ -1367,6 +1515,8 @@
             // 
             // cbxVille
             // 
+            this.cbxVille.DataSource = this.tbBenefsBindingSource;
+            this.cbxVille.DisplayMember = "Ville";
             this.cbxVille.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxVille.FormattingEnabled = true;
             this.cbxVille.Location = new System.Drawing.Point(265, 235);
@@ -1376,6 +1526,7 @@
             // 
             // txbxPortable
             // 
+            this.txbxPortable.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "portable", true));
             this.txbxPortable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxPortable.Location = new System.Drawing.Point(140, 378);
             this.txbxPortable.Name = "txbxPortable";
@@ -1384,6 +1535,7 @@
             // 
             // txbxMail
             // 
+            this.txbxMail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Email", true));
             this.txbxMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxMail.Location = new System.Drawing.Point(140, 346);
             this.txbxMail.Name = "txbxMail";
@@ -1392,6 +1544,7 @@
             // 
             // txbxFax
             // 
+            this.txbxFax.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Fax", true));
             this.txbxFax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxFax.Location = new System.Drawing.Point(140, 315);
             this.txbxFax.Name = "txbxFax";
@@ -1400,6 +1553,7 @@
             // 
             // txbxTelephone
             // 
+            this.txbxTelephone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Telephone", true));
             this.txbxTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxTelephone.Location = new System.Drawing.Point(140, 285);
             this.txbxTelephone.Name = "txbxTelephone";
@@ -1431,11 +1585,12 @@
             // dtpDateModif
             // 
             this.dtpDateModif.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dtpDateModif.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.tbBenefsBindingSource, "DateModifBenef", true));
             this.dtpDateModif.Enabled = false;
             this.dtpDateModif.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateModif.Location = new System.Drawing.Point(1113, 38);
-            this.dtpDateModif.MaxDate = new System.DateTime(2020, 1, 23, 0, 0, 0, 0);
-            this.dtpDateModif.MinDate = new System.DateTime(2020, 1, 23, 0, 0, 0, 0);
+            this.dtpDateModif.MaxDate = new System.DateTime(2110, 12, 31, 0, 0, 0, 0);
+            this.dtpDateModif.MinDate = new System.DateTime(1985, 1, 1, 0, 0, 0, 0);
             this.dtpDateModif.Name = "dtpDateModif";
             this.dtpDateModif.Size = new System.Drawing.Size(121, 29);
             this.dtpDateModif.TabIndex = 49;
@@ -1504,6 +1659,8 @@
             // 
             // cbxBenef
             // 
+            this.cbxBenef.DataSource = this.tbBenefsBindingSource;
+            this.cbxBenef.DisplayMember = "NomBenef";
             this.cbxBenef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxBenef.FormattingEnabled = true;
             this.cbxBenef.Location = new System.Drawing.Point(152, 152);
@@ -1556,11 +1713,13 @@
             // 
             // txbxPlanChasse
             // 
+            this.txbxPlanChasse.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbPlansBindingSource, "NumPlan", true));
             this.txbxPlanChasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxPlanChasse.Location = new System.Drawing.Point(152, 82);
             this.txbxPlanChasse.Name = "txbxPlanChasse";
             this.txbxPlanChasse.Size = new System.Drawing.Size(106, 29);
             this.txbxPlanChasse.TabIndex = 16;
+            this.txbxPlanChasse.TextChanged += new System.EventHandler(this.txbxPlanChasse_TextChanged);
             // 
             // lbPlanChasse
             // 
@@ -1573,99 +1732,16 @@
             this.lbPlanChasse.TabIndex = 15;
             this.lbPlanChasse.Text = "Plan Chasse :";
             // 
-            // btNouveauPlan
-            // 
-            this.btNouveauPlan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btNouveauPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNouveauPlan.ForeColor = System.Drawing.Color.Blue;
-            this.btNouveauPlan.Location = new System.Drawing.Point(1094, 11);
-            this.btNouveauPlan.Name = "btNouveauPlan";
-            this.btNouveauPlan.Size = new System.Drawing.Size(158, 32);
-            this.btNouveauPlan.TabIndex = 14;
-            this.btNouveauPlan.Text = "Nouveau Plan";
-            this.btNouveauPlan.UseVisualStyleBackColor = true;
-            // 
-            // lbSte
-            // 
-            this.lbSte.AutoSize = true;
-            this.lbSte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSte.ForeColor = System.Drawing.Color.Gold;
-            this.lbSte.Location = new System.Drawing.Point(696, 15);
-            this.lbSte.Name = "lbSte";
-            this.lbSte.Size = new System.Drawing.Size(83, 24);
-            this.lbSte.TabIndex = 13;
-            this.lbSte.Text = "Société :";
-            this.lbSte.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lbNom
-            // 
-            this.lbNom.AutoSize = true;
-            this.lbNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNom.ForeColor = System.Drawing.Color.Gold;
-            this.lbNom.Location = new System.Drawing.Point(475, 14);
-            this.lbNom.Name = "lbNom";
-            this.lbNom.Size = new System.Drawing.Size(61, 24);
-            this.lbNom.TabIndex = 12;
-            this.lbNom.Text = "Nom :";
-            // 
-            // lbNumPlan
-            // 
-            this.lbNumPlan.AutoSize = true;
-            this.lbNumPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNumPlan.ForeColor = System.Drawing.Color.Gold;
-            this.lbNumPlan.Location = new System.Drawing.Point(212, 14);
-            this.lbNumPlan.Name = "lbNumPlan";
-            this.lbNumPlan.Size = new System.Drawing.Size(103, 24);
-            this.lbNumPlan.TabIndex = 11;
-            this.lbNumPlan.Text = "Num Plan :";
-            this.lbNumPlan.Click += new System.EventHandler(this.lbNumPlan_Click);
-            // 
             // cbxCommuPrin
             // 
+            this.cbxCommuPrin.DataSource = this.tlCommunesBindingSource;
+            this.cbxCommuPrin.DisplayMember = "LibCommune";
             this.cbxCommuPrin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCommuPrin.FormattingEnabled = true;
             this.cbxCommuPrin.Location = new System.Drawing.Point(475, 79);
             this.cbxCommuPrin.Name = "cbxCommuPrin";
             this.cbxCommuPrin.Size = new System.Drawing.Size(471, 32);
             this.cbxCommuPrin.TabIndex = 10;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(542, 11);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(148, 32);
-            this.comboBox3.TabIndex = 9;
-            // 
-            // cbxNumPlan
-            // 
-            this.cbxNumPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxNumPlan.FormattingEnabled = true;
-            this.cbxNumPlan.Location = new System.Drawing.Point(321, 11);
-            this.cbxNumPlan.Name = "cbxNumPlan";
-            this.cbxNumPlan.Size = new System.Drawing.Size(148, 32);
-            this.cbxNumPlan.TabIndex = 8;
-            // 
-            // cbxSte
-            // 
-            this.cbxSte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxSte.FormattingEnabled = true;
-            this.cbxSte.Location = new System.Drawing.Point(785, 11);
-            this.cbxSte.Name = "cbxSte";
-            this.cbxSte.Size = new System.Drawing.Size(303, 32);
-            this.cbxSte.TabIndex = 7;
-            // 
-            // btRecherche
-            // 
-            this.btRecherche.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRecherche.Location = new System.Drawing.Point(12, 11);
-            this.btRecherche.Name = "btRecherche";
-            this.btRecherche.Size = new System.Drawing.Size(114, 32);
-            this.btRecherche.TabIndex = 0;
-            this.btRecherche.Text = "Recherche";
-            this.btRecherche.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -1700,12 +1776,14 @@
             this.environnementCourantToolStripMenuItem.Name = "environnementCourantToolStripMenuItem";
             this.environnementCourantToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.environnementCourantToolStripMenuItem.Text = "Environnement Courant";
+            this.environnementCourantToolStripMenuItem.Click += new System.EventHandler(this.environnementCourantToolStripMenuItem_Click);
             // 
             // saisirConsulterLesPlanDeChasseToolStripMenuItem
             // 
             this.saisirConsulterLesPlanDeChasseToolStripMenuItem.Name = "saisirConsulterLesPlanDeChasseToolStripMenuItem";
             this.saisirConsulterLesPlanDeChasseToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.saisirConsulterLesPlanDeChasseToolStripMenuItem.Text = "Saisir/Consulter les plan de chasse";
+            this.saisirConsulterLesPlanDeChasseToolStripMenuItem.Click += new System.EventHandler(this.saisirConsulterLesPlanDeChasseToolStripMenuItem_Click);
             // 
             // actionToolStripMenuItem
             // 
@@ -1724,18 +1802,21 @@
             this.basculerProposésAccordésToolStripMenuItem.Name = "basculerProposésAccordésToolStripMenuItem";
             this.basculerProposésAccordésToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.basculerProposésAccordésToolStripMenuItem.Text = "Basculer proposés / accordés";
+            this.basculerProposésAccordésToolStripMenuItem.Click += new System.EventHandler(this.basculerProposésAccordésToolStripMenuItem_Click);
             // 
             // basculerFDCYEnONFEDDAFToolStripMenuItem
             // 
             this.basculerFDCYEnONFEDDAFToolStripMenuItem.Name = "basculerFDCYEnONFEDDAFToolStripMenuItem";
             this.basculerFDCYEnONFEDDAFToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.basculerFDCYEnONFEDDAFToolStripMenuItem.Text = "Basculer FDCY en ONF e DDAF";
+            this.basculerFDCYEnONFEDDAFToolStripMenuItem.Click += new System.EventHandler(this.basculerFDCYEnONFEDDAFToolStripMenuItem_Click);
             // 
             // attributionBraceletsAutomatiqueToolStripMenuItem
             // 
             this.attributionBraceletsAutomatiqueToolStripMenuItem.Name = "attributionBraceletsAutomatiqueToolStripMenuItem";
             this.attributionBraceletsAutomatiqueToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.attributionBraceletsAutomatiqueToolStripMenuItem.Text = "Attribution bracelets automatique";
+            this.attributionBraceletsAutomatiqueToolStripMenuItem.Click += new System.EventHandler(this.attributionBraceletsAutomatiqueToolStripMenuItem_Click);
             // 
             // modificationsDattributionManuellesToolStripMenuItem
             // 
@@ -1751,12 +1832,14 @@
             this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Name = "changerLeBénéficiaireDunBraceletToolStripMenuItem";
             this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
             this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Text = "Paramètrage des bracelets pour la campagne";
+            this.changerLeBénéficiaireDunBraceletToolStripMenuItem.Click += new System.EventHandler(this.changerLeBénéficiaireDunBraceletToolStripMenuItem_Click);
             // 
             // supprimerUnBraceletToolStripMenuItem
             // 
             this.supprimerUnBraceletToolStripMenuItem.Name = "supprimerUnBraceletToolStripMenuItem";
             this.supprimerUnBraceletToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
             this.supprimerUnBraceletToolStripMenuItem.Text = "Param. Minima à tuer par espèce et par zones";
+            this.supprimerUnBraceletToolStripMenuItem.Click += new System.EventHandler(this.supprimerUnBraceletToolStripMenuItem_Click);
             // 
             // paramétrageDesActionsToolStripMenuItem
             // 
@@ -1774,24 +1857,28 @@
             this.paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem.Name = "paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem";
             this.paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem.Size = new System.Drawing.Size(357, 22);
             this.paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem.Text = "Paramétrage des bracelets pour les campagnes";
+            this.paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem.Click += new System.EventHandler(this.paramétrageDesBraceletsPourLesCampagnesToolStripMenuItem_Click);
             // 
             // paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem
             // 
             this.paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem.Name = "paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem";
             this.paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem.Size = new System.Drawing.Size(357, 22);
             this.paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem.Text = "Param. Minima à tuer par espèces et par zones";
+            this.paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem.Click += new System.EventHandler(this.paramMinimaÀTuerParEspècesEtParZonesToolStripMenuItem_Click);
             // 
             // historiqueDesDatesDesActionsToolStripMenuItem
             // 
             this.historiqueDesDatesDesActionsToolStripMenuItem.Name = "historiqueDesDatesDesActionsToolStripMenuItem";
             this.historiqueDesDatesDesActionsToolStripMenuItem.Size = new System.Drawing.Size(357, 22);
             this.historiqueDesDatesDesActionsToolStripMenuItem.Text = "Historique des dates des Actions";
+            this.historiqueDesDatesDesActionsToolStripMenuItem.Click += new System.EventHandler(this.historiqueDesDatesDesActionsToolStripMenuItem_Click);
             // 
             // historiqueDesModifsDeNumérosDePlansDeChasseToolStripMenuItem
             // 
             this.historiqueDesModifsDeNumérosDePlansDeChasseToolStripMenuItem.Name = "historiqueDesModifsDeNumérosDePlansDeChasseToolStripMenuItem";
             this.historiqueDesModifsDeNumérosDePlansDeChasseToolStripMenuItem.Size = new System.Drawing.Size(357, 22);
             this.historiqueDesModifsDeNumérosDePlansDeChasseToolStripMenuItem.Text = "Historique des modifs de numéros de plans de chasse";
+            this.historiqueDesModifsDeNumérosDePlansDeChasseToolStripMenuItem.Click += new System.EventHandler(this.historiqueDesModifsDeNumérosDePlansDeChasseToolStripMenuItem_Click);
             // 
             // editionsToolStripMenuItem
             // 
@@ -1810,12 +1897,14 @@
             this.documentsSouscommissionToolStripMenuItem.Name = "documentsSouscommissionToolStripMenuItem";
             this.documentsSouscommissionToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.documentsSouscommissionToolStripMenuItem.Text = "Documents sous-commission";
+            this.documentsSouscommissionToolStripMenuItem.Click += new System.EventHandler(this.documentsSouscommissionToolStripMenuItem_Click);
             // 
             // documentsCommissionToolStripMenuItem
             // 
             this.documentsCommissionToolStripMenuItem.Name = "documentsCommissionToolStripMenuItem";
             this.documentsCommissionToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.documentsCommissionToolStripMenuItem.Text = "Documents commission";
+            this.documentsCommissionToolStripMenuItem.Click += new System.EventHandler(this.documentsCommissionToolStripMenuItem_Click);
             // 
             // editionsDDAFToolStripMenuItem
             // 
@@ -1835,36 +1924,42 @@
             this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem.Name = "arrêtésIndividuelsTirÀLapprocheToolStripMenuItem";
             this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem.Text = "Arrêtés individuels tir à l\'approche";
+            this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem.Click += new System.EventHandler(this.arrêtésIndividuelsTirÀLapprocheToolStripMenuItem_Click);
             // 
             // arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem
             // 
             this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem.Name = "arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem";
             this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem.Text = "Arrêtés récapitulatif de tir à l\'approche";
+            this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem.Click += new System.EventHandler(this.arrêtésRécapitulatifDeTirÀLapprocheToolStripMenuItem_Click);
             // 
             // arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem
             // 
             this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem.Name = "arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem";
             this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem.Text = "Arrêtés individuels d\'attribution de Bracelets";
+            this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem.Click += new System.EventHandler(this.arrêtésIndividuelsDattributionDeBraceletsToolStripMenuItem_Click);
             // 
             // arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem
             // 
             this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem.Name = "arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem";
             this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem.Text = "Arrêtés individuels d\'attribution de Bracelets V2";
+            this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem.Click += new System.EventHandler(this.arrêtésIndividuelsDattributionDeBraceletsV2ToolStripMenuItem_Click);
             // 
             // arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem
             // 
             this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem.Name = "arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem";
             this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem.Text = "Arrêtés récapitulatif d\'attribution de bracelets";
+            this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem.Click += new System.EventHandler(this.arrêtésRécapitulatifDattributionDeBraceletsToolStripMenuItem_Click);
             // 
             // réponseAuxDemandesDePlanDeChasseToolStripMenuItem
             // 
             this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem.Name = "réponseAuxDemandesDePlanDeChasseToolStripMenuItem";
             this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem.Size = new System.Drawing.Size(322, 22);
             this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem.Text = "Réponse aux demandes de plan de chasse";
+            this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem.Click += new System.EventHandler(this.réponseAuxDemandesDePlanDeChasseToolStripMenuItem_Click);
             // 
             // editionsFédérationToolStripMenuItem
             // 
@@ -1877,8 +1972,9 @@
             // listingDétiquettesToolStripMenuItem
             // 
             this.listingDétiquettesToolStripMenuItem.Name = "listingDétiquettesToolStripMenuItem";
-            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.listingDétiquettesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listingDétiquettesToolStripMenuItem.Text = "Listing d\'étiquettes";
+            this.listingDétiquettesToolStripMenuItem.Click += new System.EventHandler(this.listingDétiquettesToolStripMenuItem_Click);
             // 
             // statistiquesToolStripMenuItem
             // 
@@ -1895,18 +1991,21 @@
             this.statistiquesParZoneToolStripMenuItem.Name = "statistiquesParZoneToolStripMenuItem";
             this.statistiquesParZoneToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.statistiquesParZoneToolStripMenuItem.Text = "Statistiques par zone";
+            this.statistiquesParZoneToolStripMenuItem.Click += new System.EventHandler(this.statistiquesParZoneToolStripMenuItem_Click);
             // 
             // statistiquesParCommunesToolStripMenuItem
             // 
             this.statistiquesParCommunesToolStripMenuItem.Name = "statistiquesParCommunesToolStripMenuItem";
             this.statistiquesParCommunesToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.statistiquesParCommunesToolStripMenuItem.Text = "Statistiques par communes";
+            this.statistiquesParCommunesToolStripMenuItem.Click += new System.EventHandler(this.statistiquesParCommunesToolStripMenuItem_Click);
             // 
             // statistiquesRéalisésListésParCommunesToolStripMenuItem
             // 
             this.statistiquesRéalisésListésParCommunesToolStripMenuItem.Name = "statistiquesRéalisésListésParCommunesToolStripMenuItem";
             this.statistiquesRéalisésListésParCommunesToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.statistiquesRéalisésListésParCommunesToolStripMenuItem.Text = "Statistiques réalisés listés par communes";
+            this.statistiquesRéalisésListésParCommunesToolStripMenuItem.Click += new System.EventHandler(this.statistiquesRéalisésListésParCommunesToolStripMenuItem_Click);
             // 
             // listesToolStripMenuItem
             // 
@@ -1931,72 +2030,84 @@
             this.recapitulatifDesAttributionsParZoneToolStripMenuItem.Name = "recapitulatifDesAttributionsParZoneToolStripMenuItem";
             this.recapitulatifDesAttributionsParZoneToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.recapitulatifDesAttributionsParZoneToolStripMenuItem.Text = "Recapitulatif des attributions par zone";
+            this.recapitulatifDesAttributionsParZoneToolStripMenuItem.Click += new System.EventHandler(this.recapitulatifDesAttributionsParZoneToolStripMenuItem_Click);
             // 
             // lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem
             // 
             this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem.Name = "lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem";
             this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem.Text = "Lettre de relance Réalisés non renseignés";
+            this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem.Click += new System.EventHandler(this.lettreDeRelanceRéalisésNonRenseignésToolStripMenuItem_Click);
             // 
             // listeDesAttributionsAccordéesSousRéserveToolStripMenuItem
             // 
             this.listeDesAttributionsAccordéesSousRéserveToolStripMenuItem.Name = "listeDesAttributionsAccordéesSousRéserveToolStripMenuItem";
             this.listeDesAttributionsAccordéesSousRéserveToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.listeDesAttributionsAccordéesSousRéserveToolStripMenuItem.Text = "Liste des attributions accordées sous réserve";
+            this.listeDesAttributionsAccordéesSousRéserveToolStripMenuItem.Click += new System.EventHandler(this.listeDesAttributionsAccordéesSousRéserveToolStripMenuItem_Click);
             // 
             // codesZonesToolStripMenuItem
             // 
             this.codesZonesToolStripMenuItem.Name = "codesZonesToolStripMenuItem";
             this.codesZonesToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesZonesToolStripMenuItem.Text = "Codes zones";
+            this.codesZonesToolStripMenuItem.Click += new System.EventHandler(this.codesZonesToolStripMenuItem_Click);
             // 
             // codesTypesDePlanDeChasseToolStripMenuItem
             // 
             this.codesTypesDePlanDeChasseToolStripMenuItem.Name = "codesTypesDePlanDeChasseToolStripMenuItem";
             this.codesTypesDePlanDeChasseToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesTypesDePlanDeChasseToolStripMenuItem.Text = "Codes types de plan de chasse";
+            this.codesTypesDePlanDeChasseToolStripMenuItem.Click += new System.EventHandler(this.codesTypesDePlanDeChasseToolStripMenuItem_Click);
             // 
             // codesEspècesToolStripMenuItem
             // 
             this.codesEspècesToolStripMenuItem.Name = "codesEspècesToolStripMenuItem";
             this.codesEspècesToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesEspècesToolStripMenuItem.Text = "Codes espèces";
+            this.codesEspècesToolStripMenuItem.Click += new System.EventHandler(this.codesEspècesToolStripMenuItem_Click);
             // 
             // codesSériesDeBraceletsToolStripMenuItem
             // 
             this.codesSériesDeBraceletsToolStripMenuItem.Name = "codesSériesDeBraceletsToolStripMenuItem";
             this.codesSériesDeBraceletsToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesSériesDeBraceletsToolStripMenuItem.Text = "Codes séries de bracelets";
+            this.codesSériesDeBraceletsToolStripMenuItem.Click += new System.EventHandler(this.codesSériesDeBraceletsToolStripMenuItem_Click);
             // 
             // codesGibiersToolStripMenuItem
             // 
             this.codesGibiersToolStripMenuItem.Name = "codesGibiersToolStripMenuItem";
             this.codesGibiersToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesGibiersToolStripMenuItem.Text = "Codes gibiers";
+            this.codesGibiersToolStripMenuItem.Click += new System.EventHandler(this.codesGibiersToolStripMenuItem_Click);
             // 
             // codesRefusToolStripMenuItem
             // 
             this.codesRefusToolStripMenuItem.Name = "codesRefusToolStripMenuItem";
             this.codesRefusToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesRefusToolStripMenuItem.Text = "Codes refus";
+            this.codesRefusToolStripMenuItem.Click += new System.EventHandler(this.codesRefusToolStripMenuItem_Click);
             // 
             // codesCampagnesToolStripMenuItem
             // 
             this.codesCampagnesToolStripMenuItem.Name = "codesCampagnesToolStripMenuItem";
             this.codesCampagnesToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesCampagnesToolStripMenuItem.Text = "Codes campagnes";
+            this.codesCampagnesToolStripMenuItem.Click += new System.EventHandler(this.codesCampagnesToolStripMenuItem_Click);
             // 
             // codesCommunesToolStripMenuItem
             // 
             this.codesCommunesToolStripMenuItem.Name = "codesCommunesToolStripMenuItem";
             this.codesCommunesToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.codesCommunesToolStripMenuItem.Text = "Codes communes";
+            this.codesCommunesToolStripMenuItem.Click += new System.EventHandler(this.codesCommunesToolStripMenuItem_Click);
             // 
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
             this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
+            this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
             // sécuritéToolStripMenuItem
             // 
@@ -2011,6 +2122,7 @@
             this.changerDeMotDePasseToolStripMenuItem.Name = "changerDeMotDePasseToolStripMenuItem";
             this.changerDeMotDePasseToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.changerDeMotDePasseToolStripMenuItem.Text = "Changer de mot de passe";
+            this.changerDeMotDePasseToolStripMenuItem.Click += new System.EventHandler(this.changerDeMotDePasseToolStripMenuItem_Click);
             // 
             // outilsToolStripMenuItem
             // 
@@ -2024,20 +2136,23 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
+            this.exportationExcelToolStripMenuItem.Click += new System.EventHandler(this.exportationExcelToolStripMenuItem_Click);
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
+            this.imprimerToolStripMenuItem.Click += new System.EventHandler(this.imprimerToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // aideToolStripMenuItem
             // 
@@ -2053,18 +2168,57 @@
             this.manuelUtilisateurWordToolStripMenuItem.Name = "manuelUtilisateurWordToolStripMenuItem";
             this.manuelUtilisateurWordToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.manuelUtilisateurWordToolStripMenuItem.Text = "Manuel utilisateur (Word)";
+            this.manuelUtilisateurWordToolStripMenuItem.Click += new System.EventHandler(this.manuelUtilisateurWordToolStripMenuItem_Click);
             // 
             // aProposDeBraceletToolStripMenuItem
             // 
             this.aProposDeBraceletToolStripMenuItem.Name = "aProposDeBraceletToolStripMenuItem";
             this.aProposDeBraceletToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.aProposDeBraceletToolStripMenuItem.Text = "A propos de Bracelet…";
+            this.aProposDeBraceletToolStripMenuItem.Click += new System.EventHandler(this.aProposDeBraceletToolStripMenuItem_Click);
             // 
             // quitterBraceletToolStripMenuItem1
             // 
             this.quitterBraceletToolStripMenuItem1.Name = "quitterBraceletToolStripMenuItem1";
             this.quitterBraceletToolStripMenuItem1.Size = new System.Drawing.Size(101, 20);
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
+            this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
+            // 
+            // tbPlansTableAdapter
+            // 
+            this.tbPlansTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbBenefsTableAdapter
+            // 
+            this.tbBenefsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbBenefstbPlansBindingSource
+            // 
+            this.tbBenefstbPlansBindingSource.DataMember = "tbBenefstbPlans";
+            this.tbBenefstbPlansBindingSource.DataSource = this.tbBenefsBindingSource;
+            // 
+            // tbCommunesBindingSource
+            // 
+            this.tbCommunesBindingSource.DataMember = "tbCommunes";
+            this.tbCommunesBindingSource.DataSource = this.braceletBDD;
+            // 
+            // tbCommunesTableAdapter
+            // 
+            this.tbCommunesTableAdapter.ClearBeforeFill = true;
+            // 
+            // braceletBDDBindingSource1
+            // 
+            this.braceletBDDBindingSource1.DataSource = this.braceletBDD;
+            this.braceletBDDBindingSource1.Position = 0;
+            // 
+            // tlCommunesBindingSource
+            // 
+            this.tlCommunesBindingSource.DataMember = "tlCommunes";
+            this.tlCommunesBindingSource.DataSource = this.braceletBDDBindingSource1;
+            // 
+            // tlCommunesTableAdapter
+            // 
+            this.tlCommunesTableAdapter.ClearBeforeFill = true;
             // 
             // Saisie_Form2
             // 
@@ -2152,10 +2306,18 @@
             this.grbSurfChasse.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPlansBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbBenefsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource)).EndInit();
             this.grbInfoBenef.ResumeLayout(false);
             this.grbInfoBenef.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2248,7 +2410,7 @@
         private System.Windows.Forms.ComboBox cbxNumPlan;
         private System.Windows.Forms.Button btRecherche;
         private System.Windows.Forms.ComboBox cbxSte;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbxNomBenef;
         private System.Windows.Forms.Label lbNumPlan;
         private System.Windows.Forms.Label lbNom;
         private System.Windows.Forms.Label lbSte;
@@ -2346,5 +2508,17 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private System.Windows.Forms.BindingSource tbPlansBindingSource;
+        private BraceletBDD braceletBDD;
+        private BraceletBDDTableAdapters.tbPlansTableAdapter tbPlansTableAdapter;
+        private System.Windows.Forms.BindingSource braceletBDDBindingSource;
+        private System.Windows.Forms.BindingSource tbBenefsBindingSource;
+        private BraceletBDDTableAdapters.tbBenefsTableAdapter tbBenefsTableAdapter;
+        private System.Windows.Forms.BindingSource tbBenefstbPlansBindingSource;
+        private System.Windows.Forms.BindingSource tbCommunesBindingSource;
+        private BraceletBDDTableAdapters.tbCommunesTableAdapter tbCommunesTableAdapter;
+        private System.Windows.Forms.BindingSource braceletBDDBindingSource1;
+        private System.Windows.Forms.BindingSource tlCommunesBindingSource;
+        private BraceletBDDTableAdapters.tlCommunesTableAdapter tlCommunesTableAdapter;
     }
 }
