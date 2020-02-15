@@ -15,10 +15,24 @@ namespace Bracelet
         public Saisie_Form2()
         {
             InitializeComponent();
-            cbxNumPlan.Text = "";
-            cbxNomBenef.Text = "";
+            using (var context = new BraceletBDD())
+            {
 
-         
+                var test = (from x in context.tbPlans
+                            where x.NumPlan.Equals(txbxPlanChasse)
+                            select x).ToList();
+                foreach (var t in test)
+                {
+                    var query = (from all in context.tlCommunes
+                                 where all.NumCommune.Equals(t.NumCommune_principale)
+                                 select all).ToList();
+
+                    foreach (var com in query)
+                    {
+                        cbxCommuPrin.Items.Add(com.LibCommune);
+                    }
+                }
+            }
         }
 
         private void quitterBraceletToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,6 +50,25 @@ namespace Bracelet
             this.tbBenefsTableAdapter.Fill(this.braceletBDD.tbBenefs);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tbPlans'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tbPlansTableAdapter.Fill(this.braceletBDD.tbPlans);
+
+            using (var context = new BraceletBDD())
+            {
+
+                var test = (from x in context.tbPlans
+                            where x.NumPlan.Equals(txbxPlanChasse)
+                            select x).ToList();
+                foreach (var t in test)
+                {
+                    var query = (from all in context.tlCommunes
+                                 where all.NumCommune.Equals(t.NumCommune_principale)
+                                 select all).ToList();
+
+                    foreach (var com in query)
+                    {
+                        cbxCommuPrin.Items.Add(com.LibCommune);
+                    }
+                }
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -423,6 +456,33 @@ namespace Bracelet
         private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cbxCommuPrin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (var context = new BraceletBDD())
+            {
+
+                var test = (from x in context.tbPlans
+                            where x.NumPlan.Equals(txbxPlanChasse)
+                            select x).ToList();
+                foreach (var t in test)
+                {
+                    var query = (from all in context.tlCommunes
+                                 where all.NumCommune.Equals(t.NumCommune_principale)
+                                 select all).ToList();
+
+                    foreach (var com in query)
+                    {
+                        cbxCommuPrin.Items.Add(com.LibCommune);
+                    }
+                }
+            }
         }
     }
 }
