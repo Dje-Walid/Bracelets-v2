@@ -90,17 +90,17 @@
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvCommunes = new System.Windows.Forms.DataGridView();
-            this.braceletBDD = new Bracelet.BraceletBDD();
-            this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tlCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlCommunesTableAdapter();
             this.cODEINSEEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.libCommuneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codePostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDD = new Bracelet.BraceletBDD();
+            this.tlCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlCommunesTableAdapter();
             this.btnModifier = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -127,6 +127,7 @@
             this.button2.Size = new System.Drawing.Size(38, 35);
             this.button2.TabIndex = 163;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnModif
             // 
@@ -610,20 +611,6 @@
             this.dgvCommunes.TabIndex = 166;
             this.dgvCommunes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // braceletBDD
-            // 
-            this.braceletBDD.DataSetName = "BraceletBDD";
-            this.braceletBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tlCommunesBindingSource
-            // 
-            this.tlCommunesBindingSource.DataMember = "tlCommunes";
-            this.tlCommunesBindingSource.DataSource = this.braceletBDD;
-            // 
-            // tlCommunesTableAdapter
-            // 
-            this.tlCommunesTableAdapter.ClearBeforeFill = true;
-            // 
             // cODEINSEEDataGridViewTextBoxColumn
             // 
             this.cODEINSEEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -650,6 +637,20 @@
             this.codePostalDataGridViewTextBoxColumn.Name = "codePostalDataGridViewTextBoxColumn";
             this.codePostalDataGridViewTextBoxColumn.ReadOnly = true;
             this.codePostalDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // tlCommunesBindingSource
+            // 
+            this.tlCommunesBindingSource.DataMember = "tlCommunes";
+            this.tlCommunesBindingSource.DataSource = this.braceletBDD;
+            // 
+            // braceletBDD
+            // 
+            this.braceletBDD.DataSetName = "BraceletBDD";
+            this.braceletBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tlCommunesTableAdapter
+            // 
+            this.tlCommunesTableAdapter.ClearBeforeFill = true;
             // 
             // btnModifier
             // 
@@ -685,8 +686,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

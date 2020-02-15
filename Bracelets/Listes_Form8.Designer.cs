@@ -89,7 +89,6 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.braceletBDDDataSet = new Bracelet.BraceletBDDDataSet();
             this.braceletBDD = new Bracelet.BraceletBDD();
             this.dgvGibiers = new System.Windows.Forms.DataGridView();
             this.cdGibierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,7 +105,6 @@
             this.tlGibiersTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlGibiersTableAdapter();
             this.btnModifier = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlGibiersBindingSource)).BeginInit();
@@ -598,11 +596,6 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // braceletBDDDataSet
-            // 
-            this.braceletBDDDataSet.DataSetName = "BraceletBDDDataSet";
-            this.braceletBDDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // braceletBDD
             // 
             this.braceletBDD.DataSetName = "BraceletBDD";
@@ -751,7 +744,6 @@
             this.Load += new System.EventHandler(this.Listes_Form8_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlGibiersBindingSource)).EndInit();
@@ -821,7 +813,6 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
-        private BraceletBDDDataSet braceletBDDDataSet;
         private BraceletBDD braceletBDD;
         private System.Windows.Forms.DataGridView dgvGibiers;
         private System.Windows.Forms.BindingSource tlGibiersBindingSource;

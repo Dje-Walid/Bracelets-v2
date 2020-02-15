@@ -371,8 +371,9 @@ namespace Bracelet
         {
             btnModif.Visible = true;
             btnModifier.Visible = false;
-
             dgvGibiers.ReadOnly = true;
+
+          
         }
 
         private void btnModif_Click(object sender, EventArgs e)
@@ -380,6 +381,11 @@ namespace Bracelet
             btnModif.Visible = false;
             btnModifier.Visible = true;
             dgvGibiers.ReadOnly = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Outils.outils.allerMenu(this);
         }
     }
 }
