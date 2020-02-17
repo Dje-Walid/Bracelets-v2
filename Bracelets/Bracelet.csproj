@@ -167,6 +167,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BraceletBDDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BraceletBDDDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Edition_Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -498,6 +508,28 @@
     </None>
     <None Include="BraceletBDDDataSet.xss">
       <DependentUpon>BraceletBDDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet1.xsc">
+      <DependentUpon>BraceletBDDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet1.xss">
+      <DependentUpon>BraceletBDDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet2.xsc">
+      <DependentUpon>BraceletBDDDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet2.xss">
+      <DependentUpon>BraceletBDDDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

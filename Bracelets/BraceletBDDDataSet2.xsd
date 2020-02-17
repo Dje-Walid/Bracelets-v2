@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BraceletBDDDataSet2" targetNamespace="http://tempuri.org/BraceletBDDDataSet2.xsd" xmlns:mstns="http://tempuri.org/BraceletBDDDataSet2.xsd" xmlns="http://tempuri.org/BraceletBDDDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BraceletBDDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BraceletBDDConnectionString (Settings)" PropertyReference="ApplicationSettings.Bracelet.Properties.Settings.GlobalReference.Default.BraceletBDDConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tlTypesPlansTableAdapter" GeneratorDataComponentClassName="tlTypesPlansTableAdapter" Name="tlTypesPlans" UserDataComponentName="tlTypesPlansTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BraceletBDDConnectionString (Settings)" DbObjectName="tlTypesPlans" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT LibTypePlan FROM tlTypesPlans</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LibTypePlan" DataSetColumn="LibTypePlan" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BraceletBDDDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BraceletBDDDataSet2" msprop:Generator_UserDSName="BraceletBDDDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tlTypesPlans" msprop:Generator_TableClassName="tlTypesPlansDataTable" msprop:Generator_TableVarName="tabletlTypesPlans" msprop:Generator_TablePropName="tlTypesPlans" msprop:Generator_RowDeletingName="tlTypesPlansRowDeleting" msprop:Generator_RowChangingName="tlTypesPlansRowChanging" msprop:Generator_RowEvHandlerName="tlTypesPlansRowChangeEventHandler" msprop:Generator_RowDeletedName="tlTypesPlansRowDeleted" msprop:Generator_UserTableName="tlTypesPlans" msprop:Generator_RowChangedName="tlTypesPlansRowChanged" msprop:Generator_RowEvArgName="tlTypesPlansRowChangeEvent" msprop:Generator_RowClassName="tlTypesPlansRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LibTypePlan" msprop:Generator_ColumnVarNameInTable="columnLibTypePlan" msprop:Generator_ColumnPropNameInRow="LibTypePlan" msprop:Generator_ColumnPropNameInTable="LibTypePlanColumn" msprop:Generator_UserColumnName="LibTypePlan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

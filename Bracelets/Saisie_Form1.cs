@@ -44,6 +44,8 @@ namespace Bracelet
 
         private void Saisie_Form1_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet2.tlTypesPlans'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlTypesPlansTableAdapter.Fill(this.braceletBDDDataSet2.tlTypesPlans);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet.tlCampagnes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlCampagnesTableAdapter.Fill(this.braceletBDDDataSet.tlCampagnes);
 
@@ -386,6 +388,23 @@ namespace Bracelet
             this.Hide();
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnModif.Checked)
+            {
+                CbxPlanChassCour.Enabled = true;
+                cbxCampCour.Enabled = true;
+
+            }
+
+            else
+            {
+                CbxPlanChassCour.Enabled = false;
+                cbxCampCour.Enabled = false;
+
+            }
         }
     }
 }
