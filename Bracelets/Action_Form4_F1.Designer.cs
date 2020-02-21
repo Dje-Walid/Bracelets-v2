@@ -28,14 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form4_F1));
             this.cbxCampAffich = new System.Windows.Forms.ComboBox();
+            this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDDDataSet5 = new Bracelet.BraceletBDDDataSet5();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnModif = new System.Windows.Forms.Button();
             this.dgvParamBracCamp = new System.Windows.Forms.DataGridView();
+            this.cdBraceletDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libBraceletDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tlBraceletsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDDDataSet6 = new Bracelet.BraceletBDDDataSet6();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,18 +98,36 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlCampagnesTableAdapter = new Bracelet.BraceletBDDDataSet5TableAdapters.tlCampagnesTableAdapter();
+            this.tlBraceletsTableAdapter = new Bracelet.BraceletBDDDataSet6TableAdapters.tlBraceletsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParamBracCamp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlBraceletsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet6)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbxCampAffich
             // 
+            this.cbxCampAffich.DataSource = this.tlCampagnesBindingSource;
+            this.cbxCampAffich.DisplayMember = "LibCampagne";
             this.cbxCampAffich.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCampAffich.FormattingEnabled = true;
             this.cbxCampAffich.Location = new System.Drawing.Point(796, 183);
             this.cbxCampAffich.Name = "cbxCampAffich";
             this.cbxCampAffich.Size = new System.Drawing.Size(143, 32);
             this.cbxCampAffich.TabIndex = 5;
+            // 
+            // tlCampagnesBindingSource
+            // 
+            this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
+            this.tlCampagnesBindingSource.DataSource = this.braceletBDDDataSet5;
+            // 
+            // braceletBDDDataSet5
+            // 
+            this.braceletBDDDataSet5.DataSetName = "BraceletBDDDataSet5";
+            this.braceletBDDDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -161,11 +186,42 @@
             // 
             // dgvParamBracCamp
             // 
+            this.dgvParamBracCamp.AutoGenerateColumns = false;
+            this.dgvParamBracCamp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvParamBracCamp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvParamBracCamp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvParamBracCamp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cdBraceletDataGridViewTextBoxColumn,
+            this.libBraceletDataGridViewTextBoxColumn});
+            this.dgvParamBracCamp.DataSource = this.tlBraceletsBindingSource;
             this.dgvParamBracCamp.Location = new System.Drawing.Point(373, 266);
             this.dgvParamBracCamp.Name = "dgvParamBracCamp";
             this.dgvParamBracCamp.Size = new System.Drawing.Size(1092, 369);
             this.dgvParamBracCamp.TabIndex = 57;
+            // 
+            // cdBraceletDataGridViewTextBoxColumn
+            // 
+            this.cdBraceletDataGridViewTextBoxColumn.DataPropertyName = "CdBracelet";
+            this.cdBraceletDataGridViewTextBoxColumn.HeaderText = "CdBracelet";
+            this.cdBraceletDataGridViewTextBoxColumn.Name = "cdBraceletDataGridViewTextBoxColumn";
+            this.cdBraceletDataGridViewTextBoxColumn.Width = 84;
+            // 
+            // libBraceletDataGridViewTextBoxColumn
+            // 
+            this.libBraceletDataGridViewTextBoxColumn.DataPropertyName = "LibBracelet";
+            this.libBraceletDataGridViewTextBoxColumn.HeaderText = "LibBracelet";
+            this.libBraceletDataGridViewTextBoxColumn.Name = "libBraceletDataGridViewTextBoxColumn";
+            this.libBraceletDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // tlBraceletsBindingSource
+            // 
+            this.tlBraceletsBindingSource.DataMember = "tlBracelets";
+            this.tlBraceletsBindingSource.DataSource = this.braceletBDDDataSet6;
+            // 
+            // braceletBDDDataSet6
+            // 
+            this.braceletBDDDataSet6.DataSetName = "BraceletBDDDataSet6";
+            this.braceletBDDDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuStrip1
             // 
@@ -530,7 +586,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -561,13 +617,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -606,6 +662,14 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // tlCampagnesTableAdapter
+            // 
+            this.tlCampagnesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tlBraceletsTableAdapter
+            // 
+            this.tlBraceletsTableAdapter.ClearBeforeFill = true;
+            // 
             // Action_Form4_F1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,7 +688,12 @@
             this.Name = "Action_Form4_F1";
             this.Text = "Paramètres des Bracelets par Campagne";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Action_Form4_F1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParamBracCamp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlBraceletsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet6)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -696,5 +765,13 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private BraceletBDDDataSet5 braceletBDDDataSet5;
+        private System.Windows.Forms.BindingSource tlCampagnesBindingSource;
+        private BraceletBDDDataSet5TableAdapters.tlCampagnesTableAdapter tlCampagnesTableAdapter;
+        private BraceletBDDDataSet6 braceletBDDDataSet6;
+        private System.Windows.Forms.BindingSource tlBraceletsBindingSource;
+        private BraceletBDDDataSet6TableAdapters.tlBraceletsTableAdapter tlBraceletsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdBraceletDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libBraceletDataGridViewTextBoxColumn;
     }
 }

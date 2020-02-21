@@ -404,6 +404,7 @@ namespace Bracelet
                 CbxPlanChassCour.Enabled = false;
                 cbxCampCour.Enabled = false;
 
+                lbCampActu.Text = cbxCampCour.Text;
             }
         }
     }

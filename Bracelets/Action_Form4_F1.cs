@@ -354,5 +354,14 @@ namespace Bracelet
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
         }
+
+        private void Action_Form4_F1_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet6.tlBracelets'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlBraceletsTableAdapter.Fill(this.braceletBDDDataSet6.tlBracelets);
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet5.tlCampagnes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlCampagnesTableAdapter.Fill(this.braceletBDDDataSet5.tlCampagnes);
+
+        }
     }
 }

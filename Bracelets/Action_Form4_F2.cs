@@ -24,6 +24,8 @@ namespace Bracelet
 
         private void Action_Form4_F2_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet7.tlEspeces'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlEspecesTableAdapter.Fill(this.braceletBDDDataSet7.tlEspeces);
 
         }
 

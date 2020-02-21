@@ -352,5 +352,12 @@ namespace Bracelet
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
         }
+
+        private void Listes_Form6_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet13.tlEspeces'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlEspecesTableAdapter.Fill(this.braceletBDDDataSet13.tlEspeces);
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listes_Form6));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListEspe = new System.Windows.Forms.DataGridView();
@@ -89,8 +90,16 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.braceletBDDDataSet13 = new Bracelet.BraceletBDDDataSet13();
+            this.tlEspecesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tlEspecesTableAdapter = new Bracelet.BraceletBDDDataSet13TableAdapters.tlEspecesTableAdapter();
+            this.cdEspeceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdTypePlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libEspeceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEspe)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -106,7 +115,13 @@
             // 
             // dgvListEspe
             // 
+            this.dgvListEspe.AutoGenerateColumns = false;
             this.dgvListEspe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListEspe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cdEspeceDataGridViewTextBoxColumn,
+            this.cdTypePlanDataGridViewTextBoxColumn,
+            this.libEspeceDataGridViewTextBoxColumn});
+            this.dgvListEspe.DataSource = this.tlEspecesBindingSource;
             this.dgvListEspe.Location = new System.Drawing.Point(353, 251);
             this.dgvListEspe.Name = "dgvListEspe";
             this.dgvListEspe.Size = new System.Drawing.Size(1092, 369);
@@ -509,7 +524,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -540,13 +555,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -585,6 +600,38 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // braceletBDDDataSet13
+            // 
+            this.braceletBDDDataSet13.DataSetName = "BraceletBDDDataSet13";
+            this.braceletBDDDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tlEspecesBindingSource
+            // 
+            this.tlEspecesBindingSource.DataMember = "tlEspeces";
+            this.tlEspecesBindingSource.DataSource = this.braceletBDDDataSet13;
+            // 
+            // tlEspecesTableAdapter
+            // 
+            this.tlEspecesTableAdapter.ClearBeforeFill = true;
+            // 
+            // cdEspeceDataGridViewTextBoxColumn
+            // 
+            this.cdEspeceDataGridViewTextBoxColumn.DataPropertyName = "CdEspece";
+            this.cdEspeceDataGridViewTextBoxColumn.HeaderText = "CdEspece";
+            this.cdEspeceDataGridViewTextBoxColumn.Name = "cdEspeceDataGridViewTextBoxColumn";
+            // 
+            // cdTypePlanDataGridViewTextBoxColumn
+            // 
+            this.cdTypePlanDataGridViewTextBoxColumn.DataPropertyName = "CdTypePlan";
+            this.cdTypePlanDataGridViewTextBoxColumn.HeaderText = "CdTypePlan";
+            this.cdTypePlanDataGridViewTextBoxColumn.Name = "cdTypePlanDataGridViewTextBoxColumn";
+            // 
+            // libEspeceDataGridViewTextBoxColumn
+            // 
+            this.libEspeceDataGridViewTextBoxColumn.DataPropertyName = "LibEspece";
+            this.libEspeceDataGridViewTextBoxColumn.HeaderText = "LibEspece";
+            this.libEspeceDataGridViewTextBoxColumn.Name = "libEspeceDataGridViewTextBoxColumn";
+            // 
             // Listes_Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -603,9 +650,12 @@
             this.Name = "Listes_Form6";
             this.Text = "Liste des Espèces";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Listes_Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEspe)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -673,5 +723,11 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private BraceletBDDDataSet13 braceletBDDDataSet13;
+        private System.Windows.Forms.BindingSource tlEspecesBindingSource;
+        private BraceletBDDDataSet13TableAdapters.tlEspecesTableAdapter tlEspecesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdEspeceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdTypePlanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libEspeceDataGridViewTextBoxColumn;
     }
 }

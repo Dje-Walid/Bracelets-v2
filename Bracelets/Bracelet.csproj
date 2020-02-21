@@ -172,10 +172,75 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BraceletBDDDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BraceletBDDDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet15.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BraceletBDDDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BraceletBDDDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BraceletBDDDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BraceletBDDDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="Edition_Form1.cs">
       <SubType>Form</SubType>
@@ -520,6 +585,72 @@
     <None Include="BraceletBDDDataSet1.xss">
       <DependentUpon>BraceletBDDDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="BraceletBDDDataSet10.xsc">
+      <DependentUpon>BraceletBDDDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet10.xss">
+      <DependentUpon>BraceletBDDDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet11.xsc">
+      <DependentUpon>BraceletBDDDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet11.xss">
+      <DependentUpon>BraceletBDDDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet12.xsc">
+      <DependentUpon>BraceletBDDDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet12.xss">
+      <DependentUpon>BraceletBDDDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet13.xsc">
+      <DependentUpon>BraceletBDDDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet13.xss">
+      <DependentUpon>BraceletBDDDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet14.xsc">
+      <DependentUpon>BraceletBDDDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet14.xss">
+      <DependentUpon>BraceletBDDDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet15.xsc">
+      <DependentUpon>BraceletBDDDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet15.xss">
+      <DependentUpon>BraceletBDDDataSet15.xsd</DependentUpon>
+    </None>
     <None Include="BraceletBDDDataSet2.xsc">
       <DependentUpon>BraceletBDDDataSet2.xsd</DependentUpon>
     </None>
@@ -530,6 +661,83 @@
     </None>
     <None Include="BraceletBDDDataSet2.xss">
       <DependentUpon>BraceletBDDDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet3.xsc">
+      <DependentUpon>BraceletBDDDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet3.xss">
+      <DependentUpon>BraceletBDDDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet4.xsc">
+      <DependentUpon>BraceletBDDDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet4.xss">
+      <DependentUpon>BraceletBDDDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet5.xsc">
+      <DependentUpon>BraceletBDDDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet5.xss">
+      <DependentUpon>BraceletBDDDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet6.xsc">
+      <DependentUpon>BraceletBDDDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet6.xss">
+      <DependentUpon>BraceletBDDDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet7.xsc">
+      <DependentUpon>BraceletBDDDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet7.xss">
+      <DependentUpon>BraceletBDDDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet8.xsc">
+      <DependentUpon>BraceletBDDDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet8.xss">
+      <DependentUpon>BraceletBDDDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet9.xsc">
+      <DependentUpon>BraceletBDDDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="BraceletBDDDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BraceletBDDDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BraceletBDDDataSet9.xss">
+      <DependentUpon>BraceletBDDDataSet9.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form1));
             this.lbBasculPropAccord = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.Label();
@@ -92,7 +93,12 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.braceletBDDDataSet3 = new Bracelet.BraceletBDDDataSet3();
+            this.tlEspecesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tlEspecesTableAdapter = new Bracelet.BraceletBDDDataSet3TableAdapters.tlEspecesTableAdapter();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbBasculPropAccord
@@ -155,6 +161,8 @@
             // 
             // cbxEspecAbascul
             // 
+            this.cbxEspecAbascul.DataSource = this.tlEspecesBindingSource;
+            this.cbxEspecAbascul.DisplayMember = "LibEspece";
             this.cbxEspecAbascul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecAbascul.FormattingEnabled = true;
             this.cbxEspecAbascul.Location = new System.Drawing.Point(582, 487);
@@ -549,7 +557,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -580,13 +588,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -625,6 +633,20 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // braceletBDDDataSet3
+            // 
+            this.braceletBDDDataSet3.DataSetName = "BraceletBDDDataSet3";
+            this.braceletBDDDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tlEspecesBindingSource
+            // 
+            this.tlEspecesBindingSource.DataMember = "tlEspeces";
+            this.tlEspecesBindingSource.DataSource = this.braceletBDDDataSet3;
+            // 
+            // tlEspecesTableAdapter
+            // 
+            this.tlEspecesTableAdapter.ClearBeforeFill = true;
+            // 
             // Action_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,6 +669,8 @@
             this.Load += new System.EventHandler(this.Action_Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -717,5 +741,8 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private BraceletBDDDataSet3 braceletBDDDataSet3;
+        private System.Windows.Forms.BindingSource tlEspecesBindingSource;
+        private BraceletBDDDataSet3TableAdapters.tlEspecesTableAdapter tlEspecesTableAdapter;
     }
 }

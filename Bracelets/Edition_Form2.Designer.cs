@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edition_Form2));
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
@@ -97,8 +98,13 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.braceletBDDDataSet8 = new Bracelet.BraceletBDDDataSet8();
+            this.tlMassifsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tlMassifsTableAdapter = new Bracelet.BraceletBDDDataSet8TableAdapters.tlMassifsTableAdapter();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAnnuler
@@ -182,6 +188,8 @@
             // 
             // cbxMassifaExclure
             // 
+            this.cbxMassifaExclure.DataSource = this.tlMassifsBindingSource;
+            this.cbxMassifaExclure.DisplayMember = "LibMassif";
             this.cbxMassifaExclure.FormattingEnabled = true;
             this.cbxMassifaExclure.Location = new System.Drawing.Point(331, 226);
             this.cbxMassifaExclure.Name = "cbxMassifaExclure";
@@ -191,6 +199,8 @@
             // 
             // cbxMassifaInclur
             // 
+            this.cbxMassifaInclur.DataSource = this.tlMassifsBindingSource;
+            this.cbxMassifaInclur.DisplayMember = "LibMassif";
             this.cbxMassifaInclur.FormattingEnabled = true;
             this.cbxMassifaInclur.Location = new System.Drawing.Point(331, 115);
             this.cbxMassifaInclur.Name = "cbxMassifaInclur";
@@ -596,7 +606,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -627,13 +637,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -672,6 +682,20 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // braceletBDDDataSet8
+            // 
+            this.braceletBDDDataSet8.DataSetName = "BraceletBDDDataSet8";
+            this.braceletBDDDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tlMassifsBindingSource
+            // 
+            this.tlMassifsBindingSource.DataMember = "tlMassifs";
+            this.tlMassifsBindingSource.DataSource = this.braceletBDDDataSet8;
+            // 
+            // tlMassifsTableAdapter
+            // 
+            this.tlMassifsTableAdapter.ClearBeforeFill = true;
+            // 
             // Edition_Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -693,6 +717,8 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -768,5 +794,8 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private BraceletBDDDataSet8 braceletBDDDataSet8;
+        private System.Windows.Forms.BindingSource tlMassifsBindingSource;
+        private BraceletBDDDataSet8TableAdapters.tlMassifsTableAdapter tlMassifsTableAdapter;
     }
 }

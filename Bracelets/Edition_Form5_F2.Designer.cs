@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edition_Form5_F2));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -88,8 +89,13 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.braceletBDDDataSet11 = new Bracelet.BraceletBDDDataSet11();
+            this.tbCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbCommunesTableAdapter = new Bracelet.BraceletBDDDataSet11TableAdapters.tbCommunesTableAdapter();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -116,6 +122,8 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.tbCommunesBindingSource;
+            this.comboBox1.DisplayMember = "NumCommune";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(352, 84);
             this.comboBox1.Name = "comboBox1";
@@ -493,7 +501,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -524,13 +532,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -569,6 +577,20 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // braceletBDDDataSet11
+            // 
+            this.braceletBDDDataSet11.DataSetName = "BraceletBDDDataSet11";
+            this.braceletBDDDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbCommunesBindingSource
+            // 
+            this.tbCommunesBindingSource.DataMember = "tbCommunes";
+            this.tbCommunesBindingSource.DataSource = this.braceletBDDDataSet11;
+            // 
+            // tbCommunesTableAdapter
+            // 
+            this.tbCommunesTableAdapter.ClearBeforeFill = true;
+            // 
             // Edition_Form5_F2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,10 +604,13 @@
             this.Name = "Edition_Form5_F2";
             this.Text = "Statistiques par communes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Edition_Form5_F2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -652,5 +677,8 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private BraceletBDDDataSet11 braceletBDDDataSet11;
+        private System.Windows.Forms.BindingSource tbCommunesBindingSource;
+        private BraceletBDDDataSet11TableAdapters.tbCommunesTableAdapter tbCommunesTableAdapter;
     }
 }
