@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Bracelet
 {
     public partial class Listes_Form8 : Form
     {
+        private OleDbConnection connection = new OleDbConnection();
         public Listes_Form8()
         {
             InitializeComponent();
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\BraceletBDD.accdb; Persist Security Info=False;";
+
         }
 
         private void environnementCourantToolStripMenuItem_Click(object sender, EventArgs e)
@@ -360,6 +364,18 @@ namespace Bracelet
         {
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlGibiers'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlGibiersTableAdapter.Fill(this.braceletBDD.tlGibiers);
+            try
+            {
+                connection.Open();
+                check.Text = "Connection Ok";
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erreur " + ex);
+            }
 
         }
 
@@ -373,7 +389,37 @@ namespace Bracelet
             btnModifier.Visible = false;
             dgvGibiers.ReadOnly = true;
 
-          
+
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand
+                {
+                    Connection = connection
+                };
+                int nb = dgvGibiers.RowCount - 1;
+                string commande = "error";
+
+                //REQUETE DE FONCTIONNE PAS 
+
+                for (int i = 0; i > nb; i++)
+                {
+                     
+                    commande = "UPDATE 'tlGibiers' SET 'CdGibier' = '" + this.dgvGibiers.Rows[i].Cells[1].Value + "','LibGibier' = '" + this.dgvGibiers.Rows[i].Cells[2].Value + "','CdEspece' = '" + this.dgvGibiers.Rows[i].Cells[3].Value + "','CdTypePlan' = '" + this.dgvGibiers.Rows[i].Cells[4].Value + "','CdBracelet' = '" + this.dgvGibiers.Rows[i].Cells[5].Value + "'OrdreAffichage' = '" + this.dgvGibiers.Rows[i].Cells[6].Value + "','GibierPreAffiche' = '" + this.dgvGibiers.Rows[i].Cells[7].Value + "','GibierPreAffichRealis' = '" + this.dgvGibiers.Rows[i].Cells[8].Value + "','CompteEffectifs' = '" + this.dgvGibiers.Rows[i].Cells[9].Value + "','Gratuit' = '" + this.dgvGibiers.Rows[i].Cells[10].Value + ";";
+                    command.CommandText = commande;
+
+                    command.ExecuteNonQuery();
+                }
+                MessageBox.Show("donnée modifiée");
+                connection.Close();
+
+            }
+            catch (Exception erreur)
+
+            {
+                MessageBox.Show("Erreur " + erreur);
+            }
+
         }
 
         private void btnModif_Click(object sender, EventArgs e)

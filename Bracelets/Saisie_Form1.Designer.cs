@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saisie_Form1));
             this.cbxCampCour = new System.Windows.Forms.ComboBox();
+            this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDDDataSet = new Bracelet.BraceletBDDDataSet();
             this.lbPlanChassCour = new System.Windows.Forms.Label();
             this.lbCampCour = new System.Windows.Forms.Label();
             this.CbxPlanChassCour = new System.Windows.Forms.ComboBox();
@@ -95,12 +97,10 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.braceletBDDDataSet = new Bracelet.BraceletBDDDataSet();
-            this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tlCampagnesTableAdapter = new Bracelet.BraceletBDDDataSetTableAdapters.tlCampagnesTableAdapter();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbxCampCour
@@ -112,6 +112,16 @@
             this.cbxCampCour.Name = "cbxCampCour";
             this.cbxCampCour.Size = new System.Drawing.Size(179, 21);
             this.cbxCampCour.TabIndex = 0;
+            // 
+            // tlCampagnesBindingSource
+            // 
+            this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
+            this.tlCampagnesBindingSource.DataSource = this.braceletBDDDataSet;
+            // 
+            // braceletBDDDataSet
+            // 
+            this.braceletBDDDataSet.DataSetName = "BraceletBDDDataSet";
+            this.braceletBDDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbPlanChassCour
             // 
@@ -570,7 +580,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -601,13 +611,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -646,16 +656,6 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // braceletBDDDataSet
-            // 
-            this.braceletBDDDataSet.DataSetName = "BraceletBDDDataSet";
-            this.braceletBDDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tlCampagnesBindingSource
-            // 
-            this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
-            this.tlCampagnesBindingSource.DataSource = this.braceletBDDDataSet;
-            // 
             // tlCampagnesTableAdapter
             // 
             this.tlCampagnesTableAdapter.ClearBeforeFill = true;
@@ -683,10 +683,10 @@
             this.Text = "Environnement Courant";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Saisie_Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

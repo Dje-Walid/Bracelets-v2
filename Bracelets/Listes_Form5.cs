@@ -19,7 +19,10 @@ namespace Bracelet
 
         private void Listes_Form5_Load(object sender, EventArgs e)
         {
-           
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlTypesPlans'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlTypesPlansTableAdapter.Fill(this.braceletBDD.tlTypesPlans);
+            
+
         }
 
         private void environnementCourantToolStripMenuItem_Click(object sender, EventArgs e)
@@ -357,6 +360,38 @@ namespace Bracelet
             this.Hide();
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
+        }
+
+        private void btnModiffication_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbxModif.Checked== true)
+                {
+                ckbxModif.ForeColor = System.Drawing.Color.Firebrick;
+            }
+            else 
+            if (ckbxModif.Checked == false)
+            {
+                ckbxModif.ForeColor = System.Drawing.Color.Black;
+                MessageBox.Show("Vos modification on bien étè enregistrée");
+                
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void txbxCodeType_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
