@@ -29,6 +29,12 @@ namespace Bracelet
 
         private void Saisie_Form2_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tbGibiers'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tbGibiersTableAdapter.Fill(this.braceletBDD.tbGibiers);
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tbCampagnes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tbCampagnesTableAdapter.Fill(this.braceletBDD.tbCampagnes);
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlCampagnes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlCampagnesTableAdapter.Fill(this.braceletBDD.tlCampagnes);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlMassifs'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlMassifsTableAdapter.Fill(this.braceletBDD.tlMassifs);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlCommunes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
@@ -69,6 +75,9 @@ namespace Bracelet
                 bs.DataSource = Dgv1;
                 dgvCommunes.DataSource = bs;
             }
+            //Calcul Total Bois et Total Complet Bois
+            txbxTTBois.Text = Convert.ToString(Convert.ToInt32(txbxBoisPrive.Text)+Convert.ToInt32(txbxBoisSoumis.Text));
+            txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -483,6 +492,21 @@ namespace Bracelet
                     }
                 }
             }
+        }
+
+        private void grbInfoBenef_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbxTTBois_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
