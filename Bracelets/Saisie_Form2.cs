@@ -15,23 +15,10 @@ namespace Bracelet
         public Saisie_Form2()
         {
             InitializeComponent();
-            using (var context = new BraceletBDD())
+
+            foreach (TextBox textBox in this.Controls.OfType<TextBox>())
             {
-
-                var test = (from x in context.tbPlans
-                            where x.NumPlan.Equals(txbxPlanChasse)
-                            select x).ToList();
-                foreach (var t in test)
-                {
-                    var query = (from all in context.tlCommunes
-                                 where all.NumCommune.Equals(t.NumCommune_principale)
-                                 select all).ToList();
-
-                    foreach (var com in query)
-                    {
-                        cbxCommuPrin.Items.Add(com.LibCommune);
-                    }
-                }
+                textBox.ReadOnly = true;
             }
         }
 

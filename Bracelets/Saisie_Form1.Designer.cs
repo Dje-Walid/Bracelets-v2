@@ -99,7 +99,6 @@
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tlCampagnesTableAdapter = new Bracelet.BraceletBDDDataSetTableAdapters.tlCampagnesTableAdapter();
-<<<<<<< HEAD
             this.btnModif = new System.Windows.Forms.CheckBox();
             this.tlCampagnesTableAdapter1 = new Bracelet.BraceletBDDDataSet1TableAdapters.tlCampagnesTableAdapter();
             this.tlTypesPlansTableAdapter = new Bracelet.BraceletBDDDataSet2TableAdapters.tlTypesPlansTableAdapter();
@@ -109,10 +108,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlTypesPlansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet2)).BeginInit();
-=======
             ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).BeginInit();
->>>>>>> b627927220369148d992691b38f4ef443b1a547d
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -673,7 +670,6 @@
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
             // tlCampagnesTableAdapter
-<<<<<<< HEAD
             // 
             this.tlCampagnesTableAdapter.ClearBeforeFill = true;
             // 
@@ -691,8 +687,6 @@
             this.btnModif.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // tlCampagnesTableAdapter1
-=======
->>>>>>> b627927220369148d992691b38f4ef443b1a547d
             // 
             this.tlCampagnesTableAdapter1.ClearBeforeFill = true;
             // 
@@ -749,11 +743,8 @@
             this.Load += new System.EventHandler(this.Saisie_Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).EndInit();
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.tlTypesPlansBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet2)).EndInit();
-=======
->>>>>>> b627927220369148d992691b38f4ef443b1a547d
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
