@@ -36,6 +36,9 @@
             this.btCampagneSuiv = new System.Windows.Forms.Button();
             this.btCamapagneLast = new System.Windows.Forms.Button();
             this.dgvCommunes = new System.Windows.Forms.DataGridView();
+            this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDD = new Bracelet.BraceletBDD();
             this.lbLstCommunes = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txbxNotesInternes = new System.Windows.Forms.TextBox();
@@ -114,7 +117,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxNumPlan = new System.Windows.Forms.ComboBox();
             this.tbPlansBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDD = new Bracelet.BraceletBDD();
             this.btRecherche = new System.Windows.Forms.Button();
             this.cbxSte = new System.Windows.Forms.ComboBox();
             this.tbBenefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -161,8 +163,6 @@
             this.lbCommuPrin = new System.Windows.Forms.Label();
             this.txbxPlanChasse = new System.Windows.Forms.TextBox();
             this.lbPlanChasse = new System.Windows.Forms.Label();
-            this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -224,15 +224,15 @@
             this.tbCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbCommunesTableAdapter();
             this.tlCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlCommunesTableAdapter();
-            this.LibCommune = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbBenefstbPlansBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.numCommuneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libCommuneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codePostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.communeDepartDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.cODEINSEEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxCommuPrin = new System.Windows.Forms.ComboBox();
+            this.LibCommune = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tlMassifsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tlMassifsTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlMassifsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
             this.grbInfoPlanChasse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspeces)).BeginInit();
@@ -243,16 +243,14 @@
             this.grbSurfChasse.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbPlansBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource)).BeginInit();
             this.grbInfoBenef.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btApercu
@@ -317,21 +315,33 @@
             // 
             // dgvCommunes
             // 
-            this.dgvCommunes.AutoGenerateColumns = false;
+            this.dgvCommunes.AllowUserToAddRows = false;
+            this.dgvCommunes.AllowUserToDeleteRows = false;
+            this.dgvCommunes.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCommunes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCommunes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.LibCommune,
-            this.numCommuneDataGridViewTextBoxColumn,
-            this.libCommuneDataGridViewTextBoxColumn,
-            this.codePostalDataGridViewTextBoxColumn,
-            this.communeDepartDataGridViewCheckBoxColumn,
-            this.cODEINSEEDataGridViewTextBoxColumn});
-            this.dgvCommunes.DataSource = this.tlCommunesBindingSource;
+            this.LibCommune});
             this.dgvCommunes.Location = new System.Drawing.Point(6, 69);
             this.dgvCommunes.Name = "dgvCommunes";
+            this.dgvCommunes.ReadOnly = true;
             this.dgvCommunes.Size = new System.Drawing.Size(428, 195);
             this.dgvCommunes.TabIndex = 74;
             this.dgvCommunes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // tlCommunesBindingSource
+            // 
+            this.tlCommunesBindingSource.DataMember = "tlCommunes";
+            this.tlCommunesBindingSource.DataSource = this.braceletBDDBindingSource1;
+            // 
+            // braceletBDDBindingSource1
+            // 
+            this.braceletBDDBindingSource1.DataSource = this.braceletBDD;
+            this.braceletBDDBindingSource1.Position = 0;
+            // 
+            // braceletBDD
+            // 
+            this.braceletBDD.DataSetName = "BraceletBDD";
+            this.braceletBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbLstCommunes
             // 
@@ -1235,11 +1245,6 @@
             this.tbPlansBindingSource.DataMember = "tbPlans";
             this.tbPlansBindingSource.DataSource = this.braceletBDD;
             // 
-            // braceletBDD
-            // 
-            this.braceletBDD.DataSetName = "BraceletBDD";
-            this.braceletBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // btRecherche
             // 
             this.btRecherche.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1604,6 +1609,8 @@
             // 
             this.dtpDateModif.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dtpDateModif.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.tbBenefsBindingSource, "DateModifBenef", true));
+            this.dtpDateModif.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "DateModifBenef", true));
+            this.dtpDateModif.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbBenefsBindingSource, "DateModifBenef", true));
             this.dtpDateModif.Enabled = false;
             this.dtpDateModif.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateModif.Location = new System.Drawing.Point(1113, 38);
@@ -1711,6 +1718,7 @@
             // txbxIDK
             // 
             this.txbxIDK.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txbxIDK.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tlMassifsBindingSource, "LibMassif", true));
             this.txbxIDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxIDK.Location = new System.Drawing.Point(152, 117);
             this.txbxIDK.Name = "txbxIDK";
@@ -1751,16 +1759,6 @@
             this.lbPlanChasse.Size = new System.Drawing.Size(138, 24);
             this.lbPlanChasse.TabIndex = 15;
             this.lbPlanChasse.Text = "Plan Chasse :";
-            // 
-            // tlCommunesBindingSource
-            // 
-            this.tlCommunesBindingSource.DataMember = "tlCommunes";
-            this.tlCommunesBindingSource.DataSource = this.braceletBDDBindingSource1;
-            // 
-            // braceletBDDBindingSource1
-            // 
-            this.braceletBDDBindingSource1.DataSource = this.braceletBDD;
-            this.braceletBDDBindingSource1.Position = 0;
             // 
             // menuStrip1
             // 
@@ -2229,46 +2227,10 @@
             // 
             this.tlCommunesTableAdapter.ClearBeforeFill = true;
             // 
-            // LibCommune
-            // 
-            this.LibCommune.DataPropertyName = "LibCommune";
-            this.LibCommune.HeaderText = "LibCommune";
-            this.LibCommune.Name = "LibCommune";
-            // 
             // tbBenefstbPlansBindingSource1
             // 
             this.tbBenefstbPlansBindingSource1.DataMember = "tbBenefstbPlans";
             this.tbBenefstbPlansBindingSource1.DataSource = this.tbBenefsBindingSource;
-            // 
-            // numCommuneDataGridViewTextBoxColumn
-            // 
-            this.numCommuneDataGridViewTextBoxColumn.DataPropertyName = "NumCommune";
-            this.numCommuneDataGridViewTextBoxColumn.HeaderText = "NumCommune";
-            this.numCommuneDataGridViewTextBoxColumn.Name = "numCommuneDataGridViewTextBoxColumn";
-            // 
-            // libCommuneDataGridViewTextBoxColumn
-            // 
-            this.libCommuneDataGridViewTextBoxColumn.DataPropertyName = "LibCommune";
-            this.libCommuneDataGridViewTextBoxColumn.HeaderText = "LibCommune";
-            this.libCommuneDataGridViewTextBoxColumn.Name = "libCommuneDataGridViewTextBoxColumn";
-            // 
-            // codePostalDataGridViewTextBoxColumn
-            // 
-            this.codePostalDataGridViewTextBoxColumn.DataPropertyName = "CodePostal";
-            this.codePostalDataGridViewTextBoxColumn.HeaderText = "CodePostal";
-            this.codePostalDataGridViewTextBoxColumn.Name = "codePostalDataGridViewTextBoxColumn";
-            // 
-            // communeDepartDataGridViewCheckBoxColumn
-            // 
-            this.communeDepartDataGridViewCheckBoxColumn.DataPropertyName = "CommuneDepart";
-            this.communeDepartDataGridViewCheckBoxColumn.HeaderText = "CommuneDepart";
-            this.communeDepartDataGridViewCheckBoxColumn.Name = "communeDepartDataGridViewCheckBoxColumn";
-            // 
-            // cODEINSEEDataGridViewTextBoxColumn
-            // 
-            this.cODEINSEEDataGridViewTextBoxColumn.DataPropertyName = "CODE_INSEE";
-            this.cODEINSEEDataGridViewTextBoxColumn.HeaderText = "CODE_INSEE";
-            this.cODEINSEEDataGridViewTextBoxColumn.Name = "cODEINSEEDataGridViewTextBoxColumn";
             // 
             // cbxCommuPrin
             // 
@@ -2279,6 +2241,23 @@
             this.cbxCommuPrin.Size = new System.Drawing.Size(471, 32);
             this.cbxCommuPrin.TabIndex = 10;
             this.cbxCommuPrin.SelectedIndexChanged += new System.EventHandler(this.cbxCommuPrin_SelectedIndexChanged);
+            // 
+            // LibCommune
+            // 
+            this.LibCommune.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LibCommune.DataPropertyName = "LibCommune";
+            this.LibCommune.HeaderText = "Nom des communes";
+            this.LibCommune.Name = "LibCommune";
+            this.LibCommune.ReadOnly = true;
+            // 
+            // tlMassifsBindingSource
+            // 
+            this.tlMassifsBindingSource.DataMember = "tlMassifs";
+            this.tlMassifsBindingSource.DataSource = this.braceletBDD;
+            // 
+            // tlMassifsTableAdapter
+            // 
+            this.tlMassifsTableAdapter.ClearBeforeFill = true;
             // 
             // Saisie_Form2
             // 
@@ -2353,6 +2332,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Saisie_Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
             this.grbInfoPlanChasse.ResumeLayout(false);
             this.grbInfoPlanChasse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).EndInit();
@@ -2367,18 +2349,16 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbPlansBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource)).EndInit();
             this.grbInfoBenef.ResumeLayout(false);
             this.grbInfoBenef.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2580,13 +2560,10 @@
         private System.Windows.Forms.BindingSource braceletBDDBindingSource1;
         private System.Windows.Forms.BindingSource tlCommunesBindingSource;
         private BraceletBDDTableAdapters.tlCommunesTableAdapter tlCommunesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LibCommune;
         private System.Windows.Forms.BindingSource tbBenefstbPlansBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numCommuneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn libCommuneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codePostalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn communeDepartDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cODEINSEEDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox cbxCommuPrin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LibCommune;
+        private System.Windows.Forms.BindingSource tlMassifsBindingSource;
+        private BraceletBDDTableAdapters.tlMassifsTableAdapter tlMassifsTableAdapter;
     }
 }
