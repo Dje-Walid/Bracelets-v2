@@ -408,12 +408,6 @@ namespace Bracelet
 
                 Outils.outils.setCampagneActuelle(cbxCampCour.Text);
                 lbCampActu.Text = Outils.outils.getCampagneActuelle();
-
-                using(var context = new BraceletBDD())
-                {
-                    var t = (from x in context.TableTransportDonnees
-                             select x);
-                }
             }
         }
     }

@@ -104,15 +104,13 @@
             this.tlTypesPlansTableAdapter = new Bracelet.BraceletBDDDataSet2TableAdapters.tlTypesPlansTableAdapter();
             this.lbCampActu1 = new System.Windows.Forms.Label();
             this.lbCampActu = new System.Windows.Forms.Label();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDD = new Bracelet.BraceletBDD();
             ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlTypesPlansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCampCour
@@ -595,7 +593,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -626,13 +624,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -718,16 +716,6 @@
             this.lbCampActu.Size = new System.Drawing.Size(0, 24);
             this.lbCampActu.TabIndex = 13;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.braceletBDD;
-            this.bindingSource1.Position = 0;
-            // 
-            // braceletBDD
-            // 
-            this.braceletBDD.DataSetName = "BraceletBDD";
-            this.braceletBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // Saisie_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -759,8 +747,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -842,7 +828,5 @@
         private BraceletBDDDataSet2TableAdapters.tlTypesPlansTableAdapter tlTypesPlansTableAdapter;
         private System.Windows.Forms.Label lbCampActu1;
         private System.Windows.Forms.Label lbCampActu;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private BraceletBDD braceletBDD;
     }
 }
