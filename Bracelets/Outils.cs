@@ -10,8 +10,11 @@ namespace Bracelet
 {
     class Outils
     {
+        private string CampagneActuelle;
         public Outils()
-        { }
+        {
+            this.CampagneActuelle = "";
+        }
         public static Outils outils = new Outils();
 
         public void annuler(Form a)
@@ -59,5 +62,16 @@ namespace Bracelet
             nomDeLaForm = new Form();
             nomDeLaForm.Show();
         }
+
+        public void setCampagneActuelle(string date)
+        {
+            this.CampagneActuelle = date;
+        }
+
+        public string getCampagneActuelle()
+        {
+            return this.CampagneActuelle;
+        }
+
     }
 }

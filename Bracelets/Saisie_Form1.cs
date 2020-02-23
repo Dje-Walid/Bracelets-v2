@@ -15,6 +15,7 @@ namespace Bracelet
         public Saisie_Form1()
         {
             InitializeComponent();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -48,6 +49,7 @@ namespace Bracelet
             this.tlTypesPlansTableAdapter.Fill(this.braceletBDDDataSet2.tlTypesPlans);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet.tlCampagnes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlCampagnesTableAdapter.Fill(this.braceletBDDDataSet.tlCampagnes);
+            lbCampActu.Text = Outils.outils.getCampagneActuelle();
 
         }
 
@@ -404,7 +406,8 @@ namespace Bracelet
                 CbxPlanChassCour.Enabled = false;
                 cbxCampCour.Enabled = false;
 
-                lbCampActu.Text = cbxCampCour.Text;
+                Outils.outils.setCampagneActuelle(cbxCampCour.Text);
+                lbCampActu.Text = Outils.outils.getCampagneActuelle();
             }
         }
     }
