@@ -42,6 +42,8 @@ namespace Bracelet
 
         private void Saisie_Form2_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlMassifs'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.tlMassifsTableAdapter.Fill(this.braceletBDD.tlMassifs);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlCommunes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlCommunesTableAdapter.Fill(this.braceletBDD.tlCommunes);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tbCommunes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
@@ -53,7 +55,7 @@ namespace Bracelet
 
             using (var context = new BraceletBDD())
             {
-
+                //Remplissage du cbxCommuPrin
                 var test = (from x in context.tbPlans
                             where x.NumPlan.Equals(txbxPlanChasse)
                             select x).ToList();
@@ -68,6 +70,17 @@ namespace Bracelet
                         cbxCommuPrin.Items.Add(com.LibCommune);
                     }
                 }
+
+                //Remplissage du DGV Communes
+                var Dgv1 = (from x in context.tlCommunes
+                            where x.NumCommune.Equals((from v in context.tbPlans
+                                                      where v.NumCommune_principale.Equals(txbxPlanChasse)
+                                                      select v.NumCommune_principale).ToList())
+                            select x.LibCommune).ToList();
+
+                BindingSource bs = new BindingSource();
+                bs.DataSource = Dgv1;
+                dgvCommunes.DataSource = bs;
             }
         }
 
