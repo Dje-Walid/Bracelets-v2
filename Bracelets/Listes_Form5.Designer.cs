@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listes_Form5));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbTypeRegroupement = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chbx = new System.Windows.Forms.CheckBox();
+            this.tlTypesPlansBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDD = new Bracelet.BraceletBDD();
             this.txbxNomCourt = new System.Windows.Forms.TextBox();
             this.txbxNomPlan = new System.Windows.Forms.TextBox();
             this.txbxCodeType = new System.Windows.Forms.TextBox();
@@ -45,7 +48,6 @@
             this.lbNomTypePlanChasse = new System.Windows.Forms.Label();
             this.lbCodeType = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxTypeRegroupement = new System.Windows.Forms.ComboBox();
             this.cmbxTypeGestion = new System.Windows.Forms.ComboBox();
@@ -107,16 +109,24 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlTypesPlansTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlTypesPlansTableAdapter();
+            this.ckbxModif = new System.Windows.Forms.CheckBox();
+            this.lb_selection = new System.Windows.Forms.Label();
+            this.cbxSelection = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlTypesPlansBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox3.Location = new System.Drawing.Point(646, 383);
+            this.pictureBox3.Location = new System.Drawing.Point(677, 494);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(20, 5);
             this.pictureBox3.TabIndex = 171;
@@ -126,7 +136,7 @@
             // 
             this.lbTypeRegroupement.AutoSize = true;
             this.lbTypeRegroupement.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTypeRegroupement.Location = new System.Drawing.Point(108, 306);
+            this.lbTypeRegroupement.Location = new System.Drawing.Point(139, 417);
             this.lbTypeRegroupement.Name = "lbTypeRegroupement";
             this.lbTypeRegroupement.Size = new System.Drawing.Size(408, 24);
             this.lbTypeRegroupement.TabIndex = 170;
@@ -135,7 +145,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox2.Location = new System.Drawing.Point(646, 299);
+            this.pictureBox2.Location = new System.Drawing.Point(677, 410);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 5);
             this.pictureBox2.TabIndex = 169;
@@ -144,7 +154,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(661, 299);
+            this.pictureBox1.Location = new System.Drawing.Point(692, 410);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(5, 89);
             this.pictureBox1.TabIndex = 168;
@@ -153,42 +163,62 @@
             // chbx
             // 
             this.chbx.AutoSize = true;
+            this.chbx.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.tlTypesPlansBindingSource, "ProfilGestSanglierGdGibier", true));
+            this.chbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tlTypesPlansBindingSource, "ProfilGestSanglierGdGibier", true));
             this.chbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbx.Location = new System.Drawing.Point(543, 521);
+            this.chbx.Location = new System.Drawing.Point(574, 632);
             this.chbx.Name = "chbx";
             this.chbx.Size = new System.Drawing.Size(15, 14);
             this.chbx.TabIndex = 167;
             this.chbx.UseVisualStyleBackColor = true;
             // 
+            // tlTypesPlansBindingSource
+            // 
+            this.tlTypesPlansBindingSource.DataMember = "tlTypesPlans";
+            this.tlTypesPlansBindingSource.DataSource = this.braceletBDD;
+            // 
+            // braceletBDD
+            // 
+            this.braceletBDD.DataSetName = "BraceletBDD";
+            this.braceletBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txbxNomCourt
             // 
+            this.txbxNomCourt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.braceletBDD, "tlTypesPlans.LibTypePlanCourt", true));
             this.txbxNomCourt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxNomCourt.Location = new System.Drawing.Point(543, 260);
+            this.txbxNomCourt.Location = new System.Drawing.Point(574, 371);
             this.txbxNomCourt.Name = "txbxNomCourt";
+            this.txbxNomCourt.ReadOnly = true;
             this.txbxNomCourt.Size = new System.Drawing.Size(100, 29);
             this.txbxNomCourt.TabIndex = 166;
             // 
             // txbxNomPlan
             // 
+            this.txbxNomPlan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.braceletBDD, "tlTypesPlans.LibTypePlan", true));
             this.txbxNomPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxNomPlan.Location = new System.Drawing.Point(544, 209);
+            this.txbxNomPlan.Location = new System.Drawing.Point(575, 320);
             this.txbxNomPlan.Name = "txbxNomPlan";
+            this.txbxNomPlan.ReadOnly = true;
             this.txbxNomPlan.Size = new System.Drawing.Size(462, 29);
             this.txbxNomPlan.TabIndex = 165;
             // 
             // txbxCodeType
             // 
+            this.txbxCodeType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tlTypesPlansBindingSource, "CdTypePlan", true));
+            this.txbxCodeType.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.braceletBDD, "tlTypesPlans.CdTypePlan", true));
             this.txbxCodeType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxCodeType.Location = new System.Drawing.Point(543, 159);
+            this.txbxCodeType.Location = new System.Drawing.Point(574, 270);
             this.txbxCodeType.Name = "txbxCodeType";
+            this.txbxCodeType.ReadOnly = true;
             this.txbxCodeType.Size = new System.Drawing.Size(100, 29);
             this.txbxCodeType.TabIndex = 164;
+            this.txbxCodeType.TextChanged += new System.EventHandler(this.txbxCodeType_TextChanged);
             // 
             // lbCheckbox
             // 
             this.lbCheckbox.AutoSize = true;
             this.lbCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCheckbox.Location = new System.Drawing.Point(150, 515);
+            this.lbCheckbox.Location = new System.Drawing.Point(181, 626);
             this.lbCheckbox.Name = "lbCheckbox";
             this.lbCheckbox.Size = new System.Drawing.Size(366, 24);
             this.lbCheckbox.TabIndex = 163;
@@ -198,7 +228,7 @@
             // 
             this.lbTypeDePlan.AutoSize = true;
             this.lbTypeDePlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTypeDePlan.Location = new System.Drawing.Point(159, 463);
+            this.lbTypeDePlan.Location = new System.Drawing.Point(190, 574);
             this.lbTypeDePlan.Name = "lbTypeDePlan";
             this.lbTypeDePlan.Size = new System.Drawing.Size(357, 24);
             this.lbTypeDePlan.TabIndex = 162;
@@ -208,7 +238,7 @@
             // 
             this.lbTypeGestion.AutoSize = true;
             this.lbTypeGestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTypeGestion.Location = new System.Drawing.Point(96, 355);
+            this.lbTypeGestion.Location = new System.Drawing.Point(127, 466);
             this.lbTypeGestion.Name = "lbTypeGestion";
             this.lbTypeGestion.Size = new System.Drawing.Size(420, 24);
             this.lbTypeGestion.TabIndex = 161;
@@ -218,7 +248,7 @@
             // 
             this.lbLesPlanDeChasse.AutoSize = true;
             this.lbLesPlanDeChasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLesPlanDeChasse.Location = new System.Drawing.Point(102, 399);
+            this.lbLesPlanDeChasse.Location = new System.Drawing.Point(133, 510);
             this.lbLesPlanDeChasse.Name = "lbLesPlanDeChasse";
             this.lbLesPlanDeChasse.Size = new System.Drawing.Size(414, 48);
             this.lbLesPlanDeChasse.TabIndex = 160;
@@ -229,7 +259,7 @@
             // 
             this.lbNomCourt.AutoSize = true;
             this.lbNomCourt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomCourt.Location = new System.Drawing.Point(283, 260);
+            this.lbNomCourt.Location = new System.Drawing.Point(314, 371);
             this.lbNomCourt.Name = "lbNomCourt";
             this.lbNomCourt.Size = new System.Drawing.Size(233, 24);
             this.lbNomCourt.TabIndex = 159;
@@ -239,7 +269,7 @@
             // 
             this.lbNomTypePlanChasse.AutoSize = true;
             this.lbNomTypePlanChasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomTypePlanChasse.Location = new System.Drawing.Point(238, 209);
+            this.lbNomTypePlanChasse.Location = new System.Drawing.Point(269, 320);
             this.lbNomTypePlanChasse.Name = "lbNomTypePlanChasse";
             this.lbNomTypePlanChasse.Size = new System.Drawing.Size(278, 24);
             this.lbNomTypePlanChasse.TabIndex = 158;
@@ -249,7 +279,7 @@
             // 
             this.lbCodeType.AutoSize = true;
             this.lbCodeType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodeType.Location = new System.Drawing.Point(420, 164);
+            this.lbCodeType.Location = new System.Drawing.Point(451, 275);
             this.lbCodeType.Name = "lbCodeType";
             this.lbCodeType.Size = new System.Drawing.Size(96, 24);
             this.lbCodeType.TabIndex = 157;
@@ -267,21 +297,12 @@
             this.button2.TabIndex = 156;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(901, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 35);
-            this.button1.TabIndex = 155;
-            this.button1.Text = "Modification";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(125, 104);
+            this.label1.ForeColor = System.Drawing.Color.Firebrick;
+            this.label1.Location = new System.Drawing.Point(116, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(722, 39);
             this.label1.TabIndex = 154;
@@ -292,7 +313,7 @@
             // 
             this.cbxTypeRegroupement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTypeRegroupement.FormattingEnabled = true;
-            this.cbxTypeRegroupement.Location = new System.Drawing.Point(543, 306);
+            this.cbxTypeRegroupement.Location = new System.Drawing.Point(574, 417);
             this.cbxTypeRegroupement.Name = "cbxTypeRegroupement";
             this.cbxTypeRegroupement.Size = new System.Drawing.Size(100, 28);
             this.cbxTypeRegroupement.TabIndex = 175;
@@ -301,25 +322,29 @@
             // 
             this.cmbxTypeGestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxTypeGestion.FormattingEnabled = true;
-            this.cmbxTypeGestion.Location = new System.Drawing.Point(543, 351);
+            this.cmbxTypeGestion.Location = new System.Drawing.Point(574, 462);
             this.cmbxTypeGestion.Name = "cmbxTypeGestion";
             this.cmbxTypeGestion.Size = new System.Drawing.Size(100, 28);
             this.cmbxTypeGestion.TabIndex = 176;
             // 
             // cmbx
             // 
+            this.cmbx.DataSource = this.tlTypesPlansBindingSource;
+            this.cmbx.DisplayMember = "ProfilRegroupPlan";
             this.cmbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbx.FormattingEnabled = true;
-            this.cmbx.Location = new System.Drawing.Point(543, 399);
+            this.cmbx.Location = new System.Drawing.Point(574, 510);
             this.cmbx.Name = "cmbx";
             this.cmbx.Size = new System.Drawing.Size(100, 28);
             this.cmbx.TabIndex = 177;
             // 
             // cmbxConcerne
             // 
+            this.cmbxConcerne.DataSource = this.tlTypesPlansBindingSource;
+            this.cmbxConcerne.DisplayMember = "ProfilLocaliTypePlan";
             this.cmbxConcerne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxConcerne.FormattingEnabled = true;
-            this.cmbxConcerne.Location = new System.Drawing.Point(543, 459);
+            this.cmbxConcerne.Location = new System.Drawing.Point(574, 570);
             this.cmbxConcerne.Name = "cmbxConcerne";
             this.cmbxConcerne.Size = new System.Drawing.Size(100, 28);
             this.cmbxConcerne.TabIndex = 178;
@@ -328,7 +353,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(672, 309);
+            this.label10.Location = new System.Drawing.Point(703, 420);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(398, 72);
             this.label10.TabIndex = 172;
@@ -773,12 +798,78 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // tlTypesPlansTableAdapter
+            // 
+            this.tlTypesPlansTableAdapter.ClearBeforeFill = true;
+            // 
+            // ckbxModif
+            // 
+            this.ckbxModif.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckbxModif.AutoSize = true;
+            this.ckbxModif.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ckbxModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbxModif.ForeColor = System.Drawing.Color.Black;
+            this.ckbxModif.Location = new System.Drawing.Point(933, 106);
+            this.ckbxModif.Name = "ckbxModif";
+            this.ckbxModif.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ckbxModif.Size = new System.Drawing.Size(120, 34);
+            this.ckbxModif.TabIndex = 180;
+            this.ckbxModif.Text = "Modification";
+            this.ckbxModif.UseVisualStyleBackColor = true;
+            this.ckbxModif.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // lb_selection
+            // 
+            this.lb_selection.AutoSize = true;
+            this.lb_selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_selection.Location = new System.Drawing.Point(190, 170);
+            this.lb_selection.Name = "lb_selection";
+            this.lb_selection.Size = new System.Drawing.Size(286, 24);
+            this.lb_selection.TabIndex = 181;
+            this.lb_selection.Text = "Sélectionner un plan de chasse :";
+            // 
+            // cbxSelection
+            // 
+            this.cbxSelection.DataSource = this.tlTypesPlansBindingSource;
+            this.cbxSelection.DisplayMember = "LibTypePlan";
+            this.cbxSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSelection.FormattingEnabled = true;
+            this.cbxSelection.Location = new System.Drawing.Point(549, 167);
+            this.cbxSelection.Name = "cbxSelection";
+            this.cbxSelection.Size = new System.Drawing.Size(385, 32);
+            this.cbxSelection.TabIndex = 182;
+            this.cbxSelection.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tlTypesPlansBindingSource, "CdTypePlan", true));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(487, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 24);
+            this.label3.TabIndex = 183;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(208, 234);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 184;
+            this.label2.Text = "label2";
+            // 
             // Listes_Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbxSelection);
+            this.Controls.Add(this.lb_selection);
+            this.Controls.Add(this.ckbxModif);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.cmbxConcerne);
             this.Controls.Add(this.cmbx);
@@ -801,7 +892,6 @@
             this.Controls.Add(this.lbNomTypePlanChasse);
             this.Controls.Add(this.lbCodeType);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listes_Form5";
@@ -811,6 +901,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlTypesPlansBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -835,7 +927,6 @@
         private System.Windows.Forms.Label lbNomTypePlanChasse;
         private System.Windows.Forms.Label lbCodeType;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxTypeRegroupement;
         private System.Windows.Forms.ComboBox cmbxTypeGestion;
@@ -897,5 +988,13 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private BraceletBDD braceletBDD;
+        private System.Windows.Forms.BindingSource tlTypesPlansBindingSource;
+        private BraceletBDDTableAdapters.tlTypesPlansTableAdapter tlTypesPlansTableAdapter;
+        private System.Windows.Forms.CheckBox ckbxModif;
+        private System.Windows.Forms.Label lb_selection;
+        private System.Windows.Forms.ComboBox cbxSelection;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

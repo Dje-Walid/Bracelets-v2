@@ -104,6 +104,7 @@
             this.tlGibiersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tlGibiersTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlGibiersTableAdapter();
             this.btnModifier = new System.Windows.Forms.Button();
+            this.check = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).BeginInit();
@@ -724,12 +725,22 @@
             this.btnModifier.Visible = false;
             this.btnModifier.Click += new System.EventHandler(this.button4_Click);
             // 
+            // check
+            // 
+            this.check.AutoSize = true;
+            this.check.Location = new System.Drawing.Point(121, 73);
+            this.check.Name = "check";
+            this.check.Size = new System.Drawing.Size(37, 13);
+            this.check.TabIndex = 163;
+            this.check.Text = "check";
+            // 
             // Listes_Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.Controls.Add(this.check);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.dgvGibiers);
             this.Controls.Add(this.menuStrip1);
@@ -828,5 +839,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn compteEffectifsDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn gratuitDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Button btnModifier;
+        private System.Windows.Forms.Label check;
     }
 }
