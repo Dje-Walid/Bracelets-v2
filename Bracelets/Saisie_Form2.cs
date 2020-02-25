@@ -54,7 +54,7 @@ namespace Bracelet
             OleDbDataReader dr = cmd.ExecuteReader();
             while(dr.Read())
             {
-                cbxCommuPrin.Items.Add(dr.GetString(0));
+                cbxCommuPrin.Items.Add(dr[0].ToString());
             }
 
             Program.outils.getConnection().Close();
