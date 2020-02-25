@@ -59,7 +59,6 @@ C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bra
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form3_Suite.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form1.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form2.resources
-C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form4.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Listes_Form3.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Listes_Form6.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Menu.resources
@@ -205,11 +204,8 @@ C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.exe
 C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.pdb
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form2.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form2_suite.resources
-C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form4.resources
-C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Aide_Form1.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Aide_Form2.resources
-C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form3.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form3_F1.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form3_F2.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form3_F3.resources
@@ -217,15 +213,10 @@ C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bra
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form3_F5.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form3_F6.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form4_F1.resources
-C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form5.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form5_F1.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form5_F2.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Edition_Form5_F3.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.ImportExport_Form1.resources
-C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.ImportExport_Form2.resources
-C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.ImportExport_Form3.resources
-C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.ImportExport_Form4.resources
-C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.ImportExport_Form5.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Listes_Form1.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Listes_Form10.resources
 C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Listes_Form11.resources
@@ -263,3 +254,9 @@ C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\bin\Debug\BraceletBDD.acc
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\bin\Debug\BraceletBDD.accdb
 C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\bin\Debug\BraceletBDD.accdb
 C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F2.resources
+C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\bin\Debug\BraceletBDD.accdb
+C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.csproj.ResolveComReference.cache
+C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F1.resources
+C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F2.resources
+C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F3.resources
+C:\Users\samsung\Documents\GitHub\Bracelets\Bracelets-v2\Bracelets\obj\Debug\Bracelet.Action_Form5_F4.resources

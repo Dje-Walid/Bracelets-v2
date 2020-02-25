@@ -17,6 +17,7 @@ namespace Bracelet
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Saisie_Form2());
-        }
+            public static Outils outils = new Outils();
+    }
     }
 }

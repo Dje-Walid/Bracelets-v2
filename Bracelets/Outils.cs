@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 
 namespace Bracelet
@@ -11,11 +12,12 @@ namespace Bracelet
     class Outils
     {
         private string CampagneActuelle;
+        private OleDbConnection connection;
         public Outils()
         {
             this.CampagneActuelle = "";
+            this.connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\BraceletBDD.accdb; Persist Security Info=False;");
         }
-        public static Outils outils = new Outils();
 
         public void annuler(Form a)
         {
@@ -72,6 +74,12 @@ namespace Bracelet
         {
             return this.CampagneActuelle;
         }
+
+        public OleDbConnection getConnection()
+        {
+            return this.connection;
+        }
+
 
     }
 }

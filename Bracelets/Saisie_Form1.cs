@@ -49,7 +49,7 @@ namespace Bracelet
             this.tlTypesPlansTableAdapter.Fill(this.braceletBDDDataSet2.tlTypesPlans);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet.tlCampagnes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlCampagnesTableAdapter.Fill(this.braceletBDDDataSet.tlCampagnes);
-            lbCampActu.Text = Outils.outils.getCampagneActuelle();
+            lbCampActu.Text = Program.outils.getCampagneActuelle();
 
         }
 
@@ -406,8 +406,8 @@ namespace Bracelet
                 CbxPlanChassCour.Enabled = false;
                 cbxCampCour.Enabled = false;
 
-                Outils.outils.setCampagneActuelle(cbxCampCour.Text);
-                lbCampActu.Text = Outils.outils.getCampagneActuelle();
+                Program.outils.setCampagneActuelle(cbxCampCour.Text);
+                lbCampActu.Text = Program.outils.getCampagneActuelle();
             }
         }
     }
