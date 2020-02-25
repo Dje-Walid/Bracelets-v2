@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Bracelet
 {
@@ -46,25 +47,20 @@ namespace Bracelet
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tbPlans'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tbPlansTableAdapter.Fill(this.braceletBDD.tbPlans);
 
-            using (var context = new BraceletBDD())
+            //Remplissage du cbxCommuPrin
+            Program.outils.getConnection().Open();
+            string requete = "Select [NumCommune_principale] from tbPlans";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while(dr.Read())
             {
-                //Remplissage du cbxCommuPrin
-                var test = (from x in context.tbPlans
-                            where x.NumPlan.Equals(txbxPlanChasse)
-                            select x).ToList();
-                foreach (var t in test)
-                {
-                    var query = (from all in context.tlCommunes
-                                 where all.NumCommune.Equals(t.NumCommune_principale)
-                                 select all).ToList();
+                cbxCommuPrin.Items.Add(dr.GetString(0));
+            }
 
-                    foreach (var com in query)
-                    {
-                        cbxCommuPrin.Items.Add(com.LibCommune);
-                    }
-                }
+            Program.outils.getConnection().Close();
 
-                //Remplissage du DGV Communes
+
+                /*//Remplissage du DGV Communes
                 var Dgv1 = (from x in context.tlCommunes
                             where x.NumCommune.Equals((from v in context.tbPlans
                                                       where v.NumCommune_principale.Equals(txbxPlanChasse)
@@ -74,10 +70,9 @@ namespace Bracelet
                 BindingSource bs = new BindingSource();
                 bs.DataSource = Dgv1;
                 dgvCommunes.DataSource = bs;
-            }
             //Calcul Total Bois et Total Complet Bois
             txbxTTBois.Text = Convert.ToString(Convert.ToInt32(txbxBoisPrive.Text)+Convert.ToInt32(txbxBoisSoumis.Text));
-            txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));
+            txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));*/
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -391,7 +391,7 @@ namespace Bracelet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Outils.outils.allerMenu(this);
+            Program.outils.allerMenu(this);
         }
     }
 }

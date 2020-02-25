@@ -79,6 +79,20 @@ namespace Bracelet
         {
             return this.connection;
         }
+        
+        public void testConnection()
+        {
+            try
+            {
+                this.connection.Open();
+                MessageBox.Show("Connexion fonctionne");
+                this.connection.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Connexion ne fonctionne pas" + ex);
+            }
+        }
 
 
     }
