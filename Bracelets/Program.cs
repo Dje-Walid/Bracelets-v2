@@ -8,16 +8,16 @@ namespace Bracelet
 {
     static class Program
     {
+        public static Outils outils = new Outils();
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Saisie_Form2());
-            public static Outils outils = new Outils();
-    }
+        }
     }
 }
