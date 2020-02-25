@@ -49,7 +49,7 @@ namespace Bracelet
 
             //Remplissage du cbxCommuPrin
             Program.outils.getConnection().Open();
-            string requete = "Select [NumCommune_principale] from tbPlans";
+            string requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) +"\");" ;
             OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
             OleDbDataReader dr = cmd.ExecuteReader();
             while(dr.Read())
