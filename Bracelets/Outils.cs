@@ -5,18 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using IniParser;
+using IniParser.Model;
 
 
 namespace Bracelet
 {
     class Outils
     {
-        private string CampagneActuelle;
         private OleDbConnection connection;
+        private FileIniDataParser config;
         public Outils()
         {
-            this.CampagneActuelle = "";
             this.connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\BraceletBDD.accdb; Persist Security Info=False;");
+            this.config = new FileIniDataParser();
         }
 
         public void annuler(Form a)
@@ -67,12 +69,14 @@ namespace Bracelet
 
         public void setCampagneActuelle(string date)
         {
-            this.CampagneActuelle = date;
+            IniData data = this.getConfig();
+            data["Info"]["CampagneActu"] = date;
+            this.config.WriteFile("Config.ini", data);
         }
 
         public string getCampagneActuelle()
         {
-            return this.CampagneActuelle;
+            return this.getConfig()["Info"]["CampagneActu"];
         }
 
         public OleDbConnection getConnection()
@@ -92,6 +96,12 @@ namespace Bracelet
             {
                 MessageBox.Show("Connexion ne fonctionne pas" + ex);
             }
+        }
+
+        public IniData getConfig()
+        {
+            IniData data = this.config.ReadFile("Config.ini");
+            return data;
         }
 
 

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using IniParser;
+using IniParser.Model;
 
 namespace Bracelet
 {
@@ -67,6 +69,10 @@ namespace Bracelet
             }
 
             Program.outils.getConnection().Close();
+
+            IniData data = Program.outils.getConfig();
+
+            txbxSecChevreuil.Text = data["Info"]["CampagneActu"];
 
             /*//Remplissage du DGV Communes
             var Dgv1 = (from x in context.tlCommunes
@@ -533,6 +539,11 @@ namespace Bracelet
             }
 
             Program.outils.getConnection().Close();
+        }
+
+        private void txbxSecChevreuil_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1098,6 +1098,7 @@
             this.txbxSecChevreuil.Name = "txbxSecChevreuil";
             this.txbxSecChevreuil.Size = new System.Drawing.Size(44, 29);
             this.txbxSecChevreuil.TabIndex = 57;
+            this.txbxSecChevreuil.TextChanged += new System.EventHandler(this.txbxSecChevreuil_TextChanged);
             // 
             // txbxSecSanglier
             // 
