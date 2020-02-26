@@ -70,23 +70,25 @@ namespace Bracelet
 
             Program.outils.getConnection().Close();
 
-            IniData data = Program.outils.getConfig();
+            //Remplissage du DGV Communes
+            dgvCommunes.ColumnCount = 1;
+            dgvCommunes.Columns[0].Name = "Nom des communes";
+            dgvCommunes.AutoResizeColumns();
 
-            txbxSecChevreuil.Text = data["Info"]["CampagneActu"];
+            Program.outils.getConnection().Open();
+            requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune] from tbCommunes where [NumPlan] = \"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+            cmd.CommandText=requete;
+            dr = cmd.ExecuteReader();
+            while(dr.Read())
+            {
+                dgvCommunes.Rows.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
 
-            /*//Remplissage du DGV Communes
-            var Dgv1 = (from x in context.tlCommunes
-                        where x.NumCommune.Equals((from v in context.tbPlans
-                                                  where v.NumCommune_principale.Equals(txbxPlanChasse)
-                                                  select v.NumCommune_principale).ToList())
-                        select x.LibCommune).ToList();
 
-            BindingSource bs = new BindingSource();
-            bs.DataSource = Dgv1;
-            dgvCommunes.DataSource = bs;
-        //Calcul Total Bois et Total Complet Bois
-        txbxTTBois.Text = Convert.ToString(Convert.ToInt32(txbxBoisPrive.Text)+Convert.ToInt32(txbxBoisSoumis.Text));
-        txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));*/
+            //Calcul Total Bois et Total Complet Bois
+            txbxTTBois.Text = Convert.ToString(Convert.ToInt32(txbxBoisPrive.Text)+Convert.ToInt32(txbxBoisSoumis.Text));
+            txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -537,7 +539,17 @@ namespace Bracelet
                 }
 
             }
+            Program.outils.getConnection().Close();
 
+            Program.outils.getConnection().Open();
+            dgvCommunes.Rows.Clear();
+            requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune] from tbCommunes where [NumPlan] = \"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+            cmd.CommandText = requete;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                dgvCommunes.Rows.Add(dr[0].ToString());
+            }
             Program.outils.getConnection().Close();
         }
 

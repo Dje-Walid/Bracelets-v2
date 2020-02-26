@@ -36,7 +36,6 @@
             this.btCampagneSuiv = new System.Windows.Forms.Button();
             this.btCamapagneLast = new System.Windows.Forms.Button();
             this.dgvCommunes = new System.Windows.Forms.DataGridView();
-            this.LibCommune = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.braceletBDDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.braceletBDD = new Bracelet.BraceletBDD();
@@ -342,24 +341,15 @@
             // 
             this.dgvCommunes.AllowUserToAddRows = false;
             this.dgvCommunes.AllowUserToDeleteRows = false;
+            this.dgvCommunes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCommunes.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCommunes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCommunes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.LibCommune});
             this.dgvCommunes.Location = new System.Drawing.Point(6, 69);
             this.dgvCommunes.Name = "dgvCommunes";
             this.dgvCommunes.ReadOnly = true;
             this.dgvCommunes.Size = new System.Drawing.Size(428, 195);
             this.dgvCommunes.TabIndex = 74;
             this.dgvCommunes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // LibCommune
-            // 
-            this.LibCommune.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.LibCommune.DataPropertyName = "LibCommune";
-            this.LibCommune.HeaderText = "Nom des communes";
-            this.LibCommune.Name = "LibCommune";
-            this.LibCommune.ReadOnly = true;
             // 
             // tlCommunesBindingSource
             // 
@@ -2765,7 +2755,6 @@
         private System.Windows.Forms.BindingSource tlCommunesBindingSource;
         private BraceletBDDTableAdapters.tlCommunesTableAdapter tlCommunesTableAdapter;
         private System.Windows.Forms.BindingSource tbBenefstbPlansBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LibCommune;
         private System.Windows.Forms.BindingSource tlMassifsBindingSource;
         private BraceletBDDTableAdapters.tlMassifsTableAdapter tlMassifsTableAdapter;
         private System.Windows.Forms.BindingSource tlCampagnesBindingSource;
