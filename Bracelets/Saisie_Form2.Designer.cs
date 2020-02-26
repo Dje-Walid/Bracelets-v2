@@ -43,6 +43,7 @@
             this.lbLstCommunes = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txbxNotesInternes = new System.Windows.Forms.TextBox();
+            this.tbPlansBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbDateCrea = new System.Windows.Forms.Label();
             this.dtpDateCreaPlan = new System.Windows.Forms.DateTimePicker();
             this.lbDateModifPlan = new System.Windows.Forms.Label();
@@ -66,6 +67,7 @@
             this.lbGibiers = new System.Windows.Forms.Label();
             this.lbBracGibier = new System.Windows.Forms.Label();
             this.chbxPointNoir = new System.Windows.Forms.CheckBox();
+            this.tbCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btEstime = new System.Windows.Forms.Button();
             this.lbEspeces = new System.Windows.Forms.Label();
             this.lbRefus = new System.Windows.Forms.Label();
@@ -73,6 +75,23 @@
             this.dvgBraceltParGibier = new System.Windows.Forms.DataGridView();
             this.dgvEspeces = new System.Windows.Forms.DataGridView();
             this.dgvGibiers = new System.Windows.Forms.DataGridView();
+            this.nbDemandeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbAccordeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbRealiseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbAvisFDCYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbAvisONFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbAvisDDAFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbAvisONFRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbSelectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbSelectionAccordeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbSelectionRealiseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nbDemandeRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accordeSousReserveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.demandetardiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tbGibiersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btSuppCampagne = new System.Windows.Forms.Button();
             this.txbxNumLastAttribution = new System.Windows.Forms.TextBox();
             this.dtpCrea = new System.Windows.Forms.DateTimePicker();
@@ -112,12 +131,12 @@
             this.grbSurfChasse = new System.Windows.Forms.GroupBox();
             this.btNewCampagne = new System.Windows.Forms.Button();
             this.dtpCampagane = new System.Windows.Forms.DateTimePicker();
+            this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbCampagane = new System.Windows.Forms.Label();
             this.btEffacer = new System.Windows.Forms.Button();
             this.btSuivant = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxNumPlan = new System.Windows.Forms.ComboBox();
-            this.tbPlansBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btRecherche = new System.Windows.Forms.Button();
             this.cbxSte = new System.Windows.Forms.ComboBox();
             this.tbBenefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -227,44 +246,28 @@
             this.tbCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbCommunesTableAdapter();
             this.tlCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlCommunesTableAdapter();
             this.tbBenefstbPlansBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cbxCommuPrin = new System.Windows.Forms.ComboBox();
             this.tlMassifsTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlMassifsTableAdapter();
-            this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tlCampagnesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlCampagnesTableAdapter();
-            this.tbCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbCampagnesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbCampagnesTableAdapter();
-            this.tbGibiersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbGibiersTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbGibiersTableAdapter();
-            this.nbDemandeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbAccordeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbRealiseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbAvisFDCYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbAvisONFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbAvisDDAFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbAvisONFRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbSelectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbSelectionAccordeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbSelectionRealiseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nbDemandeRecoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accordeSousReserveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.demandetardiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.txbxCommuPrin = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPlansBindingSource)).BeginInit();
             this.grbInfoPlanChasse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCampagnesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspeces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGibiersBindingSource)).BeginInit();
             this.grbApparGroupement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.grbSurfChasse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPlansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource)).BeginInit();
             this.grbInfoBenef.SuspendLayout();
@@ -273,9 +276,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbCampagnesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbGibiersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btApercu
@@ -407,6 +407,11 @@
             this.txbxNotesInternes.Name = "txbxNotesInternes";
             this.txbxNotesInternes.Size = new System.Drawing.Size(428, 57);
             this.txbxNotesInternes.TabIndex = 102;
+            // 
+            // tbPlansBindingSource
+            // 
+            this.tbPlansBindingSource.DataMember = "tbPlans";
+            this.tbPlansBindingSource.DataSource = this.braceletBDD;
             // 
             // lbDateCrea
             // 
@@ -705,6 +710,11 @@
             this.chbxPointNoir.Text = "Point Noir";
             this.chbxPointNoir.UseVisualStyleBackColor = true;
             // 
+            // tbCampagnesBindingSource
+            // 
+            this.tbCampagnesBindingSource.DataMember = "tbCampagnes";
+            this.tbCampagnesBindingSource.DataSource = this.braceletBDD;
+            // 
             // btEstime
             // 
             this.btEstime.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -794,6 +804,123 @@
             this.dgvGibiers.ReadOnly = true;
             this.dgvGibiers.Size = new System.Drawing.Size(1084, 211);
             this.dgvGibiers.TabIndex = 72;
+            // 
+            // nbDemandeDataGridViewTextBoxColumn
+            // 
+            this.nbDemandeDataGridViewTextBoxColumn.DataPropertyName = "NbDemande";
+            this.nbDemandeDataGridViewTextBoxColumn.HeaderText = "NbDemande";
+            this.nbDemandeDataGridViewTextBoxColumn.Name = "nbDemandeDataGridViewTextBoxColumn";
+            this.nbDemandeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbAccordeDataGridViewTextBoxColumn
+            // 
+            this.nbAccordeDataGridViewTextBoxColumn.DataPropertyName = "NbAccorde";
+            this.nbAccordeDataGridViewTextBoxColumn.HeaderText = "NbAccorde";
+            this.nbAccordeDataGridViewTextBoxColumn.Name = "nbAccordeDataGridViewTextBoxColumn";
+            this.nbAccordeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbRealiseDataGridViewTextBoxColumn
+            // 
+            this.nbRealiseDataGridViewTextBoxColumn.DataPropertyName = "NbRealise";
+            this.nbRealiseDataGridViewTextBoxColumn.HeaderText = "NbRealise";
+            this.nbRealiseDataGridViewTextBoxColumn.Name = "nbRealiseDataGridViewTextBoxColumn";
+            this.nbRealiseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbRecoursDataGridViewTextBoxColumn
+            // 
+            this.nbRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbRecours";
+            this.nbRecoursDataGridViewTextBoxColumn.HeaderText = "NbRecours";
+            this.nbRecoursDataGridViewTextBoxColumn.Name = "nbRecoursDataGridViewTextBoxColumn";
+            this.nbRecoursDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbAvisFDCYDataGridViewTextBoxColumn
+            // 
+            this.nbAvisFDCYDataGridViewTextBoxColumn.DataPropertyName = "NbAvisFDCY";
+            this.nbAvisFDCYDataGridViewTextBoxColumn.HeaderText = "NbAvisFDCY";
+            this.nbAvisFDCYDataGridViewTextBoxColumn.Name = "nbAvisFDCYDataGridViewTextBoxColumn";
+            this.nbAvisFDCYDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbAvisONFDataGridViewTextBoxColumn
+            // 
+            this.nbAvisONFDataGridViewTextBoxColumn.DataPropertyName = "NbAvisONF";
+            this.nbAvisONFDataGridViewTextBoxColumn.HeaderText = "NbAvisONF";
+            this.nbAvisONFDataGridViewTextBoxColumn.Name = "nbAvisONFDataGridViewTextBoxColumn";
+            this.nbAvisONFDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbAvisDDAFDataGridViewTextBoxColumn
+            // 
+            this.nbAvisDDAFDataGridViewTextBoxColumn.DataPropertyName = "NbAvisDDAF";
+            this.nbAvisDDAFDataGridViewTextBoxColumn.HeaderText = "NbAvisDDAF";
+            this.nbAvisDDAFDataGridViewTextBoxColumn.Name = "nbAvisDDAFDataGridViewTextBoxColumn";
+            this.nbAvisDDAFDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbAvisFDCYRecoursDataGridViewTextBoxColumn
+            // 
+            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbAvisFDCYRecours";
+            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn.HeaderText = "NbAvisFDCYRecours";
+            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn.Name = "nbAvisFDCYRecoursDataGridViewTextBoxColumn";
+            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbAvisONFRecoursDataGridViewTextBoxColumn
+            // 
+            this.nbAvisONFRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbAvisONFRecours";
+            this.nbAvisONFRecoursDataGridViewTextBoxColumn.HeaderText = "NbAvisONFRecours";
+            this.nbAvisONFRecoursDataGridViewTextBoxColumn.Name = "nbAvisONFRecoursDataGridViewTextBoxColumn";
+            this.nbAvisONFRecoursDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbAvisDDAFRecoursDataGridViewTextBoxColumn
+            // 
+            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbAvisDDAFRecours";
+            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn.HeaderText = "NbAvisDDAFRecours";
+            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn.Name = "nbAvisDDAFRecoursDataGridViewTextBoxColumn";
+            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbSelectionDataGridViewTextBoxColumn
+            // 
+            this.nbSelectionDataGridViewTextBoxColumn.DataPropertyName = "NbSelection";
+            this.nbSelectionDataGridViewTextBoxColumn.HeaderText = "NbSelection";
+            this.nbSelectionDataGridViewTextBoxColumn.Name = "nbSelectionDataGridViewTextBoxColumn";
+            this.nbSelectionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbSelectionAccordeDataGridViewTextBoxColumn
+            // 
+            this.nbSelectionAccordeDataGridViewTextBoxColumn.DataPropertyName = "NbSelectionAccorde";
+            this.nbSelectionAccordeDataGridViewTextBoxColumn.HeaderText = "NbSelectionAccorde";
+            this.nbSelectionAccordeDataGridViewTextBoxColumn.Name = "nbSelectionAccordeDataGridViewTextBoxColumn";
+            this.nbSelectionAccordeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbSelectionRealiseDataGridViewTextBoxColumn
+            // 
+            this.nbSelectionRealiseDataGridViewTextBoxColumn.DataPropertyName = "NbSelectionRealise";
+            this.nbSelectionRealiseDataGridViewTextBoxColumn.HeaderText = "NbSelectionRealise";
+            this.nbSelectionRealiseDataGridViewTextBoxColumn.Name = "nbSelectionRealiseDataGridViewTextBoxColumn";
+            this.nbSelectionRealiseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nbDemandeRecoursDataGridViewTextBoxColumn
+            // 
+            this.nbDemandeRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbDemandeRecours";
+            this.nbDemandeRecoursDataGridViewTextBoxColumn.HeaderText = "NbDemandeRecours";
+            this.nbDemandeRecoursDataGridViewTextBoxColumn.Name = "nbDemandeRecoursDataGridViewTextBoxColumn";
+            this.nbDemandeRecoursDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // accordeSousReserveDataGridViewCheckBoxColumn
+            // 
+            this.accordeSousReserveDataGridViewCheckBoxColumn.DataPropertyName = "AccordeSousReserve";
+            this.accordeSousReserveDataGridViewCheckBoxColumn.HeaderText = "AccordeSousReserve";
+            this.accordeSousReserveDataGridViewCheckBoxColumn.Name = "accordeSousReserveDataGridViewCheckBoxColumn";
+            this.accordeSousReserveDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // demandetardiveDataGridViewCheckBoxColumn
+            // 
+            this.demandetardiveDataGridViewCheckBoxColumn.DataPropertyName = "demandetardive";
+            this.demandetardiveDataGridViewCheckBoxColumn.HeaderText = "demandetardive";
+            this.demandetardiveDataGridViewCheckBoxColumn.Name = "demandetardiveDataGridViewCheckBoxColumn";
+            this.demandetardiveDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // tbGibiersBindingSource
+            // 
+            this.tbGibiersBindingSource.DataMember = "tbGibiers";
+            this.tbGibiersBindingSource.DataSource = this.braceletBDD;
             // 
             // btSuppCampagne
             // 
@@ -1238,6 +1365,11 @@
             this.dtpCampagane.TabIndex = 50;
             this.dtpCampagane.Value = new System.DateTime(2020, 1, 24, 0, 0, 0, 0);
             // 
+            // tlCampagnesBindingSource
+            // 
+            this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
+            this.tlCampagnesBindingSource.DataSource = this.braceletBDD;
+            // 
             // lbCampagane
             // 
             this.lbCampagane.AutoSize = true;
@@ -1306,11 +1438,7 @@
             this.cbxNumPlan.Name = "cbxNumPlan";
             this.cbxNumPlan.Size = new System.Drawing.Size(148, 32);
             this.cbxNumPlan.TabIndex = 8;
-            // 
-            // tbPlansBindingSource
-            // 
-            this.tbPlansBindingSource.DataMember = "tbPlans";
-            this.tbPlansBindingSource.DataSource = this.braceletBDD;
+            this.cbxNumPlan.SelectedIndexChanged += new System.EventHandler(this.cbxNumPlan_SelectedIndexChanged);
             // 
             // btRecherche
             // 
@@ -2305,158 +2433,31 @@
             this.tbBenefstbPlansBindingSource1.DataMember = "tbBenefstbPlans";
             this.tbBenefstbPlansBindingSource1.DataSource = this.tbBenefsBindingSource;
             // 
-            // cbxCommuPrin
-            // 
-            this.cbxCommuPrin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCommuPrin.FormattingEnabled = true;
-            this.cbxCommuPrin.Location = new System.Drawing.Point(475, 79);
-            this.cbxCommuPrin.Name = "cbxCommuPrin";
-            this.cbxCommuPrin.Size = new System.Drawing.Size(471, 32);
-            this.cbxCommuPrin.TabIndex = 10;
-            this.cbxCommuPrin.SelectedIndexChanged += new System.EventHandler(this.cbxCommuPrin_SelectedIndexChanged);
-            // 
             // tlMassifsTableAdapter
             // 
             this.tlMassifsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tlCampagnesBindingSource
-            // 
-            this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
-            this.tlCampagnesBindingSource.DataSource = this.braceletBDD;
             // 
             // tlCampagnesTableAdapter
             // 
             this.tlCampagnesTableAdapter.ClearBeforeFill = true;
             // 
-            // tbCampagnesBindingSource
-            // 
-            this.tbCampagnesBindingSource.DataMember = "tbCampagnes";
-            this.tbCampagnesBindingSource.DataSource = this.braceletBDD;
-            // 
             // tbCampagnesTableAdapter
             // 
             this.tbCampagnesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbGibiersBindingSource
-            // 
-            this.tbGibiersBindingSource.DataMember = "tbGibiers";
-            this.tbGibiersBindingSource.DataSource = this.braceletBDD;
             // 
             // tbGibiersTableAdapter
             // 
             this.tbGibiersTableAdapter.ClearBeforeFill = true;
             // 
-            // nbDemandeDataGridViewTextBoxColumn
+            // txbxCommuPrin
             // 
-            this.nbDemandeDataGridViewTextBoxColumn.DataPropertyName = "NbDemande";
-            this.nbDemandeDataGridViewTextBoxColumn.HeaderText = "NbDemande";
-            this.nbDemandeDataGridViewTextBoxColumn.Name = "nbDemandeDataGridViewTextBoxColumn";
-            this.nbDemandeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbAccordeDataGridViewTextBoxColumn
-            // 
-            this.nbAccordeDataGridViewTextBoxColumn.DataPropertyName = "NbAccorde";
-            this.nbAccordeDataGridViewTextBoxColumn.HeaderText = "NbAccorde";
-            this.nbAccordeDataGridViewTextBoxColumn.Name = "nbAccordeDataGridViewTextBoxColumn";
-            this.nbAccordeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbRealiseDataGridViewTextBoxColumn
-            // 
-            this.nbRealiseDataGridViewTextBoxColumn.DataPropertyName = "NbRealise";
-            this.nbRealiseDataGridViewTextBoxColumn.HeaderText = "NbRealise";
-            this.nbRealiseDataGridViewTextBoxColumn.Name = "nbRealiseDataGridViewTextBoxColumn";
-            this.nbRealiseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbRecoursDataGridViewTextBoxColumn
-            // 
-            this.nbRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbRecours";
-            this.nbRecoursDataGridViewTextBoxColumn.HeaderText = "NbRecours";
-            this.nbRecoursDataGridViewTextBoxColumn.Name = "nbRecoursDataGridViewTextBoxColumn";
-            this.nbRecoursDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbAvisFDCYDataGridViewTextBoxColumn
-            // 
-            this.nbAvisFDCYDataGridViewTextBoxColumn.DataPropertyName = "NbAvisFDCY";
-            this.nbAvisFDCYDataGridViewTextBoxColumn.HeaderText = "NbAvisFDCY";
-            this.nbAvisFDCYDataGridViewTextBoxColumn.Name = "nbAvisFDCYDataGridViewTextBoxColumn";
-            this.nbAvisFDCYDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbAvisONFDataGridViewTextBoxColumn
-            // 
-            this.nbAvisONFDataGridViewTextBoxColumn.DataPropertyName = "NbAvisONF";
-            this.nbAvisONFDataGridViewTextBoxColumn.HeaderText = "NbAvisONF";
-            this.nbAvisONFDataGridViewTextBoxColumn.Name = "nbAvisONFDataGridViewTextBoxColumn";
-            this.nbAvisONFDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbAvisDDAFDataGridViewTextBoxColumn
-            // 
-            this.nbAvisDDAFDataGridViewTextBoxColumn.DataPropertyName = "NbAvisDDAF";
-            this.nbAvisDDAFDataGridViewTextBoxColumn.HeaderText = "NbAvisDDAF";
-            this.nbAvisDDAFDataGridViewTextBoxColumn.Name = "nbAvisDDAFDataGridViewTextBoxColumn";
-            this.nbAvisDDAFDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbAvisFDCYRecoursDataGridViewTextBoxColumn
-            // 
-            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbAvisFDCYRecours";
-            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn.HeaderText = "NbAvisFDCYRecours";
-            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn.Name = "nbAvisFDCYRecoursDataGridViewTextBoxColumn";
-            this.nbAvisFDCYRecoursDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbAvisONFRecoursDataGridViewTextBoxColumn
-            // 
-            this.nbAvisONFRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbAvisONFRecours";
-            this.nbAvisONFRecoursDataGridViewTextBoxColumn.HeaderText = "NbAvisONFRecours";
-            this.nbAvisONFRecoursDataGridViewTextBoxColumn.Name = "nbAvisONFRecoursDataGridViewTextBoxColumn";
-            this.nbAvisONFRecoursDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbAvisDDAFRecoursDataGridViewTextBoxColumn
-            // 
-            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbAvisDDAFRecours";
-            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn.HeaderText = "NbAvisDDAFRecours";
-            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn.Name = "nbAvisDDAFRecoursDataGridViewTextBoxColumn";
-            this.nbAvisDDAFRecoursDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbSelectionDataGridViewTextBoxColumn
-            // 
-            this.nbSelectionDataGridViewTextBoxColumn.DataPropertyName = "NbSelection";
-            this.nbSelectionDataGridViewTextBoxColumn.HeaderText = "NbSelection";
-            this.nbSelectionDataGridViewTextBoxColumn.Name = "nbSelectionDataGridViewTextBoxColumn";
-            this.nbSelectionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbSelectionAccordeDataGridViewTextBoxColumn
-            // 
-            this.nbSelectionAccordeDataGridViewTextBoxColumn.DataPropertyName = "NbSelectionAccorde";
-            this.nbSelectionAccordeDataGridViewTextBoxColumn.HeaderText = "NbSelectionAccorde";
-            this.nbSelectionAccordeDataGridViewTextBoxColumn.Name = "nbSelectionAccordeDataGridViewTextBoxColumn";
-            this.nbSelectionAccordeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbSelectionRealiseDataGridViewTextBoxColumn
-            // 
-            this.nbSelectionRealiseDataGridViewTextBoxColumn.DataPropertyName = "NbSelectionRealise";
-            this.nbSelectionRealiseDataGridViewTextBoxColumn.HeaderText = "NbSelectionRealise";
-            this.nbSelectionRealiseDataGridViewTextBoxColumn.Name = "nbSelectionRealiseDataGridViewTextBoxColumn";
-            this.nbSelectionRealiseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nbDemandeRecoursDataGridViewTextBoxColumn
-            // 
-            this.nbDemandeRecoursDataGridViewTextBoxColumn.DataPropertyName = "NbDemandeRecours";
-            this.nbDemandeRecoursDataGridViewTextBoxColumn.HeaderText = "NbDemandeRecours";
-            this.nbDemandeRecoursDataGridViewTextBoxColumn.Name = "nbDemandeRecoursDataGridViewTextBoxColumn";
-            this.nbDemandeRecoursDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // accordeSousReserveDataGridViewCheckBoxColumn
-            // 
-            this.accordeSousReserveDataGridViewCheckBoxColumn.DataPropertyName = "AccordeSousReserve";
-            this.accordeSousReserveDataGridViewCheckBoxColumn.HeaderText = "AccordeSousReserve";
-            this.accordeSousReserveDataGridViewCheckBoxColumn.Name = "accordeSousReserveDataGridViewCheckBoxColumn";
-            this.accordeSousReserveDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // demandetardiveDataGridViewCheckBoxColumn
-            // 
-            this.demandetardiveDataGridViewCheckBoxColumn.DataPropertyName = "demandetardive";
-            this.demandetardiveDataGridViewCheckBoxColumn.HeaderText = "demandetardive";
-            this.demandetardiveDataGridViewCheckBoxColumn.Name = "demandetardiveDataGridViewCheckBoxColumn";
-            this.demandetardiveDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.txbxCommuPrin.BackColor = System.Drawing.SystemColors.Window;
+            this.txbxCommuPrin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxCommuPrin.Location = new System.Drawing.Point(479, 77);
+            this.txbxCommuPrin.Name = "txbxCommuPrin";
+            this.txbxCommuPrin.ReadOnly = true;
+            this.txbxCommuPrin.Size = new System.Drawing.Size(471, 29);
+            this.txbxCommuPrin.TabIndex = 101;
             // 
             // Saisie_Form2
             // 
@@ -2467,6 +2468,7 @@
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(2147, 1061);
+            this.Controls.Add(this.txbxCommuPrin);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.grbInfoPlanChasse);
             this.Controls.Add(this.btRecours);
@@ -2523,7 +2525,6 @@
             this.Controls.Add(this.lbCommuPrin);
             this.Controls.Add(this.txbxPlanChasse);
             this.Controls.Add(this.lbPlanChasse);
-            this.Controls.Add(this.cbxCommuPrin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Saisie_Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -2534,20 +2535,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPlansBindingSource)).EndInit();
             this.grbInfoPlanChasse.ResumeLayout(false);
             this.grbInfoPlanChasse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCampagnesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspeces)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGibiersBindingSource)).EndInit();
             this.grbApparGroupement.ResumeLayout(false);
             this.grbApparGroupement.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.grbSurfChasse.ResumeLayout(false);
             this.grbSurfChasse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPlansBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource)).EndInit();
             this.grbInfoBenef.ResumeLayout(false);
@@ -2558,9 +2562,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBenefstbPlansBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbCampagnesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbGibiersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2763,7 +2764,6 @@
         private System.Windows.Forms.BindingSource tlCommunesBindingSource;
         private BraceletBDDTableAdapters.tlCommunesTableAdapter tlCommunesTableAdapter;
         private System.Windows.Forms.BindingSource tbBenefstbPlansBindingSource1;
-        private System.Windows.Forms.ComboBox cbxCommuPrin;
         private System.Windows.Forms.DataGridViewTextBoxColumn LibCommune;
         private System.Windows.Forms.BindingSource tlMassifsBindingSource;
         private BraceletBDDTableAdapters.tlMassifsTableAdapter tlMassifsTableAdapter;
@@ -2789,5 +2789,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nbDemandeRecoursDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn accordeSousReserveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn demandetardiveDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.TextBox txbxCommuPrin;
     }
 }

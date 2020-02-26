@@ -49,30 +49,38 @@ namespace Bracelet
 
             //Remplissage du cbxCommuPrin
             Program.outils.getConnection().Open();
-            string requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) +"\");" ;
+            string requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
             OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
             OleDbDataReader dr = cmd.ExecuteReader();
-            while(dr.Read())
+
+            while (dr.Read())
             {
-                cbxCommuPrin.Items.Add(dr[0].ToString());
+                if(dr[0].ToString()=="")
+                {
+                    txbxCommuPrin.Text = "";
+                }
+                else
+                {
+                    txbxCommuPrin.Text = dr[0].ToString();
+                }
+
             }
 
             Program.outils.getConnection().Close();
 
+            /*//Remplissage du DGV Communes
+            var Dgv1 = (from x in context.tlCommunes
+                        where x.NumCommune.Equals((from v in context.tbPlans
+                                                  where v.NumCommune_principale.Equals(txbxPlanChasse)
+                                                  select v.NumCommune_principale).ToList())
+                        select x.LibCommune).ToList();
 
-                /*//Remplissage du DGV Communes
-                var Dgv1 = (from x in context.tlCommunes
-                            where x.NumCommune.Equals((from v in context.tbPlans
-                                                      where v.NumCommune_principale.Equals(txbxPlanChasse)
-                                                      select v.NumCommune_principale).ToList())
-                            select x.LibCommune).ToList();
-
-                BindingSource bs = new BindingSource();
-                bs.DataSource = Dgv1;
-                dgvCommunes.DataSource = bs;
-            //Calcul Total Bois et Total Complet Bois
-            txbxTTBois.Text = Convert.ToString(Convert.ToInt32(txbxBoisPrive.Text)+Convert.ToInt32(txbxBoisSoumis.Text));
-            txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));*/
+            BindingSource bs = new BindingSource();
+            bs.DataSource = Dgv1;
+            dgvCommunes.DataSource = bs;
+        //Calcul Total Bois et Total Complet Bois
+        txbxTTBois.Text = Convert.ToString(Convert.ToInt32(txbxBoisPrive.Text)+Convert.ToInt32(txbxBoisSoumis.Text));
+        txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));*/
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -483,7 +491,7 @@ namespace Bracelet
 
                     foreach (var com in query)
                     {
-                        cbxCommuPrin.Items.Add(com.LibCommune);
+                        //cbxCommuPrin.Items.Add(com.LibCommune);
                     }
                 }
             }
@@ -502,6 +510,29 @@ namespace Bracelet
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbxNumPlan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Program.outils.getConnection().Open();
+            string requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                if (dr[0].ToString() == "")
+                {
+                    txbxCommuPrin.Text = "";
+                }
+                else
+                {
+                    txbxCommuPrin.Text = dr[0].ToString();
+                }
+
+            }
+
+            Program.outils.getConnection().Close();
         }
     }
 }
