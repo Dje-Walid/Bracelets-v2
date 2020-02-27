@@ -138,12 +138,12 @@
             this.btRecherche = new System.Windows.Forms.Button();
             this.cbxSte = new System.Windows.Forms.ComboBox();
             this.cbxNomBenef = new System.Windows.Forms.ComboBox();
-            this.tbBenefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbNumPlan = new System.Windows.Forms.Label();
             this.lbNom = new System.Windows.Forms.Label();
             this.lbSte = new System.Windows.Forms.Label();
             this.btNouveauPlan = new System.Windows.Forms.Button();
+            this.tbBenefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbCivilite = new System.Windows.Forms.Label();
             this.lbPortable = new System.Windows.Forms.Label();
             this.lbMail = new System.Windows.Forms.Label();
@@ -1368,6 +1368,7 @@
             this.btEffacer.Size = new System.Drawing.Size(34, 32);
             this.btEffacer.TabIndex = 2;
             this.btEffacer.UseVisualStyleBackColor = true;
+            this.btEffacer.Click += new System.EventHandler(this.btEffacer_Click);
             // 
             // btSuivant
             // 
@@ -1424,6 +1425,7 @@
             this.btRecherche.TabIndex = 0;
             this.btRecherche.Text = "Recherche";
             this.btRecherche.UseVisualStyleBackColor = true;
+            this.btRecherche.Click += new System.EventHandler(this.btRecherche_Click);
             // 
             // cbxSte
             // 
@@ -1431,9 +1433,9 @@
             this.cbxSte.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxSte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSte.FormattingEnabled = true;
-            this.cbxSte.Location = new System.Drawing.Point(785, 11);
+            this.cbxSte.Location = new System.Drawing.Point(888, 12);
             this.cbxSte.Name = "cbxSte";
-            this.cbxSte.Size = new System.Drawing.Size(303, 32);
+            this.cbxSte.Size = new System.Drawing.Size(402, 32);
             this.cbxSte.TabIndex = 7;
             this.cbxSte.SelectedIndexChanged += new System.EventHandler(this.cbxSte_SelectedIndexChanged);
             // 
@@ -1445,18 +1447,9 @@
             this.cbxNomBenef.FormattingEnabled = true;
             this.cbxNomBenef.Location = new System.Drawing.Point(542, 11);
             this.cbxNomBenef.Name = "cbxNomBenef";
-            this.cbxNomBenef.Size = new System.Drawing.Size(148, 32);
+            this.cbxNomBenef.Size = new System.Drawing.Size(248, 32);
             this.cbxNomBenef.TabIndex = 9;
-            // 
-            // tbBenefsBindingSource
-            // 
-            this.tbBenefsBindingSource.DataMember = "tbBenefs";
-            this.tbBenefsBindingSource.DataSource = this.braceletBDDBindingSource;
-            // 
-            // braceletBDDBindingSource
-            // 
-            this.braceletBDDBindingSource.DataSource = this.braceletBDD;
-            this.braceletBDDBindingSource.Position = 0;
+            this.cbxNomBenef.SelectedIndexChanged += new System.EventHandler(this.cbxNomBenef_SelectedIndexChanged);
             // 
             // lbNumPlan
             // 
@@ -1486,7 +1479,7 @@
             this.lbSte.AutoSize = true;
             this.lbSte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSte.ForeColor = System.Drawing.Color.Gold;
-            this.lbSte.Location = new System.Drawing.Point(696, 15);
+            this.lbSte.Location = new System.Drawing.Point(799, 16);
             this.lbSte.Name = "lbSte";
             this.lbSte.Size = new System.Drawing.Size(83, 24);
             this.lbSte.TabIndex = 13;
@@ -1498,12 +1491,22 @@
             this.btNouveauPlan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btNouveauPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNouveauPlan.ForeColor = System.Drawing.Color.Blue;
-            this.btNouveauPlan.Location = new System.Drawing.Point(1094, 11);
+            this.btNouveauPlan.Location = new System.Drawing.Point(1297, 12);
             this.btNouveauPlan.Name = "btNouveauPlan";
             this.btNouveauPlan.Size = new System.Drawing.Size(158, 32);
             this.btNouveauPlan.TabIndex = 14;
             this.btNouveauPlan.Text = "Nouveau Plan";
             this.btNouveauPlan.UseVisualStyleBackColor = true;
+            // 
+            // tbBenefsBindingSource
+            // 
+            this.tbBenefsBindingSource.DataMember = "tbBenefs";
+            this.tbBenefsBindingSource.DataSource = this.braceletBDDBindingSource;
+            // 
+            // braceletBDDBindingSource
+            // 
+            this.braceletBDDBindingSource.DataSource = this.braceletBDD;
+            this.braceletBDDBindingSource.Position = 0;
             // 
             // lbCivilite
             // 
@@ -1656,7 +1659,6 @@
             // 
             // txbxRue
             // 
-            this.txbxRue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Rue", true));
             this.txbxRue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxRue.Location = new System.Drawing.Point(140, 175);
             this.txbxRue.Name = "txbxRue";
@@ -1665,28 +1667,31 @@
             // 
             // txbxSociete
             // 
-            this.txbxSociete.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "NomSociete", true));
+            this.txbxSociete.BackColor = System.Drawing.SystemColors.Window;
             this.txbxSociete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxSociete.Location = new System.Drawing.Point(140, 130);
             this.txbxSociete.Name = "txbxSociete";
+            this.txbxSociete.ReadOnly = true;
             this.txbxSociete.Size = new System.Drawing.Size(317, 29);
             this.txbxSociete.TabIndex = 38;
             // 
             // txbxPrenom
             // 
-            this.txbxPrenom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "PrenomBenef", true));
+            this.txbxPrenom.BackColor = System.Drawing.SystemColors.Window;
             this.txbxPrenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxPrenom.Location = new System.Drawing.Point(140, 100);
             this.txbxPrenom.Name = "txbxPrenom";
+            this.txbxPrenom.ReadOnly = true;
             this.txbxPrenom.Size = new System.Drawing.Size(317, 29);
             this.txbxPrenom.TabIndex = 39;
             // 
             // txbxNomInfoBenef
             // 
-            this.txbxNomInfoBenef.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "NomBenef", true));
+            this.txbxNomInfoBenef.BackColor = System.Drawing.SystemColors.Window;
             this.txbxNomInfoBenef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxNomInfoBenef.Location = new System.Drawing.Point(140, 69);
             this.txbxNomInfoBenef.Name = "txbxNomInfoBenef";
+            this.txbxNomInfoBenef.ReadOnly = true;
             this.txbxNomInfoBenef.Size = new System.Drawing.Size(317, 29);
             this.txbxNomInfoBenef.TabIndex = 40;
             // 
@@ -1848,8 +1853,6 @@
             // 
             // cbxBenef
             // 
-            this.cbxBenef.DataSource = this.tbBenefsBindingSource;
-            this.cbxBenef.DisplayMember = "NomBenef";
             this.cbxBenef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxBenef.FormattingEnabled = true;
             this.cbxBenef.Location = new System.Drawing.Point(152, 152);
@@ -1882,7 +1885,6 @@
             // txbxIDK
             // 
             this.txbxIDK.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txbxIDK.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tlMassifsBindingSource, "LibMassif", true));
             this.txbxIDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxIDK.Location = new System.Drawing.Point(152, 117);
             this.txbxIDK.Name = "txbxIDK";
@@ -2290,7 +2292,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -2321,14 +2323,14 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             this.exportationExcelToolStripMenuItem.Click += new System.EventHandler(this.exportationExcelToolStripMenuItem_Click);
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             this.imprimerToolStripMenuItem.Click += new System.EventHandler(this.imprimerToolStripMenuItem_Click);
             // 

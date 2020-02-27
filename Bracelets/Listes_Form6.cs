@@ -376,7 +376,6 @@ namespace Bracelet
 
             string[] ah;
 
-            int i= 0;
             while (dr0.Read()&&dr1.Read()&&dr2.Read())
             {
                 ah = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };

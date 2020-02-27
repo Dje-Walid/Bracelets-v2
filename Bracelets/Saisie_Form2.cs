@@ -123,49 +123,18 @@ namespace Bracelet
             }
             Program.outils.getConnection().Close();
 
-            //Remplissage txbxPlanChasse
-            txbxPlanChasse.Text = cbxNumPlan.Text;
-
-            //Remplissage du cbxCommuPrin
+            //Remplissage du cbxSte
             Program.outils.getConnection().Open();
-            requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+            requete = " Select [NomSociete] from tbBenefs group by [NomSociete];";
             cmd.CommandText = requete;
             dr = cmd.ExecuteReader();
 
-            while (dr.Read())
-            {
-                if(dr[0].ToString()=="")
-                {
-                    txbxCommuPrin.Text = "";
-                }
-                else
-                {
-                    txbxCommuPrin.Text = dr[0].ToString();
-                }
-
-            }
-
-            Program.outils.getConnection().Close();
-
-            //Remplissage du DGV Communes
-            dgvCommunes.ColumnCount = 1;
-            dgvCommunes.Columns[0].Name = "Nom des communes";
-            dgvCommunes.AutoResizeColumns();
-
-            Program.outils.getConnection().Open();
-            requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune] from tbCommunes where [NumPlan] = \"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
-            cmd.CommandText=requete;
-            dr = cmd.ExecuteReader();
             while(dr.Read())
             {
-                dgvCommunes.Rows.Add(dr[0].ToString());
+                cbxSte.Items.Add(dr[0].ToString());
             }
             Program.outils.getConnection().Close();
 
-
-            //Calcul Total Bois et Total Complet Bois
-            txbxTTBois.Text = Convert.ToString(Convert.ToInt32(txbxBoisPrive.Text)+Convert.ToInt32(txbxBoisSoumis.Text));
-            txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));
             #endregion
         }
 
@@ -586,46 +555,247 @@ namespace Bracelet
         private void cbxNumPlan_SelectedIndexChanged(object sender, EventArgs e)
         {
             #region "Remplissage lorsque NumPlan est selectionné"
-            //Remplissage txbxCommuPrin
+            //Tri des NomBenef
+            cbxNomBenef.Items.Clear();
             Program.outils.getConnection().Open();
-            string requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+            string requete = "Select [NomBenef] from tbBenefs where [CdBenef] in (Select [CdBenef] from tbPlans where [NumPlan] =\"" + Convert.ToString(cbxNumPlan.Text) + "\") group by [NomBenef];";
             OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
             OleDbDataReader dr = cmd.ExecuteReader();
-
             while (dr.Read())
             {
-                if (dr[0].ToString() == "")
-                {
-                    txbxCommuPrin.Text = "";
-                }
-                else
-                {
-                    txbxCommuPrin.Text = dr[0].ToString();
-                }
-
+                cbxNomBenef.Items.Add(dr[0].ToString());
             }
             Program.outils.getConnection().Close();
 
-            //Remplissage dgvCommunes
+            //Tri des sociétés
+            cbxSte.Items.Clear();
             Program.outils.getConnection().Open();
-            dgvCommunes.Rows.Clear();
-            requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune] from tbCommunes where [NumPlan] = \"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+            requete = "Select [NomSociete] from tbBenefs where [CdBenef] in (Select [CdBenef] from tbPlans where [NumPlan] =\"" + Convert.ToString(cbxNumPlan.Text) + "\");";
             cmd.CommandText = requete;
             dr = cmd.ExecuteReader();
-            while (dr.Read())
+            while(dr.Read())
             {
-                dgvCommunes.Rows.Add(dr[0].ToString());
+                cbxSte.Items.Add(dr[0].ToString());
             }
             Program.outils.getConnection().Close();
 
-            //Remplissage txbxPlanChasse
-            txbxPlanChasse.Text = cbxNumPlan.Text;
+
             #endregion
         }
 
         private void txbxSecChevreuil_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbxNomBenef_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            #region "Remplissage lorsque le NomBenef est sélectionné"
+            //Tri des NumPlan
+            cbxNumPlan.Items.Clear();
+            Program.outils.getConnection().Open();
+            string requete = "Select [NumPlan] from tbPlans where [CdBenef] in (Select [CdBenef] from tbBenefs where [NomBenef] =\"" + Convert.ToString(cbxNomBenef.Text) + "\");";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cbxNumPlan.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+
+            //Tri des sociétés
+            cbxSte.Items.Clear();
+            Program.outils.getConnection().Open();
+            requete = "Select [NomSociete] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxNomBenef.Text) + "\";";
+            cmd.CommandText = requete;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cbxSte.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+            #endregion
+        }
+
+        private void btEffacer_Click(object sender, EventArgs e)
+        {
+            #region "Bouton pour effacer"
+            //Remplissage cbxNumPlan
+            cbxNumPlan.Items.Clear();
+            Program.outils.getConnection().Open();
+            string requete = "Select [NumPlan] from tbPlans group by [NumPlan];";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cbxNumPlan.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+            cbxNumPlan.Text = "";
+
+            //Remplissage cbxNom
+            cbxNomBenef.Items.Clear();
+            Program.outils.getConnection().Open();
+            requete = "Select [NomBenef] from tbBenefs group by [NomBenef];";
+            cmd.CommandText = requete;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cbxNomBenef.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+            cbxNomBenef.Text = "";
+
+            //Remplissage du cbxSte
+            cbxSte.Items.Clear();
+            Program.outils.getConnection().Open();
+            requete = " Select [NomSociete] from tbBenefs group by [NomSociete];";
+            cmd.CommandText = requete;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                cbxSte.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+            cbxSte.Text = "";
+            #endregion
+        }
+
+        private void btRecherche_Click(object sender, EventArgs e)
+        {
+            if(cbxNomBenef.Text == "" || cbxNumPlan.Text == "")
+            {
+                MessageBox.Show("Veuillez saisir le nom du bénéficiaire ainsi que le numéro du plan de chasse.","Requête impossible par manque d'informations",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            else
+            {
+                #region "Reset des données pour reselectionner"
+                //Remplissage cbxNumPlan
+                cbxNumPlan.Items.Clear();
+                Program.outils.getConnection().Open();
+                string requete = "Select [NumPlan] from tbPlans group by [NumPlan];";
+                OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+                OleDbDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cbxNumPlan.Items.Add(dr[0].ToString());
+                }
+                Program.outils.getConnection().Close();
+                
+
+                //Remplissage cbxNom
+                cbxNomBenef.Items.Clear();
+                Program.outils.getConnection().Open();
+                requete = "Select [NomBenef] from tbBenefs group by [NomBenef];";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cbxNomBenef.Items.Add(dr[0].ToString());
+                }
+                Program.outils.getConnection().Close();
+                
+
+                //Remplissage du cbxSte
+                cbxSte.Items.Clear();
+                Program.outils.getConnection().Open();
+                requete = " Select [NomSociete] from tbBenefs group by [NomSociete];";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    cbxSte.Items.Add(dr[0].ToString());
+                }
+                Program.outils.getConnection().Close();
+                
+                #endregion
+
+
+                //Remplissage txbxPlanChasse
+                txbxPlanChasse.Text = cbxNumPlan.Text;
+
+                //Remplissage du cbxCommuPrin
+                Program.outils.getConnection().Open();
+                requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxCommuPrin.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxIDK
+                Program.outils.getConnection().Open();
+                requete = "Select [LibMassif] from tlMassifs where [CdMassif] in (Select [CdMassifCour] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while(dr.Read())
+                {
+                    txbxIDK.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage cbxBenef
+                cbxBenef.Text = cbxNomBenef.Text;
+
+                //Remplissage txbxBenef
+                Program.outils.getConnection().Open();
+                requete = "Select [PrenomBenef] from tbBenefs where [NomBenef] =\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while(dr.Read())
+                {
+                    txbxBenef.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage cbxCivilite
+                Program.outils.getConnection().Open();
+                requete = "Select [Sigle] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxNomInfoBenef
+                txbxNomInfoBenef.Text = cbxBenef.Text;
+
+                //Remplissage txbxPrenom
+                txbxPrenom.Text = txbxBenef.Text;
+
+                //Remplissage txbxSociete
+                Program.outils.getConnection().Open();
+                requete = "Select [NomSociete] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+                Program.outils.getConnection().Close();
+
+                Program.outils.getConnection().Open();
+                Program.outils.getConnection().Close();
+
+                Program.outils.getConnection().Open();
+                Program.outils.getConnection().Close();
+
+                //Remplissage du DGV Communes
+                dgvCommunes.ColumnCount = 1;
+                dgvCommunes.Columns[0].Name = "Nom des communes";
+                dgvCommunes.AutoResizeColumns();
+
+                Program.outils.getConnection().Open();
+                requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune] from tbCommunes where [NumPlan] = \"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    dgvCommunes.Rows.Add(dr[0].ToString());
+                }
+                Program.outils.getConnection().Close();
+            }
         }
     }
 }
