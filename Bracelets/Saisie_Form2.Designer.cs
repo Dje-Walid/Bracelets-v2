@@ -71,7 +71,7 @@
             this.lbEspeces = new System.Windows.Forms.Label();
             this.lbRefus = new System.Windows.Forms.Label();
             this.cbxRefus = new System.Windows.Forms.ComboBox();
-            this.dvgBraceltParGibier = new System.Windows.Forms.DataGridView();
+            this.dgvBracletParGibier = new System.Windows.Forms.DataGridView();
             this.dgvEspeces = new System.Windows.Forms.DataGridView();
             this.dgvGibiers = new System.Windows.Forms.DataGridView();
             this.nbDemandeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -129,7 +129,6 @@
             this.lbhaTotal = new System.Windows.Forms.Label();
             this.grbSurfChasse = new System.Windows.Forms.GroupBox();
             this.btNewCampagne = new System.Windows.Forms.Button();
-            this.dtpCampagane = new System.Windows.Forms.DateTimePicker();
             this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbCampagane = new System.Windows.Forms.Label();
             this.btEffacer = new System.Windows.Forms.Button();
@@ -156,9 +155,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lbPrenom = new System.Windows.Forms.Label();
             this.lbNomInfoBenef = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbxNotes = new System.Windows.Forms.TextBox();
             this.txbxCP = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbxLieuDit = new System.Windows.Forms.TextBox();
             this.txbxRue = new System.Windows.Forms.TextBox();
             this.txbxSociete = new System.Windows.Forms.TextBox();
             this.txbxPrenom = new System.Windows.Forms.TextBox();
@@ -250,6 +249,7 @@
             this.tbCampagnesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbCampagnesTableAdapter();
             this.tbGibiersTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbGibiersTableAdapter();
             this.txbxCommuPrin = new System.Windows.Forms.TextBox();
+            this.txbxCampActu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).BeginInit();
@@ -257,7 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbPlansBindingSource)).BeginInit();
             this.grbInfoPlanChasse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbCampagnesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBracletParGibier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspeces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGibiersBindingSource)).BeginInit();
@@ -749,13 +749,13 @@
             this.cbxRefus.Size = new System.Drawing.Size(315, 32);
             this.cbxRefus.TabIndex = 75;
             // 
-            // dvgBraceltParGibier
+            // dgvBracletParGibier
             // 
-            this.dvgBraceltParGibier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgBraceltParGibier.Location = new System.Drawing.Point(1472, 861);
-            this.dvgBraceltParGibier.Name = "dvgBraceltParGibier";
-            this.dvgBraceltParGibier.Size = new System.Drawing.Size(453, 187);
-            this.dvgBraceltParGibier.TabIndex = 74;
+            this.dgvBracletParGibier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBracletParGibier.Location = new System.Drawing.Point(1472, 861);
+            this.dgvBracletParGibier.Name = "dgvBracletParGibier";
+            this.dgvBracletParGibier.Size = new System.Drawing.Size(453, 187);
+            this.dgvBracletParGibier.TabIndex = 74;
             // 
             // dgvEspeces
             // 
@@ -1341,21 +1341,6 @@
             this.btNewCampagne.Text = "Nouvelle campagne";
             this.btNewCampagne.UseVisualStyleBackColor = true;
             // 
-            // dtpCampagane
-            // 
-            this.dtpCampagane.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpCampagane.CustomFormat = "2019/2020";
-            this.dtpCampagane.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tlCampagnesBindingSource, "LibCampagneCourt", true));
-            this.dtpCampagane.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCampagane.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCampagane.Location = new System.Drawing.Point(509, 716);
-            this.dtpCampagane.MaxDate = new System.DateTime(2021, 12, 24, 0, 0, 0, 0);
-            this.dtpCampagane.MinDate = new System.DateTime(2020, 1, 24, 0, 0, 0, 0);
-            this.dtpCampagane.Name = "dtpCampagane";
-            this.dtpCampagane.Size = new System.Drawing.Size(138, 29);
-            this.dtpCampagane.TabIndex = 50;
-            this.dtpCampagane.Value = new System.DateTime(2020, 1, 24, 0, 0, 0, 0);
-            // 
             // tlCampagnesBindingSource
             // 
             this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
@@ -1421,8 +1406,6 @@
             // 
             this.cbxNumPlan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbxNumPlan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxNumPlan.DataSource = this.tbPlansBindingSource;
-            this.cbxNumPlan.DisplayMember = "NumPlan";
             this.cbxNumPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxNumPlan.FormattingEnabled = true;
             this.cbxNumPlan.Location = new System.Drawing.Point(321, 11);
@@ -1446,8 +1429,6 @@
             // 
             this.cbxSte.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbxSte.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxSte.DataSource = this.tbBenefsBindingSource;
-            this.cbxSte.DisplayMember = "NomSociete";
             this.cbxSte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSte.FormattingEnabled = true;
             this.cbxSte.Location = new System.Drawing.Point(785, 11);
@@ -1647,15 +1628,15 @@
             this.lbNomInfoBenef.TabIndex = 33;
             this.lbNomInfoBenef.Text = "Nom :";
             // 
-            // textBox1
+            // txbxNotes
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Notes", true));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(497, 69);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(737, 354);
-            this.textBox1.TabIndex = 34;
+            this.txbxNotes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Notes", true));
+            this.txbxNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxNotes.Location = new System.Drawing.Point(497, 69);
+            this.txbxNotes.Multiline = true;
+            this.txbxNotes.Name = "txbxNotes";
+            this.txbxNotes.Size = new System.Drawing.Size(737, 354);
+            this.txbxNotes.TabIndex = 34;
             // 
             // txbxCP
             // 
@@ -1666,14 +1647,14 @@
             this.txbxCP.Size = new System.Drawing.Size(106, 29);
             this.txbxCP.TabIndex = 35;
             // 
-            // textBox3
+            // txbxLieuDit
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "ComplRue", true));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(140, 205);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(317, 29);
-            this.textBox3.TabIndex = 36;
+            this.txbxLieuDit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "ComplRue", true));
+            this.txbxLieuDit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxLieuDit.Location = new System.Drawing.Point(140, 205);
+            this.txbxLieuDit.Name = "txbxLieuDit";
+            this.txbxLieuDit.Size = new System.Drawing.Size(317, 29);
+            this.txbxLieuDit.TabIndex = 36;
             // 
             // txbxRue
             // 
@@ -1713,8 +1694,6 @@
             // 
             // cbxCivilite
             // 
-            this.cbxCivilite.DataSource = this.tbBenefsBindingSource;
-            this.cbxCivilite.DisplayMember = "Sigle";
             this.cbxCivilite.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCivilite.FormattingEnabled = true;
             this.cbxCivilite.Location = new System.Drawing.Point(140, 35);
@@ -1835,9 +1814,9 @@
             this.grbInfoBenef.Controls.Add(this.txbxPrenom);
             this.grbInfoBenef.Controls.Add(this.txbxSociete);
             this.grbInfoBenef.Controls.Add(this.txbxRue);
-            this.grbInfoBenef.Controls.Add(this.textBox3);
+            this.grbInfoBenef.Controls.Add(this.txbxLieuDit);
             this.grbInfoBenef.Controls.Add(this.txbxCP);
-            this.grbInfoBenef.Controls.Add(this.textBox1);
+            this.grbInfoBenef.Controls.Add(this.txbxNotes);
             this.grbInfoBenef.Controls.Add(this.lbNomInfoBenef);
             this.grbInfoBenef.Controls.Add(this.lbPrenom);
             this.grbInfoBenef.Controls.Add(this.label9);
@@ -1932,7 +1911,6 @@
             // txbxPlanChasse
             // 
             this.txbxPlanChasse.BackColor = System.Drawing.SystemColors.Window;
-            this.txbxPlanChasse.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbPlansBindingSource, "NumPlan", true));
             this.txbxPlanChasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxPlanChasse.Location = new System.Drawing.Point(152, 82);
             this.txbxPlanChasse.Name = "txbxPlanChasse";
@@ -2314,7 +2292,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -2345,14 +2323,14 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             this.exportationExcelToolStripMenuItem.Click += new System.EventHandler(this.exportationExcelToolStripMenuItem_Click);
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             this.imprimerToolStripMenuItem.Click += new System.EventHandler(this.imprimerToolStripMenuItem_Click);
             // 
@@ -2450,6 +2428,14 @@
             this.txbxCommuPrin.Size = new System.Drawing.Size(471, 29);
             this.txbxCommuPrin.TabIndex = 101;
             // 
+            // txbxCampActu
+            // 
+            this.txbxCampActu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxCampActu.Location = new System.Drawing.Point(508, 716);
+            this.txbxCampActu.Name = "txbxCampActu";
+            this.txbxCampActu.Size = new System.Drawing.Size(139, 29);
+            this.txbxCampActu.TabIndex = 107;
+            // 
             // Saisie_Form2
             // 
             this.AccessibleName = "";
@@ -2458,7 +2444,8 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(2147, 1061);
+            this.ClientSize = new System.Drawing.Size(2147, 881);
+            this.Controls.Add(this.txbxCampActu);
             this.Controls.Add(this.txbxCommuPrin);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.grbInfoPlanChasse);
@@ -2482,7 +2469,7 @@
             this.Controls.Add(this.lbEspeces);
             this.Controls.Add(this.lbRefus);
             this.Controls.Add(this.cbxRefus);
-            this.Controls.Add(this.dvgBraceltParGibier);
+            this.Controls.Add(this.dgvBracletParGibier);
             this.Controls.Add(this.dgvEspeces);
             this.Controls.Add(this.dgvGibiers);
             this.Controls.Add(this.btSuppCampagne);
@@ -2502,7 +2489,6 @@
             this.Controls.Add(this.btCamapagneLast);
             this.Controls.Add(this.btCampagneSuiv);
             this.Controls.Add(this.btCampagnePre);
-            this.Controls.Add(this.dtpCampagane);
             this.Controls.Add(this.lbCampagane);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbInfoBenef);
@@ -2530,7 +2516,7 @@
             this.grbInfoPlanChasse.ResumeLayout(false);
             this.grbInfoPlanChasse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbCampagnesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgBraceltParGibier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBracletParGibier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspeces)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGibiersBindingSource)).EndInit();
@@ -2596,7 +2582,7 @@
         private System.Windows.Forms.Label lbEspeces;
         private System.Windows.Forms.Label lbRefus;
         private System.Windows.Forms.ComboBox cbxRefus;
-        private System.Windows.Forms.DataGridView dvgBraceltParGibier;
+        private System.Windows.Forms.DataGridView dgvBracletParGibier;
         private System.Windows.Forms.DataGridView dgvEspeces;
         private System.Windows.Forms.DataGridView dgvGibiers;
         private System.Windows.Forms.Button btSuppCampagne;
@@ -2637,7 +2623,6 @@
         private System.Windows.Forms.Label lbhaTotal;
         private System.Windows.Forms.GroupBox grbSurfChasse;
         private System.Windows.Forms.Button btNewCampagne;
-        private System.Windows.Forms.DateTimePicker dtpCampagane;
         private System.Windows.Forms.Label lbCampagane;
         private System.Windows.Forms.Button btEffacer;
         private System.Windows.Forms.Button btSuivant;
@@ -2661,9 +2646,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbPrenom;
         private System.Windows.Forms.Label lbNomInfoBenef;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbxNotes;
         private System.Windows.Forms.TextBox txbxCP;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbxLieuDit;
         private System.Windows.Forms.TextBox txbxRue;
         private System.Windows.Forms.TextBox txbxSociete;
         private System.Windows.Forms.TextBox txbxPrenom;
@@ -2780,5 +2765,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn accordeSousReserveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn demandetardiveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TextBox txbxCommuPrin;
+        private System.Windows.Forms.TextBox txbxCampActu;
     }
 }

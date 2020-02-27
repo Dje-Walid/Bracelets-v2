@@ -49,11 +49,77 @@ namespace Bracelet
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tbPlans'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tbPlansTableAdapter.Fill(this.braceletBDD.tbPlans);
 
-            //Remplissage du cbxCommuPrin
+            #region "Insertion des outils dans les Controls"
+            //Insertion des outils dans les Controls
+            this.Controls.Add(cbxNumPlan);
+            this.Controls.Add(cbxNomBenef);
+            this.Controls.Add(cbxSte);
+            this.Controls.Add(txbxPlanChasse);
+            this.Controls.Add(txbxCommuPrin);
+            this.Controls.Add(txbxIDK);
+            this.Controls.Add(cbxBenef);
+            this.Controls.Add(txbxBenef);
+            this.Controls.Add(cbxCivilite);
+            this.Controls.Add(txbxNomInfoBenef);
+            this.Controls.Add(txbxPrenom);
+            this.Controls.Add(txbxSociete);
+            this.Controls.Add(txbxRue);
+            this.Controls.Add(txbxLieuDit);
+            this.Controls.Add(txbxCP);
+            this.Controls.Add(cbxVille);
+            this.Controls.Add(txbxTelephone);
+            this.Controls.Add(txbxFax);
+            this.Controls.Add(txbxMail);
+            this.Controls.Add(txbxPortable);
+            this.Controls.Add(txbxNotes);
+            this.Controls.Add(dtpDateModif);
+            this.Controls.Add(dgvCommunes);
+            this.Controls.Add(txbxNotesInternes);
+            this.Controls.Add(dtpDateCreaPlan);
+            this.Controls.Add(dtpDateModifPlan);
+            this.Controls.Add(txbxDateSuppPlan);
+            this.Controls.Add(txbxCampActu);
+            this.Controls.Add(txbxBoisPrive);
+            this.Controls.Add(txbxBoisSoumis);
+            this.Controls.Add(txbxTTBois);
+            this.Controls.Add(txbxPlaine);
+            this.Controls.Add(txbxTTSurfChasse);
+            this.Controls.Add(txbxSecChevreuil);
+            this.Controls.Add(txbxSecSanglier);
+            this.Controls.Add(txbxSecCerf);
+            this.Controls.Add(cbxNomGroupement);
+            this.Controls.Add(txbxObservations);
+            this.Controls.Add(cbxRefus);
+            this.Controls.Add(chbxPointNoir);
+            this.Controls.Add(dgvEspeces);
+            this.Controls.Add(dgvGibiers);
+            this.Controls.Add(dgvBracletParGibier);
+            this.Controls.Add(dtpLastAttribution);
+            this.Controls.Add(dtpCrea);
+            this.Controls.Add(dtpLastModif);
+            this.Controls.Add(txbxNumLastAttribution);
+            #endregion
+
+            #region "Remplissage des outils au lancement de l'application" 
+            //Remplissage cbxNumPlan
             Program.outils.getConnection().Open();
-            string requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+            string requete = "Select [NumPlan] from tbPlans;";
             OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
             OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cbxNumPlan.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+
+            //Remplissage txbxPlanChasse
+            txbxPlanChasse.Text = cbxNumPlan.Text;
+
+            //Remplissage du cbxCommuPrin
+            Program.outils.getConnection().Open();
+            requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+            cmd.CommandText = requete;
+            dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
@@ -89,6 +155,7 @@ namespace Bracelet
             //Calcul Total Bois et Total Complet Bois
             txbxTTBois.Text = Convert.ToString(Convert.ToInt32(txbxBoisPrive.Text)+Convert.ToInt32(txbxBoisSoumis.Text));
             txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));
+            #endregion
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -522,6 +589,7 @@ namespace Bracelet
 
         private void cbxNumPlan_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Remplissage txbxCommuPrin
             Program.outils.getConnection().Open();
             string requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
             OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
@@ -541,6 +609,7 @@ namespace Bracelet
             }
             Program.outils.getConnection().Close();
 
+            //Remplissage dgvCommunes
             Program.outils.getConnection().Open();
             dgvCommunes.Rows.Clear();
             requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune] from tbCommunes where [NumPlan] = \"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
@@ -551,6 +620,9 @@ namespace Bracelet
                 dgvCommunes.Rows.Add(dr[0].ToString());
             }
             Program.outils.getConnection().Close();
+
+            //Remplissage txbxPlanChasse
+            txbxPlanChasse.Text = cbxNumPlan.Text;
         }
 
         private void txbxSecChevreuil_TextChanged(object sender, EventArgs e)

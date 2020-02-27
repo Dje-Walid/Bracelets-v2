@@ -119,9 +119,11 @@ namespace Bracelet
 
         public OleDbDataReader requeteSQL(string Table, string Attribut)
         {
-            string requete = "Select [" + Attribut + "] from " + Table + " ;";
+            Program.outils.getConnection().Open();
+            string requete = "Select [" + Attribut + "] from " + Table + ";";
             OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
             OleDbDataReader dr = cmd.ExecuteReader();
+            Program.outils.getConnection().Close();
 
             return dr;
         }
