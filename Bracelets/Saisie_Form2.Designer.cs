@@ -137,9 +137,9 @@
             this.cbxNumPlan = new System.Windows.Forms.ComboBox();
             this.btRecherche = new System.Windows.Forms.Button();
             this.cbxSte = new System.Windows.Forms.ComboBox();
+            this.cbxNomBenef = new System.Windows.Forms.ComboBox();
             this.tbBenefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.braceletBDDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbxNomBenef = new System.Windows.Forms.ComboBox();
             this.lbNumPlan = new System.Windows.Forms.Label();
             this.lbNom = new System.Windows.Forms.Label();
             this.lbSte = new System.Windows.Forms.Label();
@@ -1437,6 +1437,17 @@
             this.cbxSte.TabIndex = 7;
             this.cbxSte.SelectedIndexChanged += new System.EventHandler(this.cbxSte_SelectedIndexChanged);
             // 
+            // cbxNomBenef
+            // 
+            this.cbxNomBenef.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxNomBenef.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxNomBenef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxNomBenef.FormattingEnabled = true;
+            this.cbxNomBenef.Location = new System.Drawing.Point(542, 11);
+            this.cbxNomBenef.Name = "cbxNomBenef";
+            this.cbxNomBenef.Size = new System.Drawing.Size(148, 32);
+            this.cbxNomBenef.TabIndex = 9;
+            // 
             // tbBenefsBindingSource
             // 
             this.tbBenefsBindingSource.DataMember = "tbBenefs";
@@ -1446,19 +1457,6 @@
             // 
             this.braceletBDDBindingSource.DataSource = this.braceletBDD;
             this.braceletBDDBindingSource.Position = 0;
-            // 
-            // cbxNomBenef
-            // 
-            this.cbxNomBenef.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbxNomBenef.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxNomBenef.DataSource = this.tbBenefsBindingSource;
-            this.cbxNomBenef.DisplayMember = "NomBenef";
-            this.cbxNomBenef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxNomBenef.FormattingEnabled = true;
-            this.cbxNomBenef.Location = new System.Drawing.Point(542, 11);
-            this.cbxNomBenef.Name = "cbxNomBenef";
-            this.cbxNomBenef.Size = new System.Drawing.Size(148, 32);
-            this.cbxNomBenef.TabIndex = 9;
             // 
             // lbNumPlan
             // 
@@ -1945,7 +1943,7 @@
             this.quitterBraceletToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2130, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(2147, 24);
             this.menuStrip1.TabIndex = 100;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -2444,7 +2442,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(2147, 881);
+            this.ClientSize = new System.Drawing.Size(2164, 881);
             this.Controls.Add(this.txbxCampActu);
             this.Controls.Add(this.txbxCommuPrin);
             this.Controls.Add(this.menuStrip1);

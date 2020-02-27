@@ -50,7 +50,7 @@ namespace Bracelet
             this.tbPlansTableAdapter.Fill(this.braceletBDD.tbPlans);
 
             #region "Insertion des outils dans les Controls"
-            //Insertion des outils dans les Controls
+            /*//Insertion des outils dans les Controls
             this.Controls.Add(cbxNumPlan);
             this.Controls.Add(cbxNomBenef);
             this.Controls.Add(cbxSte);
@@ -97,18 +97,29 @@ namespace Bracelet
             this.Controls.Add(dtpLastAttribution);
             this.Controls.Add(dtpCrea);
             this.Controls.Add(dtpLastModif);
-            this.Controls.Add(txbxNumLastAttribution);
+            this.Controls.Add(txbxNumLastAttribution);*/
             #endregion
 
             #region "Remplissage des outils au lancement de l'application" 
             //Remplissage cbxNumPlan
             Program.outils.getConnection().Open();
-            string requete = "Select [NumPlan] from tbPlans;";
+            string requete = "Select [NumPlan] from tbPlans group by [NumPlan];";
             OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
             OleDbDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 cbxNumPlan.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+
+            //Remplissage cbxNom
+            Program.outils.getConnection().Open();
+            requete = "Select [NomBenef] from tbBenefs group by [NomBenef];";
+            cmd.CommandText = requete;
+            dr = cmd.ExecuteReader();
+            while(dr.Read())
+            {
+                cbxNomBenef.Items.Add(dr[0].ToString());
             }
             Program.outils.getConnection().Close();
 
@@ -191,6 +202,7 @@ namespace Bracelet
         {
         }
 
+        #region "Menu"
         private void exportationExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -544,6 +556,7 @@ namespace Bracelet
         {
 
         }
+        #endregion
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -552,24 +565,7 @@ namespace Bracelet
 
         private void cbxCommuPrin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (var context = new BraceletBDD())
-            {
 
-                var test = (from x in context.tbPlans
-                            where x.NumPlan.Equals(txbxPlanChasse)
-                            select x).ToList();
-                foreach (var t in test)
-                {
-                    var query = (from all in context.tlCommunes
-                                 where all.NumCommune.Equals(t.NumCommune_principale)
-                                 select all).ToList();
-
-                    foreach (var com in query)
-                    {
-                        //cbxCommuPrin.Items.Add(com.LibCommune);
-                    }
-                }
-            }
         }
 
         private void grbInfoBenef_Enter(object sender, EventArgs e)
@@ -589,6 +585,7 @@ namespace Bracelet
 
         private void cbxNumPlan_SelectedIndexChanged(object sender, EventArgs e)
         {
+            #region "Remplissage lorsque NumPlan est selectionné"
             //Remplissage txbxCommuPrin
             Program.outils.getConnection().Open();
             string requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune_principale] from tbPlans where [NumPlan]=\"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
@@ -623,6 +620,7 @@ namespace Bracelet
 
             //Remplissage txbxPlanChasse
             txbxPlanChasse.Text = cbxNumPlan.Text;
+            #endregion
         }
 
         private void txbxSecChevreuil_TextChanged(object sender, EventArgs e)
