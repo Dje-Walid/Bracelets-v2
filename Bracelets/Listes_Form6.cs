@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using IniParser;
+using IniParser.Model;
 
 namespace Bracelet
 {
@@ -355,9 +358,42 @@ namespace Bracelet
 
         private void Listes_Form6_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet13.tlEspeces'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.tlEspecesTableAdapter.Fill(this.braceletBDDDataSet13.tlEspeces);
+            Program.outils.getConnection().Open();
+            string requete0 = "Select [CdEspece] from tlEspeces;";
+            string requete1 = "Select [LibEspece] from tlEspeces;";
+            string requete2 = "Select [CdTypePlan] from tlEspeces;";
+            OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+            OleDbDataReader dr0 = cmd0.ExecuteReader();
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+            OleDbDataReader dr2 = cmd2.ExecuteReader();
 
+            dgvListEspe.ColumnCount = 3;
+            dgvListEspe.Columns[0].Name = "Code Espece";
+            dgvListEspe.Columns[1].Name = " Nom de l'Espece";
+            dgvListEspe.Columns[2].Name = "Type Plan";
+
+            string[] ah;
+
+            int i= 0;
+            while (dr0.Read()&&dr1.Read()&&dr2.Read())
+            {
+                ah = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
+                dgvListEspe.Rows.Add(ah);
+
+
+
+            }
+
+
+            Program.outils.getConnection().Close();
+
+        }
+
+        private void dgvListEspe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+             
         }
     }
 }

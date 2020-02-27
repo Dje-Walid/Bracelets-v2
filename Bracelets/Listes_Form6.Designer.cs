@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listes_Form6));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListEspe = new System.Windows.Forms.DataGridView();
+            this.braceletBDDDataSet13 = new Bracelet.BraceletBDDDataSet13();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,16 +89,11 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.braceletBDDDataSet13 = new Bracelet.BraceletBDDDataSet13();
-            this.tlEspecesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tlEspecesTableAdapter = new Bracelet.BraceletBDDDataSet13TableAdapters.tlEspecesTableAdapter();
-            this.cdEspeceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdTypePlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libEspeceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnModif = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEspe)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -115,17 +109,17 @@
             // 
             // dgvListEspe
             // 
-            this.dgvListEspe.AutoGenerateColumns = false;
             this.dgvListEspe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListEspe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cdEspeceDataGridViewTextBoxColumn,
-            this.cdTypePlanDataGridViewTextBoxColumn,
-            this.libEspeceDataGridViewTextBoxColumn});
-            this.dgvListEspe.DataSource = this.tlEspecesBindingSource;
-            this.dgvListEspe.Location = new System.Drawing.Point(353, 251);
+            this.dgvListEspe.Location = new System.Drawing.Point(236, 243);
             this.dgvListEspe.Name = "dgvListEspe";
             this.dgvListEspe.Size = new System.Drawing.Size(1092, 369);
             this.dgvListEspe.TabIndex = 61;
+            this.dgvListEspe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListEspe_CellContentClick);
+            // 
+            // braceletBDDDataSet13
+            // 
+            this.braceletBDDDataSet13.DataSetName = "BraceletBDDDataSet13";
+            this.braceletBDDDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button3
             // 
@@ -151,17 +145,6 @@
             this.button2.TabIndex = 59;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(855, 717);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 35);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "Modification";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -177,7 +160,7 @@
             this.quitterBraceletToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1445, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1347, 24);
             this.menuStrip1.TabIndex = 62;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -600,37 +583,25 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // braceletBDDDataSet13
+            // btnModif
             // 
-            this.braceletBDDDataSet13.DataSetName = "BraceletBDDDataSet13";
-            this.braceletBDDDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnModif.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnModif.AutoSize = true;
+            this.btnModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModif.Location = new System.Drawing.Point(875, 719);
+            this.btnModif.Name = "btnModif";
+            this.btnModif.Size = new System.Drawing.Size(120, 34);
+            this.btnModif.TabIndex = 63;
+            this.btnModif.Text = "Modification";
+            this.btnModif.UseVisualStyleBackColor = true;
             // 
-            // tlEspecesBindingSource
+            // comboBox1
             // 
-            this.tlEspecesBindingSource.DataMember = "tlEspeces";
-            this.tlEspecesBindingSource.DataSource = this.braceletBDDDataSet13;
-            // 
-            // tlEspecesTableAdapter
-            // 
-            this.tlEspecesTableAdapter.ClearBeforeFill = true;
-            // 
-            // cdEspeceDataGridViewTextBoxColumn
-            // 
-            this.cdEspeceDataGridViewTextBoxColumn.DataPropertyName = "CdEspece";
-            this.cdEspeceDataGridViewTextBoxColumn.HeaderText = "CdEspece";
-            this.cdEspeceDataGridViewTextBoxColumn.Name = "cdEspeceDataGridViewTextBoxColumn";
-            // 
-            // cdTypePlanDataGridViewTextBoxColumn
-            // 
-            this.cdTypePlanDataGridViewTextBoxColumn.DataPropertyName = "CdTypePlan";
-            this.cdTypePlanDataGridViewTextBoxColumn.HeaderText = "CdTypePlan";
-            this.cdTypePlanDataGridViewTextBoxColumn.Name = "cdTypePlanDataGridViewTextBoxColumn";
-            // 
-            // libEspeceDataGridViewTextBoxColumn
-            // 
-            this.libEspeceDataGridViewTextBoxColumn.DataPropertyName = "LibEspece";
-            this.libEspeceDataGridViewTextBoxColumn.HeaderText = "LibEspece";
-            this.libEspeceDataGridViewTextBoxColumn.Name = "libEspeceDataGridViewTextBoxColumn";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(464, 208);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 26);
+            this.comboBox1.TabIndex = 64;
             // 
             // Listes_Form6
             // 
@@ -638,11 +609,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnModif);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvListEspe);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -652,10 +624,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Listes_Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEspe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet13)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -667,7 +638,6 @@
         private System.Windows.Forms.DataGridView dgvListEspe;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem environnementCourantToolStripMenuItem;
@@ -724,10 +694,7 @@
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
         private BraceletBDDDataSet13 braceletBDDDataSet13;
-        private System.Windows.Forms.BindingSource tlEspecesBindingSource;
-        private BraceletBDDDataSet13TableAdapters.tlEspecesTableAdapter tlEspecesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdEspeceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdTypePlanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn libEspeceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox btnModif;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
