@@ -172,6 +172,7 @@
             this.dtpDateModif = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.grbInfoBenef = new System.Windows.Forms.GroupBox();
+            this.cbxSociete = new System.Windows.Forms.ComboBox();
             this.txbxBenef = new System.Windows.Forms.TextBox();
             this.cbxBenef = new System.Windows.Forms.ComboBox();
             this.lbBenef = new System.Windows.Forms.Label();
@@ -249,7 +250,6 @@
             this.tbGibiersTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbGibiersTableAdapter();
             this.txbxCommuPrin = new System.Windows.Forms.TextBox();
             this.txbxCampActu = new System.Windows.Forms.TextBox();
-            this.cbxSociete = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).BeginInit();
@@ -390,11 +390,12 @@
             // 
             // txbxNotesInternes
             // 
-            this.txbxNotesInternes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbPlansBindingSource, "NotesInternes", true));
+            this.txbxNotesInternes.BackColor = System.Drawing.SystemColors.Window;
             this.txbxNotesInternes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxNotesInternes.Location = new System.Drawing.Point(6, 318);
             this.txbxNotesInternes.Multiline = true;
             this.txbxNotesInternes.Name = "txbxNotesInternes";
+            this.txbxNotesInternes.ReadOnly = true;
             this.txbxNotesInternes.Size = new System.Drawing.Size(428, 57);
             this.txbxNotesInternes.TabIndex = 102;
             // 
@@ -419,8 +420,6 @@
             this.dtpDateCreaPlan.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateCreaPlan.CausesValidation = false;
             this.dtpDateCreaPlan.Cursor = System.Windows.Forms.Cursors.No;
-            this.dtpDateCreaPlan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbPlansBindingSource, "DateCreationPlan", true));
-            this.dtpDateCreaPlan.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbPlansBindingSource, "DateCreationPlan", true));
             this.dtpDateCreaPlan.Enabled = false;
             this.dtpDateCreaPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateCreaPlan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -445,8 +444,6 @@
             this.dtpDateModifPlan.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateModifPlan.CausesValidation = false;
             this.dtpDateModifPlan.Cursor = System.Windows.Forms.Cursors.No;
-            this.dtpDateModifPlan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbPlansBindingSource, "DateModifPlan", true));
-            this.dtpDateModifPlan.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbPlansBindingSource, "DateModifPlan", true));
             this.dtpDateModifPlan.Enabled = false;
             this.dtpDateModifPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateModifPlan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -468,9 +465,11 @@
             // 
             // txbxDateSuppPlan
             // 
+            this.txbxDateSuppPlan.BackColor = System.Drawing.SystemColors.Window;
             this.txbxDateSuppPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxDateSuppPlan.Location = new System.Drawing.Point(215, 450);
             this.txbxDateSuppPlan.Name = "txbxDateSuppPlan";
+            this.txbxDateSuppPlan.ReadOnly = true;
             this.txbxDateSuppPlan.Size = new System.Drawing.Size(169, 29);
             this.txbxDateSuppPlan.TabIndex = 106;
             // 
@@ -1836,6 +1835,15 @@
             this.grbInfoBenef.Text = "Informations bénéficiaire";
             this.grbInfoBenef.Enter += new System.EventHandler(this.grbInfoBenef_Enter);
             // 
+            // cbxSociete
+            // 
+            this.cbxSociete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSociete.FormattingEnabled = true;
+            this.cbxSociete.Location = new System.Drawing.Point(140, 130);
+            this.cbxSociete.Name = "cbxSociete";
+            this.cbxSociete.Size = new System.Drawing.Size(317, 32);
+            this.cbxSociete.TabIndex = 51;
+            // 
             // txbxBenef
             // 
             this.txbxBenef.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -2430,15 +2438,6 @@
             this.txbxCampActu.Name = "txbxCampActu";
             this.txbxCampActu.Size = new System.Drawing.Size(139, 29);
             this.txbxCampActu.TabIndex = 107;
-            // 
-            // cbxSociete
-            // 
-            this.cbxSociete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxSociete.FormattingEnabled = true;
-            this.cbxSociete.Location = new System.Drawing.Point(140, 130);
-            this.cbxSociete.Name = "cbxSociete";
-            this.cbxSociete.Size = new System.Drawing.Size(317, 32);
-            this.cbxSociete.TabIndex = 51;
             // 
             // Saisie_Form2
             // 
