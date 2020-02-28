@@ -441,7 +441,7 @@ namespace Bracelet
                 Program.outils.getConnection().Open();
 
 
-                string requete3 = "INSERT INTO tlEspeces VALUES (\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[0].Value) + "\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[1].Value) + "\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[2].Value) + "\")";
+                string requete3 = "INSERT INTO tlEspeces VALUES (\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[0].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[1].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[2].Value) + "\")";
 
                 OleDbCommand cmd3 = new OleDbCommand(requete3, Program.outils.getConnection());
                 OleDbDataReader dr3 = cmd3.ExecuteReader();
