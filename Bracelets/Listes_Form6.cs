@@ -435,13 +435,13 @@ namespace Bracelet
                 btnModif.Text = "Modification";
 
                 int i;
-                i = dgvListEspe.RowCount - 1;
+                i = dgvListEspe.RowCount - 2;
                 dgvListEspe.Enabled = false;
 
                 Program.outils.getConnection().Open();
 
 
-                string requete3 = "INSERT INTO tlEspeces VALUES (\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[0].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[1].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[2].Value) + "\")";
+                string requete3 = "INSERT INTO tlEspeces VALUES (\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[0].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[1].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[2].Value) + "\",0);";
 
                 OleDbCommand cmd3 = new OleDbCommand(requete3, Program.outils.getConnection());
                 OleDbDataReader dr3 = cmd3.ExecuteReader();
