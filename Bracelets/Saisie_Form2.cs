@@ -709,10 +709,10 @@ namespace Bracelet
                     cbxSte.Items.Add(dr[0].ToString());
                 }
                 Program.outils.getConnection().Close();
-                
+
                 #endregion
 
-
+                #region "Remplissage des données"
                 //Remplissage txbxPlanChasse
                 txbxPlanChasse.Text = cbxNumPlan.Text;
 
@@ -915,7 +915,7 @@ namespace Bracelet
                 dgvCommunes.AutoResizeColumns();
 
                 Program.outils.getConnection().Open();
-                requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune] from tbCommunes where [NumPlan] = \"" + Convert.ToString(txbxPlanChasse.Text) + "\");";
+                requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune] from tbCommunes where [NumPlan] = \"" + Convert.ToString(cbxNumPlan.Text) + "\");";
                 cmd.CommandText = requete;
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -923,6 +923,55 @@ namespace Bracelet
                     dgvCommunes.Rows.Add(dr[0].ToString());
                 }
                 Program.outils.getConnection().Close();
+
+                //Remplissage txbxNotesInternes
+                Program.outils.getConnection().Open();
+                requete = "Select [NotesInternes] from tbPlans where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxNotesInternes.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage dtpDateCreaPlan
+                Program.outils.getConnection().Open();
+                requete = "Select [DateCreationPlan] from tbPlans where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    dtpDateCreaPlan.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage dtpDateModifPlan
+                Program.outils.getConnection().Open();
+                requete = "Select [DateModifPlan] from tbPlans where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    dtpDateModifPlan.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxDateSuppPlan
+                Program.outils.getConnection().Open();
+                requete = "Select [DateSupprPlan] from tbPlans where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxDateSuppPlan.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+                #endregion
             }
         }
     }
