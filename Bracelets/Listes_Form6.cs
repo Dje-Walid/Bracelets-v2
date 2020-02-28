@@ -401,42 +401,15 @@ namespace Bracelet
              
         }
 
-        private void btnModif_CheckedChanged(object sender, EventArgs e)
+
+        private void btnModification_Click(object sender, EventArgs e)
         {
-             dgvListEspe.Enabled = false;
-            if (btnModif.Checked)
+            DialogResult resulta;
+            resulta = MessageBox.Show("Voulez-vous vraiment modifer la liste des espèces ? Il est possible de modifier les libellés sans problème. Pour supprimer des espèces de gibiers, il vaut mieux demander l'aide d'un informaticien. Il est interdit de modifier un code espèce déjà utilisé.", "Liste des Especes", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (resulta == System.Windows.Forms.DialogResult.Yes)
             {
-
-                DialogResult resulta;
-                resulta = MessageBox.Show("Voulez-vous vraiment modifer la liste des espces?Il est possible de modifier les libellés sans problème.Pour supprimer des espèces de gibiers, il vaut mieux demander l'aide d' un informaticien.Il est interdit de modifier un code espèce déjà utilisé.", "Liste des Especes", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (resulta == System.Windows.Forms.DialogResult.Yes)
-                {
-                    dgvListEspe.Enabled = true;
-                    btnModif.Text = "Validé";
-
-                }
-                else
-                {
-
-                    
-                   
-                }
-
-               
-                
-
-
-            }
-
-            else
-            {
-
-
-                btnModif.Text = "Modification";
-
                 int i;
-                i = dgvListEspe.RowCount - 2;
-                dgvListEspe.Enabled = false;
+                i = dgvListEspe.Rows.Count - 2;
 
                 Program.outils.getConnection().Open();
 
@@ -445,10 +418,8 @@ namespace Bracelet
 
                 OleDbCommand cmd3 = new OleDbCommand(requete3, Program.outils.getConnection());
                 OleDbDataReader dr3 = cmd3.ExecuteReader();
-                dr3.Read();
 
-                
-
+                Program.outils.getConnection().Close();
 
             }
         }
