@@ -760,6 +760,11 @@ namespace Bracelet
                 requete = "Select [Sigle] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
                 cmd.CommandText = requete;
                 dr = cmd.ExecuteReader();
+
+                while(dr.Read())
+                {
+                    cbxCivilite.Text = dr[0].ToString();
+                }
                 Program.outils.getConnection().Close();
 
                 //Remplissage txbxNomInfoBenef
@@ -768,17 +773,140 @@ namespace Bracelet
                 //Remplissage txbxPrenom
                 txbxPrenom.Text = txbxBenef.Text;
 
-                //Remplissage txbxSociete
+                //Remplissage cbxSociete
+                cbxSociete.Items.Clear();
                 Program.outils.getConnection().Open();
                 requete = "Select [NomSociete] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
                 cmd.CommandText = requete;
                 dr = cmd.ExecuteReader();
+
+                while(dr.Read())
+                {
+                    cbxSociete.Text = dr[0].ToString();
+                    cbxSociete.Items.Add(dr[0].ToString());
+                }
                 Program.outils.getConnection().Close();
 
+                //Remplissage txbxRue
                 Program.outils.getConnection().Open();
+                requete = "Select [Rue] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxRue.Text = dr[0].ToString();
+                }
                 Program.outils.getConnection().Close();
 
+                //Remplissage txbxLieuDit
                 Program.outils.getConnection().Open();
+                requete = "Select [ComplRue] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxLieuDit.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxCP
+                Program.outils.getConnection().Open();
+                requete = "Select [CodePostal] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxCP.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage cbxVille
+                cbxVille.Items.Clear();
+                Program.outils.getConnection().Open();
+                requete = "Select [Ville] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    cbxVille.Text = dr[0].ToString();
+                    cbxVille.Items.Add(dr[0].ToString());
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxTelephone
+                Program.outils.getConnection().Open();
+                requete = "Select [Telephone] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxTelephone.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxFax
+                Program.outils.getConnection().Open();
+                requete = "Select [Fax] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxFax.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxMail
+                Program.outils.getConnection().Open();
+                requete = "Select [Email] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxMail.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxPortable
+                Program.outils.getConnection().Open();
+                requete = "Select [portable] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxPortable.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxNotes
+                Program.outils.getConnection().Open();
+                requete = "Select [Notes] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxNotes.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage dtpDateModif
+                Program.outils.getConnection().Open();
+                requete = "Select [DateModifBenef] from tbBenefs where [NomBenef]=\"" + Convert.ToString(cbxBenef.Text) + "\";";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    dtpDateModif.Text = dr[0].ToString();
+                }
                 Program.outils.getConnection().Close();
 
                 //Remplissage du DGV Communes

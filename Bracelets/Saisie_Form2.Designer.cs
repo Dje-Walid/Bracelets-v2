@@ -159,7 +159,6 @@
             this.txbxCP = new System.Windows.Forms.TextBox();
             this.txbxLieuDit = new System.Windows.Forms.TextBox();
             this.txbxRue = new System.Windows.Forms.TextBox();
-            this.txbxSociete = new System.Windows.Forms.TextBox();
             this.txbxPrenom = new System.Windows.Forms.TextBox();
             this.txbxNomInfoBenef = new System.Windows.Forms.TextBox();
             this.cbxCivilite = new System.Windows.Forms.ComboBox();
@@ -250,6 +249,7 @@
             this.tbGibiersTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbGibiersTableAdapter();
             this.txbxCommuPrin = new System.Windows.Forms.TextBox();
             this.txbxCampActu = new System.Windows.Forms.TextBox();
+            this.cbxSociete = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).BeginInit();
@@ -1631,49 +1631,45 @@
             // 
             // txbxNotes
             // 
-            this.txbxNotes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Notes", true));
+            this.txbxNotes.BackColor = System.Drawing.SystemColors.Window;
             this.txbxNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxNotes.Location = new System.Drawing.Point(497, 69);
             this.txbxNotes.Multiline = true;
             this.txbxNotes.Name = "txbxNotes";
+            this.txbxNotes.ReadOnly = true;
             this.txbxNotes.Size = new System.Drawing.Size(737, 354);
             this.txbxNotes.TabIndex = 34;
             // 
             // txbxCP
             // 
-            this.txbxCP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "CodePostal", true));
+            this.txbxCP.BackColor = System.Drawing.SystemColors.Window;
             this.txbxCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxCP.Location = new System.Drawing.Point(140, 235);
             this.txbxCP.Name = "txbxCP";
+            this.txbxCP.ReadOnly = true;
             this.txbxCP.Size = new System.Drawing.Size(106, 29);
             this.txbxCP.TabIndex = 35;
             // 
             // txbxLieuDit
             // 
+            this.txbxLieuDit.BackColor = System.Drawing.SystemColors.Window;
             this.txbxLieuDit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "ComplRue", true));
             this.txbxLieuDit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxLieuDit.Location = new System.Drawing.Point(140, 205);
             this.txbxLieuDit.Name = "txbxLieuDit";
+            this.txbxLieuDit.ReadOnly = true;
             this.txbxLieuDit.Size = new System.Drawing.Size(317, 29);
             this.txbxLieuDit.TabIndex = 36;
             // 
             // txbxRue
             // 
+            this.txbxRue.BackColor = System.Drawing.SystemColors.Window;
             this.txbxRue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxRue.Location = new System.Drawing.Point(140, 175);
             this.txbxRue.Name = "txbxRue";
+            this.txbxRue.ReadOnly = true;
             this.txbxRue.Size = new System.Drawing.Size(317, 29);
             this.txbxRue.TabIndex = 37;
-            // 
-            // txbxSociete
-            // 
-            this.txbxSociete.BackColor = System.Drawing.SystemColors.Window;
-            this.txbxSociete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxSociete.Location = new System.Drawing.Point(140, 130);
-            this.txbxSociete.Name = "txbxSociete";
-            this.txbxSociete.ReadOnly = true;
-            this.txbxSociete.Size = new System.Drawing.Size(317, 29);
-            this.txbxSociete.TabIndex = 38;
             // 
             // txbxPrenom
             // 
@@ -1706,8 +1702,6 @@
             // 
             // cbxVille
             // 
-            this.cbxVille.DataSource = this.tbBenefsBindingSource;
-            this.cbxVille.DisplayMember = "Ville";
             this.cbxVille.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxVille.FormattingEnabled = true;
             this.cbxVille.Location = new System.Drawing.Point(265, 235);
@@ -1717,37 +1711,41 @@
             // 
             // txbxPortable
             // 
-            this.txbxPortable.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "portable", true));
+            this.txbxPortable.BackColor = System.Drawing.SystemColors.Window;
             this.txbxPortable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxPortable.Location = new System.Drawing.Point(140, 378);
             this.txbxPortable.Name = "txbxPortable";
+            this.txbxPortable.ReadOnly = true;
             this.txbxPortable.Size = new System.Drawing.Size(207, 29);
             this.txbxPortable.TabIndex = 43;
             // 
             // txbxMail
             // 
-            this.txbxMail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Email", true));
+            this.txbxMail.BackColor = System.Drawing.SystemColors.Window;
             this.txbxMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxMail.Location = new System.Drawing.Point(140, 346);
             this.txbxMail.Name = "txbxMail";
+            this.txbxMail.ReadOnly = true;
             this.txbxMail.Size = new System.Drawing.Size(317, 29);
             this.txbxMail.TabIndex = 44;
             // 
             // txbxFax
             // 
-            this.txbxFax.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Fax", true));
+            this.txbxFax.BackColor = System.Drawing.SystemColors.Window;
             this.txbxFax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxFax.Location = new System.Drawing.Point(140, 315);
             this.txbxFax.Name = "txbxFax";
+            this.txbxFax.ReadOnly = true;
             this.txbxFax.Size = new System.Drawing.Size(207, 29);
             this.txbxFax.TabIndex = 45;
             // 
             // txbxTelephone
             // 
-            this.txbxTelephone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "Telephone", true));
+            this.txbxTelephone.BackColor = System.Drawing.SystemColors.Window;
             this.txbxTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxTelephone.Location = new System.Drawing.Point(140, 285);
             this.txbxTelephone.Name = "txbxTelephone";
+            this.txbxTelephone.ReadOnly = true;
             this.txbxTelephone.Size = new System.Drawing.Size(207, 29);
             this.txbxTelephone.TabIndex = 46;
             // 
@@ -1776,9 +1774,6 @@
             // dtpDateModif
             // 
             this.dtpDateModif.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dtpDateModif.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.tbBenefsBindingSource, "DateModifBenef", true));
-            this.dtpDateModif.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbBenefsBindingSource, "DateModifBenef", true));
-            this.dtpDateModif.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbBenefsBindingSource, "DateModifBenef", true));
             this.dtpDateModif.Enabled = false;
             this.dtpDateModif.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateModif.Location = new System.Drawing.Point(1113, 38);
@@ -1803,6 +1798,7 @@
             // 
             // grbInfoBenef
             // 
+            this.grbInfoBenef.Controls.Add(this.cbxSociete);
             this.grbInfoBenef.Controls.Add(this.button1);
             this.grbInfoBenef.Controls.Add(this.dtpDateModif);
             this.grbInfoBenef.Controls.Add(this.lbNotes);
@@ -1815,7 +1811,6 @@
             this.grbInfoBenef.Controls.Add(this.cbxCivilite);
             this.grbInfoBenef.Controls.Add(this.txbxNomInfoBenef);
             this.grbInfoBenef.Controls.Add(this.txbxPrenom);
-            this.grbInfoBenef.Controls.Add(this.txbxSociete);
             this.grbInfoBenef.Controls.Add(this.txbxRue);
             this.grbInfoBenef.Controls.Add(this.txbxLieuDit);
             this.grbInfoBenef.Controls.Add(this.txbxCP);
@@ -2292,7 +2287,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -2323,14 +2318,14 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             this.exportationExcelToolStripMenuItem.Click += new System.EventHandler(this.exportationExcelToolStripMenuItem_Click);
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             this.imprimerToolStripMenuItem.Click += new System.EventHandler(this.imprimerToolStripMenuItem_Click);
             // 
@@ -2435,6 +2430,15 @@
             this.txbxCampActu.Name = "txbxCampActu";
             this.txbxCampActu.Size = new System.Drawing.Size(139, 29);
             this.txbxCampActu.TabIndex = 107;
+            // 
+            // cbxSociete
+            // 
+            this.cbxSociete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSociete.FormattingEnabled = true;
+            this.cbxSociete.Location = new System.Drawing.Point(140, 130);
+            this.cbxSociete.Name = "cbxSociete";
+            this.cbxSociete.Size = new System.Drawing.Size(317, 32);
+            this.cbxSociete.TabIndex = 51;
             // 
             // Saisie_Form2
             // 
@@ -2650,7 +2654,6 @@
         private System.Windows.Forms.TextBox txbxCP;
         private System.Windows.Forms.TextBox txbxLieuDit;
         private System.Windows.Forms.TextBox txbxRue;
-        private System.Windows.Forms.TextBox txbxSociete;
         private System.Windows.Forms.TextBox txbxPrenom;
         private System.Windows.Forms.TextBox txbxNomInfoBenef;
         private System.Windows.Forms.ComboBox cbxCivilite;
@@ -2766,5 +2769,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn demandetardiveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TextBox txbxCommuPrin;
         private System.Windows.Forms.TextBox txbxCampActu;
+        private System.Windows.Forms.ComboBox cbxSociete;
     }
 }
