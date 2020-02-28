@@ -90,7 +90,6 @@
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnModif = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEspe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet13)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -594,14 +593,7 @@
             this.btnModif.TabIndex = 63;
             this.btnModif.Text = "Modification";
             this.btnModif.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(464, 208);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
-            this.comboBox1.TabIndex = 64;
+            this.btnModif.CheckedChanged += new System.EventHandler(this.btnModif_CheckedChanged);
             // 
             // Listes_Form6
             // 
@@ -609,7 +601,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1364, 749);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnModif);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvListEspe);
@@ -695,6 +686,5 @@
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
         private BraceletBDDDataSet13 braceletBDDDataSet13;
         private System.Windows.Forms.CheckBox btnModif;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

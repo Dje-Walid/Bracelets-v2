@@ -358,16 +358,20 @@ namespace Bracelet
 
         private void Listes_Form6_Load(object sender, EventArgs e)
         {
+
             Program.outils.getConnection().Open();
             string requete0 = "Select [CdEspece] from tlEspeces;";
             string requete1 = "Select [LibEspece] from tlEspeces;";
             string requete2 = "Select [CdTypePlan] from tlEspeces;";
+
             OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
             OleDbDataReader dr0 = cmd0.ExecuteReader();
             OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
             OleDbDataReader dr1 = cmd1.ExecuteReader();
             OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
             OleDbDataReader dr2 = cmd2.ExecuteReader();
+
+
 
             dgvListEspe.ColumnCount = 3;
             dgvListEspe.Columns[0].Name = "Code Espece";
@@ -376,7 +380,7 @@ namespace Bracelet
 
             string[] ah;
 
-            while (dr0.Read()&&dr1.Read()&&dr2.Read())
+            while (dr0.Read() && dr1.Read() && dr2.Read())
             {
                 ah = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
                 dgvListEspe.Rows.Add(ah);
@@ -388,11 +392,65 @@ namespace Bracelet
 
             Program.outils.getConnection().Close();
 
+
+
         }
 
         private void dgvListEspe_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
              
+        }
+
+        private void btnModif_CheckedChanged(object sender, EventArgs e)
+        {
+             dgvListEspe.Enabled = false;
+            if (btnModif.Checked)
+            {
+
+                DialogResult resulta;
+                resulta = MessageBox.Show("Voulez-vous vraiment modifer la liste des espces?Il est possible de modifier les libellés sans problème.Pour supprimer des espèces de gibiers, il vaut mieux demander l'aide d' un informaticien.Il est interdit de modifier un code espèce déjà utilisé.", "Liste des Especes", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (resulta == System.Windows.Forms.DialogResult.Yes)
+                {
+                    dgvListEspe.Enabled = true;
+                    btnModif.Text = "Validé";
+
+                }
+                else
+                {
+
+                    
+                   
+                }
+
+               
+                
+
+
+            }
+
+            else
+            {
+
+
+                btnModif.Text = "Modification";
+
+                int i;
+                i = dgvListEspe.RowCount - 1;
+                dgvListEspe.Enabled = false;
+
+                Program.outils.getConnection().Open();
+
+
+                string requete3 = "INSERT INTO tlEspeces VALUES (\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[0].Value) + "\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[1].Value) + "\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[2].Value) + "\")";
+
+                OleDbCommand cmd3 = new OleDbCommand(requete3, Program.outils.getConnection());
+                OleDbDataReader dr3 = cmd3.ExecuteReader();
+                dr3.Read();
+
+                
+
+
+            }
         }
     }
 }
