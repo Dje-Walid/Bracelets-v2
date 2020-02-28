@@ -32,9 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saisie_Form2));
             this.btApercu = new System.Windows.Forms.Button();
             this.btQuitter = new System.Windows.Forms.Button();
-            this.btCampagnePre = new System.Windows.Forms.Button();
-            this.btCampagneSuiv = new System.Windows.Forms.Button();
-            this.btCamapagneLast = new System.Windows.Forms.Button();
             this.dgvCommunes = new System.Windows.Forms.DataGridView();
             this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.braceletBDDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -249,7 +246,8 @@
             this.tbCampagnesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbCampagnesTableAdapter();
             this.tbGibiersTableAdapter = new Bracelet.BraceletBDDTableAdapters.tbGibiersTableAdapter();
             this.txbxCommuPrin = new System.Windows.Forms.TextBox();
-            this.txbxCampActu = new System.Windows.Forms.TextBox();
+            this.cbxCampActu = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDDBindingSource1)).BeginInit();
@@ -300,42 +298,6 @@
             this.btQuitter.Size = new System.Drawing.Size(34, 32);
             this.btQuitter.TabIndex = 20;
             this.btQuitter.UseVisualStyleBackColor = true;
-            // 
-            // btCampagnePre
-            // 
-            this.btCampagnePre.BackgroundImage = global::Bracelet.Properties.Resources.arrow_gauche_24px;
-            this.btCampagnePre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btCampagnePre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btCampagnePre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCampagnePre.Location = new System.Drawing.Point(509, 751);
-            this.btCampagnePre.Name = "btCampagnePre";
-            this.btCampagnePre.Size = new System.Drawing.Size(46, 32);
-            this.btCampagnePre.TabIndex = 51;
-            this.btCampagnePre.UseVisualStyleBackColor = true;
-            // 
-            // btCampagneSuiv
-            // 
-            this.btCampagneSuiv.BackgroundImage = global::Bracelet.Properties.Resources.arow_droite_24px;
-            this.btCampagneSuiv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btCampagneSuiv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btCampagneSuiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCampagneSuiv.Location = new System.Drawing.Point(555, 751);
-            this.btCampagneSuiv.Name = "btCampagneSuiv";
-            this.btCampagneSuiv.Size = new System.Drawing.Size(46, 32);
-            this.btCampagneSuiv.TabIndex = 52;
-            this.btCampagneSuiv.UseVisualStyleBackColor = true;
-            // 
-            // btCamapagneLast
-            // 
-            this.btCamapagneLast.BackgroundImage = global::Bracelet.Properties.Resources.arrow_droite__24px;
-            this.btCamapagneLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btCamapagneLast.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btCamapagneLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCamapagneLast.Location = new System.Drawing.Point(601, 751);
-            this.btCamapagneLast.Name = "btCamapagneLast";
-            this.btCamapagneLast.Size = new System.Drawing.Size(46, 32);
-            this.btCamapagneLast.TabIndex = 53;
-            this.btCamapagneLast.UseVisualStyleBackColor = true;
             // 
             // dgvCommunes
             // 
@@ -1020,10 +982,12 @@
             // 
             // txbxObservations
             // 
+            this.txbxObservations.BackColor = System.Drawing.SystemColors.Window;
             this.txbxObservations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxObservations.Location = new System.Drawing.Point(12, 1078);
             this.txbxObservations.Multiline = true;
             this.txbxObservations.Name = "txbxObservations";
+            this.txbxObservations.ReadOnly = true;
             this.txbxObservations.Size = new System.Drawing.Size(902, 69);
             this.txbxObservations.TabIndex = 62;
             // 
@@ -1082,26 +1046,32 @@
             // 
             // txbxSecChevreuil
             // 
+            this.txbxSecChevreuil.BackColor = System.Drawing.SystemColors.Window;
             this.txbxSecChevreuil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxSecChevreuil.Location = new System.Drawing.Point(200, 102);
             this.txbxSecChevreuil.Name = "txbxSecChevreuil";
+            this.txbxSecChevreuil.ReadOnly = true;
             this.txbxSecChevreuil.Size = new System.Drawing.Size(44, 29);
             this.txbxSecChevreuil.TabIndex = 57;
             this.txbxSecChevreuil.TextChanged += new System.EventHandler(this.txbxSecChevreuil_TextChanged);
             // 
             // txbxSecSanglier
             // 
+            this.txbxSecSanglier.BackColor = System.Drawing.SystemColors.Window;
             this.txbxSecSanglier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxSecSanglier.Location = new System.Drawing.Point(200, 148);
             this.txbxSecSanglier.Name = "txbxSecSanglier";
+            this.txbxSecSanglier.ReadOnly = true;
             this.txbxSecSanglier.Size = new System.Drawing.Size(44, 29);
             this.txbxSecSanglier.TabIndex = 58;
             // 
             // txbxSecCerf
             // 
+            this.txbxSecCerf.BackColor = System.Drawing.SystemColors.Window;
             this.txbxSecCerf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxSecCerf.Location = new System.Drawing.Point(200, 195);
             this.txbxSecCerf.Name = "txbxSecCerf";
+            this.txbxSecCerf.ReadOnly = true;
             this.txbxSecCerf.Size = new System.Drawing.Size(44, 29);
             this.txbxSecCerf.TabIndex = 58;
             // 
@@ -1147,19 +1117,21 @@
             // 
             // txbxBoisPrive
             // 
-            this.txbxBoisPrive.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbCampagnesBindingSource, "SurfaceBois", true));
+            this.txbxBoisPrive.BackColor = System.Drawing.SystemColors.Window;
             this.txbxBoisPrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxBoisPrive.Location = new System.Drawing.Point(140, 40);
             this.txbxBoisPrive.Name = "txbxBoisPrive";
+            this.txbxBoisPrive.ReadOnly = true;
             this.txbxBoisPrive.Size = new System.Drawing.Size(71, 29);
             this.txbxBoisPrive.TabIndex = 44;
             // 
             // txbxBoisSoumis
             // 
-            this.txbxBoisSoumis.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbCampagnesBindingSource, "SurfaceBoisSoumis", true));
+            this.txbxBoisSoumis.BackColor = System.Drawing.SystemColors.Window;
             this.txbxBoisSoumis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxBoisSoumis.Location = new System.Drawing.Point(140, 70);
             this.txbxBoisSoumis.Name = "txbxBoisSoumis";
+            this.txbxBoisSoumis.ReadOnly = true;
             this.txbxBoisSoumis.Size = new System.Drawing.Size(71, 29);
             this.txbxBoisSoumis.TabIndex = 45;
             // 
@@ -1207,10 +1179,11 @@
             // 
             // txbxPlaine
             // 
-            this.txbxPlaine.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbCampagnesBindingSource, "SurfacePlaine", true));
+            this.txbxPlaine.BackColor = System.Drawing.SystemColors.Window;
             this.txbxPlaine.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxPlaine.Location = new System.Drawing.Point(140, 163);
             this.txbxPlaine.Name = "txbxPlaine";
+            this.txbxPlaine.ReadOnly = true;
             this.txbxPlaine.Size = new System.Drawing.Size(71, 29);
             this.txbxPlaine.TabIndex = 56;
             // 
@@ -2295,7 +2268,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -2326,14 +2299,14 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             this.exportationExcelToolStripMenuItem.Click += new System.EventHandler(this.exportationExcelToolStripMenuItem_Click);
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             this.imprimerToolStripMenuItem.Click += new System.EventHandler(this.imprimerToolStripMenuItem_Click);
             // 
@@ -2431,13 +2404,26 @@
             this.txbxCommuPrin.Size = new System.Drawing.Size(471, 29);
             this.txbxCommuPrin.TabIndex = 101;
             // 
-            // txbxCampActu
+            // cbxCampActu
             // 
-            this.txbxCampActu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxCampActu.Location = new System.Drawing.Point(508, 716);
-            this.txbxCampActu.Name = "txbxCampActu";
-            this.txbxCampActu.Size = new System.Drawing.Size(139, 29);
-            this.txbxCampActu.TabIndex = 107;
+            this.cbxCampActu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCampActu.FormattingEnabled = true;
+            this.cbxCampActu.Location = new System.Drawing.Point(509, 716);
+            this.cbxCampActu.Name = "cbxCampActu";
+            this.cbxCampActu.Size = new System.Drawing.Size(138, 32);
+            this.cbxCampActu.TabIndex = 102;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(509, 754);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 32);
+            this.button2.TabIndex = 103;
+            this.button2.Text = "Rafraîchir";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Saisie_Form2
             // 
@@ -2448,7 +2434,8 @@
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(2164, 881);
-            this.Controls.Add(this.txbxCampActu);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cbxCampActu);
             this.Controls.Add(this.txbxCommuPrin);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.grbInfoPlanChasse);
@@ -2489,9 +2476,6 @@
             this.Controls.Add(this.grbApparGroupement);
             this.Controls.Add(this.grbSurfChasse);
             this.Controls.Add(this.btNewCampagne);
-            this.Controls.Add(this.btCamapagneLast);
-            this.Controls.Add(this.btCampagneSuiv);
-            this.Controls.Add(this.btCampagnePre);
             this.Controls.Add(this.lbCampagane);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbInfoBenef);
@@ -2551,9 +2535,6 @@
 
         private System.Windows.Forms.Button btApercu;
         private System.Windows.Forms.Button btQuitter;
-        private System.Windows.Forms.Button btCampagnePre;
-        private System.Windows.Forms.Button btCampagneSuiv;
-        private System.Windows.Forms.Button btCamapagneLast;
         private System.Windows.Forms.DataGridView dgvCommunes;
         private System.Windows.Forms.Label lbLstCommunes;
         private System.Windows.Forms.Label label5;
@@ -2767,7 +2748,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn accordeSousReserveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn demandetardiveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TextBox txbxCommuPrin;
-        private System.Windows.Forms.TextBox txbxCampActu;
         private System.Windows.Forms.ComboBox cbxSociete;
+        private System.Windows.Forms.ComboBox cbxCampActu;
+        private System.Windows.Forms.Button button2;
     }
 }

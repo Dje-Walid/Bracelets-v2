@@ -136,6 +136,7 @@ namespace Bracelet
             Program.outils.getConnection().Close();
 
             #endregion
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -969,6 +970,125 @@ namespace Bracelet
                 while (dr.Read())
                 {
                     txbxDateSuppPlan.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage cbxCampActu
+                cbxCampActu.Items.Clear();
+                Program.outils.getConnection().Open();
+                requete = "Select [LibCampagne] from tlCampagnes where [CdCampagne] in (Select [CdCampagne] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    cbxCampActu.Text = dr[0].ToString();
+                    cbxCampActu.Items.Add(dr[0].ToString());
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxBoisPrive
+                Program.outils.getConnection().Open();
+                requete = "Select [SurfaceBois] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\" AND [CdCampagne] in (Select [CdCampagne] from tlCampagnes where [LibCampagne]=\""+Convert.ToString(cbxCampActu.Text)+"\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxBoisPrive.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxBoisSoumis
+                Program.outils.getConnection().Open();
+                requete = "Select [SurfaceBoisSoumis] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\" AND [CdCampagne] in (Select [CdCampagne] from tlCampagnes where [LibCampagne]=\"" + Convert.ToString(cbxCampActu.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxBoisSoumis.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxTTBois
+                txbxTTBois.Text = Convert.ToString(Convert.ToInt32(txbxBoisPrive.Text) + Convert.ToInt32(txbxBoisSoumis.Text));
+
+                //Remplissage txbxPlaine
+                Program.outils.getConnection().Open();
+                requete = "Select [SurfacePlaine] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\" AND [CdCampagne] in (Select [CdCampagne] from tlCampagnes where [LibCampagne]=\"" + Convert.ToString(cbxCampActu.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxPlaine.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxTTSurfChasse
+                txbxTTSurfChasse.Text = Convert.ToString(Convert.ToInt32(txbxTTBois.Text) + Convert.ToInt32(txbxPlaine.Text));
+
+
+                //Remplissage txbxObservations
+                Program.outils.getConnection().Open();
+                requete = "Select [Observations] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\" AND [CdCampagne] in (Select [CdCampagne] from tlCampagnes where [LibCampagne]=\"" + Convert.ToString(cbxCampActu.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxObservations.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+
+                //Remplissage txbxSecChevreuil
+                Program.outils.getConnection().Open();
+                requete = "Select [secteur_chevreuil] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\" AND [CdCampagne] in (Select [CdCampagne] from tlCampagnes where [LibCampagne]=\"" + Convert.ToString(cbxCampActu.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxSecChevreuil.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxSecSanglier
+                Program.outils.getConnection().Open();
+                requete = "Select [secteur_sanglier] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\" AND [CdCampagne] in (Select [CdCampagne] from tlCampagnes where [LibCampagne]=\"" + Convert.ToString(cbxCampActu.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxSecSanglier.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage txbxSecCerf
+                Program.outils.getConnection().Open();
+                requete = "Select [secteur_cerf] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\" AND [CdCampagne] in (Select [CdCampagne] from tlCampagnes where [LibCampagne]=\"" + Convert.ToString(cbxCampActu.Text) + "\");";
+                cmd.CommandText = requete;
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txbxSecCerf.Text = dr[0].ToString();
+                }
+                Program.outils.getConnection().Close();
+
+                //Remplissage cbxNomGroupement
+                cbxNomGroupement.Items.Clear();
+                Program.outils.getConnection().Open();
+                requete = "Select [LibMassif] from tlMassifs where [SecteurMassif] in (Select [CdMassifCamp] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\" AND [CdCampagne] in (Select [CdCampagne] from tlCampagnes where [LibCampagne]=\"" + Convert.ToString(cbxCampActu.Text) + "\"));";
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    cbxNomGroupement.Text = dr[0].ToString();
+                    cbxNomGroupement.Items.Add(dr[0].ToString());
                 }
                 Program.outils.getConnection().Close();
                 #endregion
