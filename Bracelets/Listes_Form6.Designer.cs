@@ -111,6 +111,7 @@
             this.dgvListEspe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListEspe.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvListEspe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListEspe.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvListEspe.Location = new System.Drawing.Point(236, 243);
             this.dgvListEspe.Name = "dgvListEspe";
             this.dgvListEspe.Size = new System.Drawing.Size(1092, 369);
@@ -161,7 +162,7 @@
             this.quitterBraceletToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1347, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1364, 24);
             this.menuStrip1.TabIndex = 62;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -602,7 +603,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.ClientSize = new System.Drawing.Size(1381, 749);
             this.Controls.Add(this.btnModification);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvListEspe);
