@@ -1196,6 +1196,7 @@
             this.btNewCampagne.TabIndex = 54;
             this.btNewCampagne.Text = "Nouvelle campagne";
             this.btNewCampagne.UseVisualStyleBackColor = true;
+            this.btNewCampagne.Click += new System.EventHandler(this.btNewCampagne_Click);
             // 
             // tlCampagnesBindingSource
             // 
