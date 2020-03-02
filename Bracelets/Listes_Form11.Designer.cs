@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listes_Form11));
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnModif = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,7 +95,7 @@
             this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.braceletBDD = new Bracelet.BraceletBDD();
             this.tlCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlCommunesTableAdapter();
-            this.btnModifier = new System.Windows.Forms.Button();
+            this.ckbxModif = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommunes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlCommunesBindingSource)).BeginInit();
@@ -128,17 +127,6 @@
             this.button2.TabIndex = 163;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnModif
-            // 
-            this.btnModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModif.Location = new System.Drawing.Point(703, 130);
-            this.btnModif.Name = "btnModif";
-            this.btnModif.Size = new System.Drawing.Size(162, 35);
-            this.btnModif.TabIndex = 162;
-            this.btnModif.Text = "Modification";
-            this.btnModif.UseVisualStyleBackColor = true;
-            this.btnModif.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -607,7 +595,7 @@
             this.dgvCommunes.MultiSelect = false;
             this.dgvCommunes.Name = "dgvCommunes";
             this.dgvCommunes.ReadOnly = true;
-            this.dgvCommunes.Size = new System.Drawing.Size(370, 302);
+            this.dgvCommunes.Size = new System.Drawing.Size(370, 411);
             this.dgvCommunes.TabIndex = 166;
             this.dgvCommunes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -652,18 +640,21 @@
             // 
             this.tlCommunesTableAdapter.ClearBeforeFill = true;
             // 
-            // btnModifier
+            // ckbxModif
             // 
-            this.btnModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifier.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnModifier.Location = new System.Drawing.Point(703, 132);
-            this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(162, 33);
-            this.btnModifier.TabIndex = 167;
-            this.btnModifier.Text = "Modifier";
-            this.btnModifier.UseVisualStyleBackColor = true;
-            this.btnModifier.Visible = false;
-            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+            this.ckbxModif.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckbxModif.AutoSize = true;
+            this.ckbxModif.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ckbxModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbxModif.ForeColor = System.Drawing.Color.Black;
+            this.ckbxModif.Location = new System.Drawing.Point(730, 130);
+            this.ckbxModif.Name = "ckbxModif";
+            this.ckbxModif.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ckbxModif.Size = new System.Drawing.Size(120, 34);
+            this.ckbxModif.TabIndex = 181;
+            this.ckbxModif.Text = "Modification";
+            this.ckbxModif.UseVisualStyleBackColor = true;
+            this.ckbxModif.CheckedChanged += new System.EventHandler(this.ckbxModif_CheckedChanged);
             // 
             // Listes_Form11
             // 
@@ -671,12 +662,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
-            this.Controls.Add(this.btnModifier);
+            this.Controls.Add(this.ckbxModif);
             this.Controls.Add(this.dgvCommunes);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnModif);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listes_Form11";
@@ -697,7 +687,6 @@
 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnModif;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
@@ -761,6 +750,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cODEINSEEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn libCommuneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codePostalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnModifier;
+        private System.Windows.Forms.CheckBox ckbxModif;
     }
 }
