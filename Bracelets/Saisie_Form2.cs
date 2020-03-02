@@ -32,7 +32,7 @@ namespace Bracelet
 
         private void Saisie_Form2_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tbGibiers'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tbGibiers'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tbGibiersTableAdapter.Fill(this.braceletBDD.tbGibiers);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tbCampagnes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tbCampagnesTableAdapter.Fill(this.braceletBDD.tbCampagnes);
@@ -911,8 +911,10 @@ namespace Bracelet
                 Program.outils.getConnection().Close();
 
                 //Remplissage du DGV Communes
-                dgvCommunes.Rows.Clear();               dgvCommunes.ColumnCount = 1;                dgvCommunes.Columns[0].Name = "Nom des communes";
-                dgvCommunes.AutoResizeColumns();
+                dgvCommunes.Rows.Clear();               
+                dgvCommunes.ColumnCount = 1;                
+                dgvCommunes.Columns[0].Name = "Nom des communes";
+                dgvCommunes.AutoResizeColumns();  
 
                 Program.outils.getConnection().Open();
                 requete = "Select [LibCommune] from tlCommunes where [NumCommune] in (Select [NumCommune] from tbCommunes where [NumPlan] = \"" + Convert.ToString(cbxNumPlan.Text) + "\");";
@@ -923,6 +925,7 @@ namespace Bracelet
                     dgvCommunes.Rows.Add(dr[0].ToString());
                 }
                 Program.outils.getConnection().Close();
+               
 
                 //Remplissage txbxNotesInternes
                 Program.outils.getConnection().Open();
@@ -1166,25 +1169,23 @@ namespace Bracelet
                 dgvBraceletParGibier.Rows.Clear();
                 Program.outils.getConnection().Open();
                 requete = "Select [LibGibier] from tlGibiers where [CdEspece] in (Select [CdEspece] from tlEspeces where [LibEspece] =\"" + Convert.ToString(dgvEspeces.CurrentCell.Value) + "\");";
-                /*requete1 = "Select MIN([NumBracelet]) from tbBracelets where [CdGibier] in (Select [CdGibier] from tlGibiers where [LibGibier] =\"" + Convert.ToString(dgvBraceletParGibier.Rows[0].Cells[0].Value) + "\") AND [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\";";
-                string requete2 = "Select MAX([NumBracelet]) from tbBracelets where [CdGibier] in (Select [CdGibier] from tlGibiers where [LibGibier] =\"" + Convert.ToString(dgvBraceletParGibier.Rows[0].Cells[0].Value) + "\") AND [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\";";
-                */
+                requete1 = "Select MIN([NumBracelet]) from tbBracelets where [CdGibier] in (Select [CdGibier] from tbGibiers where [CdEspece] in (Select [CdEspece] from tlEspeces where [LibEspece] =\"" + Convert.ToString(dgvEspeces.CurrentCell.Value) + "\")) AND [NumPlan]=" + Convert.ToInt32(cbxNumPlan.Text) + ";";
+                string requete2 = "Select MAX([NumBracelet]) from tbBracelets where [CdGibier] in (Select [CdGibier] from tbGibiers where [CdEspece] in (Select [CdEspece] from tlEspeces where [LibEspece] =\"" + Convert.ToString(dgvEspeces.CurrentCell.Value) + "\")) AND [NumPlan]=" + Convert.ToInt32(cbxNumPlan.Text) + ";";
                 cmd.CommandText = requete;
                 dr = cmd.ExecuteReader();
-                /*cmd1.CommandText = requete1;
+                cmd1.CommandText = requete1;
                 dr1 = cmd1.ExecuteReader();
                 OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
-                OleDbDataReader dr2 = cmd2.ExecuteReader();*/
-
+                OleDbDataReader dr2 = cmd2.ExecuteReader();
 
                 dgvBraceletParGibier.ColumnCount = 3;
                 dgvBraceletParGibier.Columns[0].Name = "Nom de l'espèce";
                 dgvBraceletParGibier.Columns[1].Name = "N° min";
                 dgvBraceletParGibier.Columns[2].Name = "N° max";
 
-                while (dr.Read())
+                while (dr.Read() && dr1.Read() && dr2.Read())
                 {
-                    ah = new string[] { dr[0].ToString(), "",""};
+                    ah = new string[] { dr[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
                     dgvBraceletParGibier.Rows.Add(ah);
                 }
                 Program.outils.getConnection().Close();
@@ -1199,33 +1200,6 @@ namespace Bracelet
 
         private void btNewCampagne_Click(object sender, EventArgs e)
         {
-            
-            Program.outils.getConnection().Open();
-            string requete = "Select [LibGibier] from tlGibiers where [CdEspece] in (Select [CdEspece] from tlEspeces where [LibEspece] =\"" + Convert.ToString(dgvEspeces.CurrentCell.Value) + "\");";
-            string requete1 = "Select MIN([NumBracelet]) from tbBracelets where [CdGibier] in (Select [CdGibier] from tlGibiers where [LibGibier] =\"" + Convert.ToString(dgvBraceletParGibier.Rows[0].Cells[0].Value) + "\") AND [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\";";
-            string requete2 = "Select MAX([NumBracelet]) from tbBracelets where [CdGibier] in (Select [CdGibier] from tlGibiers where [LibGibier] =\"" + Convert.ToString(dgvBraceletParGibier.Rows[0].Cells[0].Value) + "\") AND [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\";";
-            dgvBraceletParGibier.Rows.Clear();
-            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
-            OleDbDataReader dr = cmd.ExecuteReader();
-            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
-            OleDbDataReader dr1 = cmd1.ExecuteReader();
-            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
-            OleDbDataReader dr2 = cmd2.ExecuteReader();
-
-
-            dgvBraceletParGibier.ColumnCount = 3;
-            dgvBraceletParGibier.Columns[0].Name = "Nom de l'espèce";
-            dgvBraceletParGibier.Columns[1].Name = "N° min";
-            dgvBraceletParGibier.Columns[2].Name = "N° max";
-
-            string[] ah;
-
-            while (dr.Read() && dr1.Read() && dr2.Read())
-            {
-                ah = new string[] { dr[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
-                dgvBraceletParGibier.Rows.Add(ah);
-            }
-            Program.outils.getConnection().Close();
         }
     }
 }
