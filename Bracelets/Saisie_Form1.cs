@@ -52,9 +52,12 @@ namespace Bracelet
             // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet.tlCampagnes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlCampagnesTableAdapter.Fill(this.braceletBDDDataSet.tlCampagnes);
             lbCampActu.Text = Program.outils.getCampagneActuelle();
+            CbxPlanChassCour.Text = Program.outils.getPlanChasseCourant();
+            cbxCampCour.Text = Program.outils.getCampagneActuelle();
 
         }
 
+        #region "Menu"
         private void environnementCourantToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -70,12 +73,6 @@ namespace Bracelet
             {
                 Application.Exit();
             }
-            else
-            {
-
-            }
-
-
 
         }
 
@@ -393,6 +390,7 @@ namespace Bracelet
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
         }
+        #endregion
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -410,6 +408,10 @@ namespace Bracelet
 
                 Program.outils.setCampagneActuelle(cbxCampCour.Text);
                 lbCampActu.Text = Program.outils.getCampagneActuelle();
+                cbxCampCour.Text = Program.outils.getCampagneActuelle();
+
+                Program.outils.setPlanChasseCourant(CbxPlanChassCour.Text);
+                CbxPlanChassCour.Text = Program.outils.getPlanChasseCourant();
             }
         }
     }
