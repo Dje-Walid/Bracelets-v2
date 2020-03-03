@@ -33,8 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxCdeRefus = new System.Windows.Forms.ComboBox();
+            this.tlRefusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDDDataSet14 = new Bracelet.BraceletBDDDataSet14();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxLibRefus = new System.Windows.Forms.ComboBox();
+            this.tlRefusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDDDataSet15 = new Bracelet.BraceletBDDDataSet15();
             this.chboxDroitRecours = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txbxTxtLettre = new System.Windows.Forms.TextBox();
@@ -93,19 +98,14 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.braceletBDDDataSet14 = new Bracelet.BraceletBDDDataSet14();
-            this.tlRefusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tlRefusTableAdapter = new Bracelet.BraceletBDDDataSet14TableAdapters.tlRefusTableAdapter();
-            this.cbxLibRefus = new System.Windows.Forms.ComboBox();
-            this.braceletBDDDataSet15 = new Bracelet.BraceletBDDDataSet15();
-            this.tlRefusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tlRefusTableAdapter1 = new Bracelet.BraceletBDDDataSet15TableAdapters.tlRefusTableAdapter();
-            this.groupBox1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet14)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet15)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -130,12 +130,21 @@
             // 
             // cbxCdeRefus
             // 
-            this.cbxCdeRefus.DataSource = this.tlRefusBindingSource;
             this.cbxCdeRefus.FormattingEnabled = true;
             this.cbxCdeRefus.Location = new System.Drawing.Point(155, 29);
             this.cbxCdeRefus.Name = "cbxCdeRefus";
             this.cbxCdeRefus.Size = new System.Drawing.Size(43, 32);
             this.cbxCdeRefus.TabIndex = 2;
+            // 
+            // tlRefusBindingSource
+            // 
+            this.tlRefusBindingSource.DataMember = "tlRefus";
+            this.tlRefusBindingSource.DataSource = this.braceletBDDDataSet14;
+            // 
+            // braceletBDDDataSet14
+            // 
+            this.braceletBDDDataSet14.DataSetName = "BraceletBDDDataSet14";
+            this.braceletBDDDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -162,6 +171,24 @@
             this.groupBox1.Size = new System.Drawing.Size(1240, 375);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            // 
+            // cbxLibRefus
+            // 
+            this.cbxLibRefus.FormattingEnabled = true;
+            this.cbxLibRefus.Location = new System.Drawing.Point(155, 85);
+            this.cbxLibRefus.Name = "cbxLibRefus";
+            this.cbxLibRefus.Size = new System.Drawing.Size(279, 32);
+            this.cbxLibRefus.TabIndex = 8;
+            // 
+            // tlRefusBindingSource1
+            // 
+            this.tlRefusBindingSource1.DataMember = "tlRefus";
+            this.tlRefusBindingSource1.DataSource = this.braceletBDDDataSet15;
+            // 
+            // braceletBDDDataSet15
+            // 
+            this.braceletBDDDataSet15.DataSetName = "BraceletBDDDataSet15";
+            this.braceletBDDDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // chboxDroitRecours
             // 
@@ -630,38 +657,9 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // braceletBDDDataSet14
-            // 
-            this.braceletBDDDataSet14.DataSetName = "BraceletBDDDataSet14";
-            this.braceletBDDDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tlRefusBindingSource
-            // 
-            this.tlRefusBindingSource.DataMember = "tlRefus";
-            this.tlRefusBindingSource.DataSource = this.braceletBDDDataSet14;
-            // 
             // tlRefusTableAdapter
             // 
             this.tlRefusTableAdapter.ClearBeforeFill = true;
-            // 
-            // cbxLibRefus
-            // 
-            this.cbxLibRefus.DataSource = this.tlRefusBindingSource1;
-            this.cbxLibRefus.FormattingEnabled = true;
-            this.cbxLibRefus.Location = new System.Drawing.Point(155, 85);
-            this.cbxLibRefus.Name = "cbxLibRefus";
-            this.cbxLibRefus.Size = new System.Drawing.Size(279, 32);
-            this.cbxLibRefus.TabIndex = 8;
-            // 
-            // braceletBDDDataSet15
-            // 
-            this.braceletBDDDataSet15.DataSetName = "BraceletBDDDataSet15";
-            this.braceletBDDDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tlRefusBindingSource1
-            // 
-            this.tlRefusBindingSource1.DataMember = "tlRefus";
-            this.tlRefusBindingSource1.DataSource = this.braceletBDDDataSet15;
             // 
             // tlRefusTableAdapter1
             // 
@@ -681,14 +679,14 @@
             this.Text = "Liste des codes refus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Listes_Form9_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet14)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet15)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

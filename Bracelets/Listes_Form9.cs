@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using IniParser;
+using IniParser.Model;
 
 namespace Bracelet
 {
@@ -362,6 +365,16 @@ namespace Bracelet
             this.tlRefusTableAdapter1.Fill(this.braceletBDDDataSet15.tlRefus);
             // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet14.tlRefus'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlRefusTableAdapter.Fill(this.braceletBDDDataSet14.tlRefus);
+
+            Program.outils.getConnection().Open();
+            string requete = "Select [CdRefus] from tlRefus;";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cbxCdeRefus.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
 
         }
     }
