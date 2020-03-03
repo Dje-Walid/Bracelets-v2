@@ -373,12 +373,26 @@ namespace Bracelet
             if (ckbxModif.Checked== true)
                 {
                 ckbxModif.ForeColor = System.Drawing.Color.Firebrick;
+                ckbxModif.Text = "Modifier";
+                txbxCodeType.ReadOnly = false;
+                txbxCommission.ReadOnly = false;
+                txbxGestCommun.ReadOnly = false;
+                txbxNomCourt.ReadOnly = false;
+                txbxNomPlan.ReadOnly = false;
+                txbxTypePlanCConce.ReadOnly = false;
+                txbxTypeRegroupement.ReadOnly = false;
+                cbxSelection.Visible = false;
+               
+
             }
             else 
             if (ckbxModif.Checked == false)
             {
                 ckbxModif.ForeColor = System.Drawing.Color.Black;
                 MessageBox.Show("Vos modification on bien étè enregistrée");
+                cbxSelection.Visible = false;
+                ckbxModif.Text = "Modification";
+
                 
             }
         }

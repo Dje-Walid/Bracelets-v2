@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listes_Form8));
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnModif = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,8 +102,7 @@
             this.gratuitDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tlGibiersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tlGibiersTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlGibiersTableAdapter();
-            this.btnModifier = new System.Windows.Forms.Button();
-            this.check = new System.Windows.Forms.Label();
+            this.ckbxModif = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.braceletBDD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGibiers)).BeginInit();
@@ -134,17 +132,6 @@
             this.button2.Size = new System.Drawing.Size(38, 35);
             this.button2.TabIndex = 158;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnModif
-            // 
-            this.btnModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModif.Location = new System.Drawing.Point(731, 129);
-            this.btnModif.Name = "btnModif";
-            this.btnModif.Size = new System.Drawing.Size(162, 35);
-            this.btnModif.TabIndex = 157;
-            this.btnModif.Text = "Modification";
-            this.btnModif.UseVisualStyleBackColor = true;
-            this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
             // 
             // button3
             // 
@@ -712,27 +699,21 @@
             // 
             this.tlGibiersTableAdapter.ClearBeforeFill = true;
             // 
-            // btnModifier
+            // ckbxModif
             // 
-            this.btnModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifier.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnModifier.Location = new System.Drawing.Point(731, 129);
-            this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(162, 35);
-            this.btnModifier.TabIndex = 162;
-            this.btnModifier.Text = "Modifier";
-            this.btnModifier.UseVisualStyleBackColor = true;
-            this.btnModifier.Visible = false;
-            this.btnModifier.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // check
-            // 
-            this.check.AutoSize = true;
-            this.check.Location = new System.Drawing.Point(121, 73);
-            this.check.Name = "check";
-            this.check.Size = new System.Drawing.Size(37, 13);
-            this.check.TabIndex = 163;
-            this.check.Text = "check";
+            this.ckbxModif.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckbxModif.AutoSize = true;
+            this.ckbxModif.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ckbxModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbxModif.ForeColor = System.Drawing.Color.Black;
+            this.ckbxModif.Location = new System.Drawing.Point(762, 130);
+            this.ckbxModif.Name = "ckbxModif";
+            this.ckbxModif.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ckbxModif.Size = new System.Drawing.Size(120, 34);
+            this.ckbxModif.TabIndex = 181;
+            this.ckbxModif.Text = "Modification";
+            this.ckbxModif.UseVisualStyleBackColor = true;
+            this.ckbxModif.CheckedChanged += new System.EventHandler(this.ckbxModif_CheckedChanged);
             // 
             // Listes_Form8
             // 
@@ -740,13 +721,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
-            this.Controls.Add(this.check);
-            this.Controls.Add(this.btnModifier);
+            this.Controls.Add(this.ckbxModif);
             this.Controls.Add(this.dgvGibiers);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnModif);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listes_Form8";
@@ -767,7 +746,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnModif;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
@@ -838,7 +816,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn gibierPreAffichRealisDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn compteEffectifsDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn gratuitDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Button btnModifier;
-        private System.Windows.Forms.Label check;
+        private System.Windows.Forms.CheckBox ckbxModif;
     }
 }

@@ -364,18 +364,7 @@ namespace Bracelet
         {
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlGibiers'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlGibiersTableAdapter.Fill(this.braceletBDD.tlGibiers);
-            try
-            {
-                connection.Open();
-                check.Text = "Connection Ok";
-                connection.Close();
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Erreur " + ex);
-            }
+            
 
         }
 
@@ -385,53 +374,38 @@ namespace Bracelet
 
         private void button4_Click(object sender, EventArgs e)
         {
-            btnModif.Visible = true;
-            btnModifier.Visible = false;
-            dgvGibiers.ReadOnly = true;
-
-
-            try
-            {
-                connection.Open();
-                OleDbCommand command = new OleDbCommand
-                {
-                    Connection = connection
-                };
-                int nb = dgvGibiers.RowCount - 1;
-                string commande = "error";
-
-                //REQUETE DE FONCTIONNE PAS 
-
-                for (int i = 0; i > nb; i++)
-                {
-                     
-                    commande = "UPDATE 'tlGibiers' SET 'CdGibier' = '" + this.dgvGibiers.Rows[i].Cells[1].Value + "','LibGibier' = '" + this.dgvGibiers.Rows[i].Cells[2].Value + "','CdEspece' = '" + this.dgvGibiers.Rows[i].Cells[3].Value + "','CdTypePlan' = '" + this.dgvGibiers.Rows[i].Cells[4].Value + "','CdBracelet' = '" + this.dgvGibiers.Rows[i].Cells[5].Value + "'OrdreAffichage' = '" + this.dgvGibiers.Rows[i].Cells[6].Value + "','GibierPreAffiche' = '" + this.dgvGibiers.Rows[i].Cells[7].Value + "','GibierPreAffichRealis' = '" + this.dgvGibiers.Rows[i].Cells[8].Value + "','CompteEffectifs' = '" + this.dgvGibiers.Rows[i].Cells[9].Value + "','Gratuit' = '" + this.dgvGibiers.Rows[i].Cells[10].Value + ";";
-                    command.CommandText = commande;
-
-                    command.ExecuteNonQuery();
-                }
-                MessageBox.Show("donnée modifiée");
-                connection.Close();
-
-            }
-            catch (Exception erreur)
-
-            {
-                MessageBox.Show("Erreur " + erreur);
-            }
-
+          
         }
 
         private void btnModif_Click(object sender, EventArgs e)
         {
-            btnModif.Visible = false;
-            btnModifier.Visible = true;
-            dgvGibiers.ReadOnly = false;
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Program.outils.allerMenu(this);
+        }
+
+        private void ckbxModif_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbxModif.Checked == true)
+            {
+                ckbxModif.ForeColor = System.Drawing.Color.Firebrick;
+                ckbxModif.Text = "Modifier";
+                
+            }
+            else
+               if (ckbxModif.Checked == false)
+            {
+                ckbxModif.ForeColor = System.Drawing.Color.Black;
+                ckbxModif.Text = "Modification";
+
+
+
+                MessageBox.Show("Vos modification on bien étè enregistrée");
+
+            }
         }
     }
 }

@@ -370,17 +370,13 @@ namespace Bracelet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgvCommunes.ReadOnly = false;
-            btnModif.Visible = false;
-            btnModifier.Visible = true;
+          
 
         }
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            btnModif.Visible = true;
-            btnModifier.Visible = false ;
-            dgvCommunes.ReadOnly = true;
+           
 
         }
 
@@ -392,6 +388,28 @@ namespace Bracelet
         private void button2_Click(object sender, EventArgs e)
         {
             Program.outils.allerMenu(this);
+        }
+
+        private void ckbxModif_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbxModif.Checked == true)
+            {
+
+                dgvCommunes.ReadOnly = false;
+                ckbxModif.ForeColor = System.Drawing.Color.Firebrick;
+                ckbxModif.Text = "Modifier";
+
+            }
+            else
+           if (ckbxModif.Checked == false)
+            {
+                dgvCommunes.ReadOnly = true;
+                ckbxModif.ForeColor = System.Drawing.Color.Black;
+                MessageBox.Show("Vos modification on bien étè enregistrée");
+                ckbxModif.Text = "Modification";
+
+
+            }
         }
     }
 }
