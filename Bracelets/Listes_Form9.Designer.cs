@@ -129,6 +129,9 @@
             this.cbxCdeRefus.Name = "cbxCdeRefus";
             this.cbxCdeRefus.Size = new System.Drawing.Size(43, 32);
             this.cbxCdeRefus.TabIndex = 2;
+
+            this.cbxCdeRefus.SelectedIndexChanged += new System.EventHandler(this.cbxCdeRefus_SelectedIndexChanged);
+
             // 
             // tlRefusBindingSource
             // 
@@ -159,7 +162,9 @@
             this.groupBox1.Size = new System.Drawing.Size(1240, 375);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+
             // 
             // cbxLibRefus
             // 
@@ -566,7 +571,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -597,13 +602,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem

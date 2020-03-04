@@ -388,25 +388,44 @@ namespace Bracelet
 
         private void cbxLibRefus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbxLibRefus.Items.Clear();
+            txbxTxtLettre.Clear();
             Program.outils.getConnection().Open();
+
             string requete1 = "Select [LibRefus] from tlRefus where [CdRefus] =\"" + Convert.ToString(cbxCdeRefus.Text) + "\";";
+
+            string requete1 = "Select [TexteLettre] from tlRefus where [CdRefus] =" + Convert.ToString(cbxCdeRefus.Text) + ";";
+
             OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
             OleDbDataReader dr1 = cmd1.ExecuteReader();
             while (dr1.Read())
             {
-                cbxLibRefus.Items.Add(dr1[0].ToString());
+                txbxTxtLettre.Text =dr1[0].ToString();
             }
             Program.outils.getConnection().Close();
+
 
         }
 
         private void txbxTxtLettre_TextChanged(object sender, EventArgs e)
         {
 
-            txbxTxtLettre.Clear();
+        }
+
+        private void chboxDroitRecours_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void cbxCdeRefus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbxLibRefus.Items.Clear();
             Program.outils.getConnection().Open();
+
             string requete1 = "Select [TexteLettre] from tlRefus where [CdRefus] =\"" + Convert.ToString(cbxCdeRefus.Text) + "\";";
+
+            string requete1 = "Select [LibRefus] from tlRefus where [CdRefus] =" + Convert.ToString(cbxCdeRefus.Text) + ";";
+
             OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
             OleDbDataReader dr1 = cmd1.ExecuteReader();
             while (dr1.Read())
@@ -414,14 +433,6 @@ namespace Bracelet
                 cbxLibRefus.Items.Add(dr1[0].ToString());
             }
             Program.outils.getConnection().Close();
-
-
-
-        }
-
-        private void chboxDroitRecours_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
