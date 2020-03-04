@@ -13,8 +13,8 @@ namespace Bracelet
 {
     public partial class Action_Form3_Suite : Form
     {
-        private List<string> MassifIn = new List<string>();
-        private List<string> MassifEx = new List<string>();
+        static public List<string> MassifIn = new List<string>();
+        static public List<string> MassifEx = new List<string>();
 
         public Action_Form3_Suite()
         {
@@ -121,7 +121,7 @@ namespace Bracelet
                 while (dr.Read())
                 {
                     txbxMasIn.Text = txbxMasIn.Text + "," + dr[0].ToString();
-                    MassifIn.Add(dr[0].ToString());
+                    MassifIn.Add("," + dr[0].ToString());
                 }
             }
 

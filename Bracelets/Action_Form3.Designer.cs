@@ -118,6 +118,7 @@
             this.bt_lancer_Attrib.TabIndex = 14;
             this.bt_lancer_Attrib.Text = "Lancer l\'attribution automatique\r\n";
             this.bt_lancer_Attrib.UseVisualStyleBackColor = true;
+            this.bt_lancer_Attrib.Click += new System.EventHandler(this.bt_lancer_Attrib_Click);
             // 
             // label4
             // 
