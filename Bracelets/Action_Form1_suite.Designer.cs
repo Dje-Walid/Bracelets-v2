@@ -43,11 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btValider = new System.Windows.Forms.Button();
             this.btAnnuler = new System.Windows.Forms.Button();
-            this.braceletBDDDataSet4 = new Bracelet.BraceletBDDDataSet4();
             this.tlMassifsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tlMassifsTableAdapter = new Bracelet.BraceletBDDDataSet4TableAdapters.tlMassifsTableAdapter();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,17 +191,13 @@
             // 
             // braceletBDDDataSet4
             // 
-            this.braceletBDDDataSet4.DataSetName = "BraceletBDDDataSet4";
-            this.braceletBDDDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tlMassifsBindingSource
             // 
             this.tlMassifsBindingSource.DataMember = "tlMassifs";
-            this.tlMassifsBindingSource.DataSource = this.braceletBDDDataSet4;
             // 
             // tlMassifsTableAdapter
             // 
-            this.tlMassifsTableAdapter.ClearBeforeFill = true;
             // 
             // Action_Form1_suite
             // 
@@ -225,7 +218,6 @@
             this.Load += new System.EventHandler(this.Action_Form1_suite_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -247,8 +239,6 @@
         private System.Windows.Forms.ComboBox cbxMasIn;
         private System.Windows.Forms.Button btValider;
         private System.Windows.Forms.Button btAnnuler;
-        private BraceletBDDDataSet4 braceletBDDDataSet4;
         private System.Windows.Forms.BindingSource tlMassifsBindingSource;
-        private BraceletBDDDataSet4TableAdapters.tlMassifsTableAdapter tlMassifsTableAdapter;
     }
 }

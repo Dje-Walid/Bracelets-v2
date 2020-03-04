@@ -98,12 +98,9 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.braceletBDDDataSet8 = new Bracelet.BraceletBDDDataSet8();
             this.tlMassifsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tlMassifsTableAdapter = new Bracelet.BraceletBDDDataSet8TableAdapters.tlMassifsTableAdapter();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -684,17 +681,13 @@
             // 
             // braceletBDDDataSet8
             // 
-            this.braceletBDDDataSet8.DataSetName = "BraceletBDDDataSet8";
-            this.braceletBDDDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tlMassifsBindingSource
             // 
             this.tlMassifsBindingSource.DataMember = "tlMassifs";
-            this.tlMassifsBindingSource.DataSource = this.braceletBDDDataSet8;
             // 
             // tlMassifsTableAdapter
             // 
-            this.tlMassifsTableAdapter.ClearBeforeFill = true;
             // 
             // Edition_Form2
             // 
@@ -717,7 +710,6 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -794,8 +786,6 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
-        private BraceletBDDDataSet8 braceletBDDDataSet8;
         private System.Windows.Forms.BindingSource tlMassifsBindingSource;
-        private BraceletBDDDataSet8TableAdapters.tlMassifsTableAdapter tlMassifsTableAdapter;
     }
 }

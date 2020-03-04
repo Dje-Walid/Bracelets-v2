@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saisie_Form2));
             this.btApercu = new System.Windows.Forms.Button();
             this.btQuitter = new System.Windows.Forms.Button();
@@ -52,18 +55,6 @@
             this.txbxDateSuppPlan = new System.Windows.Forms.TextBox();
             this.grbInfoPlanChasse = new System.Windows.Forms.GroupBox();
             this.btRecours = new System.Windows.Forms.Button();
-            this.btOnfSmall = new System.Windows.Forms.Button();
-            this.btDdtSmall = new System.Windows.Forms.Button();
-            this.btAccSmall = new System.Windows.Forms.Button();
-            this.btFdcySmall = new System.Windows.Forms.Button();
-            this.btAccReserve = new System.Windows.Forms.Button();
-            this.btACC = new System.Windows.Forms.Button();
-            this.btONF = new System.Windows.Forms.Button();
-            this.btDDT = new System.Windows.Forms.Button();
-            this.btNb = new System.Windows.Forms.Button();
-            this.btReal = new System.Windows.Forms.Button();
-            this.btFDCY = new System.Windows.Forms.Button();
-            this.btDem = new System.Windows.Forms.Button();
             this.lbGibiers = new System.Windows.Forms.Label();
             this.lbBracGibier = new System.Windows.Forms.Label();
             this.chbxPointNoir = new System.Windows.Forms.CheckBox();
@@ -449,170 +440,12 @@
             this.btRecours.Enabled = false;
             this.btRecours.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRecours.ForeColor = System.Drawing.Color.Firebrick;
-            this.btRecours.Location = new System.Drawing.Point(1640, 1067);
+            this.btRecours.Location = new System.Drawing.Point(1601, 1081);
             this.btRecours.Name = "btRecours";
-            this.btRecours.Size = new System.Drawing.Size(368, 26);
+            this.btRecours.Size = new System.Drawing.Size(407, 39);
             this.btRecours.TabIndex = 98;
             this.btRecours.Text = "Recours";
             this.btRecours.UseVisualStyleBackColor = true;
-            // 
-            // btOnfSmall
-            // 
-            this.btOnfSmall.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btOnfSmall.Enabled = false;
-            this.btOnfSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btOnfSmall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btOnfSmall.Location = new System.Drawing.Point(1787, 1094);
-            this.btOnfSmall.Name = "btOnfSmall";
-            this.btOnfSmall.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btOnfSmall.Size = new System.Drawing.Size(73, 26);
-            this.btOnfSmall.TabIndex = 96;
-            this.btOnfSmall.Text = "ONF";
-            this.btOnfSmall.UseVisualStyleBackColor = true;
-            // 
-            // btDdtSmall
-            // 
-            this.btDdtSmall.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btDdtSmall.Enabled = false;
-            this.btDdtSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDdtSmall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btDdtSmall.Location = new System.Drawing.Point(1861, 1094);
-            this.btDdtSmall.Name = "btDdtSmall";
-            this.btDdtSmall.Size = new System.Drawing.Size(73, 26);
-            this.btDdtSmall.TabIndex = 97;
-            this.btDdtSmall.Text = "DDT";
-            this.btDdtSmall.UseVisualStyleBackColor = true;
-            // 
-            // btAccSmall
-            // 
-            this.btAccSmall.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAccSmall.Enabled = false;
-            this.btAccSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAccSmall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btAccSmall.Location = new System.Drawing.Point(1935, 1094);
-            this.btAccSmall.Name = "btAccSmall";
-            this.btAccSmall.Size = new System.Drawing.Size(73, 26);
-            this.btAccSmall.TabIndex = 94;
-            this.btAccSmall.Text = "Acc.";
-            this.btAccSmall.UseVisualStyleBackColor = true;
-            // 
-            // btFdcySmall
-            // 
-            this.btFdcySmall.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btFdcySmall.Enabled = false;
-            this.btFdcySmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btFdcySmall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btFdcySmall.Location = new System.Drawing.Point(1714, 1094);
-            this.btFdcySmall.Name = "btFdcySmall";
-            this.btFdcySmall.Size = new System.Drawing.Size(73, 26);
-            this.btFdcySmall.TabIndex = 93;
-            this.btFdcySmall.Text = "FDCY";
-            this.btFdcySmall.UseVisualStyleBackColor = true;
-            // 
-            // btAccReserve
-            // 
-            this.btAccReserve.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAccReserve.Enabled = false;
-            this.btAccReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAccReserve.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btAccReserve.Location = new System.Drawing.Point(1390, 1067);
-            this.btAccReserve.Name = "btAccReserve";
-            this.btAccReserve.Size = new System.Drawing.Size(65, 53);
-            this.btAccReserve.TabIndex = 88;
-            this.btAccReserve.Text = "Acc s réserve";
-            this.btAccReserve.UseVisualStyleBackColor = true;
-            // 
-            // btACC
-            // 
-            this.btACC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btACC.Enabled = false;
-            this.btACC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btACC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btACC.Location = new System.Drawing.Point(1456, 1067);
-            this.btACC.Name = "btACC";
-            this.btACC.Size = new System.Drawing.Size(65, 53);
-            this.btACC.TabIndex = 89;
-            this.btACC.Text = "Acc.";
-            this.btACC.UseVisualStyleBackColor = true;
-            this.btACC.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btONF
-            // 
-            this.btONF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btONF.Enabled = false;
-            this.btONF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btONF.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btONF.Location = new System.Drawing.Point(1258, 1067);
-            this.btONF.Name = "btONF";
-            this.btONF.Size = new System.Drawing.Size(65, 53);
-            this.btONF.TabIndex = 86;
-            this.btONF.Text = "ONF";
-            this.btONF.UseVisualStyleBackColor = true;
-            // 
-            // btDDT
-            // 
-            this.btDDT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btDDT.Enabled = false;
-            this.btDDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btDDT.Location = new System.Drawing.Point(1324, 1067);
-            this.btDDT.Name = "btDDT";
-            this.btDDT.Size = new System.Drawing.Size(65, 53);
-            this.btDDT.TabIndex = 87;
-            this.btDDT.Text = "DDT";
-            this.btDDT.UseVisualStyleBackColor = true;
-            // 
-            // btNb
-            // 
-            this.btNb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btNb.Enabled = false;
-            this.btNb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNb.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btNb.Location = new System.Drawing.Point(1640, 1094);
-            this.btNb.Name = "btNb";
-            this.btNb.Size = new System.Drawing.Size(73, 26);
-            this.btNb.TabIndex = 84;
-            this.btNb.Text = "Nb";
-            this.btNb.UseVisualStyleBackColor = true;
-            // 
-            // btReal
-            // 
-            this.btReal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btReal.Enabled = false;
-            this.btReal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btReal.Location = new System.Drawing.Point(1522, 1067);
-            this.btReal.Name = "btReal";
-            this.btReal.Size = new System.Drawing.Size(65, 53);
-            this.btReal.TabIndex = 85;
-            this.btReal.Text = "Réal";
-            this.btReal.UseVisualStyleBackColor = true;
-            // 
-            // btFDCY
-            // 
-            this.btFDCY.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btFDCY.Enabled = false;
-            this.btFDCY.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btFDCY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btFDCY.Location = new System.Drawing.Point(1192, 1067);
-            this.btFDCY.Name = "btFDCY";
-            this.btFDCY.Size = new System.Drawing.Size(65, 53);
-            this.btFDCY.TabIndex = 83;
-            this.btFDCY.Text = "FDCY";
-            this.btFDCY.UseVisualStyleBackColor = true;
-            // 
-            // btDem
-            // 
-            this.btDem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btDem.Enabled = false;
-            this.btDem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btDem.Location = new System.Drawing.Point(1121, 1067);
-            this.btDem.Name = "btDem";
-            this.btDem.Size = new System.Drawing.Size(65, 53);
-            this.btDem.TabIndex = 82;
-            this.btDem.Text = "Dem.";
-            this.btDem.UseVisualStyleBackColor = true;
             // 
             // lbGibiers
             // 
@@ -745,10 +578,36 @@
             // 
             this.dgvGibiers.AllowUserToAddRows = false;
             this.dgvGibiers.AllowUserToDeleteRows = false;
+            this.dgvGibiers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGibiers.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGibiers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvGibiers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGibiers.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvGibiers.Location = new System.Drawing.Point(924, 1126);
             this.dgvGibiers.Name = "dgvGibiers";
             this.dgvGibiers.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGibiers.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvGibiers.Size = new System.Drawing.Size(1084, 211);
             this.dgvGibiers.TabIndex = 72;
             // 
@@ -2309,6 +2168,7 @@
             this.button2.TabIndex = 103;
             this.button2.Text = "Rafraîchir";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Saisie_Form2
             // 
@@ -2325,18 +2185,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.grbInfoPlanChasse);
             this.Controls.Add(this.btRecours);
-            this.Controls.Add(this.btDdtSmall);
-            this.Controls.Add(this.btOnfSmall);
-            this.Controls.Add(this.btAccSmall);
-            this.Controls.Add(this.btFdcySmall);
-            this.Controls.Add(this.btACC);
-            this.Controls.Add(this.btAccReserve);
-            this.Controls.Add(this.btDDT);
-            this.Controls.Add(this.btONF);
-            this.Controls.Add(this.btReal);
-            this.Controls.Add(this.btNb);
-            this.Controls.Add(this.btFDCY);
-            this.Controls.Add(this.btDem);
             this.Controls.Add(this.lbGibiers);
             this.Controls.Add(this.lbBracGibier);
             this.Controls.Add(this.chbxPointNoir);
@@ -2431,18 +2279,6 @@
         private System.Windows.Forms.TextBox txbxDateSuppPlan;
         private System.Windows.Forms.GroupBox grbInfoPlanChasse;
         private System.Windows.Forms.Button btRecours;
-        private System.Windows.Forms.Button btOnfSmall;
-        private System.Windows.Forms.Button btDdtSmall;
-        private System.Windows.Forms.Button btAccSmall;
-        private System.Windows.Forms.Button btFdcySmall;
-        private System.Windows.Forms.Button btAccReserve;
-        private System.Windows.Forms.Button btACC;
-        private System.Windows.Forms.Button btONF;
-        private System.Windows.Forms.Button btDDT;
-        private System.Windows.Forms.Button btNb;
-        private System.Windows.Forms.Button btReal;
-        private System.Windows.Forms.Button btFDCY;
-        private System.Windows.Forms.Button btDem;
         private System.Windows.Forms.Label lbGibiers;
         private System.Windows.Forms.Label lbBracGibier;
         private System.Windows.Forms.CheckBox chbxPointNoir;

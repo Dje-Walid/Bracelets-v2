@@ -89,6 +89,20 @@ namespace Bracelet
             return this.getConfig()["Info"]["CampagneActu"];
         }
 
+        //C'est un setter pour le Plan de Chasse courant présente sur Config.ini, elle a comme argument la valeur à set dans le plan de chasse courant
+        public void setPlanChasseCourant(string date)
+        {
+            IniData data = this.getConfig();
+            data["Info"]["PlanChasseCourant"] = date;
+            this.config.WriteFile("Config.ini", data);
+        }
+
+        //C'est un getter pour la Campagne Actuelle présente sur Config.ini
+        public string getPlanChasseCourant()
+        {
+            return this.getConfig()["Info"]["PlanChasseCourant"];
+        }
+
         //Permet de récupérer l'objet qui va permettre de réaliser les requêtes SQL
         public OleDbConnection getConnection()
         {

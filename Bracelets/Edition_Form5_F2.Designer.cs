@@ -89,12 +89,10 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.braceletBDDDataSet11 = new Bracelet.BraceletBDDDataSet11();
+
             this.tbCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbCommunesTableAdapter = new Bracelet.BraceletBDDDataSet11TableAdapters.tbCommunesTableAdapter();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -579,17 +577,13 @@
             // 
             // braceletBDDDataSet11
             // 
-            this.braceletBDDDataSet11.DataSetName = "BraceletBDDDataSet11";
-            this.braceletBDDDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbCommunesBindingSource
             // 
             this.tbCommunesBindingSource.DataMember = "tbCommunes";
-            this.tbCommunesBindingSource.DataSource = this.braceletBDDDataSet11;
             // 
             // tbCommunesTableAdapter
             // 
-            this.tbCommunesTableAdapter.ClearBeforeFill = true;
             // 
             // Edition_Form5_F2
             // 
@@ -609,7 +603,6 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -677,8 +670,6 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
-        private BraceletBDDDataSet11 braceletBDDDataSet11;
         private System.Windows.Forms.BindingSource tbCommunesBindingSource;
-        private BraceletBDDDataSet11TableAdapters.tbCommunesTableAdapter tbCommunesTableAdapter;
     }
 }

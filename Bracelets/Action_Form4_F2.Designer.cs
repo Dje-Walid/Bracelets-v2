@@ -92,12 +92,9 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.braceletBDDDataSet7 = new Bracelet.BraceletBDDDataSet7();
             this.tlEspecesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tlEspecesTableAdapter = new Bracelet.BraceletBDDDataSet7TableAdapters.tlEspecesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParamMassEspe)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -615,17 +612,13 @@
             // 
             // braceletBDDDataSet7
             // 
-            this.braceletBDDDataSet7.DataSetName = "BraceletBDDDataSet7";
-            this.braceletBDDDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tlEspecesBindingSource
             // 
             this.tlEspecesBindingSource.DataMember = "tlEspeces";
-            this.tlEspecesBindingSource.DataSource = this.braceletBDDDataSet7;
             // 
             // tlEspecesTableAdapter
             // 
-            this.tlEspecesTableAdapter.ClearBeforeFill = true;
             // 
             // Action_Form4_F2
             // 
@@ -649,7 +642,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvParamMassEspe)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -719,8 +711,6 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
-        private BraceletBDDDataSet7 braceletBDDDataSet7;
         private System.Windows.Forms.BindingSource tlEspecesBindingSource;
-        private BraceletBDDDataSet7TableAdapters.tlEspecesTableAdapter tlEspecesTableAdapter;
     }
 }
