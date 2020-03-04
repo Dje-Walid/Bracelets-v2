@@ -366,6 +366,14 @@ namespace Bracelet
             // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet14.tlRefus'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlRefusTableAdapter.Fill(this.braceletBDDDataSet14.tlRefus);
 
+            
+            cbxLibRefus.BackColor = System.Drawing.SystemColors.Window;
+            txbxTxtLettre.Enabled = false;
+            txbxTxtLettre.BackColor = System.Drawing.SystemColors.Window;
+            chboxDroitRecours.Enabled = false;
+            
+
+
             Program.outils.getConnection().Open();
             string requete = "Select [CdRefus] from tlRefus;";
             OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
@@ -375,6 +383,53 @@ namespace Bracelet
                 cbxCdeRefus.Items.Add(dr[0].ToString());
             }
             Program.outils.getConnection().Close();
+
+
+
+           
+        }
+
+        private void cbxLibRefus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbxLibRefus.Items.Clear();
+            Program.outils.getConnection().Open();
+            string requete1 = "Select [LibRefus] from tlRefus where [CdRefus] =\"" + cbxCdeRefus.Text + "\";";
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+            while (dr1.Read())
+            {
+                cbxLibRefus.Items.Add(dr1[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+
+
+
+
+
+
+
+        }
+
+        private void txbxTxtLettre_TextChanged(object sender, EventArgs e)
+        {
+
+            txbxTxtLettre.Clear();
+            Program.outils.getConnection().Open();
+            string requete1 = "Select [TexteLettre] from tlRefus where [CdRefus] =\"" + cbxCdeRefus.Text + "\";";
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+            while (dr1.Read())
+            {
+                cbxLibRefus.Items.Add(dr1[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+
+
+
+        }
+
+        private void chboxDroitRecours_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

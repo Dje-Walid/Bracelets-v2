@@ -38,11 +38,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxLibRefus = new System.Windows.Forms.ComboBox();
-            this.tlRefusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDDDataSet15 = new Bracelet.BraceletBDDDataSet15();
             this.chboxDroitRecours = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txbxTxtLettre = new System.Windows.Forms.TextBox();
+            this.tlRefusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.braceletBDDDataSet15 = new Bracelet.BraceletBDDDataSet15();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -179,16 +179,7 @@
             this.cbxLibRefus.Name = "cbxLibRefus";
             this.cbxLibRefus.Size = new System.Drawing.Size(279, 32);
             this.cbxLibRefus.TabIndex = 8;
-            // 
-            // tlRefusBindingSource1
-            // 
-            this.tlRefusBindingSource1.DataMember = "tlRefus";
-            this.tlRefusBindingSource1.DataSource = this.braceletBDDDataSet15;
-            // 
-            // braceletBDDDataSet15
-            // 
-            this.braceletBDDDataSet15.DataSetName = "BraceletBDDDataSet15";
-            this.braceletBDDDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cbxLibRefus.SelectedIndexChanged += new System.EventHandler(this.cbxLibRefus_SelectedIndexChanged);
             // 
             // chboxDroitRecours
             // 
@@ -200,6 +191,7 @@
             this.chboxDroitRecours.TabIndex = 7;
             this.chboxDroitRecours.Text = "Avec Droit Recours";
             this.chboxDroitRecours.UseVisualStyleBackColor = true;
+            this.chboxDroitRecours.CheckedChanged += new System.EventHandler(this.chboxDroitRecours_CheckedChanged);
             // 
             // label4
             // 
@@ -218,6 +210,17 @@
             this.txbxTxtLettre.Name = "txbxTxtLettre";
             this.txbxTxtLettre.Size = new System.Drawing.Size(543, 155);
             this.txbxTxtLettre.TabIndex = 5;
+            this.txbxTxtLettre.TextChanged += new System.EventHandler(this.txbxTxtLettre_TextChanged);
+            // 
+            // tlRefusBindingSource1
+            // 
+            this.tlRefusBindingSource1.DataMember = "tlRefus";
+            this.tlRefusBindingSource1.DataSource = this.braceletBDDDataSet15;
+            // 
+            // braceletBDDDataSet15
+            // 
+            this.braceletBDDDataSet15.DataSetName = "BraceletBDDDataSet15";
+            this.braceletBDDDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuStrip1
             // 
