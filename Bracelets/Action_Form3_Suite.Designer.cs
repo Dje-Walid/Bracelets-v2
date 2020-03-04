@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form3_Suite));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txbxMasEx = new System.Windows.Forms.TextBox();
+            this.txbxMasIn = new System.Windows.Forms.TextBox();
             this.txbxSecEx = new System.Windows.Forms.TextBox();
             this.txbxSecIn = new System.Windows.Forms.TextBox();
             this.cbxMasEx = new System.Windows.Forms.ComboBox();
@@ -42,8 +44,6 @@
             this.bt_Annuler = new System.Windows.Forms.Button();
             this.btValider = new System.Windows.Forms.Button();
             this.bt_Effacer = new System.Windows.Forms.Button();
-            this.txbxMasIn = new System.Windows.Forms.TextBox();
-            this.txbxMasEx = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +80,20 @@
             this.groupBox1.Text = "Quelles zones éditer ? (si non spécifié = tout)";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txbxMasEx
+            // 
+            this.txbxMasEx.Location = new System.Drawing.Point(331, 231);
+            this.txbxMasEx.Name = "txbxMasEx";
+            this.txbxMasEx.Size = new System.Drawing.Size(179, 29);
+            this.txbxMasEx.TabIndex = 11;
+            // 
+            // txbxMasIn
+            // 
+            this.txbxMasIn.Location = new System.Drawing.Point(331, 115);
+            this.txbxMasIn.Name = "txbxMasIn";
+            this.txbxMasIn.Size = new System.Drawing.Size(179, 29);
+            this.txbxMasIn.TabIndex = 10;
+            // 
             // txbxSecEx
             // 
             this.txbxSecEx.Location = new System.Drawing.Point(331, 172);
@@ -101,6 +115,7 @@
             this.cbxMasEx.Name = "cbxMasEx";
             this.cbxMasEx.Size = new System.Drawing.Size(288, 32);
             this.cbxMasEx.TabIndex = 7;
+            this.cbxMasEx.SelectedIndexChanged += new System.EventHandler(this.cbxMasEx_SelectedIndexChanged);
             // 
             // cbxMasIn
             // 
@@ -109,6 +124,7 @@
             this.cbxMasIn.Name = "cbxMasIn";
             this.cbxMasIn.Size = new System.Drawing.Size(288, 32);
             this.cbxMasIn.TabIndex = 5;
+            this.cbxMasIn.SelectedIndexChanged += new System.EventHandler(this.cbxMasIn_SelectedIndexChanged);
             // 
             // lb3
             // 
@@ -168,6 +184,7 @@
             this.btValider.TabIndex = 18;
             this.btValider.Text = "Valider";
             this.btValider.UseVisualStyleBackColor = true;
+            this.btValider.Click += new System.EventHandler(this.btValider_Click);
             // 
             // bt_Effacer
             // 
@@ -180,20 +197,6 @@
             this.bt_Effacer.Text = "Effacer";
             this.bt_Effacer.UseVisualStyleBackColor = true;
             this.bt_Effacer.Click += new System.EventHandler(this.btnEffacer_Click);
-            // 
-            // txbxMasIn
-            // 
-            this.txbxMasIn.Location = new System.Drawing.Point(331, 115);
-            this.txbxMasIn.Name = "txbxMasIn";
-            this.txbxMasIn.Size = new System.Drawing.Size(179, 29);
-            this.txbxMasIn.TabIndex = 10;
-            // 
-            // txbxMasEx
-            // 
-            this.txbxMasEx.Location = new System.Drawing.Point(331, 231);
-            this.txbxMasEx.Name = "txbxMasEx";
-            this.txbxMasEx.Size = new System.Drawing.Size(179, 29);
-            this.txbxMasEx.TabIndex = 11;
             // 
             // Action_Form3_Suite
             // 
