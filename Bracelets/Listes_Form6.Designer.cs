@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listes_Form6));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListEspe = new System.Windows.Forms.DataGridView();
-            this.braceletBDDDataSet13 = new Bracelet.BraceletBDDDataSet13();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -91,7 +90,6 @@
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnModification = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEspe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet13)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,8 +118,6 @@
             // 
             // braceletBDDDataSet13
             // 
-            this.braceletBDDDataSet13.DataSetName = "BraceletBDDDataSet13";
-            this.braceletBDDDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button3
             // 
@@ -618,7 +614,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Listes_Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEspe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet13)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -687,7 +682,6 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
-        private BraceletBDDDataSet13 braceletBDDDataSet13;
         private System.Windows.Forms.Button btnModification;
     }
 }

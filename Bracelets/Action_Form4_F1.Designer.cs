@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form4_F1));
             this.cbxCampAffich = new System.Windows.Forms.ComboBox();
             this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDDDataSet5 = new Bracelet.BraceletBDDDataSet5();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,7 +41,6 @@
             this.cdBraceletDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.libBraceletDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlBraceletsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDDDataSet6 = new Bracelet.BraceletBDDDataSet6();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,13 +96,9 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlCampagnesTableAdapter = new Bracelet.BraceletBDDDataSet5TableAdapters.tlCampagnesTableAdapter();
-            this.tlBraceletsTableAdapter = new Bracelet.BraceletBDDDataSet6TableAdapters.tlBraceletsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParamBracCamp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlBraceletsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet6)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,12 +116,9 @@
             // tlCampagnesBindingSource
             // 
             this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
-            this.tlCampagnesBindingSource.DataSource = this.braceletBDDDataSet5;
             // 
             // braceletBDDDataSet5
             // 
-            this.braceletBDDDataSet5.DataSetName = "BraceletBDDDataSet5";
-            this.braceletBDDDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -216,12 +207,9 @@
             // tlBraceletsBindingSource
             // 
             this.tlBraceletsBindingSource.DataMember = "tlBracelets";
-            this.tlBraceletsBindingSource.DataSource = this.braceletBDDDataSet6;
             // 
             // braceletBDDDataSet6
             // 
-            this.braceletBDDDataSet6.DataSetName = "BraceletBDDDataSet6";
-            this.braceletBDDDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuStrip1
             // 
@@ -664,11 +652,9 @@
             // 
             // tlCampagnesTableAdapter
             // 
-            this.tlCampagnesTableAdapter.ClearBeforeFill = true;
             // 
             // tlBraceletsTableAdapter
             // 
-            this.tlBraceletsTableAdapter.ClearBeforeFill = true;
             // 
             // Action_Form4_F1
             // 
@@ -690,10 +676,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Action_Form4_F1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParamBracCamp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlBraceletsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet6)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -765,12 +749,8 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
-        private BraceletBDDDataSet5 braceletBDDDataSet5;
         private System.Windows.Forms.BindingSource tlCampagnesBindingSource;
-        private BraceletBDDDataSet5TableAdapters.tlCampagnesTableAdapter tlCampagnesTableAdapter;
-        private BraceletBDDDataSet6 braceletBDDDataSet6;
         private System.Windows.Forms.BindingSource tlBraceletsBindingSource;
-        private BraceletBDDDataSet6TableAdapters.tlBraceletsTableAdapter tlBraceletsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdBraceletDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn libBraceletDataGridViewTextBoxColumn;
     }

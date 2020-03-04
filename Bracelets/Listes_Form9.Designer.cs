@@ -34,12 +34,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbxCdeRefus = new System.Windows.Forms.ComboBox();
             this.tlRefusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDDDataSet14 = new Bracelet.BraceletBDDDataSet14();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxLibRefus = new System.Windows.Forms.ComboBox();
             this.tlRefusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDDDataSet15 = new Bracelet.BraceletBDDDataSet15();
             this.chboxDroitRecours = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txbxTxtLettre = new System.Windows.Forms.TextBox();
@@ -98,13 +96,7 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlRefusTableAdapter = new Bracelet.BraceletBDDDataSet14TableAdapters.tlRefusTableAdapter();
-            this.tlRefusTableAdapter1 = new Bracelet.BraceletBDDDataSet15TableAdapters.tlRefusTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet14)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet15)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,12 +131,8 @@
             // tlRefusBindingSource
             // 
             this.tlRefusBindingSource.DataMember = "tlRefus";
-            this.tlRefusBindingSource.DataSource = this.braceletBDDDataSet14;
             // 
             // braceletBDDDataSet14
-            // 
-            this.braceletBDDDataSet14.DataSetName = "BraceletBDDDataSet14";
-            this.braceletBDDDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -183,12 +171,9 @@
             // tlRefusBindingSource1
             // 
             this.tlRefusBindingSource1.DataMember = "tlRefus";
-            this.tlRefusBindingSource1.DataSource = this.braceletBDDDataSet15;
             // 
             // braceletBDDDataSet15
             // 
-            this.braceletBDDDataSet15.DataSetName = "BraceletBDDDataSet15";
-            this.braceletBDDDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // chboxDroitRecours
             // 
@@ -659,11 +644,9 @@
             // 
             // tlRefusTableAdapter
             // 
-            this.tlRefusTableAdapter.ClearBeforeFill = true;
             // 
             // tlRefusTableAdapter1
             // 
-            this.tlRefusTableAdapter1.ClearBeforeFill = true;
             // 
             // Listes_Form9
             // 
@@ -680,11 +663,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Listes_Form9_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet14)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.braceletBDDDataSet15)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -757,12 +738,8 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
-        private BraceletBDDDataSet14 braceletBDDDataSet14;
         private System.Windows.Forms.BindingSource tlRefusBindingSource;
-        private BraceletBDDDataSet14TableAdapters.tlRefusTableAdapter tlRefusTableAdapter;
         private System.Windows.Forms.ComboBox cbxLibRefus;
-        private BraceletBDDDataSet15 braceletBDDDataSet15;
         private System.Windows.Forms.BindingSource tlRefusBindingSource1;
-        private BraceletBDDDataSet15TableAdapters.tlRefusTableAdapter tlRefusTableAdapter1;
     }
 }
