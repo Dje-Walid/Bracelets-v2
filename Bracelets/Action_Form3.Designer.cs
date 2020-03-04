@@ -111,9 +111,10 @@
             // 
             this.bt_lancer_Attrib.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_lancer_Attrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_lancer_Attrib.Location = new System.Drawing.Point(438, 638);
+            this.bt_lancer_Attrib.ForeColor = System.Drawing.Color.Firebrick;
+            this.bt_lancer_Attrib.Location = new System.Drawing.Point(328, 638);
             this.bt_lancer_Attrib.Name = "bt_lancer_Attrib";
-            this.bt_lancer_Attrib.Size = new System.Drawing.Size(204, 40);
+            this.bt_lancer_Attrib.Size = new System.Drawing.Size(314, 40);
             this.bt_lancer_Attrib.TabIndex = 14;
             this.bt_lancer_Attrib.Text = "Lancer l\'attribution automatique\r\n";
             this.bt_lancer_Attrib.UseVisualStyleBackColor = true;
@@ -137,7 +138,7 @@
             this.bt_Action_Form3.Name = "bt_Action_Form3";
             this.bt_Action_Form3.Size = new System.Drawing.Size(368, 33);
             this.bt_Action_Form3.TabIndex = 11;
-            this.bt_Action_Form3.Text = "Selcetion massifs  -> Tous les massifs";
+            this.bt_Action_Form3.Text = "Selection massifs  -> Tous les massifs";
             this.bt_Action_Form3.UseVisualStyleBackColor = true;
             this.bt_Action_Form3.Click += new System.EventHandler(this.btnSelecMass_Click);
             // 

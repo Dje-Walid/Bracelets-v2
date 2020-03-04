@@ -42,6 +42,8 @@
             this.bt_Annuler = new System.Windows.Forms.Button();
             this.btValider = new System.Windows.Forms.Button();
             this.bt_Effacer = new System.Windows.Forms.Button();
+            this.txbxMasIn = new System.Windows.Forms.TextBox();
+            this.txbxMasEx = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(184, 57);
+            this.label1.Location = new System.Drawing.Point(341, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(549, 39);
             this.label1.TabIndex = 14;
@@ -58,6 +60,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txbxMasEx);
+            this.groupBox1.Controls.Add(this.txbxMasIn);
             this.groupBox1.Controls.Add(this.txbxSecEx);
             this.groupBox1.Controls.Add(this.txbxSecIn);
             this.groupBox1.Controls.Add(this.cbxMasEx);
@@ -68,7 +72,7 @@
             this.groupBox1.Controls.Add(this.lb);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(54, 143);
+            this.groupBox1.Location = new System.Drawing.Point(211, 143);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(887, 365);
             this.groupBox1.TabIndex = 20;
@@ -78,7 +82,7 @@
             // 
             // txbxSecEx
             // 
-            this.txbxSecEx.Location = new System.Drawing.Point(331, 170);
+            this.txbxSecEx.Location = new System.Drawing.Point(331, 172);
             this.txbxSecEx.Name = "txbxSecEx";
             this.txbxSecEx.Size = new System.Drawing.Size(179, 29);
             this.txbxSecEx.TabIndex = 9;
@@ -93,17 +97,17 @@
             // cbxMasEx
             // 
             this.cbxMasEx.FormattingEnabled = true;
-            this.cbxMasEx.Location = new System.Drawing.Point(331, 226);
+            this.cbxMasEx.Location = new System.Drawing.Point(578, 231);
             this.cbxMasEx.Name = "cbxMasEx";
-            this.cbxMasEx.Size = new System.Drawing.Size(179, 32);
+            this.cbxMasEx.Size = new System.Drawing.Size(288, 32);
             this.cbxMasEx.TabIndex = 7;
             // 
             // cbxMasIn
             // 
             this.cbxMasIn.FormattingEnabled = true;
-            this.cbxMasIn.Location = new System.Drawing.Point(331, 115);
+            this.cbxMasIn.Location = new System.Drawing.Point(578, 110);
             this.cbxMasIn.Name = "cbxMasIn";
-            this.cbxMasIn.Size = new System.Drawing.Size(179, 32);
+            this.cbxMasIn.Size = new System.Drawing.Size(288, 32);
             this.cbxMasIn.TabIndex = 5;
             // 
             // lb3
@@ -177,6 +181,20 @@
             this.bt_Effacer.UseVisualStyleBackColor = true;
             this.bt_Effacer.Click += new System.EventHandler(this.btnEffacer_Click);
             // 
+            // txbxMasIn
+            // 
+            this.txbxMasIn.Location = new System.Drawing.Point(331, 115);
+            this.txbxMasIn.Name = "txbxMasIn";
+            this.txbxMasIn.Size = new System.Drawing.Size(179, 29);
+            this.txbxMasIn.TabIndex = 10;
+            // 
+            // txbxMasEx
+            // 
+            this.txbxMasEx.Location = new System.Drawing.Point(331, 231);
+            this.txbxMasEx.Name = "txbxMasEx";
+            this.txbxMasEx.Size = new System.Drawing.Size(179, 29);
+            this.txbxMasEx.TabIndex = 11;
+            // 
             // Action_Form3_Suite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,5 +232,7 @@
         private System.Windows.Forms.Button bt_Annuler;
         private System.Windows.Forms.Button btValider;
         private System.Windows.Forms.Button bt_Effacer;
+        private System.Windows.Forms.TextBox txbxMasEx;
+        private System.Windows.Forms.TextBox txbxMasIn;
     }
 }
