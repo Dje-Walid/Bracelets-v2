@@ -360,8 +360,7 @@ namespace Bracelet
 
         private void Edition_Form5_F2_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet11.tbCommunes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.tbCommunesTableAdapter.Fill(this.braceletBDDDataSet11.tbCommunes);
+           
 
         }
     }

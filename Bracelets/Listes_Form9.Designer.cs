@@ -44,7 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txbxTxtLettre = new System.Windows.Forms.TextBox();
             this.tlRefusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.braceletBDDDataSet15 = new Bracelet.BraceletBDDDataSet15();
+            
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -187,10 +187,9 @@
             this.txbxTxtLettre.TextChanged += new System.EventHandler(this.txbxTxtLettre_TextChanged);
             
             this.tlRefusBindingSource1.DataMember = "tlRefus";
-            this.tlRefusBindingSource1.DataSource = this.braceletBDDDataSet15;
             
-            this.braceletBDDDataSet15.DataSetName = "BraceletBDDDataSet15";
-            this.braceletBDDDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
+            
              
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saisieToolStripMenuItem,

@@ -24,8 +24,7 @@ namespace Bracelet
 
         private void Edition_Form2_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'braceletBDDDataSet8.tlMassifs'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.tlMassifsTableAdapter.Fill(this.braceletBDDDataSet8.tlMassifs);
+           
 
         }
 
