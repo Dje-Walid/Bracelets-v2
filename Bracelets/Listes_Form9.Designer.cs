@@ -38,7 +38,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxLibRefus = new System.Windows.Forms.ComboBox();
 
-            this.tlRefusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            
 
             this.chboxDroitRecours = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
