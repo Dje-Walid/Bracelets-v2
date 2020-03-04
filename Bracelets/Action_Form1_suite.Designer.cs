@@ -36,6 +36,7 @@
             this.txbxSecEx = new System.Windows.Forms.TextBox();
             this.txbxSecIn = new System.Windows.Forms.TextBox();
             this.cbxMasEx = new System.Windows.Forms.ComboBox();
+            this.tlMassifsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxMasIn = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lbSecEx = new System.Windows.Forms.Label();
@@ -43,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btValider = new System.Windows.Forms.Button();
             this.btAnnuler = new System.Windows.Forms.Button();
-            this.tlMassifsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +73,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.txbxSecEx);
             this.groupBox1.Controls.Add(this.txbxSecIn);
             this.groupBox1.Controls.Add(this.cbxMasEx);
@@ -94,14 +96,14 @@
             // 
             this.txbxSecEx.Location = new System.Drawing.Point(285, 236);
             this.txbxSecEx.Name = "txbxSecEx";
-            this.txbxSecEx.Size = new System.Drawing.Size(179, 29);
+            this.txbxSecEx.Size = new System.Drawing.Size(382, 29);
             this.txbxSecEx.TabIndex = 9;
             // 
             // txbxSecIn
             // 
             this.txbxSecIn.Location = new System.Drawing.Point(285, 83);
             this.txbxSecIn.Name = "txbxSecIn";
-            this.txbxSecIn.Size = new System.Drawing.Size(179, 29);
+            this.txbxSecIn.Size = new System.Drawing.Size(382, 29);
             this.txbxSecIn.TabIndex = 8;
             // 
             // cbxMasEx
@@ -111,17 +113,21 @@
             this.cbxMasEx.FormattingEnabled = true;
             this.cbxMasEx.Location = new System.Drawing.Point(285, 310);
             this.cbxMasEx.Name = "cbxMasEx";
-            this.cbxMasEx.Size = new System.Drawing.Size(179, 32);
+            this.cbxMasEx.Size = new System.Drawing.Size(382, 32);
             this.cbxMasEx.TabIndex = 7;
+            // 
+            // tlMassifsBindingSource
+            // 
+            this.tlMassifsBindingSource.DataMember = "tlMassifs";
             // 
             // cbxMasIn
             // 
             this.cbxMasIn.DataSource = this.tlMassifsBindingSource;
             this.cbxMasIn.DisplayMember = "LibMassif";
             this.cbxMasIn.FormattingEnabled = true;
-            this.cbxMasIn.Location = new System.Drawing.Point(285, 158);
+            this.cbxMasIn.Location = new System.Drawing.Point(673, 155);
             this.cbxMasIn.Name = "cbxMasIn";
-            this.cbxMasIn.Size = new System.Drawing.Size(179, 32);
+            this.cbxMasIn.Size = new System.Drawing.Size(21, 32);
             this.cbxMasIn.TabIndex = 5;
             this.cbxMasIn.ValueMember = "CdMassif";
             this.cbxMasIn.SelectedIndexChanged += new System.EventHandler(this.cbxMasIn_SelectedIndexChanged);
@@ -189,15 +195,12 @@
             this.btAnnuler.UseVisualStyleBackColor = true;
             this.btAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
-            // braceletBDDDataSet4
+            // textBox1
             // 
-            // 
-            // tlMassifsBindingSource
-            // 
-            this.tlMassifsBindingSource.DataMember = "tlMassifs";
-            // 
-            // tlMassifsTableAdapter
-            // 
+            this.textBox1.Location = new System.Drawing.Point(285, 158);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(382, 29);
+            this.textBox1.TabIndex = 10;
             // 
             // Action_Form1_suite
             // 
@@ -240,5 +243,6 @@
         private System.Windows.Forms.Button btValider;
         private System.Windows.Forms.Button btAnnuler;
         private System.Windows.Forms.BindingSource tlMassifsBindingSource;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

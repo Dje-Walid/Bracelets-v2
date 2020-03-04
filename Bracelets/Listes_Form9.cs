@@ -390,7 +390,7 @@ namespace Bracelet
         {
             cbxLibRefus.Items.Clear();
             Program.outils.getConnection().Open();
-            string requete1 = "Select [LibRefus] from tlRefus where [CdRefus] =\"" + cbxCdeRefus.Text + "\";";
+            string requete1 = "Select [LibRefus] from tlRefus where [CdRefus] =\"" + Convert.ToString(cbxCdeRefus.Text) + "\";";
             OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
             OleDbDataReader dr1 = cmd1.ExecuteReader();
             while (dr1.Read())
@@ -399,12 +399,6 @@ namespace Bracelet
             }
             Program.outils.getConnection().Close();
 
-
-
-
-
-
-
         }
 
         private void txbxTxtLettre_TextChanged(object sender, EventArgs e)
@@ -412,7 +406,7 @@ namespace Bracelet
 
             txbxTxtLettre.Clear();
             Program.outils.getConnection().Open();
-            string requete1 = "Select [TexteLettre] from tlRefus where [CdRefus] =\"" + cbxCdeRefus.Text + "\";";
+            string requete1 = "Select [TexteLettre] from tlRefus where [CdRefus] =\"" + Convert.ToString(cbxCdeRefus.Text) + "\";";
             OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
             OleDbDataReader dr1 = cmd1.ExecuteReader();
             while (dr1.Read())
@@ -426,6 +420,11 @@ namespace Bracelet
         }
 
         private void chboxDroitRecours_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

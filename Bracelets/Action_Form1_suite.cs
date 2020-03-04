@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using IniParser;
+using IniParser.Model;
 
 namespace Bracelet
 {
@@ -44,7 +47,17 @@ namespace Bracelet
 
         private void Action_Form1_suite_Load(object sender, EventArgs e)
         {
-            
+            Program.outils.getConnection().Open();
+            string requete = "Select [LibMassif] from tlMassifs;";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cbxMasIn.Items.Add(dr[0].ToString());
+                cbxMasEx.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+
 
         }
     }
