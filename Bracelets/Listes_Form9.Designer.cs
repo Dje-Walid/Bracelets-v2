@@ -96,6 +96,8 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnModif = new System.Windows.Forms.CheckBox();
+            this.btSortir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tlRefusBindingSource1)).BeginInit();
@@ -566,7 +568,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -597,13 +599,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -642,12 +644,37 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // btnModif
+            // 
+            this.btnModif.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnModif.AutoSize = true;
+            this.btnModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModif.Location = new System.Drawing.Point(435, 626);
+            this.btnModif.Name = "btnModif";
+            this.btnModif.Size = new System.Drawing.Size(120, 34);
+            this.btnModif.TabIndex = 12;
+            this.btnModif.Text = "Modification";
+            this.btnModif.UseVisualStyleBackColor = true;
+            this.btnModif.CheckedChanged += new System.EventHandler(this.btnModif_CheckedChanged);
+            // 
+            // btSortir
+            // 
+            this.btSortir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSortir.Image = global::Bracelet.Properties.Resources.logout__1_;
+            this.btSortir.Location = new System.Drawing.Point(632, 626);
+            this.btSortir.Name = "btSortir";
+            this.btSortir.Size = new System.Drawing.Size(120, 34);
+            this.btSortir.TabIndex = 13;
+            this.btSortir.UseVisualStyleBackColor = true;
+            // 
             // Listes_Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.Controls.Add(this.btSortir);
+            this.Controls.Add(this.btnModif);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -735,5 +762,7 @@
         private System.Windows.Forms.BindingSource tlRefusBindingSource;
         private System.Windows.Forms.ComboBox cbxLibRefus;
         private System.Windows.Forms.BindingSource tlRefusBindingSource1;
+        private System.Windows.Forms.CheckBox btnModif;
+        private System.Windows.Forms.Button btSortir;
     }
 }

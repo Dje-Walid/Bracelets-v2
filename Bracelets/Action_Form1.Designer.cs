@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form1));
             this.lbBasculPropAccord = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.Label();
@@ -93,9 +92,7 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlEspecesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbBasculPropAccord
@@ -158,14 +155,13 @@
             // 
             // cbxEspecAbascul
             // 
-            this.cbxEspecAbascul.DataSource = this.tlEspecesBindingSource;
-            this.cbxEspecAbascul.DisplayMember = "LibEspece";
             this.cbxEspecAbascul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecAbascul.FormattingEnabled = true;
             this.cbxEspecAbascul.Location = new System.Drawing.Point(582, 487);
             this.cbxEspecAbascul.Name = "cbxEspecAbascul";
             this.cbxEspecAbascul.Size = new System.Drawing.Size(186, 32);
             this.cbxEspecAbascul.TabIndex = 5;
+            this.cbxEspecAbascul.SelectedIndexChanged += new System.EventHandler(this.cbxEspecAbascul_SelectedIndexChanged);
             // 
             // btLanceBascul
             // 
@@ -630,16 +626,6 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // braceletBDDDataSet3
-            // 
-            // 
-            // tlEspecesBindingSource
-            // 
-            this.tlEspecesBindingSource.DataMember = "tlEspeces";
-            // 
-            // tlEspecesTableAdapter
-            // 
-            // 
             // Action_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -662,7 +648,6 @@
             this.Load += new System.EventHandler(this.Action_Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlEspecesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -733,6 +718,5 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
-        private System.Windows.Forms.BindingSource tlEspecesBindingSource;
     }
 }
