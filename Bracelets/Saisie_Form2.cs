@@ -1255,6 +1255,7 @@ namespace Bracelet
 
         private void dgvEspeces_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            #region "Update de la sélection"
             //Remplissage dgvBraceletParGibier
             dgvBraceletParGibier.Rows.Clear();
             Program.outils.getConnection().Open();
@@ -1348,7 +1349,7 @@ namespace Bracelet
                 dgvGibiers.Rows.Add(ah);
             }
             Program.outils.getConnection().Close();
-
+            #endregion
         }
 
         private void btNewCampagne_Click(object sender, EventArgs e)
@@ -1357,6 +1358,7 @@ namespace Bracelet
 
         private void button2_Click(object sender, EventArgs e)
         {
+            #region "Rafraichissement des données"
             //Remplissage txbxBoisPrive
             Program.outils.getConnection().Open();
             string requete = "Select [SurfaceBois] from tbCampagnes where [NumPlan]=\"" + Convert.ToString(cbxNumPlan.Text) + "\" AND [CdCampagne] in (Select [CdCampagne] from tlCampagnes where [LibCampagne]=\"" + Convert.ToString(cbxCampActu.Text) + "\");";
@@ -1625,6 +1627,7 @@ namespace Bracelet
                 dgvGibiers.Rows.Add(ah);
             }
             Program.outils.getConnection().Close();
+            #endregion
         }
     }
 }
