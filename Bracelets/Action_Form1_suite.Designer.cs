@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btEffacer = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txbxMassEx2 = new System.Windows.Forms.TextBox();
+            this.txbxMassIn2 = new System.Windows.Forms.TextBox();
             this.txbxSecEx1 = new System.Windows.Forms.TextBox();
             this.txbxSecIn1 = new System.Windows.Forms.TextBox();
             this.cbxMasEx = new System.Windows.Forms.ComboBox();
@@ -42,8 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btValider = new System.Windows.Forms.Button();
             this.btAnnuler = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,11 +68,12 @@
             this.btEffacer.TabIndex = 1;
             this.btEffacer.Text = "Effacer";
             this.btEffacer.UseVisualStyleBackColor = true;
+            this.btEffacer.Click += new System.EventHandler(this.btEffacer_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txbxMassEx2);
+            this.groupBox1.Controls.Add(this.txbxMassIn2);
             this.groupBox1.Controls.Add(this.txbxSecEx1);
             this.groupBox1.Controls.Add(this.txbxSecIn1);
             this.groupBox1.Controls.Add(this.cbxMasEx);
@@ -83,13 +84,30 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(173, 168);
+            this.groupBox1.Location = new System.Drawing.Point(71, 168);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(856, 431);
+            this.groupBox1.Size = new System.Drawing.Size(1053, 431);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quel massifs éditer ? (si non spécifieé = tout)";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txbxMassEx2
+            // 
+            this.txbxMassEx2.Enabled = false;
+            this.txbxMassEx2.Location = new System.Drawing.Point(285, 313);
+            this.txbxMassEx2.Name = "txbxMassEx2";
+            this.txbxMassEx2.Size = new System.Drawing.Size(330, 29);
+            this.txbxMassEx2.TabIndex = 11;
+            this.txbxMassEx2.TextChanged += new System.EventHandler(this.txbxSecEx2_TextChanged);
+            // 
+            // txbxMassIn2
+            // 
+            this.txbxMassIn2.Enabled = false;
+            this.txbxMassIn2.Location = new System.Drawing.Point(285, 161);
+            this.txbxMassIn2.Name = "txbxMassIn2";
+            this.txbxMassIn2.Size = new System.Drawing.Size(330, 29);
+            this.txbxMassIn2.TabIndex = 10;
             // 
             // txbxSecEx1
             // 
@@ -110,15 +128,17 @@
             this.cbxMasEx.FormattingEnabled = true;
             this.cbxMasEx.Location = new System.Drawing.Point(638, 310);
             this.cbxMasEx.Name = "cbxMasEx";
-            this.cbxMasEx.Size = new System.Drawing.Size(22, 32);
+            this.cbxMasEx.Size = new System.Drawing.Size(310, 32);
             this.cbxMasEx.TabIndex = 7;
+            this.cbxMasEx.SelectedIndexChanged += new System.EventHandler(this.cbxMasEx_SelectedIndexChanged);
             // 
             // cbxMasIn
             // 
+            this.cbxMasIn.DisplayMember = "CdMassif";
             this.cbxMasIn.FormattingEnabled = true;
             this.cbxMasIn.Location = new System.Drawing.Point(638, 161);
             this.cbxMasIn.Name = "cbxMasIn";
-            this.cbxMasIn.Size = new System.Drawing.Size(22, 32);
+            this.cbxMasIn.Size = new System.Drawing.Size(310, 32);
             this.cbxMasIn.TabIndex = 5;
             this.cbxMasIn.ValueMember = "CdMassif";
             this.cbxMasIn.SelectedIndexChanged += new System.EventHandler(this.cbxMasIn_SelectedIndexChanged);
@@ -186,22 +206,6 @@
             this.btAnnuler.UseVisualStyleBackColor = true;
             this.btAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(285, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(330, 29);
-            this.textBox1.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(285, 313);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(330, 29);
-            this.textBox2.TabIndex = 11;
-            // 
             // Action_Form1_suite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,7 +245,7 @@
         private System.Windows.Forms.ComboBox cbxMasIn;
         private System.Windows.Forms.Button btValider;
         private System.Windows.Forms.Button btAnnuler;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbxMassEx2;
+        private System.Windows.Forms.TextBox txbxMassIn2;
     }
 }

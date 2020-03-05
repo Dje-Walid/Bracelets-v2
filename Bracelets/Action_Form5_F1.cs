@@ -370,5 +370,10 @@ namespace Bracelet
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
         }
+
+        private void dgvBrac_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using IniParser;
+using IniParser.Model;
 
 namespace Bracelet
 {
@@ -358,7 +361,29 @@ namespace Bracelet
 
         private void Edition_Form5_F3_Load(object sender, EventArgs e)
         {
+
             
+            Program.outils.getConnection().Open();
+            string requete = "Select [LibCampagne] from tlCampagnes;";
+            string requete2 = "Select [LibCampagne] from tlCampagnes where [CdCampagne] in (Select ([CdCampagne]-1) from tlCampagnes where [LibCampagne]=\""+Convert.ToString(Program.outils.getCampagneActuelle())+"\");";
+           
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+
+            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+            OleDbDataReader dr2 = cmd2.ExecuteReader();
+           
+            while (dr.Read())
+            {
+                cbxCampConce.Items.Add(dr[0].ToString());
+                
+            }
+
+            while (dr2.Read())
+            {
+                cbxCampConce.Text = dr2[0].ToString();
+            }
+            Program.outils.getConnection().Close();
 
         }
     }

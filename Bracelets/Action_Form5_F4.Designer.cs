@@ -31,10 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form5_F4));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lbNumModif = new System.Windows.Forms.Label();
             this.lbNewNum = new System.Windows.Forms.Label();
-            this.lbOldNum = new System.Windows.Forms.Label();
-            this.lbDateModif = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,16 +110,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1197, 409);
             this.dataGridView1.TabIndex = 1;
             // 
-            // lbNumModif
-            // 
-            this.lbNumModif.AutoSize = true;
-            this.lbNumModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNumModif.Location = new System.Drawing.Point(358, 336);
-            this.lbNumModif.Name = "lbNumModif";
-            this.lbNumModif.Size = new System.Drawing.Size(83, 24);
-            this.lbNumModif.TabIndex = 2;
-            this.lbNumModif.Text = "N°Modif";
-            // 
             // lbNewNum
             // 
             this.lbNewNum.AutoSize = true;
@@ -132,26 +119,6 @@
             this.lbNewNum.Size = new System.Drawing.Size(172, 24);
             this.lbNewNum.TabIndex = 3;
             this.lbNewNum.Text = "Nouveau numéro";
-            // 
-            // lbOldNum
-            // 
-            this.lbOldNum.AutoSize = true;
-            this.lbOldNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOldNum.Location = new System.Drawing.Point(1026, 336);
-            this.lbOldNum.Name = "lbOldNum";
-            this.lbOldNum.Size = new System.Drawing.Size(154, 24);
-            this.lbOldNum.TabIndex = 4;
-            this.lbOldNum.Text = "Ancien numéro";
-            // 
-            // lbDateModif
-            // 
-            this.lbDateModif.AutoSize = true;
-            this.lbDateModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDateModif.Location = new System.Drawing.Point(607, 336);
-            this.lbDateModif.Name = "lbDateModif";
-            this.lbDateModif.Size = new System.Drawing.Size(200, 24);
-            this.lbDateModif.TabIndex = 5;
-            this.lbDateModif.Text = "Date de modification";
             // 
             // menuStrip1
             // 
@@ -516,7 +483,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -547,13 +514,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -599,10 +566,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.lbDateModif);
-            this.Controls.Add(this.lbOldNum);
             this.Controls.Add(this.lbNewNum);
-            this.Controls.Add(this.lbNumModif);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -622,10 +586,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lbNumModif;
         private System.Windows.Forms.Label lbNewNum;
-        private System.Windows.Forms.Label lbOldNum;
-        private System.Windows.Forms.Label lbDateModif;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem environnementCourantToolStripMenuItem;

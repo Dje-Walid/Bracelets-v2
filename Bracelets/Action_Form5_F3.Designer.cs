@@ -36,10 +36,6 @@
             this.cbxCodeAction = new System.Windows.Forms.ComboBox();
             this.lbCodection = new System.Windows.Forms.Label();
             this.dgvConsultDatesActions = new System.Windows.Forms.DataGridView();
-            this.lbDateAction = new System.Windows.Forms.Label();
-            this.lbParamAction = new System.Windows.Forms.Label();
-            this.lbNbAction = new System.Windows.Forms.Label();
-            this.lbNmAction = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,6 +91,10 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbParamAction = new System.Windows.Forms.Label();
+            this.lbNbAction = new System.Windows.Forms.Label();
+            this.lbNmAction = new System.Windows.Forms.Label();
+            this.lbDateAction = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultDatesActions)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -165,46 +165,6 @@
             this.dgvConsultDatesActions.Name = "dgvConsultDatesActions";
             this.dgvConsultDatesActions.Size = new System.Drawing.Size(1880, 820);
             this.dgvConsultDatesActions.TabIndex = 6;
-            // 
-            // lbDateAction
-            // 
-            this.lbDateAction.AutoSize = true;
-            this.lbDateAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDateAction.Location = new System.Drawing.Point(26, 280);
-            this.lbDateAction.Name = "lbDateAction";
-            this.lbDateAction.Size = new System.Drawing.Size(117, 24);
-            this.lbDateAction.TabIndex = 7;
-            this.lbDateAction.Text = "Date Action";
-            // 
-            // lbParamAction
-            // 
-            this.lbParamAction.AutoSize = true;
-            this.lbParamAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbParamAction.Location = new System.Drawing.Point(1283, 280);
-            this.lbParamAction.Name = "lbParamAction";
-            this.lbParamAction.Size = new System.Drawing.Size(217, 24);
-            this.lbParamAction.TabIndex = 8;
-            this.lbParamAction.Text = "Paramètres de l\'action";
-            // 
-            // lbNbAction
-            // 
-            this.lbNbAction.AutoSize = true;
-            this.lbNbAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNbAction.Location = new System.Drawing.Point(899, 280);
-            this.lbNbAction.Name = "lbNbAction";
-            this.lbNbAction.Size = new System.Drawing.Size(174, 24);
-            this.lbNbAction.TabIndex = 9;
-            this.lbNbAction.Text = "Nombre d\'actions";
-            // 
-            // lbNmAction
-            // 
-            this.lbNmAction.AutoSize = true;
-            this.lbNmAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNmAction.Location = new System.Drawing.Point(488, 280);
-            this.lbNmAction.Name = "lbNmAction";
-            this.lbNmAction.Size = new System.Drawing.Size(156, 24);
-            this.lbNmAction.TabIndex = 10;
-            this.lbNmAction.Text = "Nom de l\'action";
             // 
             // menuStrip1
             // 
@@ -569,7 +529,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -600,13 +560,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -644,6 +604,46 @@
             this.quitterBraceletToolStripMenuItem1.Size = new System.Drawing.Size(101, 20);
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
+            // 
+            // lbParamAction
+            // 
+            this.lbParamAction.AutoSize = true;
+            this.lbParamAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbParamAction.Location = new System.Drawing.Point(1283, 280);
+            this.lbParamAction.Name = "lbParamAction";
+            this.lbParamAction.Size = new System.Drawing.Size(217, 24);
+            this.lbParamAction.TabIndex = 8;
+            this.lbParamAction.Text = "Paramètres de l\'action";
+            // 
+            // lbNbAction
+            // 
+            this.lbNbAction.AutoSize = true;
+            this.lbNbAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNbAction.Location = new System.Drawing.Point(899, 280);
+            this.lbNbAction.Name = "lbNbAction";
+            this.lbNbAction.Size = new System.Drawing.Size(174, 24);
+            this.lbNbAction.TabIndex = 9;
+            this.lbNbAction.Text = "Nombre d\'actions";
+            // 
+            // lbNmAction
+            // 
+            this.lbNmAction.AutoSize = true;
+            this.lbNmAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNmAction.Location = new System.Drawing.Point(488, 280);
+            this.lbNmAction.Name = "lbNmAction";
+            this.lbNmAction.Size = new System.Drawing.Size(156, 24);
+            this.lbNmAction.TabIndex = 10;
+            this.lbNmAction.Text = "Nom de l\'action";
+            // 
+            // lbDateAction
+            // 
+            this.lbDateAction.AutoSize = true;
+            this.lbDateAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateAction.Location = new System.Drawing.Point(26, 280);
+            this.lbDateAction.Name = "lbDateAction";
+            this.lbDateAction.Size = new System.Drawing.Size(117, 24);
+            this.lbDateAction.TabIndex = 7;
+            this.lbDateAction.Text = "Date Action";
             // 
             // Action_Form5_F3
             // 
@@ -684,10 +684,6 @@
         private System.Windows.Forms.ComboBox cbxCodeAction;
         private System.Windows.Forms.Label lbCodection;
         private System.Windows.Forms.DataGridView dgvConsultDatesActions;
-        private System.Windows.Forms.Label lbDateAction;
-        private System.Windows.Forms.Label lbParamAction;
-        private System.Windows.Forms.Label lbNbAction;
-        private System.Windows.Forms.Label lbNmAction;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem environnementCourantToolStripMenuItem;
@@ -743,5 +739,9 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private System.Windows.Forms.Label lbParamAction;
+        private System.Windows.Forms.Label lbNbAction;
+        private System.Windows.Forms.Label lbNmAction;
+        private System.Windows.Forms.Label lbDateAction;
     }
 }

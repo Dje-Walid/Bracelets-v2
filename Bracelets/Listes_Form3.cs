@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using IniParser;
+using IniParser.Model;
 
 namespace Bracelet
 {
@@ -359,6 +362,50 @@ namespace Bracelet
             this.Hide();
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
+        }
+
+        private void Listes_Form3_Load(object sender, EventArgs e)
+        {
+            Program.outils.getConnection().Open();
+            string requete0 = "Select [NumPlan] from tbBenefs;";
+            string requete1 = "Select [NomBenef],[PrenomBenef] from tbBenefs where [CdBenef] in (Select [CdBenef] from tbPlans where NumPlan ="+dgvAttrib.Columns[0] +"  ) ;";
+            string requete2 = "Select [CdTypePlan] from tlEspeces;";
+
+            OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+            OleDbDataReader dr0 = cmd0.ExecuteReader();
+
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+
+            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+            OleDbDataReader dr2 = cmd2.ExecuteReader();
+
+
+
+            dgvAttrib.ColumnCount = 8;
+            dgvAttrib.Columns[0].Name = "N°";
+            dgvAttrib.Columns[1].Name = " Nom de l'Espece";
+            dgvAttrib.Columns[2].Name = "Nom Prénom";
+            dgvAttrib.Columns[3].Name = "Territoire";
+            dgvAttrib.Columns[4].Name = " Secteur";
+            dgvAttrib.Columns[5].Name = "Surface";
+            dgvAttrib.Columns[6].Name = " Attribution";
+            dgvAttrib.Columns[7].Name = " Observation";
+
+
+            string[] ah;
+
+            while (dr0.Read() && dr1.Read() && dr2.Read())
+            {
+                ah = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
+                dgvAttrib.Rows.Add(ah);
+
+
+
+            }
+
+
+            Program.outils.getConnection().Close();
         }
     }
 }

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using IniParser;
+using IniParser.Model;
 
 namespace Bracelet
 {
@@ -360,7 +363,20 @@ namespace Bracelet
 
         private void Edition_Form5_F2_Load(object sender, EventArgs e)
         {
-           
+            Program.outils.getConnection().Open();
+            string requete = "Select [LibCommune] from tlCommunes;";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cbxCommunes.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
