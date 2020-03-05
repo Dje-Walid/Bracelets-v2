@@ -33,10 +33,11 @@
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cbxMassifaExclure = new System.Windows.Forms.ComboBox();
-            this.cbxMassifaInclur = new System.Windows.Forms.ComboBox();
+            this.txbxSecExl = new System.Windows.Forms.TextBox();
+            this.txbxSecIncl = new System.Windows.Forms.TextBox();
+            this.cbxZonExcl = new System.Windows.Forms.ComboBox();
+            this.tlMassifsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cbxZonIncl = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -103,11 +104,12 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlMassifsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txbxZonIncl = new System.Windows.Forms.TextBox();
+            this.txbxZonExcl = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAnnuler
@@ -134,10 +136,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.cbxMassifaExclure);
-            this.groupBox1.Controls.Add(this.cbxMassifaInclur);
+            this.groupBox1.Controls.Add(this.txbxZonExcl);
+            this.groupBox1.Controls.Add(this.txbxZonIncl);
+            this.groupBox1.Controls.Add(this.txbxSecExl);
+            this.groupBox1.Controls.Add(this.txbxSecIncl);
+            this.groupBox1.Controls.Add(this.cbxZonExcl);
+            this.groupBox1.Controls.Add(this.cbxZonIncl);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -151,39 +155,45 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quel zones éditer ? (si non spécifieé = tout)";
             // 
-            // textBox2
+            // txbxSecExl
             // 
-            this.textBox2.Location = new System.Drawing.Point(285, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 29);
-            this.textBox2.TabIndex = 9;
+            this.txbxSecExl.Location = new System.Drawing.Point(285, 180);
+            this.txbxSecExl.Name = "txbxSecExl";
+            this.txbxSecExl.Size = new System.Drawing.Size(179, 29);
+            this.txbxSecExl.TabIndex = 9;
             // 
-            // textBox1
+            // txbxSecIncl
             // 
-            this.textBox1.Location = new System.Drawing.Point(285, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 29);
-            this.textBox1.TabIndex = 8;
+            this.txbxSecIncl.Location = new System.Drawing.Point(285, 57);
+            this.txbxSecIncl.Name = "txbxSecIncl";
+            this.txbxSecIncl.Size = new System.Drawing.Size(179, 29);
+            this.txbxSecIncl.TabIndex = 8;
             // 
-            // cbxMassifaExclure
+            // cbxZonExcl
             // 
-            this.cbxMassifaExclure.DataSource = this.tlMassifsBindingSource1;
-            this.cbxMassifaExclure.DisplayMember = "LibMassif";
-            this.cbxMassifaExclure.FormattingEnabled = true;
-            this.cbxMassifaExclure.Location = new System.Drawing.Point(285, 239);
-            this.cbxMassifaExclure.Name = "cbxMassifaExclure";
-            this.cbxMassifaExclure.Size = new System.Drawing.Size(179, 32);
-            this.cbxMassifaExclure.TabIndex = 7;
+            this.cbxZonExcl.DataSource = this.tlMassifsBindingSource1;
+            this.cbxZonExcl.DisplayMember = "LibMassif";
+            this.cbxZonExcl.FormattingEnabled = true;
+            this.cbxZonExcl.Location = new System.Drawing.Point(533, 242);
+            this.cbxZonExcl.Name = "cbxZonExcl";
+            this.cbxZonExcl.Size = new System.Drawing.Size(245, 32);
+            this.cbxZonExcl.TabIndex = 7;
+            this.cbxZonExcl.SelectedIndexChanged += new System.EventHandler(this.cbxZonExcl_SelectedIndexChanged);
             // 
-            // cbxMassifaInclur
+            // tlMassifsBindingSource1
             // 
-            this.cbxMassifaInclur.DataSource = this.tlMassifsBindingSource1;
-            this.cbxMassifaInclur.DisplayMember = "LibMassif";
-            this.cbxMassifaInclur.FormattingEnabled = true;
-            this.cbxMassifaInclur.Location = new System.Drawing.Point(285, 117);
-            this.cbxMassifaInclur.Name = "cbxMassifaInclur";
-            this.cbxMassifaInclur.Size = new System.Drawing.Size(179, 32);
-            this.cbxMassifaInclur.TabIndex = 5;
+            this.tlMassifsBindingSource1.DataMember = "tlMassifs";
+            // 
+            // cbxZonIncl
+            // 
+            this.cbxZonIncl.DataSource = this.tlMassifsBindingSource1;
+            this.cbxZonIncl.DisplayMember = "LibMassif";
+            this.cbxZonIncl.FormattingEnabled = true;
+            this.cbxZonIncl.Location = new System.Drawing.Point(533, 114);
+            this.cbxZonIncl.Name = "cbxZonIncl";
+            this.cbxZonIncl.Size = new System.Drawing.Size(245, 32);
+            this.cbxZonIncl.TabIndex = 5;
+            this.cbxZonIncl.SelectedIndexChanged += new System.EventHandler(this.cbxMassifaInclur_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -231,6 +241,7 @@
             this.btnEffacer.TabIndex = 11;
             this.btnEffacer.Text = "Effacer";
             this.btnEffacer.UseVisualStyleBackColor = true;
+            this.btnEffacer.Click += new System.EventHandler(this.btnEffacer_Click);
             // 
             // label1
             // 
@@ -734,18 +745,21 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // tlMassifsTableAdapter
+            // txbxZonIncl
             // 
+            this.txbxZonIncl.Enabled = false;
+            this.txbxZonIncl.Location = new System.Drawing.Point(285, 117);
+            this.txbxZonIncl.Name = "txbxZonIncl";
+            this.txbxZonIncl.Size = new System.Drawing.Size(179, 29);
+            this.txbxZonIncl.TabIndex = 10;
             // 
-            // braceletBDDDataSet10
+            // txbxZonExcl
             // 
-            // 
-            // tlMassifsBindingSource1
-            // 
-            this.tlMassifsBindingSource1.DataMember = "tlMassifs";
-            // 
-            // tlMassifsTableAdapter1
-            // 
+            this.txbxZonExcl.Enabled = false;
+            this.txbxZonExcl.Location = new System.Drawing.Point(285, 239);
+            this.txbxZonExcl.Name = "txbxZonExcl";
+            this.txbxZonExcl.Size = new System.Drawing.Size(179, 29);
+            this.txbxZonExcl.TabIndex = 11;
             // 
             // Edition_Form5_F1
             // 
@@ -769,11 +783,11 @@
             this.Load += new System.EventHandler(this.Edition_Form5_F1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,10 +798,10 @@
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox cbxMassifaExclure;
-        private System.Windows.Forms.ComboBox cbxMassifaInclur;
+        private System.Windows.Forms.TextBox txbxSecExl;
+        private System.Windows.Forms.TextBox txbxSecIncl;
+        private System.Windows.Forms.ComboBox cbxZonExcl;
+        private System.Windows.Forms.ComboBox cbxZonIncl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -855,5 +869,7 @@
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
         private System.Windows.Forms.BindingSource tlMassifsBindingSource1;
+        private System.Windows.Forms.TextBox txbxZonExcl;
+        private System.Windows.Forms.TextBox txbxZonIncl;
     }
 }

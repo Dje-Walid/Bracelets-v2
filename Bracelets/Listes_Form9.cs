@@ -26,7 +26,7 @@ namespace Bracelet
             Saisie_Form1 saisie_Form1 = new Saisie_Form1();
             saisie_Form1.Show();
         }
-
+        #region "Menu"
         private void quitterBraceletToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DialogResult resulta;
@@ -358,16 +358,19 @@ namespace Bracelet
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
         }
+        #endregion
 
         private void Listes_Form9_Load(object sender, EventArgs e)
         {
-            
 
-            
-            cbxLibRefus.BackColor = System.Drawing.SystemColors.Window;
+            cbxLibRefus.Enabled = false;
             txbxTxtLettre.Enabled = false;
-            txbxTxtLettre.BackColor = System.Drawing.SystemColors.Window;
             chboxDroitRecours.Enabled = false;
+            cbxLibRefus.BackColor = System.Drawing.SystemColors.Window;
+            txbxTxtLettre.BackColor = System.Drawing.SystemColors.Window;
+            cbxLibRefus.BackColor = System.Drawing.SystemColors.Window;
+            
+           
             
 
 
@@ -388,16 +391,7 @@ namespace Bracelet
 
         private void cbxLibRefus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txbxTxtLettre.Clear();
-            Program.outils.getConnection().Open();
-            string requete1 = "Select [TexteLettre] from tlRefus where [CdRefus] =" + Convert.ToString(cbxCdeRefus.Text) + ";";
-            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
-            OleDbDataReader dr1 = cmd1.ExecuteReader();
-            while (dr1.Read())
-            {
-                txbxTxtLettre.Text =dr1[0].ToString();
-            }
-            Program.outils.getConnection().Close();
+            
 
         }
 
@@ -420,9 +414,34 @@ namespace Bracelet
             OleDbDataReader dr1 = cmd1.ExecuteReader();
             while (dr1.Read())
             {
+                cbxLibRefus.Text = dr1[0].ToString();
                 cbxLibRefus.Items.Add(dr1[0].ToString());
             }
             Program.outils.getConnection().Close();
+
+            txbxTxtLettre.Clear();
+            Program.outils.getConnection().Open();
+            string requete2 = "Select [TexteLettre] from tlRefus where [CdRefus] =" + Convert.ToString(cbxCdeRefus.Text) + ";";
+            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+            OleDbDataReader dr2 = cmd2.ExecuteReader();
+            while (dr2.Read())
+            {
+                txbxTxtLettre.Text = dr2[0].ToString();
+            }
+            Program.outils.getConnection().Close();
+        }
+
+        private void btnModif_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnModif.Checked = true)
+            {
+                cbxLibRefus.Enabled = true;
+                txbxTxtLettre.Enabled = true;
+                chboxDroitRecours.Enabled = true; 
+
+            }
+
+            
         }
     }
 }

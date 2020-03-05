@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Bracelet
 {
@@ -361,6 +362,71 @@ namespace Bracelet
             
            
 
+        }
+
+        private void cbxMassifaInclur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Program.outils.getConnection().Open();
+            string requete = "Select [CdMassif] from tlMassifs where [LibMassif] =\"" + Convert.ToString(cbxZonIncl.Text) + "\";";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+
+            if (txbxZonIncl.Text == "")
+            {
+                while (dr.Read())
+                {
+                    txbxZonIncl.Text = dr[0].ToString();
+                    Edition_Form2.ZonIncl.Add(dr[0].ToString());
+                }
+            }
+            else
+            {
+                while (dr.Read())
+                {
+                    txbxZonIncl.Text = txbxZonIncl.Text + "," + dr[0].ToString();
+                    Edition_Form2.ZonIncl.Add("," + dr[0].ToString());
+                }
+            }
+
+            Program.outils.getConnection().Close();
+        }
+
+        private void cbxZonExcl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Program.outils.getConnection().Open();
+            string requete = "Select [CdMassif] from tlMassifs where [LibMassif] =\"" + Convert.ToString(cbxZonExcl.Text) + "\";";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+
+            if (txbxZonExcl.Text == "")
+            {
+                while (dr.Read())
+                {
+                    txbxZonExcl.Text = dr[0].ToString();
+                    Edition_Form2.ZonExcl.Add(dr[0].ToString());
+                }
+            }
+            else
+            {
+                while (dr.Read())
+                {
+                    txbxZonExcl.Text = txbxZonExcl.Text + "," + dr[0].ToString();
+                    Edition_Form2.ZonExcl.Add("," + dr[0].ToString());
+                }
+            }
+
+            Program.outils.getConnection().Close();
+        }
+
+        private void btnEffacer_Click(object sender, EventArgs e)
+        {
+            txbxSecIncl.Text = "";
+            txbxZonIncl.Text = "";
+            txbxSecExl.Text = "";
+            txbxZonExcl.Text = "";
+
+            Edition_Form2.ZonIncl.Clear();
+            Edition_Form2.ZonExcl.Clear();
         }
     }
 }

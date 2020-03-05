@@ -32,7 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edition_Form5_F2));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxCommunes = new System.Windows.Forms.ComboBox();
+            this.tbCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,11 +90,9 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-
-            this.tbCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -108,7 +107,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbxCommunes);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(33, 192);
@@ -118,15 +117,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selection de la Commune";
             // 
-            // comboBox1
+            // cbxCommunes
             // 
-            this.comboBox1.DataSource = this.tbCommunesBindingSource;
-            this.comboBox1.DisplayMember = "NumCommune";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(352, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 32);
-            this.comboBox1.TabIndex = 1;
+            this.cbxCommunes.FormattingEnabled = true;
+            this.cbxCommunes.Location = new System.Drawing.Point(352, 84);
+            this.cbxCommunes.Name = "cbxCommunes";
+            this.cbxCommunes.Size = new System.Drawing.Size(353, 32);
+            this.cbxCommunes.TabIndex = 1;
+            this.cbxCommunes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // tbCommunesBindingSource
+            // 
+            this.tbCommunesBindingSource.DataMember = "tbCommunes";
             // 
             // label2
             // 
@@ -575,16 +577,6 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // braceletBDDDataSet11
-            // 
-            // 
-            // tbCommunesBindingSource
-            // 
-            this.tbCommunesBindingSource.DataMember = "tbCommunes";
-            // 
-            // tbCommunesTableAdapter
-            // 
-            // 
             // Edition_Form5_F2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,9 +593,9 @@
             this.Load += new System.EventHandler(this.Edition_Form5_F2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbCommunesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,7 +605,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxCommunes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;

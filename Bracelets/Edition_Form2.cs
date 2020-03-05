@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Bracelet
 {
     public partial class Edition_Form2 : Form
     {
+        static public List<string> ZonIncl = new List<string>();
+        static public List<string> ZonExcl = new List<string>();
         public Edition_Form2()
         {
             InitializeComponent();
@@ -24,13 +27,32 @@ namespace Bracelet
 
         private void Edition_Form2_Load(object sender, EventArgs e)
         {
-           
+            Program.outils.getConnection().Open();
+            string requete = "Select [LibMassif] from tlMassifs";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cbxZonInc.Items.Add(dr[0].ToString());
+                cbxZonExc.Items.Add(dr[0].ToString());
+            }
+            Program.outils.getConnection().Close();
+
+             ZonIncl.Clear();
+             ZonExcl.Clear();
 
         }
 
         private void btnEffacer_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+
+            txbxSecInc.Text = "";
+            txbxZonInc.Text = "";
+            txbxSecExc.Text = "";
+            txbxZonExc.Text = "";
+
+            ZonExcl.Clear();
+            ZonIncl.Clear();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -40,12 +62,56 @@ namespace Bracelet
 
         private void cbxMassifaInclur_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Program.outils.getConnection().Open();
+            string requete = "Select [CdMassif] from tlMassifs where [LibMassif] =\"" + Convert.ToString(cbxZonInc.Text) + "\";";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
 
+            if (txbxZonInc.Text == "")
+            {
+                while (dr.Read())
+                {
+                    txbxZonInc.Text = dr[0].ToString();
+                    ZonIncl.Add(dr[0].ToString());
+                }
+            }
+            else
+            {
+                while (dr.Read())
+                {
+                    txbxZonInc.Text = txbxZonInc.Text + "," + dr[0].ToString();
+                    ZonIncl.Add("," + dr[0].ToString());
+                }
+            }
+
+            Program.outils.getConnection().Close();
         }
 
         private void cbxMassifaExclure_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Program.outils.getConnection().Open();
+            string requete = "Select [CdMassif] from tlMassifs where [LibMassif] =\"" + Convert.ToString(cbxZonExc.Text) + "\";";
+            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+            OleDbDataReader dr = cmd.ExecuteReader();
 
+            if (txbxZonExc.Text == "")
+            {
+                while (dr.Read())
+                {
+                    txbxZonExc.Text = dr[0].ToString();
+                    ZonExcl.Add(dr[0].ToString());
+                }
+            }
+            else
+            {
+                while (dr.Read())
+                {
+                    txbxZonExc.Text = txbxZonExc.Text + "," + dr[0].ToString();
+                    ZonExcl.Add("," + dr[0].ToString());
+                }
+            }
+
+            Program.outils.getConnection().Close();
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
@@ -400,6 +466,11 @@ namespace Bracelet
             this.Hide();
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
+        }
+
+        private void txbxSecExc_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

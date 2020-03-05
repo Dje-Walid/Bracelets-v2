@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Bracelet
 {
@@ -37,6 +38,8 @@ namespace Bracelet
 
             }
         }
+
+        #region "Menu"
 
         private void environnementCourantToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -380,6 +383,95 @@ namespace Bracelet
             this.Hide();
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
+        }
+        #endregion
+
+        private void bt_lancer_Attrib_Click(object sender, EventArgs e)
+        {
+            Program.outils.getConnection().Open();
+            string requete = "Select ";
+            OleDbDataAdapter Max = new OleDbDataAdapter(requete, Program.outils.getConnection());
+            //Mettre ici le DataSet : https://docs.microsoft.com/fr-fr/dotnet/framework/data/adonet/performing-batch-operations-using-dataadapters
+
+            requete = "Select (Max([NumBracelet])-Min([NumBracelet])),[NumPlan],[CdGibier] from tbGibiers group by [NumPlan],[CdGibier];";
+            OleDbDataAdapter nbBrac = new OleDbDataAdapter(requete, Program.outils.getConnection());
+            //Mettre ici le DataSet : https://docs.microsoft.com/fr-fr/dotnet/framework/data/adonet/performing-batch-operations-using-dataadapters
+
+
+            int i = 0;
+            string stockageMassEx="";
+
+            DialogResult resultat = MessageBox.Show("Vous êtes sur le point d'attribuer des numéros de bracelets pour la campagne " + Program.outils.getCampagneActuelle() + ". \nÊtes vous sûr de vouloir les attribués sur cette année ?", "Attribution automatique des bracelets", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if(resultat == System.Windows.Forms.DialogResult.Yes)
+            {
+                if(Action_Form3_Suite.MassifIn.Count == 0)
+                {
+                    if(Action_Form3_Suite.MassifEx.Count > 0)
+                    {
+                        while(i<Action_Form3_Suite.MassifEx.Count)
+                        {
+                            stockageMassEx = stockageMassEx + Action_Form3_Suite.MassifEx[i];
+
+                            i++;
+                        }
+
+                        if(i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
+                        {
+                            //Insert Into
+                        }
+                        else
+                        {
+                            //Delete
+                        }
+
+                    }
+                    else
+                    {
+                        if (i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
+                        {
+                            //Insert Into
+                        }
+                        else
+                        {
+                            //Delete
+                        }
+                    }
+                }
+                else
+                {
+                    while (i < Action_Form3_Suite.MassifEx.Count)
+                    {
+                        stockageMassEx = stockageMassEx + Action_Form3_Suite.MassifEx[i];
+
+                        i++;
+                    }
+
+                    if (Action_Form3_Suite.MassifEx.Count > 0)
+                    {
+                        if (i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
+                        {
+                            //Insert Into
+                        }
+                        else
+                        {
+                            //Delete
+                        }
+                    }
+                    else
+                    {
+                        if (i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
+                        {
+                            //Insert Into
+                        }
+                        else
+                        {
+                            //Delete
+                        }
+                    }
+                }
+            }
+
+
         }
     }
 }

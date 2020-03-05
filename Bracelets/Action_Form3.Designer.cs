@@ -99,7 +99,7 @@
             // 
             this.bt_Annuler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_Annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Annuler.Location = new System.Drawing.Point(691, 638);
+            this.bt_Annuler.Location = new System.Drawing.Point(1210, 651);
             this.bt_Annuler.Name = "bt_Annuler";
             this.bt_Annuler.Size = new System.Drawing.Size(142, 40);
             this.bt_Annuler.TabIndex = 15;
@@ -112,19 +112,20 @@
             this.bt_lancer_Attrib.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_lancer_Attrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_lancer_Attrib.ForeColor = System.Drawing.Color.Firebrick;
-            this.bt_lancer_Attrib.Location = new System.Drawing.Point(328, 638);
+            this.bt_lancer_Attrib.Location = new System.Drawing.Point(501, 651);
             this.bt_lancer_Attrib.Name = "bt_lancer_Attrib";
             this.bt_lancer_Attrib.Size = new System.Drawing.Size(314, 40);
             this.bt_lancer_Attrib.TabIndex = 14;
             this.bt_lancer_Attrib.Text = "Lancer l\'attribution automatique\r\n";
             this.bt_lancer_Attrib.UseVisualStyleBackColor = true;
+            this.bt_lancer_Attrib.Click += new System.EventHandler(this.bt_lancer_Attrib_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(484, 487);
+            this.label4.Location = new System.Drawing.Point(729, 469);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 24);
             this.label4.TabIndex = 12;
@@ -134,9 +135,9 @@
             // 
             this.bt_Action_Form3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_Action_Form3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Action_Form3.Location = new System.Drawing.Point(465, 554);
+            this.bt_Action_Form3.Location = new System.Drawing.Point(733, 535);
             this.bt_Action_Form3.Name = "bt_Action_Form3";
-            this.bt_Action_Form3.Size = new System.Drawing.Size(368, 33);
+            this.bt_Action_Form3.Size = new System.Drawing.Size(460, 50);
             this.bt_Action_Form3.TabIndex = 11;
             this.bt_Action_Form3.Text = "Selection massifs  -> Tous les massifs";
             this.bt_Action_Form3.UseVisualStyleBackColor = true;
@@ -146,7 +147,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(232, 416);
+            this.label3.Location = new System.Drawing.Point(497, 429);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(855, 24);
             this.label3.TabIndex = 10;
@@ -158,7 +159,7 @@
             this.lb.AutoSize = true;
             this.lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb.ForeColor = System.Drawing.Color.Firebrick;
-            this.lb.Location = new System.Drawing.Point(359, 189);
+            this.lb.Location = new System.Drawing.Point(624, 202);
             this.lb.Name = "lb";
             this.lb.Size = new System.Drawing.Size(641, 192);
             this.lb.TabIndex = 9;
@@ -169,7 +170,7 @@
             this.lbBasculPropAccord.AutoSize = true;
             this.lbBasculPropAccord.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBasculPropAccord.ForeColor = System.Drawing.Color.Firebrick;
-            this.lbBasculPropAccord.Location = new System.Drawing.Point(436, 52);
+            this.lbBasculPropAccord.Location = new System.Drawing.Point(726, 62);
             this.lbBasculPropAccord.Name = "lbBasculPropAccord";
             this.lbBasculPropAccord.Size = new System.Drawing.Size(397, 78);
             this.lbBasculPropAccord.TabIndex = 8;
@@ -180,7 +181,7 @@
             // 
             this.DateAttr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateAttr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateAttr.Location = new System.Drawing.Point(648, 487);
+            this.DateAttr.Location = new System.Drawing.Point(1036, 465);
             this.DateAttr.Name = "DateAttr";
             this.DateAttr.Size = new System.Drawing.Size(132, 29);
             this.DateAttr.TabIndex = 16;
@@ -200,7 +201,7 @@
             this.quitterBraceletToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -548,7 +549,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -579,13 +580,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -629,7 +630,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.DateAttr);
             this.Controls.Add(this.bt_Annuler);

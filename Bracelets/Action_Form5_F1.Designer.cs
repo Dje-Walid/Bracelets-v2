@@ -31,10 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Action_Form5_F1));
             this.lbTitre = new System.Windows.Forms.Label();
             this.dgvBrac = new System.Windows.Forms.DataGridView();
-            this.lbCodeBrac = new System.Windows.Forms.Label();
-            this.lbPrix = new System.Windows.Forms.Label();
-            this.lbNom = new System.Windows.Forms.Label();
-            this.lbNumLastBrac = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,6 +75,7 @@
             this.codesRefusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.codesCampagnesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.codesCommunesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sécuritéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changerDeMotDePasseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,7 +86,6 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBrac)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -113,46 +109,7 @@
             this.dgvBrac.Name = "dgvBrac";
             this.dgvBrac.Size = new System.Drawing.Size(1118, 434);
             this.dgvBrac.TabIndex = 1;
-            // 
-            // lbCodeBrac
-            // 
-            this.lbCodeBrac.AutoSize = true;
-            this.lbCodeBrac.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodeBrac.Location = new System.Drawing.Point(371, 180);
-            this.lbCodeBrac.Name = "lbCodeBrac";
-            this.lbCodeBrac.Size = new System.Drawing.Size(141, 24);
-            this.lbCodeBrac.TabIndex = 2;
-            this.lbCodeBrac.Text = "Code bracelet";
-            // 
-            // lbPrix
-            // 
-            this.lbPrix.AutoSize = true;
-            this.lbPrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrix.Location = new System.Drawing.Point(980, 180);
-            this.lbPrix.Name = "lbPrix";
-            this.lbPrix.Size = new System.Drawing.Size(46, 24);
-            this.lbPrix.TabIndex = 3;
-            this.lbPrix.Text = "Prix";
-            // 
-            // lbNom
-            // 
-            this.lbNom.AutoSize = true;
-            this.lbNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNom.Location = new System.Drawing.Point(670, 180);
-            this.lbNom.Name = "lbNom";
-            this.lbNom.Size = new System.Drawing.Size(165, 24);
-            this.lbNom.TabIndex = 4;
-            this.lbNom.Text = "Nom du bracelet";
-            // 
-            // lbNumLastBrac
-            // 
-            this.lbNumLastBrac.AutoSize = true;
-            this.lbNumLastBrac.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNumLastBrac.Location = new System.Drawing.Point(1154, 180);
-            this.lbNumLastBrac.Name = "lbNumLastBrac";
-            this.lbNumLastBrac.Size = new System.Drawing.Size(329, 24);
-            this.lbNumLastBrac.TabIndex = 5;
-            this.lbNumLastBrac.Text = "Numéro du dernier bracelet utilisé";
+            this.dgvBrac.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrac_CellContentClick);
             // 
             // menuStrip1
             // 
@@ -515,6 +472,13 @@
             this.codesCommunesToolStripMenuItem.Text = "Codes communes";
             this.codesCommunesToolStripMenuItem.Click += new System.EventHandler(this.codesCommunesToolStripMenuItem_Click);
             // 
+            // importExportToolStripMenuItem
+            // 
+            this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Text = "Import/Export";
+            this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
+            // 
             // sécuritéToolStripMenuItem
             // 
             this.sécuritéToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -542,13 +506,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -587,13 +551,6 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // importExportToolStripMenuItem
-            // 
-            this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.importExportToolStripMenuItem.Text = "Import/Export";
-            this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
-            // 
             // Action_Form5_F1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,10 +558,6 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1364, 744);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.lbNumLastBrac);
-            this.Controls.Add(this.lbNom);
-            this.Controls.Add(this.lbPrix);
-            this.Controls.Add(this.lbCodeBrac);
             this.Controls.Add(this.dgvBrac);
             this.Controls.Add(this.lbTitre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -624,10 +577,6 @@
 
         private System.Windows.Forms.Label lbTitre;
         private System.Windows.Forms.DataGridView dgvBrac;
-        private System.Windows.Forms.Label lbCodeBrac;
-        private System.Windows.Forms.Label lbPrix;
-        private System.Windows.Forms.Label lbNom;
-        private System.Windows.Forms.Label lbNumLastBrac;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem environnementCourantToolStripMenuItem;
