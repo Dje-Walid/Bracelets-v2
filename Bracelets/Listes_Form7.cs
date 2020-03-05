@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Bracelet
 {
@@ -90,7 +91,7 @@ namespace Bracelet
 
         private void editionsDDAFToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void arrêtésIndividuelsTirÀLapprocheToolStripMenuItem_Click(object sender, EventArgs e)
@@ -137,7 +138,7 @@ namespace Bracelet
 
         private void editionsFédérationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void listingDétiquettesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -148,7 +149,7 @@ namespace Bracelet
 
         private void statistiquesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void statistiquesParZoneToolStripMenuItem_Click(object sender, EventArgs e)
@@ -353,6 +354,106 @@ namespace Bracelet
             this.Hide();
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
+        }
+
+        private void Listes_Form7_Load(object sender, EventArgs e)
+        {
+            dvgSerieBracelets.ReadOnly = true;
+
+            Program.outils.getConnection().Open();
+            string requete0 = "Select [CdBracelet] from tlBracelets;";
+            string requete1 = "Select [LibBracelet] from tlBracelets;";
+            string requete2 = "Select [CodeBraceletImprime] from tlBracelets;";
+
+
+            OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+            OleDbDataReader dr0 = cmd0.ExecuteReader();
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+            OleDbDataReader dr2 = cmd2.ExecuteReader();
+
+            dvgSerieBracelets.ColumnCount = 3;
+            dvgSerieBracelets.Columns[0].Name = "Code Bracelet";
+            dvgSerieBracelets.Columns[1].Name = "Nom de la série de bracelets ";
+            dvgSerieBracelets.Columns[2].Name = "Code Imprimé sur les bracelets";
+
+            string[] tabSerie;
+
+
+            while (dr0.Read() && dr1.Read() && dr2.Read())
+            {
+                tabSerie = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
+                dvgSerieBracelets.Rows.Add(tabSerie);
+            }
+            Program.outils.getConnection().Close();
+        }
+
+        private void ckbxModif_CheckedChanged(object sender, EventArgs e)
+        {
+            
+           
+
+            if (ckbxModif.Checked == true)
+            {
+                DialogResult result = MessageBox.Show(" Voulez-vous vraiment modifier la liste des séries de bracelets ?\nIl est possible de modifier les libellés sans problème. \nPour supprimer des listes de séries de bracelets, \n Il vaut mieux demander l'aide d'un informaticien. \n Il est interdit de modifier un code série de bracelets déjà utilisé. \n", "AVERTISSEMENT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    ckbxModif.Checked = false;
+                }
+
+                dvgSerieBracelets.ReadOnly = false;
+                ckbxModif.ForeColor = System.Drawing.Color.Firebrick;
+
+                ckbxModif.Text = "Modifier";
+            }
+            else
+              if (ckbxModif.Checked == false)
+            {
+                ckbxModif.ForeColor = System.Drawing.Color.Black;
+                ckbxModif.Text = "Modification";
+                dvgSerieBracelets.Rows.Clear();
+
+                #region "actualisation datagridview"
+
+                Program.outils.getConnection().Open();
+                string requete0 = "Select [CdBracelet] from tlBracelets;";
+                string requete1 = "Select [LibBracelet] from tlBracelets;";
+                string requete2 = "Select [CodeBraceletImprime] from tlBracelets;";
+
+
+                OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+                OleDbDataReader dr0 = cmd0.ExecuteReader();
+                OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+                OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+                OleDbDataReader dr2 = cmd2.ExecuteReader();
+
+                dvgSerieBracelets.ColumnCount = 3;
+                dvgSerieBracelets.Columns[0].Name = "Code Bracelet";
+                dvgSerieBracelets.Columns[1].Name = "Nom de la série de bracelets ";
+                dvgSerieBracelets.Columns[2].Name = "Code Imprimé sur les bracelets";
+
+                string[] tabSerie;
+
+
+                while (dr0.Read() && dr1.Read() && dr2.Read())
+                {
+                    tabSerie = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
+                    dvgSerieBracelets.Rows.Add(tabSerie);
+                }
+                Program.outils.getConnection().Close();
+
+
+                #endregion
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Program.outils.allerMenu(this);
         }
     }
 }

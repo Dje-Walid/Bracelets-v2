@@ -120,6 +120,13 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="lbRappel.Text" xml:space="preserve">
+    <value>Rappel : Une série de bracelets peut être attribuée à plusieurs gibiers (ex : cerf mâle de récolte et cerf mâle 
+de régulation peuvent -par choix - avoir des numéros de bracelets attribués dans la même série).
+
+Note : L'informaticien vous suggère de faire commencer les codes séries de bracelets par la lettre B pour les 
+distinguer facilement des codes espèces et gibiers.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

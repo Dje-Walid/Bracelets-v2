@@ -90,16 +90,6 @@
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.braceletBDD = new Bracelet.BraceletBDD();
             this.dgvGibiers = new System.Windows.Forms.DataGridView();
-            this.cdGibierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libGibierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdEspeceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdTypePlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdBraceletDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ordreAffichageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gibierPreAfficheDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.gibierPreAffichRealisDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.compteEffectifsDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.gratuitDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tlGibiersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tlGibiersTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlGibiersTableAdapter();
             this.ckbxModif = new System.Windows.Forms.CheckBox();
@@ -591,104 +581,12 @@
             // 
             // dgvGibiers
             // 
-            this.dgvGibiers.AutoGenerateColumns = false;
             this.dgvGibiers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGibiers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cdGibierDataGridViewTextBoxColumn,
-            this.libGibierDataGridViewTextBoxColumn,
-            this.cdEspeceDataGridViewTextBoxColumn,
-            this.cdTypePlanDataGridViewTextBoxColumn,
-            this.cdBraceletDataGridViewTextBoxColumn,
-            this.ordreAffichageDataGridViewTextBoxColumn,
-            this.gibierPreAfficheDataGridViewCheckBoxColumn,
-            this.gibierPreAffichRealisDataGridViewCheckBoxColumn,
-            this.compteEffectifsDataGridViewCheckBoxColumn,
-            this.gratuitDataGridViewCheckBoxColumn});
-            this.dgvGibiers.DataSource = this.tlGibiersBindingSource;
             this.dgvGibiers.Location = new System.Drawing.Point(51, 192);
             this.dgvGibiers.Name = "dgvGibiers";
-            this.dgvGibiers.Size = new System.Drawing.Size(1054, 444);
+            this.dgvGibiers.Size = new System.Drawing.Size(1036, 444);
             this.dgvGibiers.TabIndex = 161;
-            // 
-            // cdGibierDataGridViewTextBoxColumn
-            // 
-            this.cdGibierDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cdGibierDataGridViewTextBoxColumn.DataPropertyName = "CdGibier";
-            this.cdGibierDataGridViewTextBoxColumn.HeaderText = "Cd Gibier";
-            this.cdGibierDataGridViewTextBoxColumn.Name = "cdGibierDataGridViewTextBoxColumn";
-            this.cdGibierDataGridViewTextBoxColumn.Width = 69;
-            // 
-            // libGibierDataGridViewTextBoxColumn
-            // 
-            this.libGibierDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.libGibierDataGridViewTextBoxColumn.DataPropertyName = "LibGibier";
-            this.libGibierDataGridViewTextBoxColumn.HeaderText = "Nom du gibier";
-            this.libGibierDataGridViewTextBoxColumn.Name = "libGibierDataGridViewTextBoxColumn";
-            this.libGibierDataGridViewTextBoxColumn.Width = 89;
-            // 
-            // cdEspeceDataGridViewTextBoxColumn
-            // 
-            this.cdEspeceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cdEspeceDataGridViewTextBoxColumn.DataPropertyName = "CdEspece";
-            this.cdEspeceDataGridViewTextBoxColumn.HeaderText = "Code Espèce :";
-            this.cdEspeceDataGridViewTextBoxColumn.Name = "cdEspeceDataGridViewTextBoxColumn";
-            this.cdEspeceDataGridViewTextBoxColumn.Width = 94;
-            // 
-            // cdTypePlanDataGridViewTextBoxColumn
-            // 
-            this.cdTypePlanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cdTypePlanDataGridViewTextBoxColumn.DataPropertyName = "CdTypePlan";
-            this.cdTypePlanDataGridViewTextBoxColumn.HeaderText = "CdTypePlan";
-            this.cdTypePlanDataGridViewTextBoxColumn.Name = "cdTypePlanDataGridViewTextBoxColumn";
-            this.cdTypePlanDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // cdBraceletDataGridViewTextBoxColumn
-            // 
-            this.cdBraceletDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cdBraceletDataGridViewTextBoxColumn.DataPropertyName = "CdBracelet";
-            this.cdBraceletDataGridViewTextBoxColumn.HeaderText = "Code série de bracelets :";
-            this.cdBraceletDataGridViewTextBoxColumn.Name = "cdBraceletDataGridViewTextBoxColumn";
-            this.cdBraceletDataGridViewTextBoxColumn.Width = 136;
-            // 
-            // ordreAffichageDataGridViewTextBoxColumn
-            // 
-            this.ordreAffichageDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ordreAffichageDataGridViewTextBoxColumn.DataPropertyName = "OrdreAffichage";
-            this.ordreAffichageDataGridViewTextBoxColumn.HeaderText = "Ordre affichage";
-            this.ordreAffichageDataGridViewTextBoxColumn.Name = "ordreAffichageDataGridViewTextBoxColumn";
-            this.ordreAffichageDataGridViewTextBoxColumn.Width = 96;
-            // 
-            // gibierPreAfficheDataGridViewCheckBoxColumn
-            // 
-            this.gibierPreAfficheDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.gibierPreAfficheDataGridViewCheckBoxColumn.DataPropertyName = "GibierPreAffiche";
-            this.gibierPreAfficheDataGridViewCheckBoxColumn.HeaderText = "GibierPreAffiche";
-            this.gibierPreAfficheDataGridViewCheckBoxColumn.Name = "gibierPreAfficheDataGridViewCheckBoxColumn";
-            this.gibierPreAfficheDataGridViewCheckBoxColumn.Width = 89;
-            // 
-            // gibierPreAffichRealisDataGridViewCheckBoxColumn
-            // 
-            this.gibierPreAffichRealisDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.gibierPreAffichRealisDataGridViewCheckBoxColumn.DataPropertyName = "GibierPreAffichRealis";
-            this.gibierPreAffichRealisDataGridViewCheckBoxColumn.HeaderText = "GibierPreAffichRealis";
-            this.gibierPreAffichRealisDataGridViewCheckBoxColumn.Name = "gibierPreAffichRealisDataGridViewCheckBoxColumn";
-            this.gibierPreAffichRealisDataGridViewCheckBoxColumn.Width = 112;
-            // 
-            // compteEffectifsDataGridViewCheckBoxColumn
-            // 
-            this.compteEffectifsDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.compteEffectifsDataGridViewCheckBoxColumn.DataPropertyName = "CompteEffectifs";
-            this.compteEffectifsDataGridViewCheckBoxColumn.HeaderText = "Compter effectif";
-            this.compteEffectifsDataGridViewCheckBoxColumn.Name = "compteEffectifsDataGridViewCheckBoxColumn";
-            this.compteEffectifsDataGridViewCheckBoxColumn.Width = 78;
-            // 
-            // gratuitDataGridViewCheckBoxColumn
-            // 
-            this.gratuitDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.gratuitDataGridViewCheckBoxColumn.DataPropertyName = "Gratuit";
-            this.gratuitDataGridViewCheckBoxColumn.HeaderText = "Bracelet gratuit";
-            this.gratuitDataGridViewCheckBoxColumn.Name = "gratuitDataGridViewCheckBoxColumn";
-            this.gratuitDataGridViewCheckBoxColumn.Width = 76;
+            this.dgvGibiers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGibiers_CellContentClick);
             // 
             // tlGibiersBindingSource
             // 
@@ -806,16 +704,6 @@
         private System.Windows.Forms.DataGridView dgvGibiers;
         private System.Windows.Forms.BindingSource tlGibiersBindingSource;
         private BraceletBDDTableAdapters.tlGibiersTableAdapter tlGibiersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdGibierDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn libGibierDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdEspeceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdTypePlanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdBraceletDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ordreAffichageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn gibierPreAfficheDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn gibierPreAffichRealisDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn compteEffectifsDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn gratuitDataGridViewCheckBoxColumn;
         private System.Windows.Forms.CheckBox ckbxModif;
     }
 }
