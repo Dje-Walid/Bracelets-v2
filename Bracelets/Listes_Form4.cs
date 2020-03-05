@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Bracelet
 {
@@ -90,7 +91,7 @@ namespace Bracelet
 
         private void editionsDDAFToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void arrêtésIndividuelsTirÀLapprocheToolStripMenuItem_Click(object sender, EventArgs e)
@@ -137,7 +138,7 @@ namespace Bracelet
 
         private void editionsFédérationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void listingDétiquettesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -148,7 +149,7 @@ namespace Bracelet
 
         private void statistiquesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void statistiquesParZoneToolStripMenuItem_Click(object sender, EventArgs e)
@@ -244,7 +245,7 @@ namespace Bracelet
             importExport_Form1a.Show();
         }
 
-       
+
 
         private void changerDeMotDePasseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -354,6 +355,93 @@ namespace Bracelet
             this.Hide();
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
+        }
+
+        private void Listes_Form4_Load(object sender, EventArgs e)
+        {
+            dvgZones.ReadOnly = true;
+
+            Program.outils.getConnection().Open();
+            string requete0 = "Select [CdMassif] from tlMassifs;";
+            string requete1 = "Select [LibMassif] from tlMassifs;";
+
+            OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+            OleDbDataReader dr0 = cmd0.ExecuteReader();
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+
+
+
+            dvgZones.ColumnCount = 2;
+            dvgZones.Columns[0].Name = "N° de zone";
+            dvgZones.Columns[1].Name = "Nom de la zone";
+
+
+
+
+            string[] tabZones;
+
+
+            while (dr0.Read() && dr1.Read())
+            {
+                tabZones = new string[] { dr0[0].ToString(), dr1[0].ToString() };
+                dvgZones.Rows.Add(tabZones);
+            }
+            Program.outils.getConnection().Close();
+
+        }
+
+        private void ckbxModif_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbxModif.Checked == true)
+            {
+                dvgZones.ReadOnly = false;
+                ckbxModif.ForeColor = System.Drawing.Color.Firebrick;
+                ckbxModif.Text = "Modifier";
+
+            }
+            else
+               if (ckbxModif.Checked == false)
+            {
+                ckbxModif.ForeColor = System.Drawing.Color.Black;
+                ckbxModif.Text = "Modification";
+
+                #region "actualisation datagridview"
+                dvgZones.Rows.Clear();
+                dvgZones.ReadOnly = true;
+
+                Program.outils.getConnection().Open();
+                string requete0 = "Select [CdMassif] from tlMassifs;";
+                string requete1 = "Select [LibMassif] from tlMassifs;";
+
+                OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+                OleDbDataReader dr0 = cmd0.ExecuteReader();
+                OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+
+                dvgZones.ColumnCount = 2;
+                dvgZones.Columns[0].Name = "N° de zone";
+                dvgZones.Columns[1].Name = "Nom de la zone";
+
+                string[] tabZones;
+
+
+                while (dr0.Read() && dr1.Read())
+                {
+                    tabZones = new string[] { dr0[0].ToString(), dr1[0].ToString() };
+                    dvgZones.Rows.Add(tabZones);
+                }
+                Program.outils.getConnection().Close();
+                #endregion
+
+                dvgZones.ReadOnly = true;
+                MessageBox.Show("Vos modification on bien étè enregistrée");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Program.outils.allerMenu(this);
         }
     }
 }

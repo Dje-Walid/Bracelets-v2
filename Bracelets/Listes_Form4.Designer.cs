@@ -84,7 +84,13 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ckbxModif = new System.Windows.Forms.CheckBox();
+            this.dvgZones = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgZones)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -525,19 +531,87 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Firebrick;
+            this.label1.Location = new System.Drawing.Point(214, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(276, 39);
+            this.label1.TabIndex = 182;
+            this.label1.Text = "Liste des Zones";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Bracelet.Properties.Resources.logout__1_;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(986, 86);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(38, 35);
+            this.button2.TabIndex = 183;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Bracelet.Properties.Resources.search_24px;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(919, 87);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(38, 35);
+            this.button3.TabIndex = 184;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // ckbxModif
+            // 
+            this.ckbxModif.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckbxModif.AutoSize = true;
+            this.ckbxModif.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ckbxModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbxModif.ForeColor = System.Drawing.Color.Black;
+            this.ckbxModif.Location = new System.Drawing.Point(743, 87);
+            this.ckbxModif.Name = "ckbxModif";
+            this.ckbxModif.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ckbxModif.Size = new System.Drawing.Size(120, 34);
+            this.ckbxModif.TabIndex = 186;
+            this.ckbxModif.Text = "Modification";
+            this.ckbxModif.UseVisualStyleBackColor = true;
+            this.ckbxModif.CheckedChanged += new System.EventHandler(this.ckbxModif_CheckedChanged);
+            // 
+            // dvgZones
+            // 
+            this.dvgZones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgZones.Location = new System.Drawing.Point(259, 164);
+            this.dvgZones.Name = "dvgZones";
+            this.dvgZones.Size = new System.Drawing.Size(353, 349);
+            this.dvgZones.TabIndex = 187;
+            // 
             // Listes_Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.Controls.Add(this.dvgZones);
+            this.Controls.Add(this.ckbxModif);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listes_Form4";
             this.Text = "Listes_Form4";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Listes_Form4_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgZones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,5 +674,10 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.CheckBox ckbxModif;
+        private System.Windows.Forms.DataGridView dvgZones;
     }
 }

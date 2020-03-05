@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Bracelet
 {
@@ -361,6 +362,37 @@ namespace Bracelet
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlCommunes'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlCommunesTableAdapter.Fill(this.braceletBDD.tlCommunes);
 
+            Program.outils.getConnection().Open();
+            string requete0 = "select [CODE_INSEE] from tlCommunes ;";
+            string requete1 = "select [LibCommune] from tlCommunes ;";
+            string requete2 = "select [CodePostal] from tlCommunes ;";
+
+            OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+            OleDbDataReader dr0 = cmd0.ExecuteReader();
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+            OleDbDataReader dr2 = cmd2.ExecuteReader();
+
+            dgvCommunes.ColumnCount = 3;
+            dgvCommunes.Columns[0].Name = "Code INSEE";
+            dgvCommunes.Columns[1].Name = "Nom de la commune";
+            dgvCommunes.Columns[2].Name = "Code Postal";
+
+
+            string[] tabCommunes;
+
+
+            while (dr0.Read() && dr1.Read() && dr2.Read())
+            {
+                tabCommunes = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
+                dgvCommunes.Rows.Add(tabCommunes);
+            }
+            Program.outils.getConnection().Close();
+
+
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -407,7 +439,37 @@ namespace Bracelet
                 ckbxModif.ForeColor = System.Drawing.Color.Black;
                 MessageBox.Show("Vos modification on bien étè enregistrée");
                 ckbxModif.Text = "Modification";
+                dgvCommunes.Rows.Clear();
 
+                #region "actualisation datagridview"
+                Program.outils.getConnection().Open();
+                string requete0 = "select [CODE_INSEE] from tlCommunes ;";
+                string requete1 = "select [LibCommune] from tlCommunes ;";
+                string requete2 = "select [CodePostal] from tlCommunes ;";
+
+                OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+                OleDbDataReader dr0 = cmd0.ExecuteReader();
+                OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+                OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+                OleDbDataReader dr2 = cmd2.ExecuteReader();
+
+                dgvCommunes.ColumnCount = 3;
+                dgvCommunes.Columns[0].Name = "Code INSEE";
+                dgvCommunes.Columns[1].Name = "Nom de la commune";
+                dgvCommunes.Columns[2].Name = "Code Postal";
+
+
+                string[] tabCommunes;
+
+
+                while (dr0.Read() && dr1.Read() && dr2.Read())
+                {
+                    tabCommunes = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
+                    dgvCommunes.Rows.Add(tabCommunes);
+                }
+                Program.outils.getConnection().Close();
+                #endregion
 
             }
         }

@@ -365,6 +365,61 @@ namespace Bracelet
             // TODO: cette ligne de code charge les données dans la table 'braceletBDD.tlGibiers'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.tlGibiersTableAdapter.Fill(this.braceletBDD.tlGibiers);
             
+            dgvGibiers.ReadOnly = true;
+
+            Program.outils.getConnection().Open();
+            string requete0 = "Select [Cdgibier] from tlGibiers;";
+            string requete1 = "Select [LibGibier] from tlGibiers;";
+            string requete2 = "Select [CdEspece] from tlGibiers;";
+            string requete3 = "Select [CdBracelet] from tlGibiers;";
+            string requete4 = "Select [OrdreAffichage] from tlGibiers;";
+            string requete5 = "Select [GibierPreAffiche] from tlGibiers;";
+            string requete6 = "Select [GibierPreAffichRealis] from tlGibiers;";
+            string requete7 = "Select [CompteEffectifs] from tlGibiers;";
+            string requete8 = "Select [Gratuit] from tlGibiers;";
+            OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+            OleDbDataReader dr0 = cmd0.ExecuteReader();
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+            OleDbDataReader dr2 = cmd2.ExecuteReader();
+            OleDbCommand cmd3 = new OleDbCommand(requete3, Program.outils.getConnection());
+            OleDbDataReader dr3 = cmd3.ExecuteReader();
+            OleDbCommand cmd4 = new OleDbCommand(requete4, Program.outils.getConnection());
+            OleDbDataReader dr4 = cmd4.ExecuteReader();
+            OleDbCommand cmd5 = new OleDbCommand(requete5, Program.outils.getConnection());
+            OleDbDataReader dr5 = cmd5.ExecuteReader();
+            OleDbCommand cmd6 = new OleDbCommand(requete6, Program.outils.getConnection());
+            OleDbDataReader dr6 = cmd6.ExecuteReader();
+            OleDbCommand cmd7 = new OleDbCommand(requete7, Program.outils.getConnection());
+            OleDbDataReader dr7 = cmd7.ExecuteReader();
+            OleDbCommand cmd8 = new OleDbCommand(requete8, Program.outils.getConnection());
+            OleDbDataReader dr8 = cmd8.ExecuteReader();
+
+
+            dgvGibiers.ColumnCount = 9;
+            dgvGibiers.Columns[0].Name = "Code gibier";
+            dgvGibiers.Columns[1].Name = " Nom du gibier :";
+            dgvGibiers.Columns[2].Name = " Code Espèce";
+            dgvGibiers.Columns[3].Name = "Code série de bracelets : ";
+            dgvGibiers.Columns[4].Name = " Ordre Affichage";
+            dgvGibiers.Columns[5].Name = "Pré-affich demande";
+            dgvGibiers.Columns[6].Name = " Pré-affich réalisé";
+            dgvGibiers.Columns[7].Name = " Compter effectif";
+            dgvGibiers.Columns[8].Name = " Bracelet gratuit";
+
+
+
+            string[] tabGibiers;
+
+
+            while (dr0.Read() && dr1.Read() && dr2.Read() && dr3.Read() && dr4.Read() && dr5.Read() && dr6.Read() && dr7.Read() && dr8.Read())
+            {
+                tabGibiers = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString(), dr3[0].ToString(), dr4[0].ToString(), dr5[0].ToString(), dr6[0].ToString(), dr7[0].ToString(), dr8[0].ToString(), };
+                dgvGibiers.Rows.Add(tabGibiers);
+            }
+            Program.outils.getConnection().Close();
+
 
         }
 
@@ -391,6 +446,7 @@ namespace Bracelet
         {
             if (ckbxModif.Checked == true)
             {
+                dgvGibiers.ReadOnly = false;
                 ckbxModif.ForeColor = System.Drawing.Color.Firebrick;
                 ckbxModif.Text = "Modifier";
                 
@@ -401,11 +457,71 @@ namespace Bracelet
                 ckbxModif.ForeColor = System.Drawing.Color.Black;
                 ckbxModif.Text = "Modification";
 
+                #region "actualisation datagridview"
+                dgvGibiers.Rows.Clear();
+                Program.outils.getConnection().Open();
+                string requete0 = "Select [Cdgibier] from tlGibiers;";
+                string requete1 = "Select [LibGibier] from tlGibiers;";
+                string requete2 = "Select [CdEspece] from tlGibiers;";
+                string requete3 = "Select [CdBracelet] from tlGibiers;";
+                string requete4 = "Select [OrdreAffichage] from tlGibiers;";
+                string requete5 = "Select [GibierPreAffiche] from tlGibiers;";
+                string requete6 = "Select [GibierPreAffichRealis] from tlGibiers;";
+                string requete7 = "Select [CompteEffectifs] from tlGibiers;";
+                string requete8 = "Select [Gratuit] from tlGibiers;";
+                OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+                OleDbDataReader dr0 = cmd0.ExecuteReader();
+                OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+                OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+                OleDbDataReader dr2 = cmd2.ExecuteReader();
+                OleDbCommand cmd3 = new OleDbCommand(requete3, Program.outils.getConnection());
+                OleDbDataReader dr3 = cmd3.ExecuteReader();
+                OleDbCommand cmd4 = new OleDbCommand(requete4, Program.outils.getConnection());
+                OleDbDataReader dr4 = cmd4.ExecuteReader();
+                OleDbCommand cmd5 = new OleDbCommand(requete5, Program.outils.getConnection());
+                OleDbDataReader dr5 = cmd5.ExecuteReader();
+                OleDbCommand cmd6 = new OleDbCommand(requete6, Program.outils.getConnection());
+                OleDbDataReader dr6 = cmd6.ExecuteReader();
+                OleDbCommand cmd7 = new OleDbCommand(requete7, Program.outils.getConnection());
+                OleDbDataReader dr7 = cmd7.ExecuteReader();
+                OleDbCommand cmd8 = new OleDbCommand(requete8, Program.outils.getConnection());
+                OleDbDataReader dr8 = cmd8.ExecuteReader();
 
 
+                dgvGibiers.ColumnCount = 9;
+                dgvGibiers.Columns[0].Name = "Code gibier";
+                dgvGibiers.Columns[1].Name = " Nom du gibier :";
+                dgvGibiers.Columns[2].Name = " Code Espèce";
+                dgvGibiers.Columns[3].Name = "Code série de bracelets : ";
+                dgvGibiers.Columns[4].Name = " Ordre Affichage";
+                dgvGibiers.Columns[5].Name = "Pré-affich demande";
+                dgvGibiers.Columns[6].Name = " Pré-affich réalisé";
+                dgvGibiers.Columns[7].Name = " Compter effectif";
+                dgvGibiers.Columns[8].Name = " Bracelet gratuit";
+
+
+
+                string[] tabGibiers;
+
+
+                while (dr0.Read() && dr1.Read() && dr2.Read() && dr3.Read() && dr4.Read() && dr5.Read() && dr6.Read() && dr7.Read() && dr8.Read())
+                {
+                    tabGibiers = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString(), dr3[0].ToString(), dr4[0].ToString(), dr5[0].ToString(), dr6[0].ToString(), dr7[0].ToString(), dr8[0].ToString(), };
+                    dgvGibiers.Rows.Add(tabGibiers);
+                }
+                Program.outils.getConnection().Close();
+                #endregion
+
+                dgvGibiers.ReadOnly = true;
                 MessageBox.Show("Vos modification on bien étè enregistrée");
 
             }
+        }
+
+        private void dgvGibiers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

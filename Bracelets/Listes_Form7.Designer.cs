@@ -84,7 +84,14 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dvgSerieBracelets = new System.Windows.Forms.DataGridView();
+            this.ckbxModif = new System.Windows.Forms.CheckBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lbTitre = new System.Windows.Forms.Label();
+            this.lbRappel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgSerieBracelets)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -525,19 +532,98 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // dvgSerieBracelets
+            // 
+            this.dvgSerieBracelets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgSerieBracelets.Location = new System.Drawing.Point(214, 163);
+            this.dvgSerieBracelets.Name = "dvgSerieBracelets";
+            this.dvgSerieBracelets.Size = new System.Drawing.Size(353, 349);
+            this.dvgSerieBracelets.TabIndex = 192;
+            // 
+            // ckbxModif
+            // 
+            this.ckbxModif.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckbxModif.AutoSize = true;
+            this.ckbxModif.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ckbxModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbxModif.ForeColor = System.Drawing.Color.Black;
+            this.ckbxModif.Location = new System.Drawing.Point(698, 86);
+            this.ckbxModif.Name = "ckbxModif";
+            this.ckbxModif.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ckbxModif.Size = new System.Drawing.Size(120, 34);
+            this.ckbxModif.TabIndex = 191;
+            this.ckbxModif.Text = "Modification";
+            this.ckbxModif.UseVisualStyleBackColor = true;
+            this.ckbxModif.CheckedChanged += new System.EventHandler(this.ckbxModif_CheckedChanged);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Bracelet.Properties.Resources.search_24px;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(874, 86);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(38, 35);
+            this.button3.TabIndex = 190;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Bracelet.Properties.Resources.logout__1_;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(941, 85);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(38, 35);
+            this.button2.TabIndex = 189;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lbTitre
+            // 
+            this.lbTitre.AutoSize = true;
+            this.lbTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitre.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbTitre.Location = new System.Drawing.Point(145, 85);
+            this.lbTitre.Name = "lbTitre";
+            this.lbTitre.Size = new System.Drawing.Size(486, 39);
+            this.lbTitre.TabIndex = 188;
+            this.lbTitre.Text = "Liste des séries de bracelets\r\n";
+            this.lbTitre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbRappel
+            // 
+            this.lbRappel.AutoSize = true;
+            this.lbRappel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRappel.Location = new System.Drawing.Point(115, 564);
+            this.lbRappel.Name = "lbRappel";
+            this.lbRappel.Size = new System.Drawing.Size(723, 90);
+            this.lbRappel.TabIndex = 193;
+            this.lbRappel.Text = resources.GetString("lbRappel.Text");
+            // 
             // Listes_Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.Controls.Add(this.lbRappel);
+            this.Controls.Add(this.dvgSerieBracelets);
+            this.Controls.Add(this.ckbxModif);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lbTitre);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listes_Form7";
             this.Text = "Listes_Form7";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Listes_Form7_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgSerieBracelets)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,5 +686,11 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private System.Windows.Forms.DataGridView dvgSerieBracelets;
+        private System.Windows.Forms.CheckBox ckbxModif;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lbTitre;
+        private System.Windows.Forms.Label lbRappel;
     }
 }

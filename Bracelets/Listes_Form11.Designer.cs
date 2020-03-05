@@ -89,9 +89,6 @@
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvCommunes = new System.Windows.Forms.DataGridView();
-            this.cODEINSEEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libCommuneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codePostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlCommunesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.braceletBDD = new Bracelet.BraceletBDD();
             this.tlCommunesTableAdapter = new Bracelet.BraceletBDDTableAdapters.tlCommunesTableAdapter();
@@ -582,49 +579,16 @@
             // 
             this.dgvCommunes.AllowUserToResizeColumns = false;
             this.dgvCommunes.AllowUserToResizeRows = false;
-            this.dgvCommunes.AutoGenerateColumns = false;
             this.dgvCommunes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvCommunes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvCommunes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCommunes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cODEINSEEDataGridViewTextBoxColumn,
-            this.libCommuneDataGridViewTextBoxColumn,
-            this.codePostalDataGridViewTextBoxColumn});
-            this.dgvCommunes.DataSource = this.tlCommunesBindingSource;
             this.dgvCommunes.Location = new System.Drawing.Point(150, 190);
             this.dgvCommunes.MultiSelect = false;
             this.dgvCommunes.Name = "dgvCommunes";
             this.dgvCommunes.ReadOnly = true;
-            this.dgvCommunes.Size = new System.Drawing.Size(370, 411);
+            this.dgvCommunes.Size = new System.Drawing.Size(406, 411);
             this.dgvCommunes.TabIndex = 166;
             this.dgvCommunes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // cODEINSEEDataGridViewTextBoxColumn
-            // 
-            this.cODEINSEEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cODEINSEEDataGridViewTextBoxColumn.DataPropertyName = "CODE_INSEE";
-            this.cODEINSEEDataGridViewTextBoxColumn.HeaderText = "CODE INSEE";
-            this.cODEINSEEDataGridViewTextBoxColumn.Name = "cODEINSEEDataGridViewTextBoxColumn";
-            this.cODEINSEEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cODEINSEEDataGridViewTextBoxColumn.Width = 89;
-            // 
-            // libCommuneDataGridViewTextBoxColumn
-            // 
-            this.libCommuneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.libCommuneDataGridViewTextBoxColumn.DataPropertyName = "LibCommune";
-            this.libCommuneDataGridViewTextBoxColumn.HeaderText = "Nom de la commune";
-            this.libCommuneDataGridViewTextBoxColumn.Name = "libCommuneDataGridViewTextBoxColumn";
-            this.libCommuneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.libCommuneDataGridViewTextBoxColumn.Width = 118;
-            // 
-            // codePostalDataGridViewTextBoxColumn
-            // 
-            this.codePostalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.codePostalDataGridViewTextBoxColumn.DataPropertyName = "CodePostal";
-            this.codePostalDataGridViewTextBoxColumn.HeaderText = "Code Postal";
-            this.codePostalDataGridViewTextBoxColumn.Name = "codePostalDataGridViewTextBoxColumn";
-            this.codePostalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codePostalDataGridViewTextBoxColumn.Width = 82;
             // 
             // tlCommunesBindingSource
             // 
@@ -747,9 +711,6 @@
         private BraceletBDD braceletBDD;
         private System.Windows.Forms.BindingSource tlCommunesBindingSource;
         private BraceletBDDTableAdapters.tlCommunesTableAdapter tlCommunesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cODEINSEEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn libCommuneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codePostalDataGridViewTextBoxColumn;
         private System.Windows.Forms.CheckBox ckbxModif;
     }
 }

@@ -84,7 +84,14 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dvgCampagnes = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tlTypesPlansTableAdapter1 = new Bracelet.BraceletBDDTableAdapters.tlTypesPlansTableAdapter();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgCampagnes)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -525,19 +532,84 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
+            // dvgCampagnes
+            // 
+            this.dvgCampagnes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgCampagnes.Location = new System.Drawing.Point(167, 148);
+            this.dvgCampagnes.Name = "dvgCampagnes";
+            this.dvgCampagnes.Size = new System.Drawing.Size(619, 398);
+            this.dvgCampagnes.TabIndex = 192;
+            this.dvgCampagnes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgZones_CellContentClick);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Bracelet.Properties.Resources.search_24px;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(860, 79);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(38, 35);
+            this.button3.TabIndex = 190;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Bracelet.Properties.Resources.logout__1_;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(926, 79);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(38, 35);
+            this.button2.TabIndex = 189;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Firebrick;
+            this.label1.Location = new System.Drawing.Point(194, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(364, 39);
+            this.label1.TabIndex = 188;
+            this.label1.Text = "Liste des campagnes";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(198, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(348, 13);
+            this.label2.TabIndex = 193;
+            this.label2.Text = "(Cette liste n\'est que consultable donc non modifiable avant l\'an 2030 !!!)";
+            // 
+            // tlTypesPlansTableAdapter1
+            // 
+            this.tlTypesPlansTableAdapter1.ClearBeforeFill = true;
+            // 
             // Listes_Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dvgCampagnes);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listes_Form10";
             this.Text = "Listes_Form10";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Listes_Form10_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgCampagnes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,5 +672,11 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
+        private System.Windows.Forms.DataGridView dvgCampagnes;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private BraceletBDDTableAdapters.tlTypesPlansTableAdapter tlTypesPlansTableAdapter1;
     }
 }

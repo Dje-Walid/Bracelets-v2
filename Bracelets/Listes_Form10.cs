@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.OleDb;
 namespace Bracelet
 {
     public partial class Listes_Form10 : Form
@@ -354,6 +354,56 @@ namespace Bracelet
             this.Hide();
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
+        }
+
+        private void dvgZones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Listes_Form10_Load(object sender, EventArgs e)
+        {
+            dvgCampagnes.ReadOnly = true;
+
+            Program.outils.getConnection().Open();
+            string requete0 = "Select [CdCampagne] from tlCampagnes;";
+            string requete1 = "Select [LibCampagne] from tlCampagnes;";
+            string requete2 = "Select [LibCampagneCourt] from tlCampagnes;";
+            string requete3 = "Select [CampagneInit] from tlCampagnes;";
+            string requete4 = "Select [CampagneArchiv] from tlCampagnes;";
+            
+            OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
+            OleDbDataReader dr0 = cmd0.ExecuteReader();
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+            OleDbDataReader dr2 = cmd2.ExecuteReader();
+            OleDbCommand cmd3 = new OleDbCommand(requete3, Program.outils.getConnection());
+            OleDbDataReader dr3 = cmd3.ExecuteReader();
+            OleDbCommand cmd4 = new OleDbCommand(requete4, Program.outils.getConnection());
+            OleDbDataReader dr4 = cmd4.ExecuteReader();
+            
+
+
+            dvgCampagnes.ColumnCount = 5;
+            dvgCampagnes.Columns[0].Name = "Code campagne";
+            dvgCampagnes.Columns[1].Name = " Nom Campagne: ";
+            dvgCampagnes.Columns[2].Name = " Code Espèce";
+            dvgCampagnes.Columns[3].Name = "Code série de bracelets : ";
+            dvgCampagnes.Columns[4].Name = " Ordre Affichage";
+            
+
+
+
+            string[] tabCampagnes;
+
+
+            while (dr0.Read() && dr1.Read() && dr2.Read() && dr3.Read() && dr4.Read())
+            {
+                tabCampagnes = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString(), dr3[0].ToString(), dr4[0].ToString(),  };
+                dvgCampagnes.Rows.Add(tabCampagnes);
+            }
+            Program.outils.getConnection().Close();
         }
     }
 }
