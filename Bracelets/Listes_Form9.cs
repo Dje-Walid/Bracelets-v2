@@ -433,7 +433,7 @@ namespace Bracelet
 
         private void btnModif_CheckedChanged(object sender, EventArgs e)
         {
-            if (btnModif.Checked = true)
+            if (btnModif.Checked == true)
             {
                 cbxLibRefus.Enabled = true;
                 txbxTxtLettre.Enabled = true;

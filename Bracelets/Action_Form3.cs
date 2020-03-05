@@ -389,15 +389,17 @@ namespace Bracelet
         private void bt_lancer_Attrib_Click(object sender, EventArgs e)
         {
             Program.outils.getConnection().Open();
-            string requete = "Select ";
+            string requete = "Select [NumPlan] from tbGibiers;";
             OleDbDataAdapter Max = new OleDbDataAdapter(requete, Program.outils.getConnection());
-            //Mettre ici le DataSet : https://docs.microsoft.com/fr-fr/dotnet/framework/data/adonet/performing-batch-operations-using-dataadapters
+            DataSet MaxBrac = new DataSet();
+            Max.Fill(MaxBrac, "tbBracelets");
 
-            requete = "Select (Max([NumBracelet])-Min([NumBracelet])),[NumPlan],[CdGibier] from tbGibiers group by [NumPlan],[CdGibier];";
+            requete = "Select (MAX([NumBracelet])-MIN([NumBracelet])),[NumPlan],[CdGibier] from tbBracelets group by [NumPlan],[CdGibier];";
             OleDbDataAdapter nbBrac = new OleDbDataAdapter(requete, Program.outils.getConnection());
-            //Mettre ici le DataSet : https://docs.microsoft.com/fr-fr/dotnet/framework/data/adonet/performing-batch-operations-using-dataadapters
-
-
+            DataSet nbBracelet = new DataSet();
+            nbBrac.Fill(nbBracelet, "tbBracelets2");
+            
+            int stock;
             int i = 0;
             string stockageMassEx="";
 
@@ -415,15 +417,34 @@ namespace Bracelet
                             i++;
                         }
 
-                        if(i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
-                        {
-                            //Insert Into
-                        }
-                        else
-                        {
-                            //Delete
-                        }
+                        i = 0;
 
+                        while(i < nbBracelet.Tables["tbBracelets2"].Rows.Count)
+                        {
+                            requete = "Select [NbAccorde] from tbGibiers where [NumPlan] =" + Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + " AND [CdGibier] =\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\";";
+                            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+                            OleDbDataReader dr = cmd.ExecuteReader();
+
+                            while(dr.Read())
+                            {
+                                stock = Convert.ToInt32(dr[0].ToString());
+
+                                if (Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) > stock)
+                                {
+                                    //Insert Into
+                                }
+                                else
+                                {
+                                    if(Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) < stock)
+                                    {
+                                        //Delete
+                                    }
+                                }
+                            }
+
+                            i++;
+                        }
+                        
                     }
                     else
                     {
@@ -439,15 +460,16 @@ namespace Bracelet
                 }
                 else
                 {
-                    while (i < Action_Form3_Suite.MassifEx.Count)
-                    {
-                        stockageMassEx = stockageMassEx + Action_Form3_Suite.MassifEx[i];
-
-                        i++;
-                    }
 
                     if (Action_Form3_Suite.MassifEx.Count > 0)
                     {
+                        while (i < Action_Form3_Suite.MassifEx.Count)
+                        {
+                            stockageMassEx = stockageMassEx + Action_Form3_Suite.MassifEx[i];
+
+                            i++;
+                        }
+
                         if (i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
                         {
                             //Insert Into
@@ -459,6 +481,13 @@ namespace Bracelet
                     }
                     else
                     {
+                        while (i < Action_Form3_Suite.MassifEx.Count)
+                        {
+                            stockageMassEx = stockageMassEx + Action_Form3_Suite.MassifEx[i];
+
+                            i++;
+                        }
+
                         if (i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
                         {
                             //Insert Into
@@ -471,7 +500,7 @@ namespace Bracelet
                 }
             }
 
-
+            Program.outils.getConnection().Close();
         }
     }
 }
