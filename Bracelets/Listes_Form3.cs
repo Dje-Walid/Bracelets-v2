@@ -366,19 +366,13 @@ namespace Bracelet
 
         private void Listes_Form3_Load(object sender, EventArgs e)
         {
+            
             Program.outils.getConnection().Open();
-            string requete0 = "Select [NumPlan] from tbBenefs;";
-            string requete1 = "Select [NomBenef],[PrenomBenef] from tbBenefs where [CdBenef] in (Select [CdBenef] from tbPlans where NumPlan ="+dgvAttrib.Columns[0] +"  ) ;";
-            string requete2 = "Select [CdTypePlan] from tlEspeces;";
+            string requete0 = "Select [NumPlan] from tbPlans;";
+            
 
             OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
             OleDbDataReader dr0 = cmd0.ExecuteReader();
-
-            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
-            OleDbDataReader dr1 = cmd1.ExecuteReader();
-
-            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
-            OleDbDataReader dr2 = cmd2.ExecuteReader();
 
 
 
@@ -395,13 +389,27 @@ namespace Bracelet
 
             string[] ah;
 
-            while (dr0.Read() && dr1.Read() && dr2.Read())
+            while (dr0.Read() )
             {
-                ah = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
+                ah = new string[] { dr0[0].ToString() };
                 dgvAttrib.Rows.Add(ah);
 
 
 
+            }
+
+            string requete1 = "Select [NomBenef] from tbBenefs where [CdBenef] in (Select [CdBenef] from tbPlans where NumPlan = \"" + Convert.ToString(dgvAttrib.CurrentCell.Value) + " \" ) ;";
+            string requete2 = "Select [PrenomBenef] from tbBenefs where [CdBenef] in (Select[CdBenef] from tbPlans where NumPlan = \"" + Convert.ToString(dgvAttrib.CurrentCell.Value) + "\"  ) ;";
+            OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+
+            OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+            OleDbDataReader dr2 = cmd2.ExecuteReader();
+
+            while (dr0.Read()&&dr1.Read()&&dr2.Read())
+            {
+                ah = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
+                dgvAttrib.Rows.Add(ah);
             }
 
 

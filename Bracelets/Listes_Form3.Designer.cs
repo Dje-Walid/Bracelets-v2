@@ -557,7 +557,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listes_Form3";
-            this.Text = "Listes_Form3";
+            this.Text = "Liste de demandes mises en attente - plan de chasse Grand Gibier";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Listes_Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttrib)).EndInit();
