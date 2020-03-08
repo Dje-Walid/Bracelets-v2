@@ -405,5 +405,10 @@ namespace Bracelet
             }
             Program.outils.getConnection().Close();
         }
+
+        private void Listes_Form10_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

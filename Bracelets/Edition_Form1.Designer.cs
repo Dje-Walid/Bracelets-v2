@@ -685,6 +685,8 @@
             this.Name = "Edition_Form1";
             this.Text = "Document sous-Commision";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Edition_Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Edition_Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

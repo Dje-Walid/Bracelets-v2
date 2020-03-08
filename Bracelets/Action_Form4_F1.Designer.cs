@@ -38,8 +38,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnModif = new System.Windows.Forms.Button();
             this.dgvParamBracCamp = new System.Windows.Forms.DataGridView();
-            this.cdBraceletDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libBraceletDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlBraceletsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,9 +115,6 @@
             // 
             this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
             // 
-            // braceletBDDDataSet5
-            // 
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -181,35 +176,15 @@
             this.dgvParamBracCamp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvParamBracCamp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvParamBracCamp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParamBracCamp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cdBraceletDataGridViewTextBoxColumn,
-            this.libBraceletDataGridViewTextBoxColumn});
             this.dgvParamBracCamp.DataSource = this.tlBraceletsBindingSource;
             this.dgvParamBracCamp.Location = new System.Drawing.Point(373, 266);
             this.dgvParamBracCamp.Name = "dgvParamBracCamp";
             this.dgvParamBracCamp.Size = new System.Drawing.Size(1092, 369);
             this.dgvParamBracCamp.TabIndex = 57;
             // 
-            // cdBraceletDataGridViewTextBoxColumn
-            // 
-            this.cdBraceletDataGridViewTextBoxColumn.DataPropertyName = "CdBracelet";
-            this.cdBraceletDataGridViewTextBoxColumn.HeaderText = "CdBracelet";
-            this.cdBraceletDataGridViewTextBoxColumn.Name = "cdBraceletDataGridViewTextBoxColumn";
-            this.cdBraceletDataGridViewTextBoxColumn.Width = 84;
-            // 
-            // libBraceletDataGridViewTextBoxColumn
-            // 
-            this.libBraceletDataGridViewTextBoxColumn.DataPropertyName = "LibBracelet";
-            this.libBraceletDataGridViewTextBoxColumn.HeaderText = "LibBracelet";
-            this.libBraceletDataGridViewTextBoxColumn.Name = "libBraceletDataGridViewTextBoxColumn";
-            this.libBraceletDataGridViewTextBoxColumn.Width = 85;
-            // 
             // tlBraceletsBindingSource
             // 
             this.tlBraceletsBindingSource.DataMember = "tlBracelets";
-            // 
-            // braceletBDDDataSet6
-            // 
             // 
             // menuStrip1
             // 
@@ -574,7 +549,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -605,13 +580,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -650,12 +625,6 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // tlCampagnesTableAdapter
-            // 
-            // 
-            // tlBraceletsTableAdapter
-            // 
-            // 
             // Action_Form4_F1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,6 +643,7 @@
             this.Name = "Action_Form4_F1";
             this.Text = "Paramètres des Bracelets par Campagne";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Action_Form4_F1_FormClosed);
             this.Load += new System.EventHandler(this.Action_Form4_F1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParamBracCamp)).EndInit();

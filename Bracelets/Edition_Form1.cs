@@ -393,5 +393,15 @@ namespace Bracelet
             ImportExport_Form1 importExport_Form1a = new ImportExport_Form1();
             importExport_Form1a.Show();
         }
+
+        private void Edition_Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Edition_Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

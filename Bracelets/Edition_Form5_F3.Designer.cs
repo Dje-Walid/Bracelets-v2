@@ -34,8 +34,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbxCampConce = new System.Windows.Forms.ComboBox();
-            this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.tlCampagnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -138,10 +138,6 @@
             this.cbxCampConce.Size = new System.Drawing.Size(194, 32);
             this.cbxCampConce.TabIndex = 1;
             // 
-            // tlCampagnesBindingSource
-            // 
-            this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -151,6 +147,10 @@
             this.label2.Size = new System.Drawing.Size(427, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "( par defaut edition de l\'année précedant la campagne courante )";
+            // 
+            // tlCampagnesBindingSource
+            // 
+            this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
             // 
             // button1
             // 
@@ -534,7 +534,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -565,13 +565,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -625,6 +625,7 @@
             this.Name = "Edition_Form5_F3";
             this.Text = "Statistique de Gibiers réalisés par commune";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Edition_Form5_F3_FormClosed);
             this.Load += new System.EventHandler(this.Edition_Form5_F3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

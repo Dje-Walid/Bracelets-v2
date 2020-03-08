@@ -523,5 +523,10 @@ namespace Bracelet
         {
 
         }
+
+        private void Listes_Form8_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

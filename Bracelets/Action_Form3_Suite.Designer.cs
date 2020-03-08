@@ -213,6 +213,7 @@
             this.Name = "Action_Form3_Suite";
             this.Text = "Action_Form3_Suite";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Action_Form3_Suite_FormClosed);
             this.Load += new System.EventHandler(this.Action_Form3_Suite_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

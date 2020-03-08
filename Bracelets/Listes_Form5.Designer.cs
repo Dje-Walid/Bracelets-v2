@@ -891,6 +891,7 @@
             this.Name = "Listes_Form5";
             this.Text = "Codes types de plan de chasse";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Listes_Form5_FormClosed);
             this.Load += new System.EventHandler(this.Listes_Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -379,5 +379,10 @@ namespace Bracelet
         {
 
         }
+
+        private void Edition_Form5_F2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

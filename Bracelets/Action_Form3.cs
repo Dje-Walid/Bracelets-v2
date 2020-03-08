@@ -502,5 +502,10 @@ namespace Bracelet
 
             Program.outils.getConnection().Close();
         }
+
+        private void Action_Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

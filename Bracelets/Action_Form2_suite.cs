@@ -16,5 +16,10 @@ namespace Bracelet
         {
             InitializeComponent();
         }
+
+        private void Action_Form2_suite_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

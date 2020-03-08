@@ -655,6 +655,7 @@
             this.Name = "Listes_Form11";
             this.Text = "Codes communes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Listes_Form11_FormClosed);
             this.Load += new System.EventHandler(this.Listes_Form11_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -193,6 +193,7 @@
             this.Name = "Action_Form2_suite";
             this.Text = "Sélection Massif  -> Tous les Massifs";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Action_Form2_suite_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

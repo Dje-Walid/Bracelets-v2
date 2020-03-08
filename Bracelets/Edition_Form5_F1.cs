@@ -428,5 +428,10 @@ namespace Bracelet
             Edition_Form2.ZonIncl.Clear();
             Edition_Form2.ZonExcl.Clear();
         }
+
+        private void Edition_Form5_F1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

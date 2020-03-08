@@ -443,5 +443,10 @@ namespace Bracelet
 
             
         }
+
+        private void Listes_Form9_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

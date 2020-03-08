@@ -33,17 +33,7 @@ namespace Bracelet
 
         private void btnAnnule_Click(object sender, EventArgs e)
         {
-            DialogResult resulta;
-            resulta = MessageBox.Show("Êtes-vous sûr de vouloir annuler ", "AVERTISSEMENT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (resulta == System.Windows.Forms.DialogResult.OK)
-            {
-                this.Close();
-
-            }
-            else
-            {
-
-            }
+            Program.outils.allerMenu(this);
         }
 
         private void environnementCourantToolStripMenuItem_Click(object sender, EventArgs e)
@@ -413,6 +403,16 @@ namespace Bracelet
         }
 
         private void cbxEspecAbascul_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Action_Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void outilsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

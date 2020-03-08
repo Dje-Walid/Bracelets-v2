@@ -812,6 +812,7 @@
             this.Name = "Aide_Form2";
             this.Text = "A PROPOS DE ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Aide_Form2_FormClosed);
             this.Load += new System.EventHandler(this.Aide_Form2_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

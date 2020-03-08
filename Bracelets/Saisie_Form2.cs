@@ -1629,5 +1629,10 @@ namespace Bracelet
             Program.outils.getConnection().Close();
             #endregion
         }
+
+        private void Saisie_Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -101,7 +101,6 @@
             this.lbCampActu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlTypesPlansBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,9 +118,6 @@
             // tlCampagnesBindingSource
             // 
             this.tlCampagnesBindingSource.DataMember = "tlCampagnes";
-            // 
-            // braceletBDDDataSet
-            // 
             // 
             // lbPlanChassCour
             // 
@@ -159,9 +155,6 @@
             // tlTypesPlansBindingSource
             // 
             this.tlTypesPlansBindingSource.DataMember = "tlTypesPlans";
-            // 
-            // braceletBDDDataSet2
-            // 
             // 
             // lbComm1
             // 
@@ -216,6 +209,7 @@
             this.btSortir.Size = new System.Drawing.Size(120, 34);
             this.btSortir.TabIndex = 9;
             this.btSortir.UseVisualStyleBackColor = true;
+            this.btSortir.Click += new System.EventHandler(this.btSortir_Click);
             // 
             // menuStrip1
             // 
@@ -655,9 +649,6 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // tlCampagnesTableAdapter
-            // 
-            // 
             // btnModif
             // 
             this.btnModif.Appearance = System.Windows.Forms.Appearance.Button;
@@ -670,12 +661,6 @@
             this.btnModif.Text = "Modification";
             this.btnModif.UseVisualStyleBackColor = true;
             this.btnModif.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // tlCampagnesTableAdapter1
-            // 
-            // 
-            // tlTypesPlansTableAdapter
-            // 
             // 
             // lbCampActu1
             // 
@@ -723,6 +708,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Environnement Courant";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Saisie_Form1_FormClosed);
             this.Load += new System.EventHandler(this.Saisie_Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tlCampagnesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlTypesPlansBindingSource)).EndInit();

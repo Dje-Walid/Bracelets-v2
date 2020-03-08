@@ -35,15 +35,17 @@
             this.btnEffacer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txbxZonExc = new System.Windows.Forms.TextBox();
+            this.txbxZonInc = new System.Windows.Forms.TextBox();
             this.txbxSecExc = new System.Windows.Forms.TextBox();
             this.txbxSecInc = new System.Windows.Forms.TextBox();
             this.cbxZonExc = new System.Windows.Forms.ComboBox();
-            this.tlMassifsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxZonInc = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tlMassifsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.environnementCourantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,8 +101,6 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.txbxZonInc = new System.Windows.Forms.TextBox();
-            this.txbxZonExc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -172,6 +172,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quelles zones éditer ? (si non spécifié = tout)";
             // 
+            // txbxZonExc
+            // 
+            this.txbxZonExc.Enabled = false;
+            this.txbxZonExc.Location = new System.Drawing.Point(331, 229);
+            this.txbxZonExc.Name = "txbxZonExc";
+            this.txbxZonExc.Size = new System.Drawing.Size(179, 29);
+            this.txbxZonExc.TabIndex = 11;
+            // 
+            // txbxZonInc
+            // 
+            this.txbxZonInc.Enabled = false;
+            this.txbxZonInc.Location = new System.Drawing.Point(331, 118);
+            this.txbxZonInc.Name = "txbxZonInc";
+            this.txbxZonInc.Size = new System.Drawing.Size(179, 29);
+            this.txbxZonInc.TabIndex = 10;
+            // 
             // txbxSecExc
             // 
             this.txbxSecExc.Location = new System.Drawing.Point(331, 170);
@@ -196,10 +212,6 @@
             this.cbxZonExc.Size = new System.Drawing.Size(179, 32);
             this.cbxZonExc.TabIndex = 7;
             this.cbxZonExc.SelectedIndexChanged += new System.EventHandler(this.cbxMassifaExclure_SelectedIndexChanged);
-            // 
-            // tlMassifsBindingSource
-            // 
-            this.tlMassifsBindingSource.DataMember = "tlMassifs";
             // 
             // cbxZonInc
             // 
@@ -245,6 +257,10 @@
             this.label2.Size = new System.Drawing.Size(247, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Liste des secteurs à Inclure :";
+            // 
+            // tlMassifsBindingSource
+            // 
+            this.tlMassifsBindingSource.DataMember = "tlMassifs";
             // 
             // menuStrip1
             // 
@@ -608,7 +624,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -639,13 +655,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -684,22 +700,6 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // txbxZonInc
-            // 
-            this.txbxZonInc.Enabled = false;
-            this.txbxZonInc.Location = new System.Drawing.Point(331, 118);
-            this.txbxZonInc.Name = "txbxZonInc";
-            this.txbxZonInc.Size = new System.Drawing.Size(179, 29);
-            this.txbxZonInc.TabIndex = 10;
-            // 
-            // txbxZonExc
-            // 
-            this.txbxZonExc.Enabled = false;
-            this.txbxZonExc.Location = new System.Drawing.Point(331, 229);
-            this.txbxZonExc.Name = "txbxZonExc";
-            this.txbxZonExc.Size = new System.Drawing.Size(179, 29);
-            this.txbxZonExc.TabIndex = 11;
-            // 
             // Edition_Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -716,6 +716,7 @@
             this.Name = "Edition_Form2";
             this.Text = "Document Commission";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Edition_Form2_FormClosed);
             this.Load += new System.EventHandler(this.Edition_Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

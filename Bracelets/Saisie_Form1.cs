@@ -411,5 +411,16 @@ namespace Bracelet
                 CbxPlanChassCour.Text = Program.outils.getPlanChasseCourant();
             }
         }
+
+        private void Saisie_Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btSortir_Click(object sender, EventArgs e)
+        {
+           
+
+        }
     }
 }

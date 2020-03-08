@@ -386,5 +386,10 @@ namespace Bracelet
             Program.outils.getConnection().Close();
 
         }
+
+        private void Edition_Form5_F3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

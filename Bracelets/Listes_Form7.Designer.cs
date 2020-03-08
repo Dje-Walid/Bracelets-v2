@@ -641,6 +641,7 @@
             this.Name = "Listes_Form7";
             this.Text = "Listes_Form7";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Listes_Form7_FormClosed);
             this.Load += new System.EventHandler(this.Listes_Form7_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

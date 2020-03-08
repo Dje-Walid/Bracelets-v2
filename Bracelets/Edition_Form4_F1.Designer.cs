@@ -536,6 +536,7 @@
             this.Name = "Edition_Form4_F1";
             this.Text = "Edition_Form4_F1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Edition_Form4_F1_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

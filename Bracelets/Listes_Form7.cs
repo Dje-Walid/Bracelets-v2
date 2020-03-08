@@ -455,5 +455,10 @@ namespace Bracelet
         {
             Program.outils.allerMenu(this);
         }
+
+        private void Listes_Form7_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

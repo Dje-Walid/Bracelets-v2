@@ -159,5 +159,10 @@ namespace Bracelet
         {
             this.Hide();
         }
+
+        private void Action_Form3_Suite_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -43,5 +43,10 @@ namespace Bracelet
             Menu menu = new Menu();
             menu.Show();
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

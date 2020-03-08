@@ -33,6 +33,8 @@
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txbxZonExcl = new System.Windows.Forms.TextBox();
+            this.txbxZonIncl = new System.Windows.Forms.TextBox();
             this.txbxSecExl = new System.Windows.Forms.TextBox();
             this.txbxSecIncl = new System.Windows.Forms.TextBox();
             this.cbxZonExcl = new System.Windows.Forms.ComboBox();
@@ -104,8 +106,6 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.txbxZonIncl = new System.Windows.Forms.TextBox();
-            this.txbxZonExcl = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tlMassifsBindingSource1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -154,6 +154,22 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quel zones éditer ? (si non spécifieé = tout)";
+            // 
+            // txbxZonExcl
+            // 
+            this.txbxZonExcl.Enabled = false;
+            this.txbxZonExcl.Location = new System.Drawing.Point(285, 239);
+            this.txbxZonExcl.Name = "txbxZonExcl";
+            this.txbxZonExcl.Size = new System.Drawing.Size(179, 29);
+            this.txbxZonExcl.TabIndex = 11;
+            // 
+            // txbxZonIncl
+            // 
+            this.txbxZonIncl.Enabled = false;
+            this.txbxZonIncl.Location = new System.Drawing.Point(285, 117);
+            this.txbxZonIncl.Name = "txbxZonIncl";
+            this.txbxZonIncl.Size = new System.Drawing.Size(179, 29);
+            this.txbxZonIncl.TabIndex = 10;
             // 
             // txbxSecExl
             // 
@@ -669,7 +685,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -700,13 +716,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -745,22 +761,6 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // txbxZonIncl
-            // 
-            this.txbxZonIncl.Enabled = false;
-            this.txbxZonIncl.Location = new System.Drawing.Point(285, 117);
-            this.txbxZonIncl.Name = "txbxZonIncl";
-            this.txbxZonIncl.Size = new System.Drawing.Size(179, 29);
-            this.txbxZonIncl.TabIndex = 10;
-            // 
-            // txbxZonExcl
-            // 
-            this.txbxZonExcl.Enabled = false;
-            this.txbxZonExcl.Location = new System.Drawing.Point(285, 239);
-            this.txbxZonExcl.Name = "txbxZonExcl";
-            this.txbxZonExcl.Size = new System.Drawing.Size(179, 29);
-            this.txbxZonExcl.TabIndex = 11;
-            // 
             // Edition_Form5_F1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -780,6 +780,7 @@
             this.Name = "Edition_Form5_F1";
             this.Text = "Satistique par zones";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Edition_Form5_F1_FormClosed);
             this.Load += new System.EventHandler(this.Edition_Form5_F1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

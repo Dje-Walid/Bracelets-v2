@@ -443,5 +443,10 @@ namespace Bracelet
         {
             Program.outils.allerMenu(this);
         }
+
+        private void Listes_Form4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
