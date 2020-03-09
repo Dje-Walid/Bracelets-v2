@@ -94,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(211, 67);
+            this.label1.Location = new System.Drawing.Point(236, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(789, 29);
             this.label1.TabIndex = 0;
@@ -102,11 +102,14 @@
             // 
             // dgvAttrib
             // 
+            this.dgvAttrib.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAttrib.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvAttrib.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAttrib.Location = new System.Drawing.Point(65, 173);
+            this.dgvAttrib.Location = new System.Drawing.Point(114, 144);
             this.dgvAttrib.Name = "dgvAttrib";
-            this.dgvAttrib.Size = new System.Drawing.Size(1134, 543);
+            this.dgvAttrib.Size = new System.Drawing.Size(1013, 432);
             this.dgvAttrib.TabIndex = 1;
+            this.dgvAttrib.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAttrib_CellContentClick);
             // 
             // menuStrip1
             // 
@@ -471,7 +474,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -502,13 +505,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -551,6 +554,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvAttrib);

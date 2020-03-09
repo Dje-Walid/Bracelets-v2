@@ -374,6 +374,8 @@ namespace Bracelet
             OleDbCommand cmd0 = new OleDbCommand(requete0, Program.outils.getConnection());
             OleDbDataReader dr0 = cmd0.ExecuteReader();
 
+            
+
 
 
             dgvAttrib.ColumnCount = 8;
@@ -389,29 +391,45 @@ namespace Bracelet
 
             string[] ah;
 
-            while (dr0.Read() )
+            while (dr0.Read())
             {
                 ah = new string[] { dr0[0].ToString() };
                 dgvAttrib.Rows.Add(ah);
 
-
-
             }
+            Program.outils.getConnection().Close();
+            int i = 0;
 
-            string requete1 = "Select [NomBenef] from tbBenefs where [CdBenef] in (Select [CdBenef] from tbPlans where NumPlan = \"" + Convert.ToString(dgvAttrib.CurrentCell.Value) + " \" ) ;";
-            string requete2 = "Select [PrenomBenef] from tbBenefs where [CdBenef] in (Select[CdBenef] from tbPlans where NumPlan = \"" + Convert.ToString(dgvAttrib.CurrentCell.Value) + "\"  ) ;";
+            Program.outils.getConnection().Open();
+            string requete1 = "Select [NomBenef] from tbBenefs where [CdBenef] in (Select [CdBenef] from tbPlans where NumPlan = \"" + Convert.ToString(dgvAttrib.Rows[i].Cells[0]) + " \" ) ;";
+            string requete2 = "Select [PrenomBenef] from tbBenefs where [CdBenef] in (Select[CdBenef] from tbPlans where NumPlan = \"" + Convert.ToString(dgvAttrib.Rows[i].Cells[0]) + "\"  ) ;";
             OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
             OleDbDataReader dr1 = cmd1.ExecuteReader();
 
             OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
             OleDbDataReader dr2 = cmd2.ExecuteReader();
+            Program.outils.getConnection().Close();
 
-            while (dr0.Read()&&dr1.Read()&&dr2.Read())
+            while (dgvAttrib.Rows.Count>i)
             {
-                ah = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
-                dgvAttrib.Rows.Add(ah);
-            }
+                Program.outils.getConnection().Open();
+                requete1 = "Select [NomBenef] from tbBenefs where [CdBenef] in (Select [CdBenef] from tbPlans where NumPlan = \"" + Convert.ToString(dgvAttrib.Rows[i].Cells[0]) + " \" ) ;";
+                requete2 = "Select [PrenomBenef] from tbBenefs where [CdBenef] in (Select[CdBenef] from tbPlans where NumPlan = \"" + Convert.ToString(dgvAttrib.Rows[i].Cells[0]) + "\"  ) ;";
+                cmd1.CommandText = requete1;
+                dr1 = cmd1.ExecuteReader();
 
+                cmd2.CommandText = requete2;
+                dr2 = cmd2.ExecuteReader();
+                
+
+                while (dr0.Read() && dr1.Read() && dr2.Read())
+                {
+                    ah = new string[] { dr0[0].ToString(), dr1[0].ToString(), dr2[0].ToString() };
+                    dgvAttrib.Rows.Add(ah);
+                }
+                Program.outils.getConnection().Close();
+                i++;
+            }
 
             Program.outils.getConnection().Close();
         }
@@ -419,6 +437,11 @@ namespace Bracelet
         private void Listes_Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dgvAttrib_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
