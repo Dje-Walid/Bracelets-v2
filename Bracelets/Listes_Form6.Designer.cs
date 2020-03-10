@@ -88,7 +88,7 @@
             this.manuelUtilisateurWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeBraceletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterBraceletToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnModification = new System.Windows.Forms.Button();
+            this.btnModif = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEspe)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -502,7 +502,7 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.importExportToolStripMenuItem.Text = "Import/Export";
             this.importExportToolStripMenuItem.Click += new System.EventHandler(this.importExportToolStripMenuItem_Click);
             // 
@@ -533,13 +533,13 @@
             // exportationExcelToolStripMenuItem
             // 
             this.exportationExcelToolStripMenuItem.Name = "exportationExcelToolStripMenuItem";
-            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exportationExcelToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.exportationExcelToolStripMenuItem.Text = "Exportation Excel";
             // 
             // imprimerToolStripMenuItem
             // 
             this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
-            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.imprimerToolStripMenuItem.Text = "Imprimer";
             // 
             // optionsToolStripMenuItem
@@ -578,18 +578,18 @@
             this.quitterBraceletToolStripMenuItem1.Text = "Quitter Bracelet";
             this.quitterBraceletToolStripMenuItem1.Click += new System.EventHandler(this.quitterBraceletToolStripMenuItem1_Click);
             // 
-            // btnModification
+            // btnModif
             // 
-            this.btnModification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnModification.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModification.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModification.Location = new System.Drawing.Point(880, 715);
-            this.btnModification.Name = "btnModification";
-            this.btnModification.Size = new System.Drawing.Size(120, 35);
-            this.btnModification.TabIndex = 64;
-            this.btnModification.Text = "Modification";
-            this.btnModification.UseVisualStyleBackColor = true;
-            this.btnModification.Click += new System.EventHandler(this.btnModification_Click);
+            this.btnModif.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnModif.AutoSize = true;
+            this.btnModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModif.Location = new System.Drawing.Point(858, 719);
+            this.btnModif.Name = "btnModif";
+            this.btnModif.Size = new System.Drawing.Size(120, 34);
+            this.btnModif.TabIndex = 65;
+            this.btnModif.Text = "Modification";
+            this.btnModif.UseVisualStyleBackColor = true;
+            this.btnModif.CheckedChanged += new System.EventHandler(this.btnModif_CheckedChanged);
             // 
             // Listes_Form6
             // 
@@ -597,7 +597,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1364, 749);
-            this.Controls.Add(this.btnModification);
+            this.Controls.Add(this.btnModif);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvListEspe);
             this.Controls.Add(this.button3);
@@ -680,6 +680,6 @@
         private System.Windows.Forms.ToolStripMenuItem manuelUtilisateurWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeBraceletToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
-        private System.Windows.Forms.Button btnModification;
+        private System.Windows.Forms.CheckBox btnModif;
     }
 }

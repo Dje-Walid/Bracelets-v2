@@ -358,7 +358,7 @@ namespace Bracelet
 
         private void Listes_Form6_Load(object sender, EventArgs e)
         {
-
+            dgvListEspe.Enabled = false;
             Program.outils.getConnection().Open();
             string requete0 = "Select [CdEspece] from tlEspeces;";
             string requete1 = "Select [LibEspece] from tlEspeces;";
@@ -404,29 +404,70 @@ namespace Bracelet
 
         private void btnModification_Click(object sender, EventArgs e)
         {
-            DialogResult resulta;
-            resulta = MessageBox.Show("Voulez-vous vraiment modifer la liste des espèces ? Il est possible de modifier les libellés sans problème. Pour supprimer des espèces de gibiers, il vaut mieux demander l'aide d'un informaticien. Il est interdit de modifier un code espèce déjà utilisé.", "Liste des Especes", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (resulta == System.Windows.Forms.DialogResult.Yes)
-            {
-                int i;
-                i = dgvListEspe.Rows.Count - 2;
-
-                Program.outils.getConnection().Open();
-
-
-                string requete = "INSERT INTO tlEspeces ([CdEspece],[CdTypePlan],[LibEspece]) VALUES (\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[0].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[2].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[1].Value) + "\");";
-
-                OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
-                cmd.ExecuteNonQuery();
-
-                Program.outils.getConnection().Close();
-
-            }
+            
         }
 
         private void Listes_Form6_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnModif_CheckedChanged(object sender, EventArgs e)
+        {
+              if (btnModif.Checked == true)
+            {
+
+
+                DialogResult resulta;
+                resulta = MessageBox.Show("Voulez-vous vraiment modifer la liste des espèces ? Il est possible de modifier les libellés sans problème. Pour supprimer des espèces de gibiers, il vaut mieux demander l'aide d'un informaticien. Il est interdit de modifier un code espèce déjà utilisé.", "Liste des Especes", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (resulta == System.Windows.Forms.DialogResult.Yes)
+                {
+                    dgvListEspe.Enabled = true;
+                    btnModif.Text = "Modifier";
+                   
+                }
+
+                else
+                {
+                    
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+
+            else
+            {
+                dgvListEspe.Enabled = false;
+                btnModif.Text = "Modification";
+
+                int i;
+                i = dgvListEspe.Rows.Count - 2;
+
+               /* Program.outils.getConnection().Open();
+                string requete1 = "INSERT INTO tlEspeces ([CdEspece],[CdTypePlan],[LibEspece]) VALUES (\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[0].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[2].Value) + "\",\"" + Convert.ToString(dgvListEspe.Rows[i].Cells[1].Value) + "\");";
+                OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+                while (dr1.Read())
+                {
+                    dgvListEspe.Text = dr1[0].ToString();
+                }
+                Program.outils.getConnection().Close(); */
+            }
         }
     }
 }

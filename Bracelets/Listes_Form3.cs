@@ -381,12 +381,13 @@ namespace Bracelet
             dgvAttrib.ColumnCount = 8;
             dgvAttrib.Columns[0].Name = "N°";
             dgvAttrib.Columns[1].Name = " Nom de l'Espece";
-            dgvAttrib.Columns[2].Name = "Nom Prénom";
-            dgvAttrib.Columns[3].Name = "Territoire";
-            dgvAttrib.Columns[4].Name = " Secteur";
-            dgvAttrib.Columns[5].Name = "Surface";
-            dgvAttrib.Columns[6].Name = " Attribution";
-            dgvAttrib.Columns[7].Name = " Observation";
+            dgvAttrib.Columns[2].Name = "Nom";
+            dgvAttrib.Columns[3].Name = "Prénom";
+            dgvAttrib.Columns[4].Name = "Territoire";
+            dgvAttrib.Columns[5].Name = " Secteur";
+            dgvAttrib.Columns[6].Name = "Surface";
+            dgvAttrib.Columns[7].Name = " Attribution";
+            dgvAttrib.Columns[8].Name = " Observation";
 
 
             string[] ah;

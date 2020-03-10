@@ -429,19 +429,61 @@ namespace Bracelet
                 txbxTxtLettre.Text = dr2[0].ToString();
             }
             Program.outils.getConnection().Close();
+
+            chboxDroitRecours.Checked = false;
+            Program.outils.getConnection().Open();
+            string requete3 = "Select [AvecDroitRecours] from tlRefus where [CdRefus] =" + Convert.ToString(cbxCdeRefus.Text) + ";";
+            OleDbCommand cmd3 = new OleDbCommand(requete3, Program.outils.getConnection());
+            OleDbDataReader dr3 = cmd3.ExecuteReader();
+            while (dr3.Read())
+            {
+                chboxDroitRecours.Checked = Convert.ToBoolean(dr3[0]);
+            }
+            Program.outils.getConnection().Close();
         }
 
         private void btnModif_CheckedChanged(object sender, EventArgs e)
         {
             if (btnModif.Checked == true)
             {
+                btnModif.Text = "Modifier";
                 cbxLibRefus.Enabled = true;
                 txbxTxtLettre.Enabled = true;
                 chboxDroitRecours.Enabled = true; 
 
             }
 
-            
+            else
+            {
+                cbxLibRefus.Enabled = false;
+                txbxTxtLettre.Enabled = false;
+                chboxDroitRecours.Enabled = false;
+
+
+                /* Program.outils.getConnection().Open();
+
+                string requete1 = " update [tlRefus] set [LibRefus] = \""+cbxLibRefus.Text+"\" where [CdRefus] = \""+cbxCdeRefus.Text+"\";" ;
+                string requete2 = " update [tlRefus] set [TexteLettre] = \"" + txbxTxtLettre.Text + "\"where [CdRefus] = \"" + cbxCdeRefus.Text + "\";";
+                string requete3 = " update [tlRefus] set [AvecDroitRecours] = \"" + Convert.ToBoolean(chboxDroitRecours) + "\"where [CdRefus] = \"" + cbxCdeRefus.Text + "\";";
+                
+
+                OleDbCommand cmd1 = new OleDbCommand(requete1, Program.outils.getConnection());
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+
+                OleDbCommand cmd2 = new OleDbCommand(requete2, Program.outils.getConnection());
+                OleDbDataReader dr2 = cmd2.ExecuteReader();
+
+                OleDbCommand cmd3 = new OleDbCommand(requete3, Program.outils.getConnection());
+                OleDbDataReader dr3 = cmd3.ExecuteReader();
+
+                while (dr1.Read()&&dr2.Read()&&dr3.Read())
+                 {
+                     
+                 }
+
+                 Program.outils.getConnection().Close(); */
+            }
+
         }
 
         private void Listes_Form9_FormClosed(object sender, FormClosedEventArgs e)
