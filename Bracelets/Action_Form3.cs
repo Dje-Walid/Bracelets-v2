@@ -431,7 +431,7 @@ namespace Bracelet
 
                                 if (Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) > stock)
                                 {
-                                    //Insert Into
+                                    requete = "Insert into tbBracelets VALUES (\"" + Program.outils.getCampagneActuelle() + "";
                                 }
                                 else
                                 {
