@@ -103,6 +103,12 @@ namespace Bracelet
             return this.getConfig()["Info"]["PlanChasseCourant"];
         }
 
+        //Permet de changer la base de données sur laquelle les requêtes vont être effectives
+        public void setConnection(string NomFichier)
+        {
+            this.connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\" + NomFichier + ".accdb; Persist Security Info=False;");
+        }
+
         //Permet de récupérer l'objet qui va permettre de réaliser les requêtes SQL
         public OleDbConnection getConnection()
         {

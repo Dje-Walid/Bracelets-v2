@@ -1359,7 +1359,11 @@ namespace Bracelet
             //Lancement de l'extension Access + docu = https://www.c-sharpcorner.com/blogs/how-to-create-an-access-database-by-using-adox-and-visual-c-sharp-net
 
             ADOX.Catalog cat = new ADOX.Catalog();
-            cat.Create(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\BraceletBDD" + Convert.ToString(Program.outils.getCampagneActuelle()) + ".accdb; Jet OLEDB:Engine Type=5");
+            cat.Create(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='BraceletBDD" + Program.outils.getCampagneActuelle() + ".accdb';");
+            Program.outils.setConnection("BraceletBDD" + Program.outils.getCampagneActuelle());
+            //Petite modif a faire après c'est de se baser sur le libCamp et faire +1 pour le nom de la bdd
+            //En attente du dictionnaire de données pour els createTable etc...
+            
 
         }
 
