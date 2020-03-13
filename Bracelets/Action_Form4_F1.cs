@@ -357,7 +357,6 @@ namespace Bracelet
 
         private void Action_Form4_F1_Load(object sender, EventArgs e)
         {
-            
 
         }
 

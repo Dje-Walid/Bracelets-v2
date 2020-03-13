@@ -2,6 +2,7 @@
 using System.Data.OleDb;
 using System.Linq;
 using System.Windows.Forms;
+using ADOX;
 
 namespace Bracelet
 {
@@ -1354,6 +1355,12 @@ namespace Bracelet
 
         private void btNewCampagne_Click(object sender, EventArgs e)
         {
+
+            //Lancement de l'extension Access + docu = https://www.c-sharpcorner.com/blogs/how-to-create-an-access-database-by-using-adox-and-visual-c-sharp-net
+
+            ADOX.Catalog cat = new ADOX.Catalog();
+            cat.Create(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\BraceletBDD" + Convert.ToString(Program.outils.getCampagneActuelle()) + ".accdb; Jet OLEDB:Engine Type=5");
+
         }
 
         private void button2_Click(object sender, EventArgs e)

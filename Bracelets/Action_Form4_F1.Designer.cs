@@ -721,7 +721,7 @@
         private System.Windows.Forms.ToolStripMenuItem quitterBraceletToolStripMenuItem1;
         private System.Windows.Forms.BindingSource tlCampagnesBindingSource;
         private System.Windows.Forms.BindingSource tlBraceletsBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdBraceletDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn libBraceletDataGridViewTextBoxColumn;
+        /*private System.Windows.Forms.DataGridViewTextBoxColumn cdBraceletDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libBraceletDataGridViewTextBoxColumn;*/
     }
 }

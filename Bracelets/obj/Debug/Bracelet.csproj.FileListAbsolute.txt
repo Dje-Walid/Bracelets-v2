@@ -272,3 +272,5 @@ C:\Users\Mehdi\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Bracelet.csproj
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\bin\Debug\INIFileParser.dll
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\bin\Debug\INIFileParser.xml
 C:\Users\adama\Documents\Bracelets-v2\Bracelets\obj\Debug\Bracelet.csproj.CopyComplete
+C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Interop.ADOX.dll
+C:\Users\Walid\Documents\GitHub\Bracelets-v2\Bracelets\obj\Debug\Interop.MDACVer.dll
