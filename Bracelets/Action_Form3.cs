@@ -388,6 +388,7 @@ namespace Bracelet
 
         private void bt_lancer_Attrib_Click(object sender, EventArgs e)
         {
+            #region "Attribution auto des bracelets"
             Program.outils.getConnection().Open();
             string requete = "Select [NumPlan] from tbGibiers;";
             OleDbDataAdapter Max = new OleDbDataAdapter(requete, Program.outils.getConnection());
@@ -431,13 +432,18 @@ namespace Bracelet
 
                                 if (Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) > stock)
                                 {
-                                    requete = "Insert into tbBracelets VALUES (\"" + Program.outils.getCampagneActuelle() + "";
+                                    //Pour le bon fonctionnement de cette requete il va falloir mettre le NumBracelet de tbBracelet en NumeroAuto et Remplacer le "G" par une requete qui recup le typePlan
+                                    requete = "Insert into tbBracelets VALUES (\"" + Program.outils.getCampagneActuelle() + "\",\"A Ajouter\",,\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\"G\",\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + "\",\"" + Convert.ToString(DateAttr.Text) + "\";";
+                                    cmd.CommandText = requete;
+                                    cmd.ExecuteNonQuery();
                                 }
                                 else
                                 {
                                     if(Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) < stock)
                                     {
-                                        //Delete
+                                        requete = "Delete from tbBracelets where [NumBracelet] in (Select MAX([NumBracelet]) from tbBracelets where [NumPlan] =" + Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + " AND [CdGibier] =\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\");";
+                                        cmd.CommandText = requete;
+                                        cmd.ExecuteNonQuery();
                                     }
                                 }
                             }
@@ -448,13 +454,44 @@ namespace Bracelet
                     }
                     else
                     {
-                        if (i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
+                        while (i < Action_Form3_Suite.MassifEx.Count)
                         {
-                            //Insert Into
+                            stockageMassEx = stockageMassEx + Action_Form3_Suite.MassifEx[i];
+
+                            i++;
                         }
-                        else
+
+                        i = 0;
+
+                        while (i < nbBracelet.Tables["tbBracelets2"].Rows.Count)
                         {
-                            //Delete
+                            requete = "Select [NbAccorde] from tbGibiers where [NumPlan] =" + Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + " AND [CdGibier] =\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\";";
+                            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+                            OleDbDataReader dr = cmd.ExecuteReader();
+
+                            while (dr.Read())
+                            {
+                                stock = Convert.ToInt32(dr[0].ToString());
+
+                                if (Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) > stock)
+                                {
+                                    //Pour le bon fonctionnement de cette requete il va falloir mettre le NumBracelet de tbBracelet en NumeroAuto et Remplacer le "G" par une requete qui recup le typePlan
+                                    requete = "Insert into tbBracelets VALUES (\"" + Program.outils.getCampagneActuelle() + "\",\"A Ajouter\",,\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\"G\",\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + "\",\"" + Convert.ToString(DateAttr.Text) + "\";";
+                                    cmd.CommandText = requete;
+                                    cmd.ExecuteNonQuery();
+                                }
+                                else
+                                {
+                                    if (Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) < stock)
+                                    {
+                                        requete = "Delete from tbBracelets where [NumBracelet] in (Select MAX([NumBracelet]) from tbBracelets where [NumPlan] =" + Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + " AND [CdGibier] =\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\");";
+                                        cmd.CommandText = requete;
+                                        cmd.ExecuteNonQuery();
+                                    }
+                                }
+                            }
+
+                            i++;
                         }
                     }
                 }
@@ -470,13 +507,37 @@ namespace Bracelet
                             i++;
                         }
 
-                        if (i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
+                        i = 0;
+
+                        while (i < nbBracelet.Tables["tbBracelets2"].Rows.Count)
                         {
-                            //Insert Into
-                        }
-                        else
-                        {
-                            //Delete
+                            requete = "Select [NbAccorde] from tbGibiers where [NumPlan] =" + Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + " AND [CdGibier] =\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\";";
+                            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+                            OleDbDataReader dr = cmd.ExecuteReader();
+
+                            while (dr.Read())
+                            {
+                                stock = Convert.ToInt32(dr[0].ToString());
+
+                                if (Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) > stock)
+                                {
+                                    //Pour le bon fonctionnement de cette requete il va falloir mettre le NumBracelet de tbBracelet en NumeroAuto et Remplacer le "G" par une requete qui recup le typePlan
+                                    requete = "Insert into tbBracelets VALUES (\"" + Program.outils.getCampagneActuelle() + "\",\"A Ajouter\",,\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\"G\",\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + "\",\"" + Convert.ToString(DateAttr.Text) + "\";";
+                                    cmd.CommandText = requete;
+                                    cmd.ExecuteNonQuery();
+                                }
+                                else
+                                {
+                                    if (Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) < stock)
+                                    {
+                                        requete = "Delete from tbBracelets where [NumBracelet] in (Select MAX([NumBracelet]) from tbBracelets where [NumPlan] =" + Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + " AND [CdGibier] =\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\");";
+                                        cmd.CommandText = requete;
+                                        cmd.ExecuteNonQuery();
+                                    }
+                                }
+                            }
+
+                            i++;
                         }
                     }
                     else
@@ -488,19 +549,44 @@ namespace Bracelet
                             i++;
                         }
 
-                        if (i == Convert.ToInt32(nbBrac)/*Compare nbBrac et NbAccrode*/)
+                        i = 0;
+
+                        while (i < nbBracelet.Tables["tbBracelets2"].Rows.Count)
                         {
-                            //Insert Into
-                        }
-                        else
-                        {
-                            //Delete
+                            requete = "Select [NbAccorde] from tbGibiers where [NumPlan] =" + Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + " AND [CdGibier] =\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\";";
+                            OleDbCommand cmd = new OleDbCommand(requete, Program.outils.getConnection());
+                            OleDbDataReader dr = cmd.ExecuteReader();
+
+                            while (dr.Read())
+                            {
+                                stock = Convert.ToInt32(dr[0].ToString());
+
+                                if (Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) > stock)
+                                {
+                                    //Pour le bon fonctionnement de cette requete il va falloir mettre le NumBracelet de tbBracelet en NumeroAuto et Remplacer le "G" par une requete qui recup le typePlan
+                                    requete = "Insert into tbBracelets VALUES (\"" + Program.outils.getCampagneActuelle() + "\",\"A Ajouter\",,\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\"G\",\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + "\",\"" + Convert.ToString(DateAttr.Text) + "\";";
+                                    cmd.CommandText = requete;
+                                    cmd.ExecuteNonQuery();
+                                }
+                                else
+                                {
+                                    if (Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][0].ToString()) < stock)
+                                    {
+                                        requete = "Delete from tbBracelets where [NumBracelet] in (Select MAX([NumBracelet]) from tbBracelets where [NumPlan] =" + Convert.ToInt32(nbBracelet.Tables["tbBracelets2"].Rows[i][1].ToString()) + " AND [CdGibier] =\"" + Convert.ToString(nbBracelet.Tables["tbBracelets2"].Rows[i][2].ToString()) + "\");";
+                                        cmd.CommandText = requete;
+                                        cmd.ExecuteNonQuery();
+                                    }
+                                }
+                            }
+
+                            i++;
                         }
                     }
                 }
             }
 
             Program.outils.getConnection().Close();
+            #endregion
         }
 
         private void Action_Form3_FormClosed(object sender, FormClosedEventArgs e)
