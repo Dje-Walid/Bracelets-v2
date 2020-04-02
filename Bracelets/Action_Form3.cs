@@ -593,5 +593,10 @@ namespace Bracelet
         {
             Application.Exit();
         }
+
+        private void Action_Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

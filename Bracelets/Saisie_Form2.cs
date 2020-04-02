@@ -94,6 +94,7 @@ namespace Bracelet
             #endregion
 
             #region "Remplissage des outils au lancement de l'application" 
+
             //Remplissage cbxNumPlan
             Program.outils.getConnection().Open();
             string requete = "Select [NumPlan] from tbPlans group by [NumPlan];";
